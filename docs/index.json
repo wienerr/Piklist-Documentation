@@ -1,12 +1,5 @@
 [
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/test/test/",
-	"title": "Test",
-	"tags": [],
-	"description": "",
-	"content": "This is a test page.\n"
-},
-{
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
 	"title": "",
 	"tags": [],
@@ -33,11 +26,4 @@
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/test/",
-	"title": "Test Chapter",
-	"tags": [],
-	"description": "",
-	"content": "This is a test chapter.\n"
 }]
