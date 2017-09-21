@@ -2,6 +2,7 @@ baseURL = "https://piklist.github.io/"
 languageCode = "en-us"
 title = "Piklist Documentation"
 theme = "hugo-theme-learn"
+publishDir = "docs"
 
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
