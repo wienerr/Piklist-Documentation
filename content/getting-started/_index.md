@@ -3,7 +3,7 @@ title: "Getting Started"
 chapter: true
 ---
 ## Description
-To get the most out of this tutorial you should have a recent version of WordPress running and the Piklist plugin installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
+To get the most out of this tutorial you should have a recent version of WordPress running and the [Piklist plugin](https://wordpress.org/plugins/piklist/) installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
 
 ## What is Piklist?
 At it’s very basic level, Piklist is a rapid development framework for WordPress. When using Piklist to build your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code.
@@ -15,7 +15,7 @@ Piklist is a code-based framework, which means it has no user interface. We beli
 We’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!
 
 ## About this Tutorial
-Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide when you’ve finished this tutorial.
+Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide [TODO: ADD LINK] when you’ve finished this tutorial.
 
 Let’s get started!
 
@@ -79,13 +79,14 @@ Version: The Plugin's Version Number, e.g.: 1.0
 Author: Name Of The Plugin Author
 Author URI: http://URI_Of_The_Plugin_Author
 Plugin Type: Piklist
+*/
 ```
 
-A more detailed doc on writing Piklist plugins can be found here >
+A more detailed doc on writing Piklist plugins can be found here > [TODO: ADD LINK]
 
 ## Grouping fields
 ### Overview
-Now that we have our folder structure set up, it’s time to add some files. Each file you add to a parts folder will contain your fields. These files allow you to group fields together and you can also have multiple files in each parts folder. For example, each file in the “meta-boxes” folder will create a metabox for a Post Type. Each file in the “users” folder will create a user field section. Each file in the “widgets” folder will create a Widget (yes, you can easily create widgets with Piklist).
+Now that we have our folder structure set up, it’s time to add some files. Each file you add to a parts folder will contain your fields. These files allow you to group fields together and you can also have multiple files in each parts folder. For example, each file in the “meta-boxes” folder will create a metabox for a Post Type. Each file in the “users” folder will create a user field section. Each file in the “widgets” folder will create a Widget (yes, you can easily create widgets with Piklist). [TODO: ADD LINK]
 
 ### Comment blocks
 Configuration options for each field group are defined in the comment block at the top of each file.  These comment blocks are similar to what WordPress uses for plugin headers. They allow you to easily configure a group of fields with no hooks or filters.
@@ -98,6 +99,7 @@ Create a new file in your “meta-boxes” folder called my-fields.php. At the t
 Title: My custom fields
 Post Type: post
 */
+?>
 ```
 
 In this comment block you just defined two configuration parameters:
@@ -107,45 +109,36 @@ Post Type: Which post type(s) should display this metabox.
 
 Save the file. Now open WordPress and go to “Add new Post”. You should see an empty metabox with the title “My custom fields”. You just created your first metabox with Piklist!
 
-Meta Box
 
-Configuration Options
+
+![Meta Box](/images/getting-started-meta-box.png)
+
+### Configuration Options
 The comment block at the top of each parts file defines configuration options for a field group.  Each field type (i.e. metaboxes, settings, widgets, etc) have different configuration options.  Some configuration parameters can take multiple values.  For example, the “Post Type” parameter can accept multiple Post Types separated by commas.
 
 Change the “Post Type” parameter to this: Post Type: post, page so your code will look like this:
 
-1
-2
-3
-4
-5
+```
 <?php
 /*
 Title: My custom fields
 Post Type: post, page
 */
+?>
+```
+
 Save the file. Open WordPress and add a new Page. You will see the same empty metabox that you added to Posts. Using this method you can easily use the same field code to multiple Post Types.
 
-5) Adding Fields
-Overview
+## Adding Fields
+### Overview
 
 Piklist fields can be added almost anywhere in WordPress by using a very simple function. In most cases, the code you use to create a field in one area of WordPress can be used in all other areas as well. So, for example, if you already created a field for a Post Type and you also wanted to use it for a User Profile page, you can just copy and paste it.
 
-Fields
+### Fields
 
 Now that we created our metabox, it’s time to add some fields.  Under the comment block add the following field code so your file looks like this:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+```
 <?php
 /*
 Title: My custom fields
@@ -157,36 +150,28 @@ piklist('field', array(
   ,'field' => 'field_one'
   ,'label' => 'First Field'
 ));
-The piklist(‘field’) function accepts tons of parameters. This example used just three:
-type: The type of field. In this case “text”.
-field: The name of the field. This is where the field data will be saved in the database.
-label: A label that displays next to the field.
+```
+
+The piklist('field') function accepts tons of parameters[TODO: ADD LINK]. This example used just three:
+
+**type**: The type of field. In this case “text”.
+
+**field**: The name of the field. This is where the field data will be saved in the database.
+
+**label**: A label that displays next to the field.
+
 
 Save the file. Go back to WordPress and add a new Post or a new Page. You will see a text field with the label “First Field” in your metabox.
 
-getting-started-first-field@2x
 
-Add more fields
+
+![Meta Box](/images/getting-started-first-field.png)
+
+### Add more fields
 
 Now go back to your file, copy the field code (not the comment block), and paste it under the first field.  Change the type to colorpicker, the field parameter to ‘field_two’, and the label to ‘Second field’. Your file should now look like this:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
+```
 <?php
 /*
 Title: My custom fields
@@ -204,35 +189,24 @@ piklist('field', array(
   ,'field' => 'field_two'
   ,'label' => 'Second Field'
 ));
+```
+
 Save the file. Go back to WordPress and add a new Post or Page. You now have two fields: a text box and a colorpicker.
-getting-started-second-field@2x
+
+![Meta Box](/images/getting-started-second-field.png)
+
 
 Click inside the field and a color palette will pop up. You just created a colorpicker field by copying your existing text field code and making a few small changes.
 
-6) Utilizing the same code everywhere.
+## Utilizing the same code everywhere.
 As mentioned in the Tutorial introduction, one of the biggest benefits of Piklist is that it’s a code-based framework. You can easily copy and paste your code from one object type to another.
 
-Copy and Paste programming
+### Copy and Paste programming
 In the “users” folder you created in step 3, create a new file. Now open the file in your “meta-boxes” folder, select everything and copy. Open the file in your users folder and paste. The file in your “users” folder should be an exact duplicate of the one that’s in your “meta-boxes” folder.
 
 Since Users aren’t a Post Type, delete the line in your comment block that says: Post Type: post, page. Your file should look like this:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
+```
 <?php
 /*
 Title: My custom fields
@@ -249,10 +223,13 @@ piklist('field', array(
   ,'field' => 'field_two'
   ,'label' => 'Second Field'
 ));
+```
+
 Press save. Open WordPress and edit any users profile. You will see this field under the section “My custom fields”.
-getting-started-user-profile@2x
+
+![Meta Box](/images/getting-started-user-profile.png)
 
 You just utilized the same code for a User Profile, that you wrote for a Post Type. This is a huge time saver and you will find this feature invaluable.
 
-7) Built-in Demos
-Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here.
+## Built-in Demos
+Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]
