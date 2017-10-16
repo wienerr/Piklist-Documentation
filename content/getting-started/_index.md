@@ -233,3 +233,6 @@ You just utilized the same code for a User Profile, that you wrote for a Post Ty
 
 ## Built-in Demos
 Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]
+
+## Video Overview
+The initial public unveiling of Piklist at WordCampNYC 2012.{{< youtube wmKjn-fDlvU >}}  
