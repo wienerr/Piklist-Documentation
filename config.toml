@@ -1,4 +1,4 @@
-baseURL = "https://piklist.github.io/"
+baseURL = "https://piklist.github.io/Piklist-Documentation/"
 languageCode = "en-us"
 title = "Piklist Documentation"
 theme = "hugo-theme-learn"
