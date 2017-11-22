@@ -3,7 +3,7 @@ title: "Piklist checker"
 chapter: true
 ---
 
-![Piklist Checker message](/images/piklist-checker.jpg)
+![Piklist Checker message](/Piklist-Documentation/images/piklist-checker.jpg)
 
 ## Description
 Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
