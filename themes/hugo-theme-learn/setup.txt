@@ -1,0 +1,4 @@
+To start:
+-navigate to this project folder
+-open terminal
+-type:  hugo server -D
