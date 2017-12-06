@@ -11,6 +11,43 @@
     
     
     <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/</guid>
+      <description> action  Input: string Returns: string  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/</guid>
+      <description> align  Input: string Returns: string  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/</guid>
+      <description> anchor_id  Input: string Returns: string  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/</guid>
+      <description> capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other
+ Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  </description>
+    </item>
+    
+    <item>
       <title>Built-in Demos</title>
       <link>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

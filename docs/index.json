@@ -14,6 +14,41 @@
 	"content": " Welcome to the Piklist Documentation Home of the documentation that\u0026rsquo;s so good it will make you cry.\n"
 },
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Leave this here so the file doesn\u0026rsquo;t show up in the menu\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " action  Input: string Returns: string  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " align  Input: string Returns: string  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " anchor_id  Input: string Returns: string  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  "
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/",
 	"title": "Built-in Demos",
 	"tags": [],

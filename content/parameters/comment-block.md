@@ -4,10 +4,4 @@ chapter: true
 ---
 ## Parameters
 
-{{< commentblock action >}}
-
-{{< commentblock align >}}
-
-{{< commentblock anchor_id >}}
-
-{{< commentblock capability >}}
+{{< show-comment-blocks >}}
