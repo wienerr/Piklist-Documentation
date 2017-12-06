@@ -1,6 +1,7 @@
 ---
 title: "Getting Started"
 chapter: true
+weight: 1
 ---
 ## Description
 To get the most out of this tutorial you should have a recent version of WordPress running and the [Piklist plugin](https://wordpress.org/plugins/piklist/) installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
