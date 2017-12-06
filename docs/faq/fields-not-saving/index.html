@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title> :: Piklist Documentation</title>
+    <title>Why aren’t my fields saving?  :: Piklist Documentation</title>
     
     
     <link href="/Piklist-Documentation/css/nucleus.css?1512586842" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Piklist-Documentation/">
+  <body class="" data-url="/Piklist-Documentation/faq/fields-not-saving/">
     <nav id="sidebar" class="">
 
 
@@ -116,7 +116,7 @@
   
     
     <li data-nav-id="/Piklist-Documentation/faq/" title="FAQs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -197,7 +197,7 @@
  
   
     
-      <li data-nav-id="/Piklist-Documentation/faq/fields-not-saving/" title="Why aren’t my fields saving? " class="dd-item ">
+      <li data-nav-id="/Piklist-Documentation/faq/fields-not-saving/" title="Why aren’t my fields saving? " class="dd-item active">
         <a href="/Piklist-Documentation/faq/fields-not-saving/">
         Why aren’t my fields saving? 
         
@@ -417,24 +417,73 @@
         <div id="overlay"></div>
         <div class="padding highlightable sticky-parent">
               
+              <div class="sticky-spacer">
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Piklist-Documentation/'></a> > <a href='/Piklist-Documentation/faq/'>FAQs</a> > Why aren’t my fields saving? 
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
 
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
 
         
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="welcome-to-the-piklist-documentation">Welcome to the Piklist Documentation</h1>
 
-<p>Home of the documentation that&rsquo;s so good it will make you cry.</p>
+<h2 id="description">Description</h2>
+
+<p>The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.</p>
+
+<p>If you are registering a post type, make sure <code>custom-fields</code> is not in the “supports” array.</p>
+
+<p>To remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use <a href="https://developer.wordpress.org/reference/functions/remove_post_type_support/"><code>remove_post_type_support()</code></a>.</p>
+
+<p>This code should go in your theme&rsquo;s <code>functions.php</code> file, or your plugin file.</p>
+
+<script src="//gist.github.com/sbruner/fb4d015d8c7444ceefb8e4e5057f2ccf.js"></script>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+
+        
+            </div> 
         
         </div> 
       </div>
@@ -483,6 +532,94 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -555,86 +692,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -693,8 +750,10 @@
 
 
         
+            <a class="nav nav-prev" href="/Piklist-Documentation/faq/what-is-piklist/" title="What is Piklist?"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/Piklist-Documentation/admin-notices/" title="Creating an Admin Notice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/Piklist-Documentation/getting-started/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -724,3 +783,4 @@
 
   </body>
 </html>
+

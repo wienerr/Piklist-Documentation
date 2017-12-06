@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title> :: Piklist Documentation</title>
+    <title>Creating an Admin Notice :: Piklist Documentation</title>
     
     
     <link href="/Piklist-Documentation/css/nucleus.css?1512586842" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Piklist-Documentation/">
+  <body class="" data-url="/Piklist-Documentation/admin-notices/">
     <nav id="sidebar" class="">
 
 
@@ -94,8 +94,8 @@
   
     
     <li data-nav-id="/Piklist-Documentation/admin-notices/" title="Creating an Admin Notice" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/Piklist-Documentation/admin-notices/">
@@ -417,24 +417,74 @@
         <div id="overlay"></div>
         <div class="padding highlightable sticky-parent">
               
+              <div class="sticky-spacer">
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/Piklist-Documentation/'></a> > Creating an Admin Notice
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
 
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
 
         
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="welcome-to-the-piklist-documentation">Welcome to the Piklist Documentation</h1>
 
-<p>Home of the documentation that&rsquo;s so good it will make you cry.</p>
+<h2 id="description">Description</h2>
+
+<p>Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.</p>
+
+<p>Decide whether you are going to include your notice in a plugin or theme.
+Create a <code>notices/</code> folder in your <code>parts/</code> folder (e.g. <code>/parts/notices/</code>).
+Now, create a php file in your notices folder. This file will hold your notice code.
+At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.</p>
+
+<pre><code>&lt;?php
+/*
+Notice Type: updated
+Dismiss: true
+*/
+?&gt;
+&lt;p&gt;This is my notice&lt;/p&gt;
+</code></pre>
+
+<p>You can find a full list of available parameters for notices here.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+        
+            </div> 
         
         </div> 
       </div>
@@ -464,8 +514,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -483,34 +531,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -519,73 +541,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -683,6 +638,102 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -693,8 +744,10 @@
 
 
         
+            <a class="nav nav-prev" href="/Piklist-Documentation/" title=""> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/Piklist-Documentation/admin-notices/" title="Creating an Admin Notice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/Piklist-Documentation/faq/" title="FAQs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

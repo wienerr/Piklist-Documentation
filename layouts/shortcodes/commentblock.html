@@ -1,0 +1,2 @@
+{{$file := (print "comment-block-parameters/" ( .Get 0 ) ".md") }}
+{{- $file  | readFile | markdownify -}}

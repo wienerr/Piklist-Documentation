@@ -10,5 +10,109 @@
 	<atom:link href="https://piklist.github.io/Piklist-Documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Built-in Demos</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</guid>
+      <description>Description Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
+ Install Piklist like you would any other Plugin.</description>
+    </item>
+    
+    <item>
+      <title>Comment Block Parameters</title>
+      <link>https://piklist.github.io/Piklist-Documentation/parameters/comment-block/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/parameters/comment-block/</guid>
+      <description> Parameters action  Input: string Returns: string  align  Input: string Returns: string  anchor_id  Input: string Returns: string  capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other
+ Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  </description>
+    </item>
+    
+    <item>
+      <title>Folder Structure</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</guid>
+      <description>Description When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.
+Piklist has a predefined folder structure which it scans for your code.
+Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.</description>
+    </item>
+    
+    <item>
+      <title>How do I include Piklist in my plugin or theme?</title>
+      <link>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</guid>
+      <description>Description While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.
+If the user does install Piklist as a separate plugin, AND your plugin/theme, it invites multiple conflicts, including different versions of Piklist.</description>
+    </item>
+    
+    <item>
+      <title>Parse error: syntax error, unexpected T_FUNCTION</title>
+      <link>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</guid>
+      <description>Description If you’re getting this error, you are running an older version of PHP on your server.
+Piklist, like WordPress, recommends PHP v5.6 or higher.
+Please contact your host and ask them to upgrade you.</description>
+    </item>
+    
+    <item>
+      <title>Piklist checker</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</guid>
+      <description>Description Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
+If the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.</description>
+    </item>
+    
+    <item>
+      <title>Piklist enable your theme</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</guid>
+      <description>Description Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.
+ First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.
+ Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.</description>
+    </item>
+    
+    <item>
+      <title>What is Piklist?</title>
+      <link>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</guid>
+      <description>Description Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.
+Most people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist.</description>
+    </item>
+    
+    <item>
+      <title>Why aren’t my fields saving? </title>
+      <link>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</guid>
+      <description>Description The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
+If you are registering a post type, make sure custom-fields is not in the “supports” array.
+To remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().</description>
+    </item>
+    
+    <item>
+      <title>Writing a plugin for Piklist</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</guid>
+      <description>Description Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
+Registering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</description>
+    </item>
+    
   </channel>
 </rss>

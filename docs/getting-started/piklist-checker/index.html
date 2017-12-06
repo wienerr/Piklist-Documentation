@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title> :: Piklist Documentation</title>
+    <title>Piklist checker :: Piklist Documentation</title>
     
     
     <link href="/Piklist-Documentation/css/nucleus.css?1512586842" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Piklist-Documentation/">
+  <body class="" data-url="/Piklist-Documentation/getting-started/piklist-checker/">
     <nav id="sidebar" class="">
 
 
@@ -224,7 +224,7 @@
   
     
     <li data-nav-id="/Piklist-Documentation/getting-started/" title="Getting Started" class="dd-item 
-        
+        parent
         
         
         ">
@@ -286,7 +286,7 @@
  
   
     
-      <li data-nav-id="/Piklist-Documentation/getting-started/piklist-checker/" title="Piklist checker" class="dd-item ">
+      <li data-nav-id="/Piklist-Documentation/getting-started/piklist-checker/" title="Piklist checker" class="dd-item active">
         <a href="/Piklist-Documentation/getting-started/piklist-checker/">
         Piklist checker
         
@@ -417,24 +417,89 @@
         <div id="overlay"></div>
         <div class="padding highlightable sticky-parent">
               
+              <div class="sticky-spacer">
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Piklist-Documentation/'></a> > <a href='/Piklist-Documentation/getting-started/'>Getting Started</a> > Piklist checker
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
 
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
 
         
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="welcome-to-the-piklist-documentation">Welcome to the Piklist Documentation</h1>
 
-<p>Home of the documentation that&rsquo;s so good it will make you cry.</p>
+<p><img src="/Piklist-Documentation/images/piklist-checker.jpg" alt="Piklist Checker message" /></p>
+
+<h2 id="description">Description</h2>
+
+<p>Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.</p>
+
+<p>If the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Piklist checker is designed to be easy to include in your plugin.</p>
+
+<p>Include the Piklist Checker file in your Piklist plugin or theme. You can always get the most up-to-date version of Piklist Checker at <a href="http://plugins.svn.wordpress.org/piklist/assets/class-piklist-checker.php">WordPress.org</a>.</p>
+
+<h3 id="plugin">Plugin</h3>
+
+<p>Add the following to your plugin. Notice the checker code is wrapped in a function that hooks to the <code>init</code> action.
+<script src="//gist.github.com/sbruner/bd657c0fbe5d15900f93.js"></script></p>
+
+<h3 id="theme">Theme</h3>
+
+<p>If you’re using Piklist in your theme, this code should go in the <code>functions.php</code> file. Notice the added parameter after <code>__FILE__</code>:
+<script src="//gist.github.com/sbruner/d0bf54bca71f76e1636b.js"></script></p>
+
+<h3 id="example">Example</h3>
+
+<p>You can find an example of implementing the Piklist Checker in the <a href="https://wordpress.org/plugins/wp-helpers/">WordPress Helpers plugin</a>.</p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+
+        
+            </div> 
         
         </div> 
       </div>
@@ -563,6 +628,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -576,37 +642,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -640,6 +677,42 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -693,8 +766,10 @@
 
 
         
+            <a class="nav nav-prev" href="/Piklist-Documentation/getting-started/folder-structure/" title="Folder Structure"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/Piklist-Documentation/admin-notices/" title="Creating an Admin Notice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/Piklist-Documentation/getting-started/piklist-enable-your-theme/" title="Piklist enable your theme" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -724,3 +799,4 @@
 
   </body>
 </html>
+

@@ -7,8 +7,29 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/parameters/comment-block/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/admin-notices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</loc>
   </url>
   
   <url>
@@ -16,8 +37,40 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</loc>
   </url>
   
 </urlset>

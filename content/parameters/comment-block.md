@@ -4,7 +4,10 @@ chapter: true
 ---
 ## Parameters
 
+{{< commentblock action >}}
 
-# [action](#action)
-* Input:  string
-* Returns:  string
+{{< commentblock align >}}
+
+{{< commentblock anchor_id >}}
+
+{{< commentblock capability >}}

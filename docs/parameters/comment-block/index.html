@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title> :: Piklist Documentation</title>
+    <title>Comment Block Parameters :: Piklist Documentation</title>
     
     
     <link href="/Piklist-Documentation/css/nucleus.css?1512586842" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/Piklist-Documentation/">
+  <body class="" data-url="/Piklist-Documentation/parameters/comment-block/">
     <nav id="sidebar" class="">
 
 
@@ -351,7 +351,7 @@
   
     
     <li data-nav-id="/Piklist-Documentation/parameters/" title="Parameters" class="dd-item 
-        
+        parent
         
         
         ">
@@ -375,7 +375,7 @@
  
   
     
-      <li data-nav-id="/Piklist-Documentation/parameters/comment-block/" title="Comment Block Parameters" class="dd-item ">
+      <li data-nav-id="/Piklist-Documentation/parameters/comment-block/" title="Comment Block Parameters" class="dd-item active">
         <a href="/Piklist-Documentation/parameters/comment-block/">
         Comment Block Parameters
         
@@ -417,24 +417,103 @@
         <div id="overlay"></div>
         <div class="padding highlightable sticky-parent">
               
+              <div class="sticky-spacer">
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/Piklist-Documentation/'></a> > <a href='/Piklist-Documentation/parameters/'>Parameters</a> > Comment Block Parameters
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
 
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
 
         
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="welcome-to-the-piklist-documentation">Welcome to the Piklist Documentation</h1>
 
-<p>Home of the documentation that&rsquo;s so good it will make you cry.</p>
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="action-action"><a href="#action">action</a></h3>
+
+<ul>
+<li>Input:  string</li>
+<li>Returns:  string</li>
+</ul>
+
+
+<h3 id="align-align"><a href="#align">align</a></h3>
+
+<ul>
+<li>Input:  string</li>
+<li>Returns:  string</li>
+</ul>
+
+
+<h3 id="anchor-id-anchor-id"><a href="#anchor_id">anchor_id</a></h3>
+
+<ul>
+<li>Input:  string</li>
+<li>Returns:  string</li>
+</ul>
+
+
+<h3 id="capability-capability"><a href="#capability">capability</a></h3>
+
+<p>User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other</p>
+
+<ul>
+<li>Input:  comma-delimited</li>
+<li>Returns: array</li>
+<li>Default: Whatever is set in register post type</li>
+<li>Examples:</li>
+</ul>
+
+<pre><code>Capability: edit_posts
+Capability: edit_posts, edit_others_posts
+</code></pre>
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+
+        
+            </div> 
         
         </div> 
       </div>
@@ -659,6 +738,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -672,6 +752,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -692,6 +773,8 @@
         
 
 
+        
+            <a class="nav nav-prev" href="/Piklist-Documentation/parameters/" title="Parameters"> <i class="fa fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="/Piklist-Documentation/admin-notices/" title="Creating an Admin Notice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -724,3 +807,4 @@
 
   </body>
 </html>
+
