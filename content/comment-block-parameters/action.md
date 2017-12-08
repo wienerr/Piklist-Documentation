@@ -1,4 +1,4 @@
-### [action](#action)
+## Action
 
 * Input:  string
 * Returns:  string
