@@ -9,5 +9,5 @@ Piklist Parts: notices
 
 Example:
 ```
-new: false
+Notice ID: plugin-intro
 ```

@@ -339,7 +339,111 @@ new: false  </description>
       <description> Notice ID ID of an admin notice.
 Piklist Parts: notices
  Input: string Returns: string  Example:
-new: false  </description>
+Notice ID: plugin-intro  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/</guid>
+      <description> Notice Type ID of an admin notice.
+Piklist Parts: notices
+ Input: string Returns: string Values: info, error, warning  Example:
+Notice Type: info  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/</guid>
+      <description>Order The sort order of this group of fields. Allows for creating an absolute order of field groups. NOTE: If the &amp;ldquo;lock&amp;rdquo; attribute is not set, or set to &amp;ldquo;false&amp;rdquo;, then the order you set is the default.
+For meta-boxes, this is within the context and priority. The user can still drag and drop the meta-boxes and take them out of your designated order.
+Piklist Parts: meta-boxes, terms, users, workflows</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/</guid>
+      <description> Page What admin page will display this data. NOTE: To display on a settings page, use the menu_slug.
+Piklist Parts: meta-boxes, terms, users, workflows, notices
+ Input: comma-delimited Returns: array  Examples:
+Page: post.php, post-new.php, post-edit.php Page: profile.php, user-edit.php Page: edit-tags.php, term.php Page: my_settings_menu_slug  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/</guid>
+      <description> Pointer ID ID of a pointer
+Piklist Parts: pointers
+ Input: string Returns: string  Example:
+Pointer ID: plugin-settings  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/</guid>
+      <description> Position The position of your workflow tabs
+Piklist Parts: workflows
+ Input: string Returns: string Values: header, body, title, editor  Example:
+Position: body  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/</guid>
+      <description> Post Type The Post Type or a comma-delimited list of Post Types that will display this meta-box.
+Piklist Parts: meta-boxes
+ Input: comma-delimited Returns: array Values: any registered post type  Example:
+Post Type: post, page, custom_post_type  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/</guid>
+      <description> Preview Show preview in the admin.
+ Input: boolean  Example:
+Preview: false  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/</guid>
+      <description> Priority The priority within the context where the boxes should show. Works with the context parameter.
+Piklist Parts: meta-boxes
+ Input: string Returns: string Values: high, core, default, low (Any valid value from add_meta_box()) Default: default  Example:
+Priority: core  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/</guid>
+      <description> Redirect Piklist Parts: forms
+ Input: string Returns: string  </description>
     </item>
     
     <item>

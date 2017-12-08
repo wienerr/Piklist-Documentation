@@ -1,4 +1,8 @@
 To start:
 -open terminal
 -navigate to this project folder
--type:  hugo server -D
+-run:  hugo server -D
+
+When finished:
+-ctrl - C to exit
+-run:  hugo
