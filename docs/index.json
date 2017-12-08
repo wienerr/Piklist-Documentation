@@ -25,28 +25,217 @@
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " action  Input: string Returns: string  "
+	"content": " Action  Input: string Returns: string  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/",
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " align  Input: string Returns: string  "
+	"content": " Align How the pointer should be aligned on this edge, relative to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: top, bottom, left, right, middle  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/",
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " anchor_id  Input: string Returns: string  "
+	"content": " Anchor ID  Input: string Returns: string  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/",
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  "
+	"content": " Capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\nPiklist Parts: all\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/class/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Class  Input: comma-delimited Returns: comma-delimited  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/clear/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Clear When set to true, all meta-boxes that have been registered by WordPress or other plugins will be removed. This allows you to build your Workflow views exactly the way you want them.\nPiklist Parts: workflows\n Input: boolean Default: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/collapse/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Collapse If set to true, this meta-box will be collapsed by default.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/context/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Context The part of the page where you want this group of fields to show.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: normal, advanced, side (Any valid value from add_meta_box()) Default: advanced  Example:\ncontext: normal  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/default/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Default  Input: boolean Returns: boolean  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/description/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Description A description of this section. This field doesn’t do anything except add a description for you.\nPiklist Parts: all\n Input: string Returns: string  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/disable/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Disable  Input: boolean Returns: boolean  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/edge/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Ddge Which edge should be adjacent to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: left, right, top, bottom  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/editor/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Editor Add a button to the tinymce editor that will run your shortcode. The icon used is set by the icon parameter\nPiklist Parts: shortcodes\n Input: boolean Default: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/extend_id/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Extend ID  Input: string Returns: string  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/filter/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Filter  Input: boolean Returns: boolean  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Flow  Input: comma-delimited Returns: array  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow_page/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Flow page  Input: comma-delimited Returns: array  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/header/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Header  Input: boolean Returns: boolean  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/height/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Height  Input: numeric Returns: numeric  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/icon/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Icon Name of the dashicon to represent this shortcode.\nPiklist Parts: shortcodes\n Input: string. Any valid Dashicon  Example:\nicon: dashicons-editor-quote  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/id/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " ID Display this group of fields for this object ID.\nPiklist Parts: meta-boxes, terms, users\n Input: comma-delimited Returns: array  Example:\nid: 2 id: 2, 4  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/inline/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Inline Display this shortcode inline.\nPiklist Parts: shortcodes\n Input: boolean Default: false (block)  Example:\ninline: true  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/lock/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Lock Locking the meta-box stops the user from being able to drag it around the edit screen.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Example:\nlock: true  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/logged_in/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Logged in Whether to show to logged in users or not.\nPiklist Parts: all\n Input: boolean Returns: boolean Default: true  Example:\nlogged_in: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/message/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Message The message to show after a successful submission of a form.\nPiklist Parts: forms\n Input: string Returns: string  Example:\nmessage: Thank you for your message. We will get back to you shortly.  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/meta_box/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Metabox If set to false, the default box box \u0026ldquo;look\u0026rdquo; will be removed.\nPiklist Parts: forms\n Input: boolean Returns: boolean Default: true  Example:\nmeta_box: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/method/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Method The HTTP method used for this form.\nPiklist Parts: forms\n Input: string Returns: string Values: get, post Default: Post  Example:\nmethod: get  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/name/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Name The name of the part.\nPiklist Parts: all\n Input: string  Example:\nname: My Shortcode name: Theme Options  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/network/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Network Show this item in the network settings of a multisite install.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean  Example:\nnetwork: true  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/new/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " New Show this metabox when creating a new post.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean Default: true  Example:\nnew: false  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_id/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Notice ID ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string  Example:\nnew: false  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/",
@@ -67,7 +256,7 @@
 	"title": "Comment Block Parameters",
 	"tags": [],
 	"description": "",
-	"content": " Parameters action  Input: string Returns: string  align  Input: string Returns: string  anchor_id  Input: string Returns: string  capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  "
+	"content": "This is a full list of available parameters for Piklist comment blocks. Not all parameters work with all Piklist parts (parts/ folders).\nAction  Input: string Returns: string  Align How the pointer should be aligned on this edge, relative to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: top, bottom, left, right, middle  Anchor ID  Input: string Returns: string  Capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\nPiklist Parts: all\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  Class  Input: comma-delimited Returns: comma-delimited  Clear When set to true, all meta-boxes that have been registered by WordPress or other plugins will be removed. This allows you to build your Workflow views exactly the way you want them.\nPiklist Parts: workflows\n Input: boolean Default: false  Collapse If set to true, this meta-box will be collapsed by default.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Context The part of the page where you want this group of fields to show.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: normal, advanced, side (Any valid value from add_meta_box()) Default: advanced  Example:\ncontext: normal  Default  Input: boolean Returns: boolean  Description A description of this section. This field doesn’t do anything except add a description for you.\nPiklist Parts: all\n Input: string Returns: string  Disable  Input: boolean Returns: boolean  Ddge Which edge should be adjacent to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: left, right, top, bottom  Editor Add a button to the tinymce editor that will run your shortcode. The icon used is set by the icon parameter\nPiklist Parts: shortcodes\n Input: boolean Default: false  Extend ID  Input: string Returns: string  Filter  Input: boolean Returns: boolean  Flow  Input: comma-delimited Returns: array  Flow page  Input: comma-delimited Returns: array  Header  Input: boolean Returns: boolean  Height  Input: numeric Returns: numeric  Icon Name of the dashicon to represent this shortcode.\nPiklist Parts: shortcodes\n Input: string. Any valid Dashicon  Example:\nicon: dashicons-editor-quote  ID Display this group of fields for this object ID.\nPiklist Parts: meta-boxes, terms, users\n Input: comma-delimited Returns: array  Example:\nid: 2 id: 2, 4  Inline Display this shortcode inline.\nPiklist Parts: shortcodes\n Input: boolean Default: false (block)  Example:\ninline: true  Lock Locking the meta-box stops the user from being able to drag it around the edit screen.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Example:\nlock: true  Logged in Whether to show to logged in users or not.\nPiklist Parts: all\n Input: boolean Returns: boolean Default: true  Example:\nlogged_in: false  Message The message to show after a successful submission of a form.\nPiklist Parts: forms\n Input: string Returns: string  Example:\nmessage: Thank you for your message. We will get back to you shortly.  Metabox If set to false, the default box box \u0026ldquo;look\u0026rdquo; will be removed.\nPiklist Parts: forms\n Input: boolean Returns: boolean Default: true  Example:\nmeta_box: false  Method The HTTP method used for this form.\nPiklist Parts: forms\n Input: string Returns: string Values: get, post Default: Post  Example:\nmethod: get  Name The name of the part.\nPiklist Parts: all\n Input: string  Example:\nname: My Shortcode name: Theme Options  Network Show this item in the network settings of a multisite install.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean  Example:\nnetwork: true  New Show this metabox when creating a new post.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean Default: true  Example:\nnew: false  Notice ID ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string  Example:\nnew: false  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/admin-notices/",
