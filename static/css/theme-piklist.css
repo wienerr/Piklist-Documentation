@@ -11,3 +11,8 @@
 #logo-image {
   width: 75%;
 }
+
+#shortcuts h3 {
+  margin: 10px 15px;
+  border-top: solid #aaa 1px;
+}

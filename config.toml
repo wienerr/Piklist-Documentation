@@ -5,6 +5,30 @@ theme = "hugo-theme-learn"
 publishDir = "docs"
 canonifyURLs = true
 
+[[menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Piklist Repo"
+identifier = "piklistrepo"
+url = "https://github.com/piklist/piklist"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Documentation Repo"
+identifier = "docsrepo"
+url = "https://github.com/piklist/piklist-documentation"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-wordpress'></i> Piklist on WordPress.org"
+identifier = "wordpress"
+url = "https://wordpress.org/plugins/piklist/"
+weight = 12
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-external-link'></i> Piklist.com"
+identifier = "piklistwebsite"
+url = "https://piklist.com"
+weight = 13
+
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
   # Useful to give opportunity to people to create merge request for your doc.
@@ -24,13 +48,14 @@ canonifyURLs = true
   # Set this to true to disable copy-to-clipboard button for inline code.
   disableInlineCopyToClipBoard = false
   # A title for shortcuts in menu is set by default. Set this to true to disable it.
-  disableShortcutsTitle = false
+  disableShortcutsTitle = true
   # When using mulitlingual website, disable the switch language button.
   disableLanguageSwitchingButton = false
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "piklist"
+
 
 [outputs]
   home = [ "HTML", "RSS", "JSON"]
