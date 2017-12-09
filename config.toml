@@ -55,6 +55,7 @@ weight = 13
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "piklist"
+  docsrepo = "https://github.com/piklist/piklist-documentation"
 
 
 [outputs]

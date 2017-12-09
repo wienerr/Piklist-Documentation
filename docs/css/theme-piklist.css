@@ -16,3 +16,26 @@
   margin: 10px 15px;
   border-top: solid #aaa 1px;
 }
+
+/* Contributor Block */
+#contribute {
+  display: none;
+  border-top: solid #EEE 2px;
+}
+
+#contribute.display {
+  display: block;
+}
+
+#contribute h2.small {
+  font-size: 1.2rem;
+}
+
+#contribute p.small {
+  font-size: 0.9rem;
+}
+
+#contribute a.button {
+  background: #e32e19;
+  box-shadow: 0 3px 0 #71170c;
+}
