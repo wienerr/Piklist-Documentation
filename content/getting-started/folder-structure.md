@@ -1,8 +1,7 @@
 ---
 title: "Folder Structure"
-chapter: true
 ---
-## Description
+    
 When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the ``/widgets/`` folder.
 
 Piklist has a predefined folder structure which it scans for your code.

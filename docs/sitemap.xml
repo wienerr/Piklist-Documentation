@@ -7,227 +7,311 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/text/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/customize/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/group/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/action/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/align/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/anchor_id/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/class/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/capability/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/clear/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/class/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/collapse/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/clear/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/context/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/collapse/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/default/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/context/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/description/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/default/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/disable/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/description/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/edge/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/disable/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/editor/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/edge/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/extend_id/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/editor/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/filter/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/extend_id/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/filter/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow_page/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/header/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow_page/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/height/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/header/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/icon/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/height/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/id/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/icon/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/inline/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/id/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/lock/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/inline/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/logged_in/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/lock/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/message/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/logged_in/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/meta_box/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/message/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/method/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/meta_box/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/name/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/method/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/network/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/name/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/new/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/network/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_id/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/new/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_id/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_type/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/order/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/page/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/pointer_id/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/position/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/post_type/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/preview/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/priority/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/role/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/redirect/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/setting/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/role/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/shortcode/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/setting/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sidebar/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/shortcode/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/standalone/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sidebar/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/status/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/standalone/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sub_tab/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/status/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tab/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sub_tab/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tags/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tab/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/taxonomy/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tags/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/template/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/taxonomy/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/title/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/template/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/type/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/title/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/width/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/type/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/width/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/email/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/file_name/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/html_class/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/text_field/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/title/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/user/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_filter_kses/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses_post/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/customize/admin-notices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/customize/admin-pages/</loc>
   </url>
   
   <url>
@@ -244,12 +328,11 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/admin-notices/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
-    <priority>0</priority>
+    <loc>https://piklist.github.io/Piklist-Documentation/customize/dashboard-widgets/</loc>
   </url>
   
   <url>
@@ -261,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/parameters/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/</loc>
   </url>
   
   <url>
@@ -282,7 +365,7 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/</loc>
   </url>
   
   <url>

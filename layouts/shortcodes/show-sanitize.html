@@ -1,0 +1,7 @@
+{{- $path := "content/partials/sanitize" -}}
+{{- $files := readDir $path -}}
+{{- range $files }}
+  {{- if ne "_index.md" .Name }}
+    {{- print "content/partials/sanitize/" .Name | readFile | markdownify }}
+  {{- end }}
+{{- end }}

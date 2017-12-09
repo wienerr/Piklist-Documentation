@@ -4,7 +4,63 @@
 	"title": "Getting Started",
 	"tags": [],
 	"description": "",
-	"content": " Description To get the most out of this tutorial you should have a recent version of WordPress running and the Piklist plugin installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.\nWhat is Piklist? At it’s very basic level, Piklist is a rapid development framework for WordPress. When using Piklist to build your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code.\nYou install and activate Piklist like any other WordPress plugin. It is absolutely free. Built-in demos are included, so you can see some of the features of Piklist in action.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nAbout this Tutorial Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide [TODO: ADD LINK] when you’ve finished this tutorial.\nLet’s get started!\nYou can easily create your project in a new or existing plugin, or your theme. In this tutorial we’ll create the project in your theme.\nPiklist Folder Structure To help keep your code organized, Piklist uses a pre-defined folder/file structure that makes it easy for you to add functionality to your site.\nPiklist utilizes a folder for each major section of WordPress. You create these folders in your theme or plugin and place the appropriate files in them. Piklist will automatically load these files correctly.\nFolder Structure for your theme If you want to use your theme for your Piklist files, open your theme’s main folder and add a folder called “piklist”. Inside that folder add another called “parts” and then add any Piklist folders you will need. Your folder structure should look like this:\n/theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /help /media /meta-boxes /notices /pointers /settings /terms /updates /users /widgets /workflows  Folder Structure for your plugin You can also create a Piklist plugin if you want. The folder structure is slightly different than the one for a theme. Open your plugin’s main folder and add a “parts” folder. In that folder add any folders you will need. Your folder structure should look like this:\n/plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /help /media /meta-boxes /notices /pointers /settings /terms /updates /users /widgets /workflows  When creating a plugin you need let Piklist know this plugin depends on it. In the comment block of your main plugin file, you need to add: Plugin Type: Piklist. So your comment block should look something like this:\n/* Plugin Name: Name Of The Plugin Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates Description: A brief description of the Plugin. Version: The Plugin's Version Number, e.g.: 1.0 Author: Name Of The Plugin Author Author URI: http://URI_Of_The_Plugin_Author Plugin Type: Piklist */  A more detailed doc on writing Piklist plugins can be found here \u0026gt; [TODO: ADD LINK]\nGrouping fields Overview Now that we have our folder structure set up, it’s time to add some files. Each file you add to a parts folder will contain your fields. These files allow you to group fields together and you can also have multiple files in each parts folder. For example, each file in the “meta-boxes” folder will create a metabox for a Post Type. Each file in the “users” folder will create a user field section. Each file in the “widgets” folder will create a Widget (yes, you can easily create widgets with Piklist). [TODO: ADD LINK]\nComment blocks Configuration options for each field group are defined in the comment block at the top of each file. These comment blocks are similar to what WordPress uses for plugin headers. They allow you to easily configure a group of fields with no hooks or filters.\nCreate a new file in your “meta-boxes” folder called my-fields.php. At the top of the file, add this comment block:\n\u0026lt;?php /* Title: My custom fields Post Type: post */ ?\u0026gt;  In this comment block you just defined two configuration parameters: Title: The title of your metabox. Post Type: Which post type(s) should display this metabox.\nSave the file. Now open WordPress and go to “Add new Post”. You should see an empty metabox with the title “My custom fields”. You just created your first metabox with Piklist!\nConfiguration Options The comment block at the top of each parts file defines configuration options for a field group. Each field type (i.e. metaboxes, settings, widgets, etc) have different configuration options. Some configuration parameters can take multiple values. For example, the “Post Type” parameter can accept multiple Post Types separated by commas.\nChange the “Post Type” parameter to this: Post Type: post, page so your code will look like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ ?\u0026gt;  Save the file. Open WordPress and add a new Page. You will see the same empty metabox that you added to Posts. Using this method you can easily use the same field code to multiple Post Types.\nAdding Fields Overview Piklist fields can be added almost anywhere in WordPress by using a very simple function. In most cases, the code you use to create a field in one area of WordPress can be used in all other areas as well. So, for example, if you already created a field for a Post Type and you also wanted to use it for a User Profile page, you can just copy and paste it.\nFields Now that we created our metabox, it’s time to add some fields. Under the comment block add the following field code so your file looks like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' ));  The piklist(\u0026lsquo;field\u0026rsquo;) function accepts tons of parameters[TODO: ADD LINK]. This example used just three:\ntype: The type of field. In this case “text”.\nfield: The name of the field. This is where the field data will be saved in the database.\nlabel: A label that displays next to the field.\nSave the file. Go back to WordPress and add a new Post or a new Page. You will see a text field with the label “First Field” in your metabox.\nAdd more fields Now go back to your file, copy the field code (not the comment block), and paste it under the first field. Change the type to colorpicker, the field parameter to ‘field_two’, and the label to ‘Second field’. Your file should now look like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'field_two' ,'label' =\u0026gt; 'Second Field' ));  Save the file. Go back to WordPress and add a new Post or Page. You now have two fields: a text box and a colorpicker.\nClick inside the field and a color palette will pop up. You just created a colorpicker field by copying your existing text field code and making a few small changes.\nUtilizing the same code everywhere. As mentioned in the Tutorial introduction, one of the biggest benefits of Piklist is that it’s a code-based framework. You can easily copy and paste your code from one object type to another.\nCopy and Paste programming In the “users” folder you created in step 3, create a new file. Now open the file in your “meta-boxes” folder, select everything and copy. Open the file in your users folder and paste. The file in your “users” folder should be an exact duplicate of the one that’s in your “meta-boxes” folder.\nSince Users aren’t a Post Type, delete the line in your comment block that says: Post Type: post, page. Your file should look like this:\n\u0026lt;?php /* Title: My custom fields */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'field_two' ,'label' =\u0026gt; 'Second Field' ));  Press save. Open WordPress and edit any users profile. You will see this field under the section “My custom fields”.\nYou just utilized the same code for a User Profile, that you wrote for a Post Type. This is a huge time saver and you will find this feature invaluable.\nBuilt-in Demos Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]\nVideo Overview The initial public unveiling of Piklist at WordCampNYC 2012.   "
+	"content": " Getting Started with Piklist To get the most out of this tutorial you should have a recent version of WordPress running and the Piklist plugin installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.\nWhat is Piklist? At it’s very basic level, Piklist is a rapid development framework for WordPress. When using Piklist to build your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code.\nYou install and activate Piklist like any other WordPress plugin. It is absolutely free. Built-in demos are included, so you can see some of the features of Piklist in action.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nAbout this Tutorial Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide when you’ve finished this tutorial.\nLet’s get started!\nYou can easily create your project in a new or existing plugin, or your theme. In this tutorial we’ll create the project in your theme.\nPiklist Folder Structure To help keep your code organized, Piklist uses a pre-defined folder/file structure that makes it easy for you to add functionality to your site.\nPiklist utilizes a folder for each major section of WordPress. You create these folders in your theme or plugin and place the appropriate files in them. Piklist will automatically load these files correctly.\nFolder Structure for your theme If you want to use your theme for your Piklist files, open your theme’s main folder and add a folder called “piklist”. Inside that folder add another called “parts” and then add any Piklist folders you will need. Your folder structure should look like this:\n/theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /help /media /meta-boxes /notices /pointers /settings /terms /updates /users /widgets /workflows  Folder Structure for your plugin You can also create a Piklist plugin if you want. The folder structure is slightly different than the one for a theme. Open your plugin’s main folder and add a “parts” folder. In that folder add any folders you will need. Your folder structure should look like this:\n/plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /help /media /meta-boxes /notices /pointers /settings /terms /updates /users /widgets /workflows  When creating a plugin you need let Piklist know this plugin depends on it. In the comment block of your main plugin file, you need to add: Plugin Type: Piklist. So your comment block should look something like this:\n/* Plugin Name: Name Of The Plugin Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates Description: A brief description of the Plugin. Version: The Plugin's Version Number, e.g.: 1.0 Author: Name Of The Plugin Author Author URI: http://URI_Of_The_Plugin_Author Plugin Type: Piklist */  A more detailed doc on writing Piklist plugins can be found here \u0026gt; [TODO: ADD LINK]\nGrouping fields Overview Now that we have our folder structure set up, it’s time to add some files. Each file you add to a parts folder will contain your fields. These files allow you to group fields together and you can also have multiple files in each parts folder. For example, each file in the “meta-boxes” folder will create a metabox for a Post Type. Each file in the “users” folder will create a user field section. Each file in the “widgets” folder will create a Widget (yes, you can easily create widgets with Piklist). [TODO: ADD LINK]\nComment blocks Configuration options for each field group are defined in the comment block at the top of each file. These comment blocks are similar to what WordPress uses for plugin headers. They allow you to easily configure a group of fields with no hooks or filters.\nA full list of Comment Block parameters can be found here.\nCreate a new file in your “meta-boxes” folder called my-fields.php. At the top of the file, add this comment block:\n\u0026lt;?php /* Title: My custom fields Post Type: post */ ?\u0026gt;  In this comment block you just defined two configuration parameters: Title: The title of your metabox. Post Type: Which post type(s) should display this metabox.\nSave the file. Now open WordPress and go to “Add new Post”. You should see an empty metabox with the title “My custom fields”. You just created your first metabox with Piklist!\nConfiguration Options The comment block at the top of each parts file defines configuration options for a field group. Each field type (i.e. metaboxes, settings, widgets, etc) have different configuration options. Some configuration parameters can take multiple values. For example, the “Post Type” parameter can accept multiple Post Types separated by commas.\nChange the “Post Type” parameter to this: Post Type: post, page so your code will look like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ ?\u0026gt;  Save the file. Open WordPress and add a new Page. You will see the same empty metabox that you added to Posts. Using this method you can easily use the same field code to multiple Post Types.\nAdding Fields Overview Piklist fields can be added almost anywhere in WordPress by using a very simple function. In most cases, the code you use to create a field in one area of WordPress can be used in all other areas as well. So, for example, if you already created a field for a Post Type and you also wanted to use it for a User Profile page, you can just copy and paste it.\nFields Now that we created our metabox, it’s time to add some fields. Under the comment block add the following field code so your file looks like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' ));  The piklist(\u0026lsquo;field\u0026rsquo;) function accepts tons of parameters[TODO: ADD LINK]. This example used just three:\ntype: The type of field. In this case “text”.\nfield: The name of the field. This is where the field data will be saved in the database.\nlabel: A label that displays next to the field.\nSave the file. Go back to WordPress and add a new Post or a new Page. You will see a text field with the label “First Field” in your metabox.\nAdd more fields Now go back to your file, copy the field code (not the comment block), and paste it under the first field. Change the type to colorpicker, the field parameter to ‘field_two’, and the label to ‘Second field’. Your file should now look like this:\n\u0026lt;?php /* Title: My custom fields Post Type: post, page */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'field_two' ,'label' =\u0026gt; 'Second Field' ));  Save the file. Go back to WordPress and add a new Post or Page. You now have two fields: a text box and a colorpicker.\nClick inside the field and a color palette will pop up. You just created a colorpicker field by copying your existing text field code and making a few small changes.\nUtilizing the same code everywhere. As mentioned in the Tutorial introduction, one of the biggest benefits of Piklist is that it’s a code-based framework. You can easily copy and paste your code from one object type to another.\nCopy and Paste programming In the “users” folder you created in step 3, create a new file. Now open the file in your “meta-boxes” folder, select everything and copy. Open the file in your users folder and paste. The file in your “users” folder should be an exact duplicate of the one that’s in your “meta-boxes” folder.\nSince Users aren’t a Post Type, delete the line in your comment block that says: Post Type: post, page. Your file should look like this:\n\u0026lt;?php /* Title: My custom fields */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'field_one' ,'label' =\u0026gt; 'First Field' )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'field_two' ,'label' =\u0026gt; 'Second Field' ));  Press save. Open WordPress and edit any users profile. You will see this field under the section “My custom fields”.\nYou just utilized the same code for a User Profile, that you wrote for a Post Type. This is a huge time saver and you will find this feature invaluable.\nBuilt-in Demos Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]\nVideo Overview The initial public unveiling of Piklist at WordCampNYC 2012.   "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/text/",
+	"title": "Text",
+	"tags": [],
+	"description": "",
+	"content": " 'type' =\u0026gt; 'text' piklist('field', array( 'type' =\u0026gt; 'text', 'field' =\u0026gt; 'my_text', 'label' =\u0026gt; 'Text', 'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' // WordPress css class ) ));  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/faq/",
+	"title": "FAQs",
+	"tags": [],
+	"description": "",
+	"content": " FAQs What is Piklist? Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.\nMost people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist. Check out the main Piklist help section to learn more.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nThere’s jQuery-for-Javascript and Rails-for-Ruby. Now there is Piklist-for-WordPress.\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/",
+	"title": "Field Types",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/",
+	"title": "Fields",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/",
+	"title": "Sanitizing Fields",
+	"tags": [],
+	"description": "",
+	"content": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the sanitize parameter.\nChoose the appropriate type of sanitization for each of your fields.\nemail Strips out all characters that are not allowable in an email address.\nCodex reference for parameters: sanitize_email\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'email' ) )  file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line. Replaces spaces and consecutive dashes with a single dash. Trim period, dash and underscore from beginning and end of filename.\nCodex reference for parameters: sanitize_file_name\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'file_name' ) )  html_class Sanitizes a html classname to ensure it only contains valid characters.\nCodex reference for parameters: sanitize_html_class\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'html_class' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-class' ) ) )  text_field Checks for invalid UTF-8, Convert single \u0026lt; characters to entity, strip all tags, remove line breaks, tabs and extra white space, strip octets.\nCodex reference for parameters: sanitize_text_field\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'text_field' ) )  title Specifically, HTML and PHP tags are stripped, and (in a ‘save’ context) accents are removed (accented characters are replaced with non-accented equivalents). Despite the name of this function, the returned value is intended to be suitable for use in a URL, not as a human-readable title.\nCodex reference for parameters: sanitize_title\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'title' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-fallback-title' ) ,'context' =\u0026gt; 'save' ) )  user Sanitize username stripping out unsafe characters.\nCodex reference for parameters: sanitize_user\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'user' ,'options' =\u0026gt; array( 'strict' =\u0026gt; 'true' ) ) )  wp_filter_kses Sanitize content with allowed HTML Kses rules.\nCodex reference for parameters: wp_filter_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_filter_kses' ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/customize/",
+	"title": "Customize WordPress",
+	"tags": [],
+	"description": "",
+	"content": " Description With Piklist you can customize most of WordPress.\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/parameters/",
+	"title": "Parameters",
+	"tags": [],
+	"description": "",
+	"content": " Description "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/group/",
+	"title": "Field Group",
+	"tags": [],
+	"description": "",
+	"content": " 'type' =\u0026gt; 'group' Adds a group of fields.\nIf field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.\nExamples piklist('field', array( 'type' =\u0026gt; 'group' ,'field' =\u0026gt; 'address_group' ,'label' =\u0026gt; __('Address (Grouped)', 'piklist-demo') ,'list' =\u0026gt; false ,'description' =\u0026gt; __('A grouped field with the field parameter set.', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_1' ,'label' =\u0026gt; __('Street Address', 'piklist-demo') ,'required' =\u0026gt; true ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Street Address' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_2' ,'label' =\u0026gt; __('PO Box, Suite, etc.', 'piklist-demo') ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'PO Box, Suite, etc.' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'city' ,'label' =\u0026gt; __('City', 'piklist-demo') ,'columns' =\u0026gt; 5 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'City' ) ) ,array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'state' ,'label' =\u0026gt; __('State', 'piklist-demo') ,'columns' =\u0026gt; 4 ,'choices' =\u0026gt; piklist_demo_get_states() ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'postal_code' ,'label' =\u0026gt; __('Postal Code', 'piklist-demo') ,'columns' =\u0026gt; 3 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Postal Code' ) ) ) ));  Usage Display Grouped Fields If field value is set for the group, unserialize the contents of the field like this:\n$group_data = get_post_meta($post-\u0026gt;ID, 'field_name', true); $group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed print_r($group_data); // output the results  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
@@ -14,396 +70,487 @@
 	"content": " Welcome to the Piklist Documentation Home of the documentation that\u0026rsquo;s so good it will make you cry.\n"
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": "Leave this here so the file doesn\u0026rsquo;t show up in the menu\n"
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/action/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Action  Input: string Returns: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/align/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Align How the pointer should be aligned on this edge, relative to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: top, bottom, left, right, middle  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/anchor_id/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Anchor ID  Input: string Returns: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/capability/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\nPiklist Parts: all\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/class/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/class/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Class  Input: comma-delimited Returns: comma-delimited  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/clear/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/clear/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Clear When set to true, all meta-boxes that have been registered by WordPress or other plugins will be removed. This allows you to build your Workflow views exactly the way you want them.\nPiklist Parts: workflows\n Input: boolean Default: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/collapse/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/collapse/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Collapse If set to true, this meta-box will be collapsed by default.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/context/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/context/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Context The part of the page where you want this group of fields to show.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: normal, advanced, side (Any valid value from add_meta_box()) Default: advanced  Example:\ncontext: normal  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/default/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/default/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Default  Input: boolean Returns: boolean  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/description/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/description/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Description A description of this section. This field doesn’t do anything except add a description for you.\nPiklist Parts: all\n Input: string Returns: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/disable/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/disable/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Disable  Input: boolean Returns: boolean  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/edge/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/edge/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Ddge Which edge should be adjacent to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: left, right, top, bottom  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/editor/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/editor/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Editor Add a button to the tinymce editor that will run your shortcode. The icon used is set by the icon parameter\nPiklist Parts: shortcodes\n Input: boolean Default: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/extend_id/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/extend_id/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Extend ID  Input: string Returns: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/filter/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/filter/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Filter  Input: boolean Returns: boolean  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Flow  Input: comma-delimited Returns: array  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow_page/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow_page/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Flow page  Input: comma-delimited Returns: array  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/header/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/header/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Header  Input: boolean Returns: boolean  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/height/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/height/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Height  Input: numeric Returns: numeric  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/icon/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/icon/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Icon Name of the dashicon to represent this shortcode.\nPiklist Parts: shortcodes\n Input: string. Any valid Dashicon  Example:\nicon: dashicons-editor-quote  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/id/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/id/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " ID Display this group of fields for this object ID.\nPiklist Parts: meta-boxes, terms, users, media\n Input: comma-delimited Returns: array  Example:\nid: 2 id: 2, 4  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/inline/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/inline/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Inline Display this shortcode inline.\nPiklist Parts: shortcodes\n Input: boolean Default: false (block)  Example:\ninline: true  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/lock/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/lock/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Lock Locking the meta-box stops the user from being able to drag it around the edit screen.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Example:\nlock: true  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/logged_in/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/logged_in/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Logged in Whether to show to logged in users or not.\nPiklist Parts: all\n Input: boolean Returns: boolean Default: true  Example:\nlogged_in: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/message/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/message/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Message The message to show after a successful submission of a form.\nPiklist Parts: forms\n Input: string Returns: string  Example:\nmessage: Thank you for your message. We will get back to you shortly.  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/meta_box/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/meta_box/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Metabox If set to false, the default box box \u0026ldquo;look\u0026rdquo; will be removed.\nPiklist Parts: forms\n Input: boolean Returns: boolean Default: true  Example:\nmeta_box: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/method/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/method/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Method The HTTP method used for this form.\nPiklist Parts: forms\n Input: string Returns: string Values: get, post Default: Post  Example:\nmethod: get  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/name/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/name/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Name The name of the part.\nPiklist Parts: all\n Input: string  Example:\nname: My Shortcode name: Theme Options  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/network/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/network/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Network Show this item in the network settings of a multisite install.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean  Example:\nnetwork: true  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/new/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/new/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " New Show this metabox when creating a new post.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean Default: true  Example:\nnew: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_id/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_id/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Notice ID ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string  Example:\nNotice ID: plugin-intro  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_type/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Notice Type ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string Values: info, error, warning  Example:\nNotice Type: info  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/order/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Order The sort order of this group of fields. Allows for creating an absolute order of field groups. NOTE: If the \u0026ldquo;lock\u0026rdquo; attribute is not set, or set to \u0026ldquo;false\u0026rdquo;, then the order you set is the default.\nFor meta-boxes, this is within the context and priority. The user can still drag and drop the meta-boxes and take them out of your designated order.\nPiklist Parts: meta-boxes, terms, users, workflows, media\n Input: numeric Returns: numeric  Example:\norder: 4  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/page/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Page What admin page will display this data. NOTE: To display on a settings page, use the menu_slug.\nPiklist Parts: meta-boxes, terms, users, workflows, notices, media\n Input: comma-delimited Returns: array  Examples:\nPage: post.php, post-new.php, post-edit.php Page: profile.php, user-edit.php Page: edit-tags.php, term.php Page: my_settings_menu_slug  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/pointer_id/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Pointer ID ID of a pointer\nPiklist Parts: pointers\n Input: string Returns: string  Example:\nPointer ID: plugin-settings  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/position/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Position The position of your workflow tabs\nPiklist Parts: workflows\n Input: string Returns: string Values: header, body, title, editor  Example:\nPosition: body  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/post_type/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Post Type The Post Type or a comma-delimited list of Post Types that will display this meta-box.\nPiklist Parts: meta-boxes\n Input: comma-delimited Returns: array Values: any registered post type  Example:\nPost Type: post, page, custom_post_type  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/preview/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Preview Show preview in the admin.\n Input: boolean  Example:\nPreview: false  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/priority/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Priority The priority within the context where the boxes should show. Works with the context parameter.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: high, core, default, low (Any valid value from add_meta_box()) Default: default  Example:\nPriority: core  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/redirect/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Redirect Piklist Parts: forms\n Input: string Returns: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/role/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/role/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Role User role that can view this group of fields. This is not the \u0026ldquo;minimum\u0026rdquo; role, this is the actual role . Do not include if you wish to allow all users to view. ** Do not use with \u0026ldquo;capability\u0026rdquo;. Use one or the other.\nPiklist Parts: all\n Input: comma-delimited Returns: array Values: Any user role  Examples:\nRole: administrator Role: administrator, editor, custom-role  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/setting/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/setting/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Setting The setting this section belongs to, as defined when you initially register the Settings Page.\nPiklist Parts: settings\n Input: string Returns: string Values: Any registered setting  Examples:\nSetting: my_settings  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/shortcode/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/shortcode/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Shortcode The name of the shortcode. Spaces are not allowed.\nPiklist Parts: shortcodes\n Input: string Returns: string  Examples:\nShortcode: my_shortcode  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sidebar/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sidebar/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Side bar TODO: Jason if you change \u0026ldquo;Side Bar\u0026rdquo; to \u0026ldquo;Sidebar\u0026rdquo;, the theme breaks\nDisplay the content in this file in the Help Tab Sidebar. Do not create a tab for it.\nPiklist Parts: help\n Input: boolean Returns: boolean  Examples:\nSidebar: true  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/standalone/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/standalone/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Standalone By default, Piklist takes all widgets created within a plugin or theme, and groups them as one widget. If you want your widget to not be part of a group, like the WordPress default, set this parameter to true.\nPiklist Parts: help\n Input: boolean Returns: boolean Default: false  Examples:\nStandalone: true  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/status/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/status/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Status List of post statuses that will show this meta-box. Custom post statuses are allowed.\nPiklist Parts: meta-boxes\n Input: comma-delimited Returns: array  Examples:\nStatus: my_custom_status Status: my_custom_status, published  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sub_tab/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sub_tab/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Sub Tab If a Workflow and a Tab have already been defined, use this parameter to assign this field group to a sub-tab of a Tab.\nPiklist Parts: meta-boxes, terms, users, settings, media\n Input: comma-delimited Returns: array  Examples:\nSub Tab: basic Sub Tab: basic, tab one  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tab/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tab/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Tab If a Workflow has been defined, use this parameter to assign this field group to a specific Tab.\nPiklist Parts: meta-boxes, terms, users, settings, media\n Input: comma-delimited Returns: array  Examples:\nTab: General Tab: General, Advanced  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tags/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tags/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Tags  Input: comma-delimited Returns: comma-delimited  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/taxonomy/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/taxonomy/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Taxonomy The Taxonomy or a comma-delimited list of Taxonomies that will display this meta-box.\nPiklist Parts: terms\n Input: comma-delimited Returns: array Values: any registered taxonomy  Example:\nTaxonomy: category, tag Taxonomy: my_taxonomy  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/template/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/template/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Template The file name of the Page Template you want this meta-box to display, without “.php”. The page must be saved with this page template to work. If the file is in a directory, that directory must be included.\nYou must save the page before this parameter will work.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: any registered taxonomy  Example:\nTemplate: my-template Template: page-templates/my-template Template: default  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/title/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/title/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Title Title of the section.\nPiklist Parts: all\n Input: string Returns: string  Example:\nTitle: Theme Settings Title: User Options  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/type/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/type/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Type  Input: string  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/comment-block-parameters/width/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/width/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Width The width of the widget UI in the admin\nPiklist Parts: widgets\n Input: numeric Returns: numeric  Example:\nWidth: 500 Width: 720  "
 },
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Leave this here so the file doesn\u0026rsquo;t show up in the menu\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/email/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " email Strips out all characters that are not allowable in an email address.\nCodex reference for parameters: sanitize_email\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'email' ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/file_name/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line. Replaces spaces and consecutive dashes with a single dash. Trim period, dash and underscore from beginning and end of filename.\nCodex reference for parameters: sanitize_file_name\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'file_name' ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/html_class/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " html_class Sanitizes a html classname to ensure it only contains valid characters.\nCodex reference for parameters: sanitize_html_class\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'html_class' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-class' ) ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/text_field/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " text_field Checks for invalid UTF-8, Convert single \u0026lt; characters to entity, strip all tags, remove line breaks, tabs and extra white space, strip octets.\nCodex reference for parameters: sanitize_text_field\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'text_field' ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/title/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " title Specifically, HTML and PHP tags are stripped, and (in a ‘save’ context) accents are removed (accented characters are replaced with non-accented equivalents). Despite the name of this function, the returned value is intended to be suitable for use in a URL, not as a human-readable title.\nCodex reference for parameters: sanitize_title\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'title' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-fallback-title' ) ,'context' =\u0026gt; 'save' ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/user/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " user Sanitize username stripping out unsafe characters.\nCodex reference for parameters: sanitize_user\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'user' ,'options' =\u0026gt; array( 'strict' =\u0026gt; 'true' ) ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_filter_kses/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " wp_filter_kses Sanitize content with allowed HTML Kses rules.\nCodex reference for parameters: wp_filter_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_filter_kses' ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses_post/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/customize/admin-notices/",
+	"title": "Admin Notices",
+	"tags": [],
+	"description": "",
+	"content": " /parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.\n Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.  \u0026lt;?php /* Notice Type: updated Dismiss: true */ ?\u0026gt; \u0026lt;p\u0026gt;This is my notice\u0026lt;/p\u0026gt;  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/customize/admin-pages/",
+	"title": "Admin Pages",
+	"tags": [],
+	"description": "",
+	"content": " /parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.\nYou can create as many files as you like and place them in this folder. Each file will render one Admin page.\nConfiguration options are placed in a comment block at the top of your file.\n"
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/",
 	"title": "Built-in Demos",
 	"tags": [],
 	"description": "",
-	"content": " Description Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!\n Install Piklist like you would any other Plugin. Once installed, activate Piklist. You will see a Piklist item in your WordPress menu. Now you can start adding power to your theme and plugins. Check out our tutorials for a detailed overview.  Included Demos You can get a good overview of what Piklist is capable of by activating the included “Piklist Demos” add-on:\n Hover over the “Piklist” menu item, and then click on “Settings”. You should now see options for Settings. Under the Add-ons tab is the “Extend Piklist” area containing the “Piklist Demos” add-on. Click on “Activate”, and then on “Save Changes”.  You will now have access to the Piklist Demos:  Custom Post Type and Settings: Go to Piklist Demos \u0026gt; Add New. Create a new demo here and it will show up under Piklist Demos.\nSample Widgets: Go to Appearance \u0026gt; Widgets \u0026gt; Piklist Demo Widgets.\nUsage Piklist checker is designed to be easy to include in your plugin.\nInclude the Piklist Checker file in your Piklist plugin or theme. You can always get the most up-to-date version of Piklist Checker at WordPress.org.\nPlugin Add the following to your plugin. Notice the checker code is wrapped in a function that hooks to the init action. \nTheme If you’re using Piklist in your theme, this code should go in the functions.php file. Notice the added parameter after __FILE__: \nExample You can find an example of implementing the Piklist Checker in the WordPress Helpers plugin.\n"
+	"content": " Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!\n Install Piklist like you would any other Plugin. Once installed, activate Piklist. You will see a Piklist item in your WordPress menu. Now you can start adding power to your theme and plugins. Check out our tutorials for a detailed overview.  Included Demos You can get a good overview of what Piklist is capable of by activating the included “Piklist Demos” add-on:\n Hover over the “Piklist” menu item, and then click on “Settings”. You should now see options for Settings. Under the Add-ons tab is the “Extend Piklist” area containing the “Piklist Demos” add-on. Click on “Activate”, and then on “Save Changes”.  You will now have access to the Piklist Demos:  Custom Post Type and Settings: Go to Piklist Demos \u0026gt; Add New. Create a new demo here and it will show up under Piklist Demos.\nSample Widgets: Go to Appearance \u0026gt; Widgets \u0026gt; Piklist Demo Widgets.\nUsage Piklist checker is designed to be easy to include in your plugin.\nInclude the Piklist Checker file in your Piklist plugin or theme. You can always get the most up-to-date version of Piklist Checker at WordPress.org.\nPlugin Add the following to your plugin. Notice the checker code is wrapped in a function that hooks to the init action. \nTheme If you’re using Piklist in your theme, this code should go in the functions.php file. Notice the added parameter after __FILE__: \nExample You can find an example of implementing the Piklist Checker in the WordPress Helpers plugin.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/categories/",
@@ -420,60 +567,60 @@
 	"content": "This is a full list of available parameters for Piklist comment blocks. Not all parameters work with all Piklist parts (parts/ folders).\nAction  Input: string Returns: string  Align How the pointer should be aligned on this edge, relative to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: top, bottom, left, right, middle  Anchor ID  Input: string Returns: string  Capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other\nPiklist Parts: all\n Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  Class  Input: comma-delimited Returns: comma-delimited  Clear When set to true, all meta-boxes that have been registered by WordPress or other plugins will be removed. This allows you to build your Workflow views exactly the way you want them.\nPiklist Parts: workflows\n Input: boolean Default: false  Collapse If set to true, this meta-box will be collapsed by default.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Context The part of the page where you want this group of fields to show.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: normal, advanced, side (Any valid value from add_meta_box()) Default: advanced  Example:\ncontext: normal  Default  Input: boolean Returns: boolean  Description A description of this section. This field doesn’t do anything except add a description for you.\nPiklist Parts: all\n Input: string Returns: string  Disable  Input: boolean Returns: boolean  Ddge Which edge should be adjacent to the target.\nPiklist Parts: pointers\n Input: string Returns: string Values: left, right, top, bottom  Editor Add a button to the tinymce editor that will run your shortcode. The icon used is set by the icon parameter\nPiklist Parts: shortcodes\n Input: boolean Default: false  Extend ID  Input: string Returns: string  Filter  Input: boolean Returns: boolean  Flow  Input: comma-delimited Returns: array  Flow page  Input: comma-delimited Returns: array  Header  Input: boolean Returns: boolean  Height  Input: numeric Returns: numeric  Icon Name of the dashicon to represent this shortcode.\nPiklist Parts: shortcodes\n Input: string. Any valid Dashicon  Example:\nicon: dashicons-editor-quote  ID Display this group of fields for this object ID.\nPiklist Parts: meta-boxes, terms, users, media\n Input: comma-delimited Returns: array  Example:\nid: 2 id: 2, 4  Inline Display this shortcode inline.\nPiklist Parts: shortcodes\n Input: boolean Default: false (block)  Example:\ninline: true  Lock Locking the meta-box stops the user from being able to drag it around the edit screen.\nPiklist Parts: meta-boxes\n Input: boolean Returns: boolean Default: false  Example:\nlock: true  Logged in Whether to show to logged in users or not.\nPiklist Parts: all\n Input: boolean Returns: boolean Default: true  Example:\nlogged_in: false  Message The message to show after a successful submission of a form.\nPiklist Parts: forms\n Input: string Returns: string  Example:\nmessage: Thank you for your message. We will get back to you shortly.  Metabox If set to false, the default box box \u0026ldquo;look\u0026rdquo; will be removed.\nPiklist Parts: forms\n Input: boolean Returns: boolean Default: true  Example:\nmeta_box: false  Method The HTTP method used for this form.\nPiklist Parts: forms\n Input: string Returns: string Values: get, post Default: Post  Example:\nmethod: get  Name The name of the part.\nPiklist Parts: all\n Input: string  Example:\nname: My Shortcode name: Theme Options  Network Show this item in the network settings of a multisite install.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean  Example:\nnetwork: true  New Show this metabox when creating a new post.\nPiklist Parts: dashboard\n Input: boolean Returns: boolean Default: true  Example:\nnew: false  Notice ID ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string  Example:\nNotice ID: plugin-intro  Notice Type ID of an admin notice.\nPiklist Parts: notices\n Input: string Returns: string Values: info, error, warning  Example:\nNotice Type: info  Order The sort order of this group of fields. Allows for creating an absolute order of field groups. NOTE: If the \u0026ldquo;lock\u0026rdquo; attribute is not set, or set to \u0026ldquo;false\u0026rdquo;, then the order you set is the default.\nFor meta-boxes, this is within the context and priority. The user can still drag and drop the meta-boxes and take them out of your designated order.\nPiklist Parts: meta-boxes, terms, users, workflows, media\n Input: numeric Returns: numeric  Example:\norder: 4  Page What admin page will display this data. NOTE: To display on a settings page, use the menu_slug.\nPiklist Parts: meta-boxes, terms, users, workflows, notices, media\n Input: comma-delimited Returns: array  Examples:\nPage: post.php, post-new.php, post-edit.php Page: profile.php, user-edit.php Page: edit-tags.php, term.php Page: my_settings_menu_slug  Pointer ID ID of a pointer\nPiklist Parts: pointers\n Input: string Returns: string  Example:\nPointer ID: plugin-settings  Position The position of your workflow tabs\nPiklist Parts: workflows\n Input: string Returns: string Values: header, body, title, editor  Example:\nPosition: body  Post Type The Post Type or a comma-delimited list of Post Types that will display this meta-box.\nPiklist Parts: meta-boxes\n Input: comma-delimited Returns: array Values: any registered post type  Example:\nPost Type: post, page, custom_post_type  Preview Show preview in the admin.\n Input: boolean  Example:\nPreview: false  Priority The priority within the context where the boxes should show. Works with the context parameter.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: high, core, default, low (Any valid value from add_meta_box()) Default: default  Example:\nPriority: core  Redirect Piklist Parts: forms\n Input: string Returns: string  Role User role that can view this group of fields. This is not the \u0026ldquo;minimum\u0026rdquo; role, this is the actual role . Do not include if you wish to allow all users to view. ** Do not use with \u0026ldquo;capability\u0026rdquo;. Use one or the other.\nPiklist Parts: all\n Input: comma-delimited Returns: array Values: Any user role  Examples:\nRole: administrator Role: administrator, editor, custom-role  Setting The setting this section belongs to, as defined when you initially register the Settings Page.\nPiklist Parts: settings\n Input: string Returns: string Values: Any registered setting  Examples:\nSetting: my_settings  Shortcode The name of the shortcode. Spaces are not allowed.\nPiklist Parts: shortcodes\n Input: string Returns: string  Examples:\nShortcode: my_shortcode  Side bar TODO: Jason if you change \u0026ldquo;Side Bar\u0026rdquo; to \u0026ldquo;Sidebar\u0026rdquo;, the theme breaks\nDisplay the content in this file in the Help Tab Sidebar. Do not create a tab for it.\nPiklist Parts: help\n Input: boolean Returns: boolean  Examples:\nSidebar: true  Standalone By default, Piklist takes all widgets created within a plugin or theme, and groups them as one widget. If you want your widget to not be part of a group, like the WordPress default, set this parameter to true.\nPiklist Parts: help\n Input: boolean Returns: boolean Default: false  Examples:\nStandalone: true  Status List of post statuses that will show this meta-box. Custom post statuses are allowed.\nPiklist Parts: meta-boxes\n Input: comma-delimited Returns: array  Examples:\nStatus: my_custom_status Status: my_custom_status, published  Sub Tab If a Workflow and a Tab have already been defined, use this parameter to assign this field group to a sub-tab of a Tab.\nPiklist Parts: meta-boxes, terms, users, settings, media\n Input: comma-delimited Returns: array  Examples:\nSub Tab: basic Sub Tab: basic, tab one  Tab If a Workflow has been defined, use this parameter to assign this field group to a specific Tab.\nPiklist Parts: meta-boxes, terms, users, settings, media\n Input: comma-delimited Returns: array  Examples:\nTab: General Tab: General, Advanced  Tags  Input: comma-delimited Returns: comma-delimited  Taxonomy The Taxonomy or a comma-delimited list of Taxonomies that will display this meta-box.\nPiklist Parts: terms\n Input: comma-delimited Returns: array Values: any registered taxonomy  Example:\nTaxonomy: category, tag Taxonomy: my_taxonomy  Template The file name of the Page Template you want this meta-box to display, without “.php”. The page must be saved with this page template to work. If the file is in a directory, that directory must be included.\nYou must save the page before this parameter will work.\nPiklist Parts: meta-boxes\n Input: string Returns: string Values: any registered taxonomy  Example:\nTemplate: my-template Template: page-templates/my-template Template: default  Title Title of the section.\nPiklist Parts: all\n Input: string Returns: string  Example:\nTitle: Theme Settings Title: User Options  Type  Input: string  Width The width of the widget UI in the admin\nPiklist Parts: widgets\n Input: numeric Returns: numeric  Example:\nWidth: 500 Width: 720  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/admin-notices/",
-	"title": "Creating an Admin Notice",
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/",
+	"title": "Creating Metaboxes and Fields",
 	"tags": [],
 	"description": "",
-	"content": " Description Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.\nDecide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.\n\u0026lt;?php /* Notice Type: updated Dismiss: true */ ?\u0026gt; \u0026lt;p\u0026gt;This is my notice\u0026lt;/p\u0026gt;  You can find a full list of available parameters for notices here.\n"
+	"content": " Description Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.\n The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.) You can see the supported Piklist folder structure here.\n Each file we add to the the meta-boxes folder will create a metabox on the post edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward. Ok, let’s create our metabox file!\n Create a new file: let’s call it demo-metabox.php. At the top of the file, we will add a comment block that will control the configuration of the metabox. This comment block is very similar to what you would see in a standard WordPress plugin or theme. Here are the minimum variables required:\n  \u0026lt;?php /* Title: My Demo Metabox Post Type: post */  This comment block tells Piklist you want to name your metabox, “My Demo Metabox”, and have it display on the edit screen for a Post. To have this metabox work with a custom post type, you could also add a custom post type slug here as well. The Piklist comment block for metaboxes supports a lot more than just these two variables. You can view the full list in our docs.\n Now we start adding our fields. It’s best practice to make the “field” name all lowercase letters, numbers, and dashes or underscores, with no spaces or special characters if possible (i.e. facebook-page-url). The field label can be anything you want.\n Let’s create our first field, a text box:\n  piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'demo_text' ,'label' =\u0026gt; 'Text Box' ,'description' =\u0026gt; 'Field Description' ,'value' =\u0026gt; 'Default text' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  This simple array will create a text box that automatically saves as Post Meta.\n Now, let’s create our select field:  piklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'demo_select' ,'label' =\u0026gt; 'Select Box' ,'description' =\u0026gt; 'Choose from the drop-down.' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( 'option1' =\u0026gt; 'Option 1' ,'option2' =\u0026gt; 'Option 2' ,'option3' =\u0026gt; 'Option 3' ) ));  Notice that this array is very similar to the one used to create the text box. Just two differences:\n type =\u0026gt; select: Tells Piklist that you want to render a select field. The choices array adds your choices.  That’s it! Everything else is the same.\n One more field to go in this tutorial. Let’s create our ColorPicker field. Normally, you would need to add Javascript and CSS to create this field… but not with Piklist!  piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'demo_colorpicker' ,'label' =\u0026gt; 'Choose a color' ,'value' =\u0026gt; '#aee029' ,'description' =\u0026gt; 'Click in the box to select a color.' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  Seriously, that’s all you need to create a ColorPicker field. You will notice this is pretty much the same code used to create the text box, except we set ‘type’ =\u0026gt; ‘colorpicker’.\nFull Code Snippet:  \u0026lt;?php /* Title: My Demo Metabox Post Type: post */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'demo_text' ,'label' =\u0026gt; 'Text Box' ,'description' =\u0026gt; 'Field Description' ,'value' =\u0026gt; 'Default text' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) )); piklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'demo_select' ,'label' =\u0026gt; 'Select Box' ,'description' =\u0026gt; 'Choose from the drop-down.' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( 'option1' =\u0026gt; 'Option 1' ,'option2' =\u0026gt; 'Option 2' ,'option3' =\u0026gt; 'Option 3' ) )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'demo_colorpicker' ,'label' =\u0026gt; 'Choose a color' ,'value' =\u0026gt; '#aee029' ,'description' =\u0026gt; 'Click in the box to select a color.' ,'help' =\u0026gt; 'This is help text.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  Usage Where possible, Piklist uses the default WordPress functions to get things done, and using Post Meta is no different. You can use the get_post_meta() function to pull this data into your theme. Here’s how you would use these fields in your single.php file:\necho get_post_meta($post-\u0026gt;ID, 'demo_text', true); echo get_post_meta($post-\u0026gt;ID, 'demo_select', true); echo get_post_meta($post-\u0026gt;ID, 'demo_colorpicker', true);  get_post_meta() takes a second parameter, which can be set as true or false. Set to true if you want only a single row from the database, or false if you want every row it finds that matches the meta name.\n"
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/faq/",
-	"title": "FAQs",
+	"uri": "https://piklist.github.io/Piklist-Documentation/customize/dashboard-widgets/",
+	"title": "Dashboard Widgets",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\nYou can create as many files as you like and place them in this folder. Each file will render one Dashboard Widget.\nConfiguration options are placed in a comment block at the top of your file.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/",
 	"title": "Folder Structure",
 	"tags": [],
 	"description": "",
-	"content": " Description When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.\nPiklist has a predefined folder structure which it scans for your code.\nTheme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.\n"
+	"content": " When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.\nPiklist has a predefined folder structure which it scans for your code.\nTheme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/",
 	"title": "How do I include Piklist in my plugin or theme?",
 	"tags": [],
 	"description": "",
-	"content": " Description While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.\nIf the user does install Piklist as a separate plugin, AND your plugin/theme, it invites multiple conflicts, including different versions of Piklist. This can cause your plugin, or other plugins/themes that rely on Piklist, not to work properly. In addition, you become solely responsible for keeping your code updated with the latest version of Piklist, instead of letting the user upgrade normally.\nAdditionally, if you plan on submitting your code to WordPress.org, they do not accept a plugin that includes an entire other plugin, inside it.\nTo make it easier for you to build your plugin on Piklist, we have created the Piklist Checker. By including the Checker in your plugin, your users will be notified if Piklist is not installed, and they will be walked through the installation.\nWe hope you agree that keeping Piklist as a separate plugin makes sense for both you and your users. If not, there are other frameworks you can choose from that are designed to be included in plugins and themes.\n"
+	"content": "While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.\nIf the user does install Piklist as a separate plugin, AND your plugin/theme, it invites multiple conflicts, including different versions of Piklist. This can cause your plugin, or other plugins/themes that rely on Piklist, not to work properly. In addition, you become solely responsible for keeping your code updated with the latest version of Piklist, instead of letting the user upgrade normally.\nAdditionally, if you plan on submitting your code to WordPress.org, they do not accept a plugin that includes an entire other plugin, inside it.\nTo make it easier for you to build your plugin on Piklist, we have created the Piklist Checker. By including the Checker in your plugin, your users will be notified if Piklist is not installed, and they will be walked through the installation.\nWe hope you agree that keeping Piklist as a separate plugin makes sense for both you and your users. If not, there are other frameworks you can choose from that are designed to be included in plugins and themes.\n"
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/parameters/",
-	"title": "Parameters",
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/",
+	"title": "Meta-boxes",
 	"tags": [],
 	"description": "",
-	"content": " Description "
+	"content": "  Creating Metaboxes and Fields  Description Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts. The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.\n "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/",
 	"title": "Parse error: syntax error, unexpected T_FUNCTION",
 	"tags": [],
 	"description": "",
-	"content": " Description If you’re getting this error, you are running an older version of PHP on your server.\nPiklist, like WordPress, recommends PHP v5.6 or higher.\nPlease contact your host and ask them to upgrade you.\n"
+	"content": "If you’re getting this error, you are running an older version of PHP on your server.\nPiklist, like WordPress, recommends PHP v5.6 or higher.\nPlease contact your host and ask them to upgrade you.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/",
 	"title": "Piklist checker",
 	"tags": [],
 	"description": "",
-	"content": " Description Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.\nIf the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.\nUsage Piklist checker is designed to be easy to include in your plugin.\nInclude the Piklist Checker file in your Piklist plugin or theme. You can always get the most up-to-date version of Piklist Checker at WordPress.org.\nPlugin Add the following to your plugin. Notice the checker code is wrapped in a function that hooks to the init action. \nTheme If you’re using Piklist in your theme, this code should go in the functions.php file. Notice the added parameter after __FILE__: \nExample You can find an example of implementing the Piklist Checker in the WordPress Helpers plugin.\n"
+	"content": " Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.\nIf the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.\nUsage Piklist checker is designed to be easy to include in your plugin.\nInclude the Piklist Checker file in your Piklist plugin or theme. You can always get the most up-to-date version of Piklist Checker at WordPress.org.\nPlugin Add the following to your plugin. Notice the checker code is wrapped in a function that hooks to the init action. \nTheme If you’re using Piklist in your theme, this code should go in the functions.php file. Notice the added parameter after __FILE__: \nExample You can find an example of implementing the Piklist Checker in the WordPress Helpers plugin.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/",
 	"title": "Piklist enable your theme",
 	"tags": [],
 	"description": "",
-	"content": " Description Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.\n First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.\n Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.php file.\n  IMPORTANT You cannot include the Piklist plugin in your theme. It needs to remain a separate plugin.\n"
+	"content": " Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.\n First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.\n Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.php file.\n  IMPORTANT You cannot include the Piklist plugin in your theme. It needs to remain a separate plugin.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tags/",
@@ -483,23 +630,23 @@
 	"content": ""
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/",
-	"title": "What is Piklist?",
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/",
+	"title": "Tutorials",
 	"tags": [],
-	"description": "",
-	"content": " Description Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.\nMost people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist. Check out the main Piklist help section to learn more.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nThere’s jQuery-for-Javascript and Rails-for-Ruby. Now there is Piklist-for-WordPress.\n"
+	"description": "Lots of great tutorials",
+	"content": ""
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/",
-	"title": "Why aren’t my fields saving? ",
+	"title": "Why aren’t my fields saving?",
 	"tags": [],
 	"description": "",
-	"content": " Description The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.\nIf you are registering a post type, make sure custom-fields is not in the “supports” array.\nTo remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().\nThis code should go in your theme\u0026rsquo;s functions.php file, or your plugin file.\n "
+	"content": "The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.\nIf you are registering a post type, make sure custom-fields is not in the “supports” array.\nTo remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().\nThis code should go in your theme\u0026rsquo;s functions.php file, or your plugin file.\n "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/",
 	"title": "Writing a plugin for Piklist",
 	"tags": [],
 	"description": "",
-	"content": " Description Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.\nRegistering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.\n First create a folder to hold your plugin. The folder name can be anything you want… this is the same as any other plugin you would write.\n Then create your main plugin file, and make sure it’s the same name as your folder. So if your plugin is in the folder /my-cool-plugin/, then the main file should be named my-cool-plugin.php, as suggested on WordPress.org.\n Now, add the standard WordPress file headers to the top… this is also the same as any other plugin you would write.\n Now, here’s how you tell Piklist your plugin exists. Add one more line to the file header you just created: Plugin Type: Piklist. That’s it! Your new plugin header would look something like this:\n\u0026lt;?php /* Plugin Name: Name Of The Plugin Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates Description: A brief description of the Plugin. Version: The Plugin's Version Number, e.g.: 1.0 Author: Name Of The Plugin Author Author URI: http://URI_Of_The_Plugin_Author Plugin Type: Piklist License: A \u0026quot;Slug\u0026quot; license name e.g. GPL2 */ ?\u0026gt;  As long as you have Piklist activated on your site, this plugin will now run properly.\n  Now you just need to create the proper folder structure so you can start creating fields and more.\nCreating plugins has never been easier!\nAdding your plugin to WordPress.org Let your users know Piklist is powering your plugin:\n Add a “Powered by Piklist” logo to your plugin banner. You can download it here \u0026gt;\n Add “Piklist” as a tag in your readme.txt file.\n Add the following information to your readme.txt file. This code is formatted for markup, which WordPress.org uses to parse your readme.txt file. The spaces after the second line are intentional and create a line break.\n  \u0026gt; #### Powered by Piklist \u0026gt; WordPress Helpers requires the Piklist framework. \u0026gt; \u0026lt;a href=\u0026quot;http://wordpress.org/extend/plugins/piklist/\u0026quot;\u0026gt;You can download and install Piklist for free.\u0026lt;/a\u0026gt;  "
+	"content": " Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.\nRegistering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.\n First create a folder to hold your plugin. The folder name can be anything you want… this is the same as any other plugin you would write.\n Then create your main plugin file, and make sure it’s the same name as your folder. So if your plugin is in the folder /my-cool-plugin/, then the main file should be named my-cool-plugin.php, as suggested on WordPress.org.\n Now, add the standard WordPress file headers to the top… this is also the same as any other plugin you would write.\n Now, here’s how you tell Piklist your plugin exists. Add one more line to the file header you just created: Plugin Type: Piklist. That’s it! Your new plugin header would look something like this:\n\u0026lt;?php /* Plugin Name: Name Of The Plugin Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates Description: A brief description of the Plugin. Version: The Plugin's Version Number, e.g.: 1.0 Author: Name Of The Plugin Author Author URI: http://URI_Of_The_Plugin_Author Plugin Type: Piklist License: A \u0026quot;Slug\u0026quot; license name e.g. GPL2 */ ?\u0026gt;  As long as you have Piklist activated on your site, this plugin will now run properly.\n  Now you just need to create the proper folder structure so you can start creating fields and more.\nCreating plugins has never been easier!\nAdding your plugin to WordPress.org Let your users know Piklist is powering your plugin:\n Add a “Powered by Piklist” logo to your plugin banner. You can download it here \u0026gt;\n Add “Piklist” as a tag in your readme.txt file.\n Add the following information to your readme.txt file. This code is formatted for markup, which WordPress.org uses to parse your readme.txt file. The spaces after the second line are intentional and create a line break.\n  \u0026gt; #### Powered by Piklist \u0026gt; WordPress Helpers requires the Piklist framework. \u0026gt; \u0026lt;a href=\u0026quot;http://wordpress.org/extend/plugins/piklist/\u0026quot;\u0026gt;You can download and install Piklist for free.\u0026lt;/a\u0026gt;  "
 }]

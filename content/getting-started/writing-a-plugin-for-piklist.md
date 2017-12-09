@@ -1,8 +1,7 @@
 ---
 title: "Writing a plugin for Piklist"
-chapter: true
 ---
-## Description
+
 Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
 
 ### Registering your plugin with Piklist
@@ -46,7 +45,7 @@ Let your users know Piklist is powering your plugin:
 
 ```
 > #### Powered by Piklist
-> WordPress Helpers requires the Piklist framework.   
+> WordPress Helpers requires the Piklist framework.
 > <a href="http://wordpress.org/extend/plugins/piklist/">You can download and install Piklist for free.</a>
 
 ```

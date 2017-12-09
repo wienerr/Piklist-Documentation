@@ -1,8 +1,6 @@
 ---
 title: "Built-in Demos"
-chapter: true
 ---
-## Description
 Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
 
 1. Install Piklist like you would any other Plugin.

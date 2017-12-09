@@ -11,20 +11,53 @@
     
     
     <item>
-      <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/</link>
+      <title>Text</title>
+      <link>https://piklist.github.io/Piklist-Documentation/fields/types/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/action/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/fields/types/text/</guid>
+      <description> &#39;type&#39; =&amp;gt; &#39;text&#39; piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39;, &#39;field&#39; =&amp;gt; &#39;my_text&#39;, &#39;label&#39; =&amp;gt; &#39;Text&#39;, &#39;attributes&#39; =&amp;gt; array( &#39;class&#39; =&amp;gt; &#39;regular-text&#39; // WordPress css class ) ));  </description>
+    </item>
+    
+    <item>
+      <title>Sanitizing Fields</title>
+      <link>https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/</guid>
+      <description>When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the sanitize parameter.
+Choose the appropriate type of sanitization for each of your fields.
+email Strips out all characters that are not allowable in an email address.
+Codex reference for parameters: sanitize_email
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;email&#39; ) )  file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line.</description>
+    </item>
+    
+    <item>
+      <title>Field Group</title>
+      <link>https://piklist.github.io/Piklist-Documentation/fields/types/group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/fields/types/group/</guid>
+      <description>&#39;type&#39; =&amp;gt; &#39;group&#39; Adds a group of fields.
+If field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.
+Examples piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;group&#39; ,&#39;field&#39; =&amp;gt; &#39;address_group&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Address (Grouped)&#39;, &#39;piklist-demo&#39;) ,&#39;list&#39; =&amp;gt; false ,&#39;description&#39; =&amp;gt; __(&#39;A grouped field with the field parameter set.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/action/</guid>
       <description> Action  Input: string Returns: string  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/align/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/align/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/align/</guid>
       <description> Align How the pointer should be aligned on this edge, relative to the target.
 Piklist Parts: pointers
  Input: string Returns: string Values: top, bottom, left, right, middle  </description>
@@ -32,19 +65,19 @@ Piklist Parts: pointers
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/anchor_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/anchor_id/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/anchor_id/</guid>
       <description> Anchor ID  Input: string Returns: string  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/capability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/capability/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/capability/</guid>
       <description> Capability User capability that can view this group of fields. This is not the “minimum” capability, this is the actual capability. Do not include if you wish to allow all users to view. ** Do not use with “role”. Use one or the other
 Piklist Parts: all
  Input: comma-delimited Returns: array Default: Whatever is set in register post type Examples:  Capability: edit_posts Capability: edit_posts, edit_others_posts  </description>
@@ -52,19 +85,19 @@ Piklist Parts: all
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/class/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/class/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/class/</guid>
       <description> Class  Input: comma-delimited Returns: comma-delimited  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/clear/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/clear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/clear/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/clear/</guid>
       <description> Clear When set to true, all meta-boxes that have been registered by WordPress or other plugins will be removed. This allows you to build your Workflow views exactly the way you want them.
 Piklist Parts: workflows
  Input: boolean Default: false  </description>
@@ -72,10 +105,10 @@ Piklist Parts: workflows
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/collapse/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/collapse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/collapse/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/collapse/</guid>
       <description> Collapse If set to true, this meta-box will be collapsed by default.
 Piklist Parts: meta-boxes
  Input: boolean Returns: boolean Default: false  </description>
@@ -83,10 +116,10 @@ Piklist Parts: meta-boxes
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/context/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/context/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/context/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/context/</guid>
       <description> Context The part of the page where you want this group of fields to show.
 Piklist Parts: meta-boxes
  Input: string Returns: string Values: normal, advanced, side (Any valid value from add_meta_box()) Default: advanced  Example:
@@ -95,19 +128,19 @@ context: normal  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/default/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/default/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/default/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/default/</guid>
       <description> Default  Input: boolean Returns: boolean  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/description/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/description/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/description/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/description/</guid>
       <description> Description A description of this section. This field doesn’t do anything except add a description for you.
 Piklist Parts: all
  Input: string Returns: string  </description>
@@ -115,19 +148,19 @@ Piklist Parts: all
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/disable/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/disable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/disable/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/disable/</guid>
       <description> Disable  Input: boolean Returns: boolean  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/edge/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/edge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/edge/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/edge/</guid>
       <description> Ddge Which edge should be adjacent to the target.
 Piklist Parts: pointers
  Input: string Returns: string Values: left, right, top, bottom  </description>
@@ -135,10 +168,10 @@ Piklist Parts: pointers
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/editor/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/editor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/editor/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/editor/</guid>
       <description> Editor Add a button to the tinymce editor that will run your shortcode. The icon used is set by the icon parameter
 Piklist Parts: shortcodes
  Input: boolean Default: false  </description>
@@ -146,64 +179,64 @@ Piklist Parts: shortcodes
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/extend_id/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/extend_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/extend_id/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/extend_id/</guid>
       <description> Extend ID  Input: string Returns: string  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/filter/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/filter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/filter/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/filter/</guid>
       <description> Filter  Input: boolean Returns: boolean  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow/</guid>
       <description> Flow  Input: comma-delimited Returns: array  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow_page/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow_page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/flow_page/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/flow_page/</guid>
       <description> Flow page  Input: comma-delimited Returns: array  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/header/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/header/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/header/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/header/</guid>
       <description> Header  Input: boolean Returns: boolean  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/height/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/height/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/height/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/height/</guid>
       <description> Height  Input: numeric Returns: numeric  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/icon/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/icon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/icon/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/icon/</guid>
       <description> Icon Name of the dashicon to represent this shortcode.
 Piklist Parts: shortcodes
  Input: string. Any valid Dashicon  Example:
@@ -212,10 +245,10 @@ icon: dashicons-editor-quote  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/id/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/id/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/id/</guid>
       <description> ID Display this group of fields for this object ID.
 Piklist Parts: meta-boxes, terms, users, media
  Input: comma-delimited Returns: array  Example:
@@ -224,10 +257,10 @@ id: 2 id: 2, 4  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/inline/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/inline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/inline/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/inline/</guid>
       <description> Inline Display this shortcode inline.
 Piklist Parts: shortcodes
  Input: boolean Default: false (block)  Example:
@@ -236,10 +269,10 @@ inline: true  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/lock/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/lock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/lock/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/lock/</guid>
       <description> Lock Locking the meta-box stops the user from being able to drag it around the edit screen.
 Piklist Parts: meta-boxes
  Input: boolean Returns: boolean Default: false  Example:
@@ -248,10 +281,10 @@ lock: true  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/logged_in/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/logged_in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/logged_in/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/logged_in/</guid>
       <description> Logged in Whether to show to logged in users or not.
 Piklist Parts: all
  Input: boolean Returns: boolean Default: true  Example:
@@ -260,10 +293,10 @@ logged_in: false  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/message/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/message/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/message/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/message/</guid>
       <description> Message The message to show after a successful submission of a form.
 Piklist Parts: forms
  Input: string Returns: string  Example:
@@ -272,10 +305,10 @@ message: Thank you for your message. We will get back to you shortly.  </descrip
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/meta_box/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/meta_box/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/meta_box/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/meta_box/</guid>
       <description> Metabox If set to false, the default box box &amp;ldquo;look&amp;rdquo; will be removed.
 Piklist Parts: forms
  Input: boolean Returns: boolean Default: true  Example:
@@ -284,10 +317,10 @@ meta_box: false  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/method/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/method/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/method/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/method/</guid>
       <description> Method The HTTP method used for this form.
 Piklist Parts: forms
  Input: string Returns: string Values: get, post Default: Post  Example:
@@ -296,10 +329,10 @@ method: get  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/name/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/name/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/name/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/name/</guid>
       <description> Name The name of the part.
 Piklist Parts: all
  Input: string  Example:
@@ -308,10 +341,10 @@ name: My Shortcode name: Theme Options  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/network/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/network/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/network/</guid>
       <description> Network Show this item in the network settings of a multisite install.
 Piklist Parts: dashboard
  Input: boolean Returns: boolean  Example:
@@ -320,10 +353,10 @@ network: true  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/new/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/new/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/new/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/new/</guid>
       <description> New Show this metabox when creating a new post.
 Piklist Parts: dashboard
  Input: boolean Returns: boolean Default: true  Example:
@@ -332,10 +365,10 @@ new: false  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_id/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_id/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_id/</guid>
       <description> Notice ID ID of an admin notice.
 Piklist Parts: notices
  Input: string Returns: string  Example:
@@ -344,10 +377,10 @@ Notice ID: plugin-intro  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/notice_type/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/notice_type/</guid>
       <description> Notice Type ID of an admin notice.
 Piklist Parts: notices
  Input: string Returns: string Values: info, error, warning  Example:
@@ -356,10 +389,10 @@ Notice Type: info  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/order/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/order/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/order/</guid>
       <description>Order The sort order of this group of fields. Allows for creating an absolute order of field groups. NOTE: If the &amp;ldquo;lock&amp;rdquo; attribute is not set, or set to &amp;ldquo;false&amp;rdquo;, then the order you set is the default.
 For meta-boxes, this is within the context and priority. The user can still drag and drop the meta-boxes and take them out of your designated order.
 Piklist Parts: meta-boxes, terms, users, workflows, media</description>
@@ -367,10 +400,10 @@ Piklist Parts: meta-boxes, terms, users, workflows, media</description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/page/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/page/</guid>
       <description> Page What admin page will display this data. NOTE: To display on a settings page, use the menu_slug.
 Piklist Parts: meta-boxes, terms, users, workflows, notices, media
  Input: comma-delimited Returns: array  Examples:
@@ -379,10 +412,10 @@ Page: post.php, post-new.php, post-edit.php Page: profile.php, user-edit.php Pag
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/pointer_id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/pointer_id/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/pointer_id/</guid>
       <description> Pointer ID ID of a pointer
 Piklist Parts: pointers
  Input: string Returns: string  Example:
@@ -391,10 +424,10 @@ Pointer ID: plugin-settings  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/position/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/position/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/position/</guid>
       <description> Position The position of your workflow tabs
 Piklist Parts: workflows
  Input: string Returns: string Values: header, body, title, editor  Example:
@@ -403,10 +436,10 @@ Position: body  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/post_type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/post_type/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/post_type/</guid>
       <description> Post Type The Post Type or a comma-delimited list of Post Types that will display this meta-box.
 Piklist Parts: meta-boxes
  Input: comma-delimited Returns: array Values: any registered post type  Example:
@@ -415,10 +448,10 @@ Post Type: post, page, custom_post_type  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/preview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/preview/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/preview/</guid>
       <description> Preview Show preview in the admin.
  Input: boolean  Example:
 Preview: false  </description>
@@ -426,10 +459,10 @@ Preview: false  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/priority/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/priority/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/priority/</guid>
       <description> Priority The priority within the context where the boxes should show. Works with the context parameter.
 Piklist Parts: meta-boxes
  Input: string Returns: string Values: high, core, default, low (Any valid value from add_meta_box()) Default: default  Example:
@@ -438,20 +471,20 @@ Priority: core  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/redirect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/redirect/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/redirect/</guid>
       <description> Redirect Piklist Parts: forms
  Input: string Returns: string  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/role/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/role/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/role/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/role/</guid>
       <description> Role User role that can view this group of fields. This is not the &amp;ldquo;minimum&amp;rdquo; role, this is the actual role . Do not include if you wish to allow all users to view. ** Do not use with &amp;ldquo;capability&amp;rdquo;. Use one or the other.
 Piklist Parts: all
  Input: comma-delimited Returns: array Values: Any user role  Examples:
@@ -460,10 +493,10 @@ Role: administrator Role: administrator, editor, custom-role  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/setting/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/setting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/setting/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/setting/</guid>
       <description> Setting The setting this section belongs to, as defined when you initially register the Settings Page.
 Piklist Parts: settings
  Input: string Returns: string Values: Any registered setting  Examples:
@@ -472,10 +505,10 @@ Setting: my_settings  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/shortcode/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/shortcode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/shortcode/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/shortcode/</guid>
       <description> Shortcode The name of the shortcode. Spaces are not allowed.
 Piklist Parts: shortcodes
  Input: string Returns: string  Examples:
@@ -484,10 +517,10 @@ Shortcode: my_shortcode  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sidebar/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sidebar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sidebar/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sidebar/</guid>
       <description> Side bar TODO: Jason if you change &amp;ldquo;Side Bar&amp;rdquo; to &amp;ldquo;Sidebar&amp;rdquo;, the theme breaks
 Display the content in this file in the Help Tab Sidebar. Do not create a tab for it.
 Piklist Parts: help
@@ -497,10 +530,10 @@ Sidebar: true  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/standalone/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/standalone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/standalone/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/standalone/</guid>
       <description> Standalone By default, Piklist takes all widgets created within a plugin or theme, and groups them as one widget. If you want your widget to not be part of a group, like the WordPress default, set this parameter to true.
 Piklist Parts: help
  Input: boolean Returns: boolean Default: false  Examples:
@@ -509,10 +542,10 @@ Standalone: true  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/status/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/status/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/status/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/status/</guid>
       <description> Status List of post statuses that will show this meta-box. Custom post statuses are allowed.
 Piklist Parts: meta-boxes
  Input: comma-delimited Returns: array  Examples:
@@ -521,10 +554,10 @@ Status: my_custom_status Status: my_custom_status, published  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sub_tab/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sub_tab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/sub_tab/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/sub_tab/</guid>
       <description> Sub Tab If a Workflow and a Tab have already been defined, use this parameter to assign this field group to a sub-tab of a Tab.
 Piklist Parts: meta-boxes, terms, users, settings, media
  Input: comma-delimited Returns: array  Examples:
@@ -533,10 +566,10 @@ Sub Tab: basic Sub Tab: basic, tab one  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tab/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tab/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tab/</guid>
       <description> Tab If a Workflow has been defined, use this parameter to assign this field group to a specific Tab.
 Piklist Parts: meta-boxes, terms, users, settings, media
  Input: comma-delimited Returns: array  Examples:
@@ -545,19 +578,19 @@ Tab: General Tab: General, Advanced  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tags/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/tags/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/tags/</guid>
       <description> Tags  Input: comma-delimited Returns: comma-delimited  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/taxonomy/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/taxonomy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/taxonomy/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/taxonomy/</guid>
       <description> Taxonomy The Taxonomy or a comma-delimited list of Taxonomies that will display this meta-box.
 Piklist Parts: terms
  Input: comma-delimited Returns: array Values: any registered taxonomy  Example:
@@ -566,10 +599,10 @@ Taxonomy: category, tag Taxonomy: my_taxonomy  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/template/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/template/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/template/</guid>
       <description> Template The file name of the Page Template you want this meta-box to display, without “.php”. The page must be saved with this page template to work. If the file is in a directory, that directory must be included.
 You must save the page before this parameter will work.
 Piklist Parts: meta-boxes
@@ -579,10 +612,10 @@ Template: my-template Template: page-templates/my-template Template: default  </
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/title/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/title/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/title/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/title/</guid>
       <description> Title Title of the section.
 Piklist Parts: all
  Input: string Returns: string  Example:
@@ -591,23 +624,122 @@ Title: Theme Settings Title: User Options  </description>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/type/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/type/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/type/</guid>
       <description> Type  Input: string  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/width/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/width/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/comment-block-parameters/width/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/comment-block-parameters/width/</guid>
       <description> Width The width of the widget UI in the admin
 Piklist Parts: widgets
  Input: numeric Returns: numeric  Example:
 Width: 500 Width: 720  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/email/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/email/</guid>
+      <description> email Strips out all characters that are not allowable in an email address.
+Codex reference for parameters: sanitize_email
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;email&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/file_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/file_name/</guid>
+      <description> file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line. Replaces spaces and consecutive dashes with a single dash. Trim period, dash and underscore from beginning and end of filename.
+Codex reference for parameters: sanitize_file_name
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;file_name&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/html_class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/html_class/</guid>
+      <description> html_class Sanitizes a html classname to ensure it only contains valid characters.
+Codex reference for parameters: sanitize_html_class
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;html_class&#39; ,&#39;options&#39; =&amp;gt; array( &#39;fallback&#39; =&amp;gt; &#39;my-default-class&#39; ) ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/text_field/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/text_field/</guid>
+      <description> text_field Checks for invalid UTF-8, Convert single &amp;lt; characters to entity, strip all tags, remove line breaks, tabs and extra white space, strip octets.
+Codex reference for parameters: sanitize_text_field
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;text_field&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/title/</guid>
+      <description> title Specifically, HTML and PHP tags are stripped, and (in a ‘save’ context) accents are removed (accented characters are replaced with non-accented equivalents). Despite the name of this function, the returned value is intended to be suitable for use in a URL, not as a human-readable title.
+Codex reference for parameters: sanitize_title
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;title&#39; ,&#39;options&#39; =&amp;gt; array( &#39;fallback&#39; =&amp;gt; &#39;my-fallback-title&#39; ) ,&#39;context&#39; =&amp;gt; &#39;save&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/user/</guid>
+      <description> user Sanitize username stripping out unsafe characters.
+Codex reference for parameters: sanitize_user
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;user&#39; ,&#39;options&#39; =&amp;gt; array( &#39;strict&#39; =&amp;gt; &#39;true&#39; ) ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_filter_kses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_filter_kses/</guid>
+      <description> wp_filter_kses Sanitize content with allowed HTML Kses rules.
+Codex reference for parameters: wp_filter_kses
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;wp_filter_kses&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses/</guid>
+      <description> wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.
+Codex reference for parameters: wp_kses
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;wp_kses&#39; ,&#39;options&#39; =&amp;gt; array( &#39;allowed_html&#39; =&amp;gt; array( &#39;strong&#39; =&amp;gt; array() ,&#39;a&#39; =&amp;gt; array( &#39;href&#39; =&amp;gt; array() ,&#39;title&#39; =&amp;gt; array() ) ) ,&#39;allowed_protocols&#39; =&amp;gt; array(&#39;http&#39;) ) ) )  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses_post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/partials/sanitize/wp_kses_post/</guid>
+      <description> wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.
+Codex reference for parameters: wp_kses
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;wp_kses&#39; ,&#39;options&#39; =&amp;gt; array( &#39;allowed_html&#39; =&amp;gt; array( &#39;strong&#39; =&amp;gt; array() ,&#39;a&#39; =&amp;gt; array( &#39;href&#39; =&amp;gt; array() ,&#39;title&#39; =&amp;gt; array() ) ) ,&#39;allowed_protocols&#39; =&amp;gt; array(&#39;http&#39;) ) ) )  </description>
     </item>
     
     <item>
@@ -616,7 +748,7 @@ Width: 500 Width: 720  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</guid>
-      <description>Description Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
+      <description>Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
  Install Piklist like you would any other Plugin.</description>
     </item>
     
@@ -633,12 +765,22 @@ Piklist Parts: pointers
     </item>
     
     <item>
+      <title>Creating Metaboxes and Fields</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</guid>
+      <description>Description Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
+ The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.</description>
+    </item>
+    
+    <item>
       <title>Folder Structure</title>
       <link>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</guid>
-      <description>Description When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.
+      <description>When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.
 Piklist has a predefined folder structure which it scans for your code.
 Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.</description>
     </item>
@@ -649,7 +791,7 @@ Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</guid>
-      <description>Description While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.
+      <description>While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.
 If the user does install Piklist as a separate plugin, AND your plugin/theme, it invites multiple conflicts, including different versions of Piklist.</description>
     </item>
     
@@ -659,7 +801,7 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</guid>
-      <description>Description If you’re getting this error, you are running an older version of PHP on your server.
+      <description>If you’re getting this error, you are running an older version of PHP on your server.
 Piklist, like WordPress, recommends PHP v5.6 or higher.
 Please contact your host and ask them to upgrade you.</description>
     </item>
@@ -670,7 +812,7 @@ Please contact your host and ask them to upgrade you.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</guid>
-      <description>Description Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
+      <description>Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
 If the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.</description>
     </item>
     
@@ -680,28 +822,18 @@ If the user attempts to activate a Piklist plugin, without activating Piklist fi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</guid>
-      <description>Description Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.
+      <description>Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.
  First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.
  Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.</description>
     </item>
     
     <item>
-      <title>What is Piklist?</title>
-      <link>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/faq/what-is-piklist/</guid>
-      <description>Description Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.
-Most people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist.</description>
-    </item>
-    
-    <item>
-      <title>Why aren’t my fields saving? </title>
+      <title>Why aren’t my fields saving?</title>
       <link>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</guid>
-      <description>Description The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
+      <description>The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
 If you are registering a post type, make sure custom-fields is not in the “supports” array.
 To remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().</description>
     </item>
@@ -712,7 +844,7 @@ To remove the custom-fields meta box from a WordPress default post type, or one 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</guid>
-      <description>Description Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
+      <description>Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
 Registering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</description>
     </item>
     

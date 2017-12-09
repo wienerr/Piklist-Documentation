@@ -1,8 +1,7 @@
 ---
-title: "Why aren’t my fields saving? "
-chapter: true
+title: "Why aren’t my fields saving?"
 ---
-## Description
+
 The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
 
 If you are registering a post type, make sure `custom-fields` is not in the “supports” array.

@@ -1,9 +1,9 @@
 ---
 title: "Getting Started"
 chapter: true
-weight: 1
+weight: 10
 ---
-## Description
+# Getting Started with Piklist
 To get the most out of this tutorial you should have a recent version of WordPress running and the [Piklist plugin](https://wordpress.org/plugins/piklist/) installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
 
 ## What is Piklist?
@@ -16,7 +16,7 @@ Piklist is a code-based framework, which means it has no user interface. We beli
 We’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!
 
 ## About this Tutorial
-Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide [TODO: ADD LINK] when you’ve finished this tutorial.
+Piklist is an incredibly powerful framework for WordPress. This tutorial only covers one feature of Piklist… adding custom fields. There is a lot more that Piklist can do, so check out the rest of the User Guide when you’ve finished this tutorial.
 
 Let’s get started!
 
@@ -91,6 +91,8 @@ Now that we have our folder structure set up, it’s time to add some files. Eac
 
 ### Comment blocks
 Configuration options for each field group are defined in the comment block at the top of each file.  These comment blocks are similar to what WordPress uses for plugin headers. They allow you to easily configure a group of fields with no hooks or filters.
+
+[A full list of Comment Block parameters can be found here.](/parameters/comment-block/)
 
 Create a new file in your “meta-boxes” folder called my-fields.php. At the top of the file, add this comment block:
 
@@ -236,4 +238,4 @@ You just utilized the same code for a User Profile, that you wrote for a Post Ty
 Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]
 
 ## Video Overview
-The initial public unveiling of Piklist at WordCampNYC 2012.{{< youtube wmKjn-fDlvU >}}  
+The initial public unveiling of Piklist at WordCampNYC 2012.{{< youtube wmKjn-fDlvU >}}

@@ -1,0 +1,2 @@
+{{$file := (print "content/partials/sanitize/" ( .Get 0 ) ".md") }}
+{{- $file  | readFile | markdownify -}}
