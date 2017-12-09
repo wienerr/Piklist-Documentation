@@ -53,7 +53,7 @@
 	"title": "Parameters",
 	"tags": [],
 	"description": "",
-	"content": " Description "
+	"content": " Parameters Piklist provides powerful, easy ways to change how and where things work.\nThis section is a reference to easily find parameters, what they do, and how to use them.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/group/",
@@ -67,7 +67,7 @@
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " Welcome to the Piklist Documentation Home of the documentation that\u0026rsquo;s so good it will make you cry.\n"
+	"content": " Welcome to the Piklist Documentation Piklist is the most powerful framework for WordPress. Using Piklist, you can quickly and easily create things like metaboxes, custom fields, settings pages workflows, and on and on.\nNew? Here\u0026rsquo;s how to get started!\nVeteran? Try the search bar. It\u0026rsquo;s amazing.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/customize/admin-notices/",
