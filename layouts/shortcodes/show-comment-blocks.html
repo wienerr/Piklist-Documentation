@@ -1,7 +1,7 @@
-{{- $path := "content/partials/comment-block-parameters" -}}
+{{- $path := "data/comment-block-parameters" -}}
 {{- $files := readDir $path -}}
 {{- range $files }}
   {{- if ne "_index.md" .Name }}
-    {{- print "content/partials/comment-block-parameters/" .Name | readFile | markdownify }}
+    {{- print "data/comment-block-parameters/" .Name | readFile | markdownify }}
   {{- end }}
 {{- end }}
