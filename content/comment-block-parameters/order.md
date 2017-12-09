@@ -5,7 +5,7 @@ NOTE: If the "lock" attribute is not set, or set to "false", then the order you 
 
 For meta-boxes, this is within the context and priority.  The user can still drag and drop the meta-boxes and take them out of your designated order.
 
-Piklist Parts: meta-boxes, terms, users, workflows
+Piklist Parts: meta-boxes, terms, users, workflows, media
 
 * Input:  numeric
 * Returns:  numeric

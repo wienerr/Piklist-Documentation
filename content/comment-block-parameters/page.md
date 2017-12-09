@@ -3,7 +3,7 @@
 What admin page will display this data.
 NOTE: To display on a settings page, use the menu_slug.
 
-Piklist Parts: meta-boxes, terms, users, workflows, notices
+Piklist Parts: meta-boxes, terms, users, workflows, notices, media
 
 * Input:  comma-delimited
 * Returns:  array
