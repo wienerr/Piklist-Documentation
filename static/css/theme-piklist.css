@@ -8,14 +8,6 @@
   border-color: #777;
 }
 
-#chapter {
-  justify-content: left;
-}
-
-#chapter p, #chapter h1, #chapter h2, #chapter h3, #chapter h4, #chapter h5 {
-  text-align: left;
-}
-
-#chapter p {
-    font-size: 1.2rem;
+#logo-image {
+  width: 75%;
 }
