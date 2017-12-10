@@ -7,10 +7,6 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/text/</loc>
-  </url>
-  
-  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
   </url>
   
@@ -27,11 +23,15 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/parameters/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</loc>
   </url>
   
   <url>
@@ -43,11 +43,19 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize/admin-notices/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-subtitle-field/</loc>
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize/admin-pages/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-wysisyg-excerpt-box/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-pages/</loc>
   </url>
   
   <url>
@@ -60,7 +68,19 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/parameters/comment-block/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/checkbox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/colorpicker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/comment-block-parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/fields/conditionally-show-fields/</loc>
   </url>
   
   <url>
@@ -68,7 +88,31 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize/dashboard-widgets/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/dashboard-widgets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/datepicker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/fields/display-menus-radio-checkbox-select-list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/editor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/field-parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/fields/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/file/</loc>
   </url>
   
   <url>
@@ -76,7 +120,23 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/html/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/html5/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/hidden/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/lock-field-values-based-post-status/</loc>
   </url>
   
   <url>
@@ -96,8 +156,24 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/radio/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/select/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/text/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/types/textarea/</loc>
   </url>
   
   <url>

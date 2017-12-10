@@ -1,16 +1,19 @@
 ---
 title: Creating Metaboxes and Fields
+description: Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
 hidden: true
 ---
+    
+![Metabox](/images/userguide-meta-box.jpg)
 
 ## Description
 Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
 
-1. The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.) You can see the supported [Piklist folder structure here]( /getting-started/folder-structure/ ).
+The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.) You can see the supported [Piklist folder structure here]( /getting-started/folder-structure/ ).
 
-2. Each file we add to the the meta-boxes folder will create a metabox on the post edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward.  Ok, let’s create our metabox file!
+Each file we add to the the meta-boxes folder will create a metabox on the post edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward.  Ok, let’s create our metabox file!
 
-3. Create a new file: let’s call it `demo-metabox.php`.  At the top of the file, we will add a comment block that will control the configuration of the metabox.  This comment block is very similar to what you would see in a standard WordPress plugin or theme.  Here are the minimum variables required:
+Create a new file: let’s call it `demo-metabox.php`.  At the top of the file, we will add a comment block that will control the configuration of the metabox.  This comment block is very similar to what you would see in a standard WordPress plugin or theme.  Here are the minimum variables required:
 
 ```
 <?php
@@ -22,9 +25,9 @@ Post Type: post
 
 This comment block tells Piklist you want to name your metabox, “My Demo Metabox”, and have it display on the edit screen for a Post. To have this metabox work with a custom post type, you could also add a custom post type slug here as well. The Piklist comment block for metaboxes supports a lot more than just these two variables.  You can view the full list in our docs.
 
-4. Now we start adding our fields.  It’s best practice to make the “field” name all lowercase letters, numbers, and dashes or underscores, with no spaces or special characters if possible (i.e. facebook-page-url). The field label can be anything you want.
+Now we start adding our fields.  It’s best practice to make the “field” name all lowercase letters, numbers, and dashes or underscores, with no spaces or special characters if possible (i.e. facebook-page-url). The field label can be anything you want.
 
-5. Let’s create our first field, a text box:
+Let’s create our first field, a text box:
 
 ```
 piklist('field', array(
@@ -41,7 +44,7 @@ piklist('field', array(
  ```
  This simple array will create a text box that automatically saves as Post Meta.
 
-6. Now, let’s create our select field:
+Now, let’s create our select field:
 
 ```
 piklist('field', array(
@@ -68,7 +71,7 @@ piklist('field', array(
 
 That’s it! Everything else is the same.
 
-7. One more field to go in this tutorial. Let’s create our ColorPicker field. Normally, you would need to add Javascript and CSS to create this field… but not with Piklist!
+One more field to go in this tutorial. Let’s create our ColorPicker field. Normally, you would need to add Javascript and CSS to create this field… but not with Piklist!
 
 ```
 piklist('field', array(

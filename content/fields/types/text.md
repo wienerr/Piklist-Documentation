@@ -1,6 +1,6 @@
 ---
-title: "Text"
-weight: 10
+title: "Text Field"
+menuTitle: "Text"
 ---
 ### `'type' => 'text'`
 

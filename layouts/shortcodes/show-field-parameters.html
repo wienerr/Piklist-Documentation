@@ -1,0 +1,7 @@
+{{- $path := "data/field-parameters" -}}
+{{- $files := readDir $path -}}
+{{- range $files }}
+  {{- if ne "_index.md" .Name }}
+    {{- print "data/field-parameters/" .Name | readFile | markdownify }}
+  {{- end }}
+{{- end }}

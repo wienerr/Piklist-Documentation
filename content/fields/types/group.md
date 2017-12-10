@@ -1,6 +1,6 @@
 ---
 title: "Field Group"
-weight: 100
+weight: 1000
 ---
 ### `'type' => 'group'`
 
