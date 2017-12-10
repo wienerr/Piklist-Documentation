@@ -34,17 +34,6 @@ Codex reference for parameters: sanitize_email
     </item>
     
     <item>
-      <title>Field Group</title>
-      <link>https://piklist.github.io/Piklist-Documentation/fields/types/group/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/fields/types/group/</guid>
-      <description>&#39;type&#39; =&amp;gt; &#39;group&#39; Adds a group of fields.
-If field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.
-Examples piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;group&#39; ,&#39;field&#39; =&amp;gt; &#39;address_group&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Address (Grouped)&#39;, &#39;piklist-demo&#39;) ,&#39;list&#39; =&amp;gt; false ,&#39;description&#39; =&amp;gt; __(&#39;A grouped field with the field parameter set.</description>
-    </item>
-    
-    <item>
       <title>Add Subtitle field to the Post screen</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-subtitle-field/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -201,6 +190,17 @@ NOTES:
       <description>When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.
 Piklist has a predefined folder structure which it scans for your code.
 Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.</description>
+    </item>
+    
+    <item>
+      <title>Group Field</title>
+      <link>https://piklist.github.io/Piklist-Documentation/fields/types/group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/fields/types/group/</guid>
+      <description>&#39;type&#39; =&amp;gt; &#39;group&#39; Adds a group of fields.
+If field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.
+Examples piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;group&#39; ,&#39;field&#39; =&amp;gt; &#39;address_group&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Address (Grouped)&#39;, &#39;piklist-demo&#39;) ,&#39;list&#39; =&amp;gt; false ,&#39;description&#39; =&amp;gt; __(&#39;A grouped field with the field parameter set.</description>
     </item>
     
     <item>

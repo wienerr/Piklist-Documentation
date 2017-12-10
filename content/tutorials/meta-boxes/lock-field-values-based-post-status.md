@@ -19,7 +19,8 @@ Decide if you are going to build your Piklist code as a plugin or in your theme.
 
 With Piklist you can display fields as metaboxes, on a Settings page or a Widget. Choose which one you want to use.
 
-Create your field the standard Piklist way.  For this tutorial we will create a text box.  The only difference is that you will add the [`on_post_status`](/parameters/field/#on-post-status) parameter. You’ll notice that it is set to show values when the post status equals publish.
+Create your field the standard Piklist way.  For this tutorial we will create a text box.  The only difference is that you will add the [`on_post_status`](/fields/field-parameters
+/#on-post-status) parameter. You’ll notice that it is set to show values when the post status equals publish.
 
 ```
 piklist('field', array(

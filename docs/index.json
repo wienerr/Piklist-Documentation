@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/",
+	"title": "Fields",
+	"tags": [],
+	"description": "",
+	"content": "Piklist fields are incredibly powerful and easy to use.\n Field Types    Checkbox Field     Colorpicker Field     Datepicker Field     Editor Field     File (upload) Field     Group Field     HTML Field     HTML5 Fields     Hidden Field     Radio Field     Select Field     Text Field     Textarea Field      Sanitizing Fields     Create your own field     Field Parameters     "
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/",
 	"title": "Getting Started",
 	"tags": [],
@@ -18,14 +25,7 @@
 	"title": "Field Types",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/fields/",
-	"title": "Fields",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": "Piklist supports all these field types, or you can create your own.\n Checkbox Field   Colorpicker Field   Datepicker Field   Editor Field   File (upload) Field   Group Field   HTML Field   HTML5 Fields   Hidden Field   Radio Field   Select Field   Text Field   Textarea Field   "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/",
@@ -54,13 +54,6 @@
 	"tags": [],
 	"description": "",
 	"content": " With Piklist, you can easily create your own fields to use in your projects.\n To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field. For demonstration purposes we’ll create our own checkbox field and call it my-checkbox, so the file name is my-checkbox.php. Depending on the type of field you want to create, you may want to copy/paste from an existing Piklist field. For this demo, we are going to open the default Piklist checkbox file, piklist/parts/fields/checkbox.php, copy everything and paste it into my-checkbox.php. Make any changes to this field you like, and you’re done!  Usage When using your new checkbox, use the type my-checkbox. It should look like this:\npiklist('field', array( 'type' =\u0026gt; 'my-checkbox', // custom field type 'field' =\u0026gt; 'custom-checkbox', 'label' =\u0026gt; 'Custom Select Field', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/group/",
-	"title": "Field Group",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'group' Adds a group of fields.\nIf field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.\nExamples piklist('field', array( 'type' =\u0026gt; 'group' ,'field' =\u0026gt; 'address_group' ,'label' =\u0026gt; __('Address (Grouped)', 'piklist-demo') ,'list' =\u0026gt; false ,'description' =\u0026gt; __('A grouped field with the field parameter set.', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_1' ,'label' =\u0026gt; __('Street Address', 'piklist-demo') ,'required' =\u0026gt; true ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Street Address' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_2' ,'label' =\u0026gt; __('PO Box, Suite, etc.', 'piklist-demo') ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'PO Box, Suite, etc.' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'city' ,'label' =\u0026gt; __('City', 'piklist-demo') ,'columns' =\u0026gt; 5 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'City' ) ) ,array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'state' ,'label' =\u0026gt; __('State', 'piklist-demo') ,'columns' =\u0026gt; 4 ,'choices' =\u0026gt; piklist_demo_get_states() ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'postal_code' ,'label' =\u0026gt; __('Postal Code', 'piklist-demo') ,'columns' =\u0026gt; 3 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Postal Code' ) ) ) ));  Usage Display Grouped Fields If field value is set for the group, unserialize the contents of the field like this:\n$group_data = get_post_meta($post-\u0026gt;ID, 'field_name', true); $group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed print_r($group_data); // output the results  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
@@ -201,6 +194,13 @@
 	"tags": [],
 	"description": "",
 	"content": " When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.\nPiklist has a predefined folder structure which it scans for your code.\nTheme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/group/",
+	"title": "Group Field",
+	"tags": [],
+	"description": "",
+	"content": " 'type' =\u0026gt; 'group' Adds a group of fields.\nIf field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.\nExamples piklist('field', array( 'type' =\u0026gt; 'group' ,'field' =\u0026gt; 'address_group' ,'label' =\u0026gt; __('Address (Grouped)', 'piklist-demo') ,'list' =\u0026gt; false ,'description' =\u0026gt; __('A grouped field with the field parameter set.', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_1' ,'label' =\u0026gt; __('Street Address', 'piklist-demo') ,'required' =\u0026gt; true ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Street Address' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_2' ,'label' =\u0026gt; __('PO Box, Suite, etc.', 'piklist-demo') ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'PO Box, Suite, etc.' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'city' ,'label' =\u0026gt; __('City', 'piklist-demo') ,'columns' =\u0026gt; 5 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'City' ) ) ,array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'state' ,'label' =\u0026gt; __('State', 'piklist-demo') ,'columns' =\u0026gt; 4 ,'choices' =\u0026gt; piklist_demo_get_states() ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'postal_code' ,'label' =\u0026gt; __('Postal Code', 'piklist-demo') ,'columns' =\u0026gt; 3 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Postal Code' ) ) ) ));  Usage Display Grouped Fields If field value is set for the group, unserialize the contents of the field like this:\n$group_data = get_post_meta($post-\u0026gt;ID, 'field_name', true); $group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed print_r($group_data); // output the results  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/html/",

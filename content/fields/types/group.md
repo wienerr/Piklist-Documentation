@@ -1,6 +1,6 @@
 ---
-title: "Field Group"
-weight: 1000
+title: "Group Field"
+menuTitle: "Group"
 ---
 ### `'type' => 'group'`
 
