@@ -13,7 +13,7 @@ Piklist utilizes a folder for each major section of WordPress. You create these 
 
 If you want to use your theme for your Piklist files, open your theme’s main folder and add a folder called “piklist”. Inside that folder add another called “parts” and then add any Piklist folders you will need. Your folder structure should look like this:
 
-```
+```text
 /theme-folder
   /piklist
     /parts
@@ -36,7 +36,7 @@ If you want to use your theme for your Piklist files, open your theme’s main f
 
 You can also create a Piklist plugin if you want. The folder structure is slightly different than the one for a theme. Open your plugin’s main folder and add a “parts” folder. In that folder add any folders you will need. Your folder structure should look like this:
 
-```
+```text
 /plugin-folder
   /parts
     /admin-pages (Do not use for settings pages)

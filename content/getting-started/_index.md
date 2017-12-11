@@ -1,9 +1,8 @@
 ---
 title: "Getting Started"
-chapter: true
 weight: 10
 ---
-# Getting Started with Piklist
+## Getting Started with Piklist
 To get the most out of this tutorial you should have a recent version of WordPress running and the [Piklist plugin](https://wordpress.org/plugins/piklist/) installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
 
 ## What is Piklist?
@@ -30,7 +29,7 @@ Piklist utilizes a folder for each major section of WordPress. You create these 
 ### Folder Structure for your theme
 If you want to use your theme for your Piklist files, open your theme’s main folder and add a folder called “piklist”. Inside that folder add another called “parts” and then add any Piklist folders you will need. Your folder structure should look like this:
 
-```
+```text
 /theme-folder
   /piklist
     /parts
@@ -51,7 +50,7 @@ If you want to use your theme for your Piklist files, open your theme’s main f
 ### Folder Structure for your plugin
 You can also create a Piklist plugin if you want. The folder structure is slightly different than the one for a theme. Open your plugin’s main folder and add a “parts” folder. In that folder add any folders you will need. Your folder structure should look like this:
 
-```
+```text
 /plugin-folder
   /parts
     /admin-pages (Do not use for settings pages)
@@ -71,19 +70,19 @@ You can also create a Piklist plugin if you want. The folder structure is slight
 
 When creating a plugin you need let Piklist know this plugin depends on it. In the comment block of your main plugin file, you need to add: Plugin Type: Piklist. So your comment block should look something like this:
 
-```
-/*
-Plugin Name: Name Of The Plugin
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
-Version: The Plugin's Version Number, e.g.: 1.0
-Author: Name Of The Plugin Author
-Author URI: http://URI_Of_The_Plugin_Author
-Plugin Type: Piklist
-*/
+```php
+/**
+ * Plugin Name: Name Of The Plugin
+ * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+ * Description: A brief description of the Plugin.
+ * Version: The Plugin's Version Number, e.g.: 1.0
+ * Author: Name Of The Plugin Author
+ * Author URI: http://URI_Of_The_Plugin_Author
+ * Plugin Type: Piklist
+ */
 ```
 
-A more detailed doc on writing Piklist plugins can be found here > [TODO: ADD LINK]
+A more detailed doc on writing Piklist plugins can be found here: [Writing a Plugin for Piklist](/getting-started/writing-a-plugin-for-piklist)
 
 ## Grouping fields
 ### Overview
@@ -96,13 +95,12 @@ Configuration options for each field group are defined in the comment block at t
 
 Create a new file in your “meta-boxes” folder called my-fields.php. At the top of the file, add this comment block:
 
-```
+```php
 <?php
-/*
-Title: My custom fields
-Post Type: post
-*/
-?>
+/**
+ * Title: My custom fields
+ * Post Type: post
+ */
 ```
 
 In this comment block you just defined two configuration parameters:
@@ -121,13 +119,12 @@ The comment block at the top of each parts file defines configuration options fo
 
 Change the “Post Type” parameter to this: Post Type: post, page so your code will look like this:
 
-```
+```php
 <?php
-/*
-Title: My custom fields
-Post Type: post, page
-*/
-?>
+/**
+ * Title: My custom fields
+ * Post Type: post, page
+ */
 ```
 
 Save the file. Open WordPress and add a new Page. You will see the same empty metabox that you added to Posts. Using this method you can easily use the same field code to multiple Post Types.
@@ -143,10 +140,10 @@ Now that we created our metabox, it’s time to add some fields.  Under the comm
 
 ```
 <?php
-/*
-Title: My custom fields
-Post Type: post, page
-*/
+/**
+ * Title: My custom fields
+ * Post Type: post, page
+ */
 
 piklist('field', array(
   'type' => 'text'
@@ -155,7 +152,7 @@ piklist('field', array(
 ));
 ```
 
-The piklist('field') function accepts tons of parameters[TODO: ADD LINK]. This example used just three:
+The piklist('field') function accepts [tons of parameters](/fields/field-parameters). This example used just three:
 
 **type**: The type of field. In this case “text”.
 
@@ -176,10 +173,10 @@ Now go back to your file, copy the field code (not the comment block), and paste
 
 ```
 <?php
-/*
-Title: My custom fields
-Post Type: post, page
-*/
+/**
+ * Title: My custom fields
+ * Post Type: post, page
+ */
 
 piklist('field', array(
   'type' => 'text'
@@ -209,11 +206,11 @@ In the “users” folder you created in step 3, create a new file. Now open the
 
 Since Users aren’t a Post Type, delete the line in your comment block that says: Post Type: post, page. Your file should look like this:
 
-```
+```php
 <?php
-/*
-Title: My custom fields
-*/
+/**
+ * Title: My custom fields
+ */
 
 piklist('field', array(
   'type' => 'text'
@@ -235,7 +232,7 @@ Press save. Open WordPress and edit any users profile. You will see this field u
 You just utilized the same code for a User Profile, that you wrote for a Post Type. This is a huge time saver and you will find this feature invaluable.
 
 ## Built-in Demos
-Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about Piklist Demos here. [TODO ADD LINK]
+Now that you understand how easy it is to create fields with Piklist, we’re sure you’re excited to get started. To help you along, Piklist comes with built-in demos that contain tons of field configurations that you can easily copy and paste into your own project. You can learn more about [Piklist Demos here](/getting-started/built-in-demos).
 
 ## Video Overview
 The initial public unveiling of Piklist at WordCampNYC 2012.{{< youtube wmKjn-fDlvU >}}

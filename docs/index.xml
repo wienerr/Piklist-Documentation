@@ -88,18 +88,6 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;colorpicker&#39;, 
     </item>
     
     <item>
-      <title>Comment Block Parameters</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/comment-block-parameters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/comment-block-parameters/</guid>
-      <description>This is a full list of available parameters for Piklist comment blocks. Not all parameters work with all Piklist parts (parts/ folders).
-Action  Input: string Returns: string  Align How the pointer should be aligned on this edge, relative to the target.
-Piklist Parts: pointers
- Input: string Returns: string Values: top, bottom, left, right, middle  Anchor ID  Input: string Returns: string  Capability User capability that can view this group of fields.</description>
-    </item>
-    
-    <item>
       <title>Conditionally Show Fields</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/fields/conditionally-show-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

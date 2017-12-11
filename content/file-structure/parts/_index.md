@@ -1,5 +1,6 @@
 ---
 title: "Parts"
+chapter: true
 weight: 40
 ---
 
