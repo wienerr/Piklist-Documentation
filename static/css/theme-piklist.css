@@ -17,6 +17,26 @@
   border-top: solid #aaa 1px;
 }
 
+/* Children Shortcode */
+ul.children {
+  list-style-type: none;
+}
+
+ul.children li.child {
+  margin-bottom: 30px;
+}
+
+ul.children li.child p.children-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+ul.children li.child p.children-description {
+  font-size: 1rem;
+  font-style: normal;
+}
+
 /* Contributor Block */
 #contribute {
   display: none;

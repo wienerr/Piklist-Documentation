@@ -1,4 +1,4 @@
 ---
 title: "Filters"
 ---
-{{% children depth="3" description="true" showhidden="true" %}}
+{{% children description="true" showhidden="true" %}}
