@@ -336,17 +336,6 @@ View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
-      <title>Meta-boxes</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</guid>
-      <description>/parts/meta-boxes/ With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created.
-You can create as many files as you like and place them in this folder. Each file will render one meta-box.
-View Tutorials &amp;rightarrow;</description>
-    </item>
-    
-    <item>
       <title>Parse error: syntax error, unexpected T_FUNCTION</title>
       <link>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -386,6 +375,16 @@ If the user attempts to activate a Piklist plugin, without activating Piklist fi
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/placing-add-new-post-workflow/</guid>
       <description>Piklist’s Workflow system is incredibly powerful. It allows you to divide a page into different tabs. In this tutorial, we’ll use the Workflows to divide the default WordPress add new Post page.
  Review the Workflows documentation page to get an idea how they work. For this tutorial, we will need to create one Workflow HEADER, and two Workflow TAB files. Additionally, we will need to write a quick function as well.</description>
+    </item>
+    
+    <item>
+      <title>Pointers</title>
+      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</guid>
+      <description>/parts/pointers/ With Piklist you can easily create Pointers.
+You can create as many files as you like and place them in this folder. Each file will render one pointer. View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>

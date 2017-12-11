@@ -184,10 +184,6 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</loc>
-  </url>
-  
-  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/</loc>
   </url>
   
@@ -205,6 +201,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/placing-add-new-post-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</loc>
   </url>
   
   <url>
