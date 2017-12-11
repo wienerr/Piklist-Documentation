@@ -14,7 +14,7 @@ A few important caveats:
 * Some themes may not display your post if the status is not published, so you may have to modify your theme’s loop to show it.
 * This parameter does not ADD statuses to the Post Type, it removes the default WordPress statuses and REPLACES them.
 
-Like most items in Piklist, we will use an array of values to add our Custom Post Statuses. Piklist has a bunch of parameters to use with Custom Post Types, the one we will use is `status`.  Add this to your Custom Post Type you registered with the Piklist filter `piklist_post_types`:
+Like most items in Piklist, we will use an array of values to add our Custom Post Statuses. Piklist has a bunch of parameters to use with Custom Post Types, the one we will use is `status`.  Add this to your Custom Post Type you registered with the Piklist filter [`piklist_post_types`](actions-filters/filters/piklist_post_types/):
 ```
 'status' => array(
    'draft' => array(

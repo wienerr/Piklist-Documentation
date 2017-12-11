@@ -63,6 +63,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/settings/building-settings-pages/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</loc>
   </url>
   
@@ -160,6 +164,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/hide-meta-boxes-page-template/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
   </url>
   
@@ -169,6 +177,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/media/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/meta-boxes/</loc>
   </url>
   
   <url>
@@ -192,11 +204,27 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/placing-add-new-post-workflow/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/radio/</loc>
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/registering-post-types/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/select/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/settings/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/settings/</loc>
   </url>
   
   <url>
@@ -229,6 +257,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</loc>
   </url>
   
@@ -242,6 +274,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process_folder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_post_types/</loc>
   </url>
   
   <url>
