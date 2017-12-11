@@ -4,6 +4,7 @@ title = "Piklist Documentation"
 theme = "hugo-theme-learn"
 publishDir = "docs"
 canonifyURLs = true
+enableGitInfo = true
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-github'></i> Piklist Repo"
