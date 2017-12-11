@@ -53,7 +53,7 @@
 	"title": "Field Types",
 	"tags": [],
 	"description": "",
-	"content": "Piklist supports all these field types, or you can create your own.\n Checkbox Field   Colorpicker Field   Datepicker Field   Editor Field   File (upload) Field   Group Field   HTML Field   HTML5 Fields   Hidden Field   Radio Field   Select Field   Text Field   Textarea Field   "
+	"content": "Piklist supports all these field types, or you can create your own.\nCheckbox Field\n Colorpicker Field\n Datepicker Field\n Editor Field\n File (upload) Field\n Group Field\n HTML Field\n HTML5 Fields\n Hidden Field\n Radio Field\n Select Field\n Text Field\n Textarea Field\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/",
@@ -81,7 +81,7 @@
 	"title": "Fields",
 	"tags": [],
 	"description": "",
-	"content": "Piklist fields are incredibly powerful and easy to use.\n Field Types    Checkbox Field     Colorpicker Field     Datepicker Field     Editor Field     File (upload) Field     Group Field     HTML Field     HTML5 Fields     Hidden Field     Radio Field     Select Field     Text Field     Textarea Field      Sanitizing Fields     Create your own field     Field Parameters     "
+	"content": " Fields Piklist fields are incredibly powerful and easy to use.\nField Types\n Sanitizing Fields\n Create your own field\n Field Parameters\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/",
@@ -95,7 +95,7 @@
 	"title": "Tutorials",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\n Fields (General)    Conditionally Show Fields     Display Menus as a Radio, Checkbox or Select list     Show Fields by User Capability or Role      Forms    Understanding Front End Forms      Posts / Meta-boxes    Getting Started with Meta-boxes and Fields     Add Subtitle field to the Post screen     Add WYSISYG to your Excerpt Box     Creating Custom Post Statuses     Hide Meta Boxes for a Page Template     Lock Field Values based on Post Status     Registering Post Types     Show Metaboxes and Fields by Post Status      Relationships    Working with Field Relationships      Settings    Building Settings Pages      Taxonomies / Terms    Getting Started with Taxonomies and Piklist     Creating Separate Taxonomies for each User     Display Taxonomies as Radio, Checkboxes or Select list     Grouping child taxonomies by their parents      Updates    Getting started with updates      Users    Display Users as a Radio, Checkbox or Select list      Widgets    Easy Widgets      Workflows    Building Your First Workflow     Placing \u0026#34;Add New Post\u0026#34; in a Workflow      "
+	"content": " Tutorials We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\nFields (General)\n Forms\n Posts / Meta-boxes\n Relationships\n Settings\n Taxonomies / Terms\n Updates\n Users\n Widgets\n Workflows\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
@@ -256,7 +256,7 @@
 	"title": "Fields (General)",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Conditionally Show Fields  Piklist makes it easy to show one or more fields, based on the value of another field, and so much more.\n Display Menus as a Radio, Checkbox or Select list  Using Piklist you can easily display your Menus as Radio, Checkboxes or a Select list (dropdowns). Easily include them in custom theme settings, or when creating posts. This simple tutorial will show you how.\n Show Fields by User Capability or Role  Insert a subtitle filed to the Post screen\n "
+	"content": " Tutorials Conditionally Show Fields\nPiklist makes it easy to show one or more fields, based on the value of another field, and so much more.\n Display Menus as a Radio, Checkbox or Select list\nUsing Piklist you can easily display your Menus as Radio, Checkboxes or a Select list (dropdowns). Easily include them in custom theme settings, or when creating posts. This simple tutorial will show you how.\n Show Fields by User Capability or Role\nInsert a subtitle filed to the Post screen\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/file/",
@@ -270,7 +270,7 @@
 	"title": "Filters",
 	"tags": [],
 	"description": "",
-	"content": "  piklist_empty_post_title  Let’s you programmatically set the post title when adding a new post (post type).\n   piklist_part_process  The `piklist_part_process` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n   piklist_part_process-{$folder}  The `piklist_part_process-{$folder}` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n   piklist_post_types  The piklist_post_types filter lets you register your custom Post Types through Piklist. This gives you access to additional functionality that Piklist offers.\n   piklist_pre_update_option  The piklist_pre_update_option filter is used to filter the settings input before they are saved\n   piklist_pre_update_option_$setting  The piklist_pre_update_option_$setting filter is used to filter the settings input before they are saved\n   piklist_sanitization_rules  Add your own rules to sanitize field data.\n   piklist_taxonomies  Extends the standard WordPress function register_taxonomy with additional features and parameters.\n   piklist_validation_rules  Add your own rules to validate field data.\n   "
+	"content": " piklist_empty_post_title\nLet’s you programmatically set the post title when adding a new post (post type).\n piklist_part_process\nThe `piklist_part_process` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n piklist_part_process-{$folder}\nThe `piklist_part_process-{$folder}` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n piklist_post_types\nThe piklist_post_types filter lets you register your custom Post Types through Piklist. This gives you access to additional functionality that Piklist offers.\n piklist_pre_update_option\nThe piklist_pre_update_option filter is used to filter the settings input before they are saved\n piklist_pre_update_option_$setting\nThe piklist_pre_update_option_$setting filter is used to filter the settings input before they are saved\n piklist_sanitization_rules\nAdd your own rules to sanitize field data.\n piklist_taxonomies\nExtends the standard WordPress function register_taxonomy with additional features and parameters.\n piklist_validation_rules\nAdd your own rules to validate field data.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/",
@@ -291,7 +291,7 @@
 	"title": "Forms",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Understanding Front End Forms  Piklist makes creating Front End forms as easy as creating fields in the WordPress admin\n "
+	"content": " Tutorials Understanding Front End Forms\nPiklist makes creating Front End forms as easy as creating fields in the WordPress admin\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/group/",
@@ -410,7 +410,7 @@
 	"title": "Posts / Meta-boxes",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Getting Started with Meta-boxes and Fields  Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.\n Add Subtitle field to the Post screen  Insert a subtitle filed to the Post screen\n Add WYSISYG to your Excerpt Box  To add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.\n Creating Custom Post Statuses  Custom Post Statuses are at the heart of any web application built with WordPress, and Piklist makes it easy for you to implement them.\n Hide Meta Boxes for a Page Template  Using Piklist, you can easily hide some meta boxes when a certain page template is selected in WordPress\n Lock Field Values based on Post Status  Piklist allows you to lock a field value (making it read-only), when the post status changes. A perfect example of this is if you want to lock post meta once a post is published.\n Registering Post Types  Add some extra power to your Post Types by registering them the Piklist way.\n Show Metaboxes and Fields by Post Status  With web applications and powerful websites, there will be times you want to only show a metabox or metafield when a post is in a particular post status.\n "
+	"content": " Tutorials Getting Started with Meta-boxes and Fields\nPiklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.\n Add Subtitle field to the Post screen\nInsert a subtitle filed to the Post screen\n Add WYSISYG to your Excerpt Box\nTo add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.\n Creating Custom Post Statuses\nCustom Post Statuses are at the heart of any web application built with WordPress, and Piklist makes it easy for you to implement them.\n Hide Meta Boxes for a Page Template\nUsing Piklist, you can easily hide some meta boxes when a certain page template is selected in WordPress\n Lock Field Values based on Post Status\nPiklist allows you to lock a field value (making it read-only), when the post status changes. A perfect example of this is if you want to lock post meta once a post is published.\n Registering Post Types\nAdd some extra power to your Post Types by registering them the Piklist way.\n Show Metaboxes and Fields by Post Status\nWith web applications and powerful websites, there will be times you want to only show a metabox or metafield when a post is in a particular post status.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/radio/",
@@ -431,7 +431,7 @@
 	"title": "Relationships",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Working with Field Relationships  Piklist allows you to relate any object to any object.\n "
+	"content": " Tutorials Working with Field Relationships\nPiklist allows you to relate any object to any object.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/select/",
@@ -452,7 +452,7 @@
 	"title": "Settings",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Building Settings Pages  Creating WordPress Settings pages with Piklist is as easy as creating any other field type.\n "
+	"content": " Tutorials Building Settings Pages\nCreating WordPress Settings pages with Piklist is as easy as creating any other field type.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/shortcodes/",
@@ -487,7 +487,7 @@
 	"title": "Taxonomies / Terms",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Getting Started with Taxonomies and Piklist  Add some extra power to your Taxonomies by registering them the Piklist way.\n Creating Separate Taxonomies for each User  In this tutorial we’ll provide each logged in user with their own set of private tags.\n Display Taxonomies as Radio, Checkboxes or Select list  Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns)\n Grouping child taxonomies by their parents  WordPress hierarchical taxonomies allow you to assign terms to a parent term. In this tutorial we’ll show you how to group the child terms under each parent, and make the parent unselectable, forcing the user to only select the children.\n "
+	"content": " Tutorials Getting Started with Taxonomies and Piklist\nAdd some extra power to your Taxonomies by registering them the Piklist way.\n Creating Separate Taxonomies for each User\nIn this tutorial we’ll provide each logged in user with their own set of private tags.\n Display Taxonomies as Radio, Checkboxes or Select list\nUsing Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns)\n Grouping child taxonomies by their parents\nWordPress hierarchical taxonomies allow you to assign terms to a parent term. In this tutorial we’ll show you how to group the child terms under each parent, and make the parent unselectable, forcing the user to only select the children.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/terms/",
@@ -529,7 +529,7 @@
 	"title": "Updates",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Getting started with updates  Use Piklist updates to run your update scripts\n "
+	"content": " Tutorials Getting started with updates\nUse Piklist updates to run your update scripts\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/",
@@ -543,7 +543,7 @@
 	"title": "Users",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Display Users as a Radio, Checkbox or Select list  Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).\n "
+	"content": " Tutorials Display Users as a Radio, Checkbox or Select list\nUsing Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/",
@@ -564,7 +564,7 @@
 	"title": "Widgets",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Easy Widgets  Building widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets.\n "
+	"content": " Tutorials Easy Widgets\nBuilding widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/",
@@ -578,7 +578,7 @@
 	"title": "Workflows",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Building Your First Workflow  Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow  Use the Workflows to divide the default WordPress add new Post page.\n "
+	"content": " Tutorials Building Your First Workflow\nPiklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow\nUse the Workflows to divide the default WordPress add new Post page.\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/relationships/working-with-field-relationships/",
