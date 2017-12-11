@@ -39,3 +39,9 @@
   background: #e32e19;
   box-shadow: 0 3px 0 #71170c;
 }
+
+#contribute small.last-modified {
+  display: block;
+  margin-top: 60px;
+  font-size: 0.75rem;
+}
