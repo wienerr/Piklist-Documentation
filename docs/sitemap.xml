@@ -3,15 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/fields/</loc>
-  </url>
-  
-  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/</loc>
   </url>
   
   <url>
@@ -35,11 +27,23 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</loc>
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/</loc>
   </url>
   
   <url>
@@ -84,6 +88,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/creating-custom-post-statuses/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</loc>
   </url>
   
@@ -116,7 +124,19 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/forms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/forms/</loc>
   </url>
   
   <url>
@@ -132,6 +152,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/help/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/hidden/</loc>
   </url>
   
@@ -141,6 +165,14 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/lock-field-values-based-post-status/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/media/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</loc>
   </url>
   
   <url>
@@ -168,6 +200,14 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/fields/show-fields-user-capability-role/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/show-metaboxes-fields-post-status/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tags/</loc>
     <priority>0</priority>
   </url>
@@ -181,11 +221,47 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/forms/understanding-front-end-forms/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_empty_post_title/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process_folder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option_setting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_sanitization_rules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_taxonomies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_validation_rules/</loc>
   </url>
   
 </urlset>

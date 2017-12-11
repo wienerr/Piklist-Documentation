@@ -1,6 +1,6 @@
 ---
 title: "Fields"
-weight: 10
+weight: 50
 ---
 
 Piklist fields are incredibly powerful and easy to use.

@@ -88,6 +88,17 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;colorpicker&#39;, 
     </item>
     
     <item>
+      <title>Creating Custom Post Statuses</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/creating-custom-post-statuses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/creating-custom-post-statuses/</guid>
+      <description>Custom Post Statuses are at the heart of any web application built with WordPress, and Piklist makes it easy for you to implement them. No longer are you stuck with draft, pending review and published. You can add whatever post statuses you choose.
+A few important caveats:
+ Due to the nature of WordPress, your first post status has to remain “draft”. You can change the label so it displays “New”, or “Howdy”, but the key in the post status array will have to remain draft (we’ll explain more later in the tutorial).</description>
+    </item>
+    
+    <item>
       <title>Creating Metaboxes and Fields</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -131,7 +142,9 @@ Piklist can replace the default editor in WordPress by using code the following 
       
       <guid>https://piklist.github.io/Piklist-Documentation/fields/field-parameters/</guid>
       <description>This is a full list of available parameters for Piklist fields.
-on_post_status </description>
+add_more (repeater) Piklist allows you to turn ANY field, or group of fields, into a repeater field, by simple adding the add_more parameter.
+Displaying Data To display the results of the Add-More in your theme, pull the data like you normally would. Add more’s save data as an array, so you can loop though the data to display.
+ Input: boolean Default: false  Example: &#39;add_more&#39; =&amp;gt; true</description>
     </item>
     
     <item>
@@ -277,6 +290,24 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;select&#39; ,&#39;
     </item>
     
     <item>
+      <title>Show Fields by User Capability or Role</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/fields/show-fields-user-capability-role/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/fields/show-fields-user-capability-role/</guid>
+      <description>With web applications and powerful websites, there will be times you want to only show a metabox or metafield to a particular user role or capability. For an Order Management system you may want your customers to see certain fields, while your employees can see them all. Or maybe you want Administrators and Editors to be able to leave notes on a post that no one else can see. Well, Piklist makes it easy to do just that.</description>
+    </item>
+    
+    <item>
+      <title>Show Metaboxes and Fields by Post Status</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/show-metaboxes-fields-post-status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/show-metaboxes-fields-post-status/</guid>
+      <description>With web applications and powerful websites, there will be times you want to only show a meta-box or metafield when a post is in a particular post status. This becomes extra powerful when paired with the Piklist capability parameter, which allows you to show/hide a field based on a user role or capability. For an Order Management system, you may want an order notes field hidden until the estimate becomes an order.</description>
+    </item>
+    
+    <item>
       <title>Text Field</title>
       <link>https://piklist.github.io/Piklist-Documentation/fields/types/text/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -313,6 +344,104 @@ To remove the custom-fields meta box from a WordPress default post type, or one 
       <guid>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</guid>
       <description>Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
 Registering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</description>
+    </item>
+    
+    <item>
+      <title>piklist_empty_post_title</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_empty_post_title/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_empty_post_title/</guid>
+      <description>apply_filters(&#39;piklist_empty_post_title&#39;, $data[&#39;post_title&#39;], $post_array); Let’s you programmatically set the post title when adding a new post (post type).
+Example:
+// Set the Post Title to &amp;quot;Order #&amp;quot; plus post ID: function set_post_title_to_order_number($data, $post_array) { if ($post_array[&#39;post_type&#39;] == &#39;MY-POST-TYPE&#39;) { return &#39;Order #&#39; . $post_array[&#39;ID&#39;]; } else { return $data; } } add_filter(&#39;piklist_empty_post_title&#39;, &#39;set_post_title_to_order_number&#39;, 10, 2);  IMPORTANT: This filter works best when there is no title field for posts. To disable the title field, do not pass &amp;ldquo;title&amp;rdquo; to the supports parameter when registering a post type.</description>
+    </item>
+    
+    <item>
+      <title>piklist_part_process</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process/</guid>
+      <description>apply_filters(&#39;piklist_part_process&#39;, $_part, $folder); The piklist_part_process filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.
+Parameters $part The individual part (e.g. meta-box, setting, etc.) to be modified or removed. It’s an associative array that contains all the information about the part.
+ Input: Array  $folder The folder the part is stored in. If it’s a meta-box, then this would be “meta-boxes”.</description>
+    </item>
+    
+    <item>
+      <title>piklist_part_process-{$folder}</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process_folder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_part_process_folder/</guid>
+      <description>apply_filters(&amp;quot;piklist_part_process-{$folder}&amp;quot;, $_part); The piklist_part_process-{$folder} filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.
+Parameters $folder The parts folder you want to filter (e.g. meta-boxes, settings, etc.)
+$part The individual part (e.g. meta-box, setting, etc.) to be modified or removed. It’s an associative array that contains all the information about the part.
+ Input: Array  $folder The folder the part is stored in.</description>
+    </item>
+    
+    <item>
+      <title>piklist_pre_update_option</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option/</guid>
+      <description>apply_filters(&#39;piklist_pre_update_option&#39;, $settings, $setting, $new, $old); The piklist_pre_update_option filter is used to filter the settings input before they are saved. This allows you to manipulate the input data, or even add additional settings before the data is entered into the database.
+Parameters This filter provides you with the following parameters:
+$settings All key=&amp;gt;value pairs for this setting. If you are using multiple tabs, this will show all settings for all tabs.</description>
+    </item>
+    
+    <item>
+      <title>piklist_pre_update_option_$setting</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option_setting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_pre_update_option_setting/</guid>
+      <description>apply_filters(&#39;piklist_pre_update_option_&#39; . $setting, $settings, $new, $old); The piklist_pre_update_option_$setting filter is used to filter the settings input before they are saved. This allows you to manipulate the input data, or even add additional settings before the data is entered into the database.
+Parameters This filter provides you with the following parameters:
+$settings All key=&amp;gt;value pairs for this setting. If you are using multiple tabs, this will show all settings for all tabs.</description>
+    </item>
+    
+    <item>
+      <title>piklist_sanitization_rules</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_sanitization_rules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_sanitization_rules/</guid>
+      <description> apply_filters(&#39;piklist_sanitization_rules&#39;, self::$sanitization_rules); Add your own rules to sanitize field data.
+Example:
+// create a sanitization rule called &amp;quot;my_email_sanitization&amp;quot; add_filter(&#39;piklist_sanitization_rules&#39;, &#39;sanitize_email_function&#39;, 11); function sanitize_email_function($sanitization_rules) { $sanitization_rules[&#39;my_email_sanitization&#39;] = array( &#39;callback&#39; =&amp;gt; &#39;sanitize_email_callback&#39; ); return $sanitization_rules; } function sanitize_email_callback($value, $field, $options) { return sanitize_email($value); // sanitize_email() is a core WordPress function }  Usage:
+&#39;sanitize&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;my_email_sanitization&#39; ) )  </description>
+    </item>
+    
+    <item>
+      <title>piklist_taxonomies</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_taxonomies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_taxonomies/</guid>
+      <description>apply_filters(&#39;piklist_taxonomies&#39;, self::$taxonomies); Extends the standard WordPress function register_taxonomy() with additional features and parameters.
+Parameters piklist_taxonomies supports all parameters from register_taxonomy() as well as these custom parameters:
+object_type Set this parameter to use this Piklist taxonomy for users
+ Input: Array  Example:
+&#39;object_type&#39; =&amp;gt; &#39;user
+hide_meta_box Hide the meta box created by this taxonomy
+ Input: Array  Example:
+&amp;quot;hide_meta_box&amp;quot; =&amp;gt; true
+meta_box_filter Add a filter to this meta box to make it easier to search for terms.</description>
+    </item>
+    
+    <item>
+      <title>piklist_validation_rules</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_validation_rules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_validation_rules/</guid>
+      <description>apply_filters(&#39;piklist_validation_rules&#39;, self::$validation_rules); Add your own rules to validate field data.
+Example:
+add_filter(&#39;piklist_validation_rules&#39;, &#39;check_valid_number&#39;, 11); function check_valid_number($validation_rules) { $validation_rules[&#39;my_number&#39;] = array( &#39;rule&#39; =&amp;gt; &amp;quot;/[-+]?[0-9]*[.,]?[0-9]+/&amp;quot; ,&#39;message&#39; =&amp;gt; __(&#39;is not a number&#39;) ); return $validation_rules; }  Usage:
+&#39;validate&#39; =&amp;gt; array( array( &#39;type&#39; =&amp;gt; &#39;my_number&#39; ) )  Create a rule with a callback function:
+// Create a validation rule called &amp;quot;my_file_exists&amp;quot; add_filter(&#39;piklist_validation_rules&#39;, &#39;check_file_exists&#39;, 11); function check_file_exists($validation_rules) { $validation_rules[&#39;my_file_exists&#39;] = array( &#39;callback&#39; =&amp;gt; &#39;my_validate_file_exists&#39; ); return $validation_rules; } /** * @param int $index The field index being checked.</description>
     </item>
     
   </channel>

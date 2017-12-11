@@ -21,3 +21,5 @@ Dismiss: true
 ?>
 <p>This is my notice</p>
 ```
+
+**[View Tutorials &rightarrow;](/tutorials/notices/)**

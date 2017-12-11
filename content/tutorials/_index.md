@@ -1,7 +1,9 @@
 ---
 title: "Tutorials"
 chapter: true
-weight: 15
+weight: 99
 ---
 # Tutorials
 We've put together some tutorials on specific examples. Enjoy!
+
+{{% children depth="3" showhidden="true" %}}
