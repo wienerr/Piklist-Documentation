@@ -3,6 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/getting-started-taxonomies/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/</loc>
   </url>
   
@@ -40,6 +48,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</loc>
   </url>
   
   <url>
@@ -96,7 +108,7 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/creating-separate-taxonomies-user/</loc>
   </url>
   
   <url>
@@ -109,6 +121,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/fields/display-menus-radio-checkbox-select-list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</loc>
   </url>
   
   <url>
@@ -148,6 +164,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/grouping-child-taxonomies-parents/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/html/</loc>
   </url>
   
@@ -184,10 +204,6 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/</loc>
-  </url>
-  
-  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/parse-error-syntax-error-unexpected-t_function/</loc>
   </url>
   
@@ -208,11 +224,19 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/radio/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/registering-post-types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/relationships/</loc>
   </url>
   
   <url>
@@ -225,6 +249,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/settings/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/shortcodes/</loc>
   </url>
   
   <url>
@@ -241,6 +269,14 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/terms/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/types/text/</loc>
   </url>
   
@@ -253,11 +289,23 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/updates/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/updates/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/relationships/working-with-field-relationships/</loc>
   </url>
   
   <url>

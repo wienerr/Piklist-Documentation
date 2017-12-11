@@ -1,9 +1,10 @@
 ---
-title: Creating Metaboxes and Fields
+title: Getting Started with Meta-boxes and Fields
 description: Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
 hidden: true
+weight: 1
 ---
-    
+
 ![Metabox](/images/userguide-meta-box.jpg)
 
 ## Description

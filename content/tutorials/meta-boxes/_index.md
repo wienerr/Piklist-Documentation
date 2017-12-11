@@ -1,5 +1,5 @@
 ---
-title: Meta-boxes
+title: Posts / Meta-boxes
 ---
 ## Tutorials
 
