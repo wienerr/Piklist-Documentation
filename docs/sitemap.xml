@@ -3,11 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/building-first-workflow/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/getting-started-taxonomies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</loc>
   </url>
   
   <url>
@@ -48,10 +60,6 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</loc>
   </url>
   
   <url>
@@ -125,6 +133,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/users/display-users-radio-checkbox-select-list/</loc>
   </url>
   
   <url>
@@ -297,7 +309,27 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/users/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/</loc>
   </url>
   
   <url>

@@ -1,5 +1,19 @@
 [
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/workflows/building-first-workflow/",
+	"title": "Building Your First Workflow",
+	"tags": [],
+	"description": "Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.",
+	"content": " Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.\nIMPORTANT: Each Workflow tab loads a separate page, with a new url. If you change tabs without saving you will lose your data.\nALSO IMPORTANT: Workflows control the ENTIRE page, not just what is located under the tabs.\nEach Workflow needs a minimum of two files:\nHeader file This file goes in the /workflows folder\nThe header sets the main parameters for the entire flow. Entering the parameters into a comment block is all that\u0026rsquo;s required of the header file.\nParameters Flow Define a unique name for your flow. The name will tie together all your tabs. Example: My Flow\nPage What pages the flow should display on. This can be multiple pages, separated by commas. Example: post.php, post-new.php, post-edit.php, admin.php, your_custom_setting\nPost Type For custom post type flows, please define the post type. Example: my_cpt\nHeader Tells Piklist this is a WorkFlow header file. Set this to: true.\nPosition Where on the page should the WorkFlow display. The Workflow system can currently display in five WordPress hook locations:\n'header' =\u0026gt; 'in_admin_header'\n'body' =\u0026gt; 'all_admin_notices'\n'title' =\u0026gt; 'edit_form_after_title'\n'editor' =\u0026gt; 'edit_form_after_editor'\n'profile' =\u0026gt; 'profile_personal_options'\n/* Flow: My Flow Page: post.php, post-new.php, post-edit.php, admin.php Post Type: my_cpt Header: true Position: title */  Tab file This file goes in the /workflows folder\nEach tab in your Workflow gets its own file. Each file uses a comment block to link it to a Workflow.\nTIP: You must create at least two tabs for WorkFlows to show up.\nParameters Title The title of the Workflow tab. Example: My Tab\nOrder Defines the sort order of the tabs. Example: 10\nFlow Should be the same value as the header file. Example: My Flow\nPage What pages the individual tab should display on. This can be multiple pages, separated by commas. Example: post.php, post-new.php, post-edit.php, admin.php\nDefault Sets this tab as the default tab. IMPORTANT: Only use this parameter in ONE of your WorkFlow tab files. Default: true\n/* Title: My Tab Order: 10 Flow: My Flow */  So far we\u0026rsquo;ve created a Workflow and a tab, but we have not shown any content. When you click on a tab you are defining the entire page environment, not just the environment in the tab. You have to define which meta-boxes (or user sections, settings sections, term sections, etc) are shown on the entire page, even in the sidebar. This means when a user clicks on a WorkFlow tab you can hide or show fields in the actual tab and in the sidebar.\nAssign Meta Boxes, Sections, Etc. to Workflows. ** This file goes in the /meta-boxes folder, if you want to assign meta-boxes to this workflow. If you want to assign settings sections, then this file would go in the /settings folder.\nIn this example, we are creating and assigning a meta-box.\nCreate a meta-box the way you normally would with Piklist.\nIn the comment block of your meta box file add the following two parameters:\nTab: My Tab Flow: My Flow  So, if this was the original comment block for your meta box:\n/* Title: Text Fields Post Type: piklist_demo */  It would now look like this:\n/* Title: Text Fields Post Type: piklist_demo Tab: My Tab Flow: My Flow */  Your meta-box will now show up under the “My Tab” tab of your workflow.\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/",
+	"title": "Easy Widgets",
+	"tags": [],
+	"description": "Building widgets with Piklist is incredibly simple.  You can use a fraction of the code WordPress requires to make very powerful widgets.",
+	"content": " Building widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets. In this tutorial, we will create a widget that includes three fields: select, text and ColorPicker.\n The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a widgets subfolder. You can see the supported Piklist folder structure here. Next we need to create the widget files. Piklist widgets are made up of two:  widget-name.php: This file holds the widget output, and is the only required file for a widget. (i.e. example.php) widget-name-form.php: Settings fields for your widget are placed in this file. (i.e. example-form.php)   Widget Settings File Let’s start with example-form.php, which will hold the fields the user will fill in to control the widget. This file is only required if you want to add settings to your widget.\nNow, let’s create our first field, a text box:\npiklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'demo_text' ,'label' =\u0026gt; 'Title' ,'description' =\u0026gt; 'Field Description' ,'value' =\u0026gt; 'Default text' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  This simple array will create a text box that automatically saves as a widget setting. The 'type' =\u0026gt; 'text' variable tells Piklist what sort of field to render. Also, notice that this is very similar to the way you create fields for meta-boxes.\nNow, let’s create our select field, a select field:\npiklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'demo_select' ,'label' =\u0026gt; 'Select box' ,'description' =\u0026gt; 'Choose from the dropdown.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( 'option1' =\u0026gt; 'Option 1' ,'option2' =\u0026gt; 'Option 2' ,'option3' =\u0026gt; 'Option 3' ) ));  Notice that this array is very similar to the one used to create the text box. Just two differences:\n 'type' =\u0026gt; 'select': Tells Piklist that you want to render a select field. The choices array adds your choices.  That’s it! Everything else is the same.\nOne more field to go in this tutorial. Let’s create our colorPicker field. Normally, you would need to add Javascript and CSS to create this field… but not with Piklist!\npiklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'demo_colorpicker' ,'label' =\u0026gt; 'Choose a color' ,'value' =\u0026gt; '#aee029' ,'description' =\u0026gt; 'Click in the box to select a color.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  Seriously, that’s all you need to create a ColorPicker field. You will notice this is pretty much the same code used to create the text box, except we set 'type' =\u0026gt; 'colorpicker'.\nFull Code Snippet for Widget Settings: example-form.php: \u0026lt;?php piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'demo_text' ,'label' =\u0026gt; 'Text box' ,'description' =\u0026gt; 'Field Description' ,'value' =\u0026gt; 'Default text' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) )); piklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'demo_select' ,'label' =\u0026gt; 'Select box' ,'description' =\u0026gt; 'Choose from the dropdown.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( 'option1' =\u0026gt; 'Option 1' ,'option2' =\u0026gt; 'Option 2' ,'option3' =\u0026gt; 'Option 3' ) )); piklist('field', array( 'type' =\u0026gt; 'colorpicker' ,'field' =\u0026gt; 'demo_colorpicker' ,'label' =\u0026gt; 'Choose a color' ,'value' =\u0026gt; '#aee029' ,'description' =\u0026gt; 'Click in the box to select a color.' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ));  Widget Output File The output file is the only required file, since settings may not be necessary for some widgets. Open example.php. At the top of the file, we will add a comment block that will control the configuration of the widget. This comment block is very similar to what you would see in a standard WordPress plugin or theme. Here are the minimum variables required:\n\u0026lt;?php /* Title: My Demo Widget Description: A description of what my widget does */  This comment block tells Piklist you want to name your widget, \u0026ldquo;My Demo Widget\u0026rdquo;, with the description showing up in the widget edit screen.\nNow let\u0026rsquo;s add the standard WordPress widget variables. These are dictated by your theme:\n\u0026lt;?php echo $before_widget; ?\u0026gt; \u0026lt;?php echo $before_title; ?\u0026gt; \u0026lt;?php echo $after_title; ?\u0026gt; \u0026lt;?php echo $after_widget; ?\u0026gt;  Then add in your fields where you want them to show:\n\u0026lt;?php echo $before_widget; ?\u0026gt; \u0026lt;?php echo $before_title; ?\u0026gt; \u0026lt;?php echo $settings['demo_text']; ?\u0026gt;! \u0026lt;?php echo $after_title; ?\u0026gt; \u0026lt;?php echo $settings['demo_select']; ?\u0026gt;! \u0026lt;?php echo $settings['demo_colorpicker']; ?\u0026gt;! \u0026lt;?php echo $after_widget; ?\u0026gt;  You just built a widget!\n"
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/",
 	"title": "Getting Started with Meta-boxes and Fields",
 	"tags": [],
@@ -12,6 +26,13 @@
 	"tags": [],
 	"description": "Add some extra power to your Taxonomies by registering them the Piklist way.",
 	"content": "Whether you register a taxonomy via the standard WordPress function register_taxonomy, or through Piklist, you can still take advantage of many Piklist features. However, you can add some extra power to your Taxonomies by registering them the Piklist way. Piklist extends the register_taxonomy function with extra parameters to enable extra features. You can use the standard register_taxonomy parameters, plus additional ones defined by Piklist.\nTo register a Taxonomy with Piklist:\n Create a function with your Taxonomy parameters. Hook it to the piklist_taxonomies filter. This code can go in your custom plugin, or your theme’s functions.php file.  add_filter('piklist_taxonomies', 'demo_type_tax'); function demo_type_tax($taxonomies) { $taxonomies[] = array( 'post_type' =\u0026gt; 'piklist_demo' ,'name' =\u0026gt; 'piklist_demo_type' ,'show_admin_column' =\u0026gt; true ,'configuration' =\u0026gt; array( 'hierarchical' =\u0026gt; true ,'labels' =\u0026gt; piklist('taxonomy_labels', 'Demo Type') ,'hide_meta_box' =\u0026gt; true ,'show_ui' =\u0026gt; true ,'query_var' =\u0026gt; true ,'rewrite' =\u0026gt; array( 'slug' =\u0026gt; 'demo-type' ) ); return $taxonomies; }  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/",
+	"title": "Getting started with updates",
+	"tags": [],
+	"description": "Use Piklist updates to run your update scripts",
+	"content": " If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.\nThen write your update procedure.\nExample This example is pulled from Piklist itself.\n This update scripts runs if you are upgrading from Piklist version 0.7.1. The script moves data from a legacy table to a new table, and drops the old table. You can find it in piklist/parts/updates  if (!defined('ABSPATH')) exit; // Exit if accessed directly if (!class_exists('Piklist_Update_0_7_2')) { class Piklist_Update_0_7_2 { public function __construct() { add_action('admin_init', array($this, 'admin_init')); } public function admin_init() { global $wpdb; $legacy_table = $wpdb-\u0026gt;prefix . 'piklist_cpt_relate'; $count = $wpdb-\u0026gt;get_var(\u0026quot;SHOW TABLES LIKE '{$legacy_table}'\u0026quot;); // Does the legacy table exist? if (!empty($count)) { // Grab data from legacy table $data = $wpdb-\u0026gt;get_results(\u0026quot;SELECT * FROM {$legacy_table}\u0026quot;, ARRAY_A); // Move data to new table foreach ($data as $row) { $wpdb-\u0026gt;insert( $wpdb-\u0026gt;post_relationships ,$row ,array( '%d' ,'%d' ,'%d' ) ); } // Delete legacy table $wpdb-\u0026gt;query(\u0026quot;DROP TABLE IF EXISTS {$legacy_table}\u0026quot;); } } } }  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/",
@@ -74,7 +95,7 @@
 	"title": "Tutorials",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\n Fields (General)    Conditionally Show Fields     Display Menus as a Radio, Checkbox or Select list     Show Fields by User Capability or Role      Forms    Understanding Front End Forms      Posts / Meta-boxes    Getting Started with Meta-boxes and Fields     Add Subtitle field to the Post screen     Add WYSISYG to your Excerpt Box     Creating Custom Post Statuses     Hide Meta Boxes for a Page Template     Lock Field Values based on Post Status     Registering Post Types     Show Metaboxes and Fields by Post Status      Relationships    Working with Field Relationships      Settings    Building Settings Pages      Taxonomies / Terms    Getting Started with Taxonomies and Piklist     Creating Separate Taxonomies for each User     Display Taxonomies as Radio, Checkboxes or Select list     Grouping child taxonomies by their parents      Updates          Workflows    Placing \u0026#34;Add New Post\u0026#34; in a Workflow      "
+	"content": " Tutorials We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\n Fields (General)    Conditionally Show Fields     Display Menus as a Radio, Checkbox or Select list     Show Fields by User Capability or Role      Forms    Understanding Front End Forms      Posts / Meta-boxes    Getting Started with Meta-boxes and Fields     Add Subtitle field to the Post screen     Add WYSISYG to your Excerpt Box     Creating Custom Post Statuses     Hide Meta Boxes for a Page Template     Lock Field Values based on Post Status     Registering Post Types     Show Metaboxes and Fields by Post Status      Relationships    Working with Field Relationships      Settings    Building Settings Pages      Taxonomies / Terms    Getting Started with Taxonomies and Piklist     Creating Separate Taxonomies for each User     Display Taxonomies as Radio, Checkboxes or Select list     Grouping child taxonomies by their parents      Updates    Getting started with updates      Users    Display Users as a Radio, Checkbox or Select list      Widgets    Easy Widgets      Workflows    Building Your First Workflow     Placing \u0026#34;Add New Post\u0026#34; in a Workflow      "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
@@ -82,13 +103,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Welcome to the Piklist Documentation Piklist is the most powerful framework for WordPress. Using Piklist, you can quickly and easily create things like metaboxes, custom fields, settings pages workflows, and on and on.\nNew? Here\u0026rsquo;s how to get started!\nVeteran? Try the search bar. It\u0026rsquo;s amazing.\n"
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/actions-filters/",
@@ -215,6 +229,13 @@
 	"tags": [],
 	"description": "Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns)",
 	"content": "Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.\n Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Metaboxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code! In this example, we are going to pull the standard WordPress categories, this works for custom taxonomies as well.\nWe’re are going to use the WordPress function get_terms(), to get our taxonomy values. This function stores data in an array, and with Piklist, parsing an array and displaying it as a Select List is really easy. As you can see from the WordPress Codex page, this array stores all data in an Object, and then breaks them out. You have access to fields like term_id, name, parent etc. We are going to assign each item in the select list to the term_id, but show the name. This is added to the Piklist parameter choices:\npiklist('field', array( 'type' =\u0026gt; 'select' ,'scope' =\u0026gt; 'taxonomy' ,'field' =\u0026gt; 'category' ,'label' =\u0026gt; 'Categories' ,'description' =\u0026gt; 'Terms will appear when they are added to this taxonomy.' ,'choices' =\u0026gt; array( '' =\u0026gt; 'Choose Term' ) + piklist(get_terms(array( 'taxonomy' =\u0026gt; 'piklist_demo_type' ,'hide_empty' =\u0026gt; false )) ,array( 'term_id' ,'name' ) ) ));  Let’s take a look at this code:\n First we created a standard Piklist Select list. Notice we set the scope here. In most cases Piklist will automatically determine the scope. But when SAVING to a taxonomy you will need to set 'scope' =\u0026gt; 'taxonomy'. Here we are saving to the taxonomy \u0026lsquo;category\u0026rsquo;. If this code was on a Settings page, and you wanted to save this data as a Setting, you would not set Scope. The choices array gets pulled in dynamically. We told Piklist to use the get_terms() function, and told it to get the piklist_demo_type taxonomy values. We also passed the hide_empty parameter to Piklist. This parameter is standard to the get_terms() function and can be found at the Codex. The next array tells Pikist what should be the KEY for the field, and what should be the VALUE. In this case we selected term_id as the KEY, and name as the VALUE to show in the list.  Radio Buttons: To make these Radio Buttons, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'radio'.\nCheckboxes: To make these Checkboxes, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'checkbox'.\nYes, it’s that easy!\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/users/display-users-radio-checkbox-select-list/",
+	"title": "Display Users as a Radio, Checkbox or Select list",
+	"tags": [],
+	"description": "Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).",
+	"content": "Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.\n Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Meta-boxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code! We\u0026rsquo;re are going to use the WordPress function get_users(), to get our users. This function stores data in an array, and with Piklist, parsing an array and displaying it as a Select List is really easy. As you can see from the WordPress Codex page, this array stores all users in an Object, and then breaks them out. You have access to fields like ID, user_login, user_pass, etc. We are going to assign each item in the dropdown to the ID, but show the display_name:\npiklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'my_users' ,'label' =\u0026gt; 'Choose a user' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( '' =\u0026gt; 'Choose User' ) + piklist( get_users( array( 'orderby' =\u0026gt; 'display_name' ,'order' =\u0026gt; 'asc' ) ,'objects' ) ,array( 'ID' ,'display_name' ) ) ));  Let\u0026rsquo;s take a look at this code:\n First we created a standard Piklist Select list. The only major change is the choices array. We told Piklist to use the get_users() function, and then passed the orderby and order parameters to Piklist. These parameters are standard to the get_users() function and can be found at the WordPress Codex. The next array tells Piklist what should be the KEY for the field, and what should be the VALUE. In this case we selected ID as the KEY, and DISPLAY_NAME as the VALUE to show in the list.  Checkbox: To make this a Checkbox, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'checkbox'.\nRadio Buttons: To make this Radio Buttons, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'radio'.\nYes, it\u0026rsquo;s that easy!\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/editor/",
@@ -508,7 +529,21 @@
 	"title": "Updates",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials    \n "
+	"content": " Tutorials  Getting started with updates  Use Piklist updates to run your update scripts\n "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/",
+	"title": "Users",
+	"tags": [],
+	"description": "",
+	"content": " /parts/users/ With Piklist you can easily create user meta sections.\nYou can create as many files as you like and place them in this folder. Each file will render one user meta section.\nView Tutorials \u0026rightarrow;\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/users/",
+	"title": "Users",
+	"tags": [],
+	"description": "",
+	"content": " Tutorials  Display Users as a Radio, Checkbox or Select list  Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).\n "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/",
@@ -518,11 +553,32 @@
 	"content": "The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.\nIf you are registering a post type, make sure custom-fields is not in the “supports” array.\nTo remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().\nThis code should go in your theme\u0026rsquo;s functions.php file, or your plugin file.\n "
 },
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/",
+	"title": "Widgets",
+	"tags": [],
+	"description": "",
+	"content": " /parts/widgets/ With Piklist you can easily create Widgets.\nWidgets are made up of two files:\n Output file (This is the only required file) Form file (Not required)  Output file This is the only required file for widgets. Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.\nThe format of this file is: widget-name.php (i.e. example.php)\nForm file This file holds the fields that will be filled in on the Widget page in the WordPress admin.\nThe format of this file is: widget-name-form.php (i.e. example-form.php)\nView Tutorials \u0026rightarrow;\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/widgets/",
+	"title": "Widgets",
+	"tags": [],
+	"description": "",
+	"content": " Tutorials  Easy Widgets  Building widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets.\n "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/",
+	"title": "Workflows",
+	"tags": [],
+	"description": "",
+	"content": " /parts/workflows/ Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\nYou can create as many files as you like and place them in this folder. Each file will render one workflow tab.\nView Tutorials \u0026rightarrow;\n"
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/workflows/",
 	"title": "Workflows",
 	"tags": [],
 	"description": "",
-	"content": " Tutorials  Placing \u0026#34;Add New Post\u0026#34; in a Workflow  Use the Workflows to divide the default WordPress add new Post page.\n "
+	"content": " Tutorials  Building Your First Workflow  Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow  Use the Workflows to divide the default WordPress add new Post page.\n "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/relationships/working-with-field-relationships/",

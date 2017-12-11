@@ -11,6 +11,28 @@
     
     
     <item>
+      <title>Building Your First Workflow</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/building-first-workflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/building-first-workflow/</guid>
+      <description>Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.
+IMPORTANT: Each Workflow tab loads a separate page, with a new url. If you change tabs without saving you will lose your data.
+ALSO IMPORTANT: Workflows control the ENTIRE page, not just what is located under the tabs.
+Each Workflow needs a minimum of two files:</description>
+    </item>
+    
+    <item>
+      <title>Easy Widgets</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</guid>
+      <description>Building widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets. In this tutorial, we will create a widget that includes three fields: select, text and ColorPicker.
+ The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a widgets subfolder. You can see the supported Piklist folder structure here.</description>
+    </item>
+    
+    <item>
       <title>Getting Started with Meta-boxes and Fields</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -28,6 +50,18 @@ The first step is to create the proper folder structure in your theme. Create a 
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/terms/getting-started-taxonomies/</guid>
       <description>Whether you register a taxonomy via the standard WordPress function register_taxonomy, or through Piklist, you can still take advantage of many Piklist features. However, you can add some extra power to your Taxonomies by registering them the Piklist way. Piklist extends the register_taxonomy function with extra parameters to enable extra features. You can use the standard register_taxonomy parameters, plus additional ones defined by Piklist.
 To register a Taxonomy with Piklist:</description>
+    </item>
+    
+    <item>
+      <title>Getting started with updates</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</guid>
+      <description>If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.
+Then write your update procedure.
+Example This example is pulled from Piklist itself.
+ This update scripts runs if you are upgrading from Piklist version 0.</description>
     </item>
     
     <item>
@@ -51,15 +85,6 @@ Codex reference for parameters: sanitize_email
       <guid>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</guid>
       <description>With Piklist, you can easily create your own fields to use in your projects.
  To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -203,6 +228,16 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;datepicker&#39;, &
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</guid>
       <description>Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.
  Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Metaboxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code!</description>
+    </item>
+    
+    <item>
+      <title>Display Users as a Radio, Checkbox or Select list</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/users/display-users-radio-checkbox-select-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/users/display-users-radio-checkbox-select-list/</guid>
+      <description>Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.
+ Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Meta-boxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code!</description>
     </item>
     
     <item>
@@ -551,6 +586,17 @@ View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
+      <title>Users</title>
+      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/</guid>
+      <description>/parts/users/ With Piklist you can easily create user meta sections.
+You can create as many files as you like and place them in this folder. Each file will render one user meta section.
+View Tutorials &amp;rightarrow;</description>
+    </item>
+    
+    <item>
       <title>Why aren’t my fields saving?</title>
       <link>https://piklist.github.io/Piklist-Documentation/faq/fields-not-saving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -559,6 +605,28 @@ View Tutorials &amp;rightarrow;</description>
       <description>The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
 If you are registering a post type, make sure custom-fields is not in the “supports” array.
 To remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().</description>
+    </item>
+    
+    <item>
+      <title>Widgets</title>
+      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/</guid>
+      <description>/parts/widgets/ With Piklist you can easily create Widgets.
+Widgets are made up of two files:
+ Output file (This is the only required file) Form file (Not required)  Output file This is the only required file for widgets. Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.</description>
+    </item>
+    
+    <item>
+      <title>Workflows</title>
+      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/</guid>
+      <description>/parts/workflows/ Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.
+You can create as many files as you like and place them in this folder. Each file will render one workflow tab.
+View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
