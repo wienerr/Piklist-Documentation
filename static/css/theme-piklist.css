@@ -68,6 +68,12 @@ ul.children li.child p.children-description {
 }
 
 /* Home Page */
+[data-url="/"] h2,
+[data-url="/"] h3 {
+    text-align: center;
+}
+
+
 [data-url="/"] thead {
     display: none;
 }
