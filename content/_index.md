@@ -11,7 +11,7 @@ chapter: false
 
 | | |
 | ----- | -----|
-| <h2>[Getting Started](/getting-started)</h2> | <h2>[FAQS](/faq)</h2> |
+| <h2><i class="fal fa-check-square"></i> [Getting Started](/getting-started)</h2> | <h2><i class="fal fa-question"></i> [FAQS](/faq)</h2> |
 | <h3>[Admin Notices](/##)</h3> Dismissable or standard admin notices that can be on every admin page, or just specific ones.| <h3>[Admin Pages](/##)</h3> Create "About" pages and more, with customizable forms. |
 | <h3>[Dashboard Widgets](/##)</h3> Easy dashboard widgets for Multisite or Single site | <h3>[Custom Fields](/##)</h3> The simplest, most powerful way to create custom fields in WordPress |
 | <h3>[Frontend Forms](/##)</h3> Powerful forms that can do anything you can imagine. | <h3>[Help Tabs](/##)</h3> Easily add WordPress help tabs to any page. |
