@@ -7,25 +7,25 @@ canonifyURLs = true
 enableGitInfo = true
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-github'></i> Piklist Repo"
+name = "<i class='fab fa-github'></i> Piklist Repo"
 identifier = "piklistrepo"
 url = "https://github.com/piklist/piklist"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-github'></i> Documentation Repo"
+name = "<i class='fab fa-github'></i> Documentation Repo"
 identifier = "docsrepo"
 url = "https://github.com/piklist/piklist-documentation"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-wordpress'></i> Piklist on WordPress.org"
+name = "<i class='fab fa-wordpress'></i> Piklist on WordPress.org"
 identifier = "wordpress"
 url = "https://wordpress.org/plugins/piklist/"
 weight = 12
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-external-link'></i> Piklist.com"
+name = "<i class='far fa-external-link'></i> Piklist.com"
 identifier = "piklistwebsite"
 url = "https://piklist.com"
 weight = 13
