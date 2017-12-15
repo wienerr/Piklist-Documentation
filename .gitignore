@@ -2,3 +2,4 @@
 public/
 exampleSite/public
 .vscode/
+node_modules/
