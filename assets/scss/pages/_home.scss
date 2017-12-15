@@ -1,0 +1,10 @@
+#features-table {
+  @extend .row;
+
+  list-style-type: none;
+
+  .feature {
+    @extend .col-12;
+    @extend .col-xl-6;
+  }
+}
