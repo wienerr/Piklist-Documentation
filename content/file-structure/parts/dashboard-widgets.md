@@ -6,8 +6,16 @@ title: "Dashboard Widgets"
 
 With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.
 
-You can create as many files as you like and place them in this folder. Each file will render one Dashboard Widget.
+```
+<?php
+/*
+Title: My Dashboard Widget
+Capability: manage_options
+*/
 
-Configuration options are placed in a comment block at the top of your file.
+_e('Welcome to my dashboard widget', 'piklist');
+
+
+```
 
 **[View Tutorials &rightarrow;](/tutorials/dashboard/)**

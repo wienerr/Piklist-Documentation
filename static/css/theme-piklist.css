@@ -306,3 +306,17 @@ h1 {
 h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
     text-align: center;
 }
+
+#sidebar ul li[data-nav-id="/getting-started/"],
+#sidebar ul li[data-nav-id="/actions-filters/"] {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul.children-li > li.child > p.children-title {
+    font-size: 2.5rem;
+    line-height: 110% !important;
+    margin: 2.5rem 0 1.5rem 0;
+    font-style: none !important;
+}

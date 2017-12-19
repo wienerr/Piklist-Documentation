@@ -1,4 +1,4 @@
 ---
 title: "Filters"
+hidden: true
 ---
-{{% children description="true" showhidden="true" %}}

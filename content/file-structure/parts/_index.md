@@ -1,7 +1,9 @@
 ---
-title: "Parts"
-chapter: true
+title: "Piklist Parts"
+chapter: false
 weight: 40
 ---
 
-With Piklist you can customize most of WordPress.  Piklist "parts" types of items you can modify or add to WordPress. Meta-boxes and settings are "parts". So are widgets and shortcodes for example.
+With Piklist you can customize most of WordPress.  Piklist "parts" are types of items you can modify or add to WordPress. Meta-boxes and settings are "parts". So are widgets and shortcodes for example.
+
+{{% children showhidden="true" %}}

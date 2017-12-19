@@ -6,6 +6,20 @@ title: "Media"
 
 With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.
 
-Configuration options are placed in a comment block at the top of your file.
+```
+<?php
+/*
+Title: Sample Media Fields
+*/
+
+  piklist('field', array(
+    'type' => 'text'
+    ,'field' => 'sample_text'
+    ,'label' => __('Text', 'piklist')
+    ,'attributes' => array(
+      'class' => 'regular-text'
+    )
+  ));
+ ```
 
 **[View Tutorials &rightarrow;](/tutorials/media/)**

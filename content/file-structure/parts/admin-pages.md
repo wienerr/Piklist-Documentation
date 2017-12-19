@@ -6,8 +6,18 @@ title: "Admin Pages"
 
 With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.
 
-You can create as many files as you like and place them in this folder. Each file will render one Admin page.
+```
+<?php
+/*
+Page: piklist
+*/
+?>
 
-Configuration options are placed in a comment block at the top of your file.
+<div class="wrap about-wrap">
+
+    <h1><?php echo __('Welcome to Piklist','piklist'); ?></h1>
+
+</div>
+```
 
 **[View Tutorials &rightarrow;](/tutorials/admin-pages/)**
