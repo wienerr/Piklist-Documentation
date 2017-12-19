@@ -35,6 +35,13 @@
 	"content": " If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.\nThen write your update procedure.\nExample This example is pulled from Piklist itself.\n This update scripts runs if you are upgrading from Piklist version 0.7.1. The script moves data from a legacy table to a new table, and drops the old table. You can find it in piklist/parts/updates  if (!defined('ABSPATH')) exit; // Exit if accessed directly if (!class_exists('Piklist_Update_0_7_2')) { class Piklist_Update_0_7_2 { public function __construct() { add_action('admin_init', array($this, 'admin_init')); } public function admin_init() { global $wpdb; $legacy_table = $wpdb-\u0026gt;prefix . 'piklist_cpt_relate'; $count = $wpdb-\u0026gt;get_var(\u0026quot;SHOW TABLES LIKE '{$legacy_table}'\u0026quot;); // Does the legacy table exist? if (!empty($count)) { // Grab data from legacy table $data = $wpdb-\u0026gt;get_results(\u0026quot;SELECT * FROM {$legacy_table}\u0026quot;, ARRAY_A); // Move data to new table foreach ($data as $row) { $wpdb-\u0026gt;insert( $wpdb-\u0026gt;post_relationships ,$row ,array( '%d' ,'%d' ,'%d' ) ); } // Delete legacy table $wpdb-\u0026gt;query(\u0026quot;DROP TABLE IF EXISTS {$legacy_table}\u0026quot;); } } } }  "
 },
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/about-piklist/",
+	"title": "About Piklist",
+	"tags": [],
+	"description": "",
+	"content": " A little about Piklist "
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/",
 	"title": "Getting Started",
 	"tags": [],
@@ -56,13 +63,6 @@
 	"content": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the sanitize parameter.\nChoose the appropriate type of sanitization for each of your fields.\nemail Strips out all characters that are not allowable in an email address.\nCodex reference for parameters: sanitize_email\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'email' ) )  file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line. Replaces spaces and consecutive dashes with a single dash. Trim period, dash and underscore from beginning and end of filename.\nCodex reference for parameters: sanitize_file_name\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'file_name' ) )  html_class Sanitizes a html classname to ensure it only contains valid characters.\nCodex reference for parameters: sanitize_html_class\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'html_class' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-class' ) ) )  text_field Checks for invalid UTF-8, Convert single \u0026lt; characters to entity, strip all tags, remove line breaks, tabs and extra white space, strip octets.\nCodex reference for parameters: sanitize_text_field\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'text_field' ) )  title Specifically, HTML and PHP tags are stripped, and (in a ‘save’ context) accents are removed (accented characters are replaced with non-accented equivalents). Despite the name of this function, the returned value is intended to be suitable for use in a URL, not as a human-readable title.\nCodex reference for parameters: sanitize_title\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'title' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-fallback-title' ) ,'context' =\u0026gt; 'save' ) )  user Sanitize username stripping out unsafe characters.\nCodex reference for parameters: sanitize_user\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'user' ,'options' =\u0026gt; array( 'strict' =\u0026gt; 'true' ) ) )  wp_filter_kses Sanitize content with allowed HTML Kses rules.\nCodex reference for parameters: wp_filter_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_filter_kses' ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/customize-wordpress/",
-	"title": "Customize WordPress",
-	"tags": [],
-	"description": "",
-	"content": "With Piklist you can customize most of WordPress. Piklist \u0026ldquo;parts\u0026rdquo; types of items you can modify or add to WordPress. Meta-boxes and settings are \u0026ldquo;parts\u0026rdquo;. So are widgets and shortcodes for example.\n"
-},
-{
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/",
 	"title": "File Structure",
 	"tags": [],
@@ -71,10 +71,10 @@
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/",
-	"title": "Parts",
+	"title": "Piklist Parts",
 	"tags": [],
 	"description": "",
-	"content": "With Piklist you can customize most of WordPress. Piklist \u0026ldquo;parts\u0026rdquo; types of items you can modify or add to WordPress. Meta-boxes and settings are \u0026ldquo;parts\u0026rdquo;. So are widgets and shortcodes for example.\n"
+	"content": "With Piklist you can customize most of WordPress. Piklist \u0026ldquo;parts\u0026rdquo; are types of items you can modify or add to WordPress. Meta-boxes and settings are \u0026ldquo;parts\u0026rdquo;. So are widgets and shortcodes for example.\nAdmin Notices\n Admin Pages\n Dashboard Widgets\n Forms\n Help\n Media\n Meta-boxes\n Pointers\n Settings\n Shortcodes\n Terms\n Updates\n Users\n Widgets\n Workflows\n  "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/",
@@ -84,25 +84,11 @@
 	"content": " Fields Piklist fields are incredibly powerful and easy to use.\nField Types\n Sanitizing Fields\n Create your own field\n Field Parameters\n  "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/",
-	"title": "Create your own field",
+	"uri": "https://piklist.github.io/Piklist-Documentation/actions-filters/",
+	"title": "Actions and Filters",
 	"tags": [],
 	"description": "",
-	"content": " With Piklist, you can easily create your own fields to use in your projects.\n To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field. For demonstration purposes we’ll create our own checkbox field and call it my-checkbox, so the file name is my-checkbox.php. Depending on the type of field you want to create, you may want to copy/paste from an existing Piklist field. For this demo, we are going to open the default Piklist checkbox file, piklist/parts/fields/checkbox.php, copy everything and paste it into my-checkbox.php. Make any changes to this field you like, and you’re done!  Usage When using your new checkbox, use the type my-checkbox. It should look like this:\npiklist('field', array( 'type' =\u0026gt; 'my-checkbox', // custom field type 'field' =\u0026gt; 'custom-checkbox', 'label' =\u0026gt; 'Custom Select Field', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/faq/",
-	"title": "FAQs",
-	"tags": [],
-	"description": "",
-	"content": " FAQs What is Piklist? Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.\nMost people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist. Check out the main Piklist help section to learn more.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nThere’s jQuery-for-Javascript and Rails-for-Ruby. Now there is Piklist-for-WordPress.\n"
-},
-{
-	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/",
-	"title": "Tutorials",
-	"tags": [],
-	"description": "",
-	"content": "We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\nFields (General)\n  Conditionally Show Fields\n Display Menus as a Radio, Checkbox or Select list\n Show Fields by User Capability or Role\n  Forms\n  Understanding Front End Forms\n  Posts / Meta-boxes\n  Getting Started with Meta-boxes and Fields\n Add Subtitle field to the Post screen\n Add WYSISYG to your Excerpt Box\n Creating Custom Post Statuses\n Hide Meta Boxes for a Page Template\n Lock Field Values based on Post Status\n Registering Post Types\n Show Metaboxes and Fields by Post Status\n  Relationships\n  Working with Field Relationships\n  Settings\n  Building Settings Pages\n  Taxonomies / Terms\n  Getting Started with Taxonomies and Piklist\n Creating Separate Taxonomies for each User\n Display Taxonomies as Radio, Checkboxes or Select list\n Grouping child taxonomies by their parents\n  Updates\n  Getting started with updates\n  Users\n  Display Users as a Radio, Checkbox or Select list\n  Widgets\n  Easy Widgets\n  Workflows\n  Building Your First Workflow\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow\n   "
+	"content": "Piklist includes tons of actions and filters.\nFilters\n  piklist_empty_post_title\nLet’s you programmatically set the post title when adding a new post (post type).\n   piklist_part_process\nThe `piklist_part_process` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n   piklist_part_process-{$folder}\nThe `piklist_part_process-{$folder}` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n   piklist_post_types\nThe piklist_post_types filter lets you register your custom Post Types through Piklist. This gives you access to additional functionality that Piklist offers.\n   piklist_pre_update_option\nThe piklist_pre_update_option filter is used to filter the settings input before they are saved\n   piklist_pre_update_option_$setting\nThe piklist_pre_update_option_$setting filter is used to filter the settings input before they are saved\n   piklist_sanitization_rules\nAdd your own rules to sanitize field data.\n   piklist_taxonomies\nExtends the standard WordPress function register_taxonomy with additional features and parameters.\n   piklist_validation_rules\nAdd your own rules to validate field data.\n     "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/",
@@ -112,11 +98,25 @@
 	"content": " Piklist Documentation With Piklist you can create and enhance almost every part of WordPress.  Getting Started  FAQS Admin Notices Dismissable or standard admin notices that can be on every admin page, or just specific ones.\n Admin Pages Create \"About\" pages and more, with customizable forms.\n Dashboard Widgets Easy dashboard widgets for Multisite or Single site  Custom Fields The simplest, most powerful way to create custom fields in WordPress  Frontend Forms Powerful forms that can do anything you can imagine.  Help Tabs Easily add WordPress help tabs to any page.  Media Library Totally customize your Media Library pages.  Pointers Create step-by-step tutorials in the admin.  Post Types Register Post Types with Piklist and add power to your post types.  Settings The simplest way to add settings pages in WordPress.  Shortcodes Piklist automatically creates a UI for your shortcodes.  Taxonomies Register Taxonomies with Piklist and add power to your terms.  Update Scripts Let Piklist handle update scripts for your plugin or theme.  Users Totally customize the user screens.  Widgets Easily add widgets to your plugin or theme.  Workflow Tabs Break up any page with an advanced tab system.   "
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/actions-filters/",
-	"title": "Actions and Filters",
+	"uri": "https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/",
+	"title": "Create your own field",
 	"tags": [],
 	"description": "",
-	"content": "Piklist includes tons of actions and filters.\n"
+	"content": " With Piklist, you can easily create your own fields to use in your projects.\n To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field. For demonstration purposes we’ll create our own checkbox field and call it my-checkbox, so the file name is my-checkbox.php. Depending on the type of field you want to create, you may want to copy/paste from an existing Piklist field. For this demo, we are going to open the default Piklist checkbox file, piklist/parts/fields/checkbox.php, copy everything and paste it into my-checkbox.php. Make any changes to this field you like, and you’re done!  Usage When using your new checkbox, use the type my-checkbox. It should look like this:\npiklist('field', array( 'type' =\u0026gt; 'my-checkbox', // custom field type 'field' =\u0026gt; 'custom-checkbox', 'label' =\u0026gt; 'Custom Select Field', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/",
+	"title": "Tutorials",
+	"tags": [],
+	"description": "",
+	"content": "We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\nFields (General)\n  Conditionally Show Fields\n Display Menus as a Radio, Checkbox or Select list\n Show Fields by User Capability or Role\n  Forms\n  Understanding Front End Forms\n  Posts / Meta-boxes\n  Getting Started with Meta-boxes and Fields\n Add Subtitle field to the Post screen\n Add WYSISYG to your Excerpt Box\n Creating Custom Post Statuses\n Hide Meta Boxes for a Page Template\n Lock Field Values based on Post Status\n Registering Post Types\n Show Metaboxes and Fields by Post Status\n  Relationships\n  Working with Field Relationships\n  Settings\n  Building Settings Pages\n  Taxonomies / Terms\n  Getting Started with Taxonomies and Piklist\n Creating Separate Taxonomies for each User\n Display Taxonomies as Radio, Checkboxes or Select list\n Grouping child taxonomies by their parents\n  Updates\n  Getting started with updates\n  Users\n  Display Users as a Radio, Checkbox or Select list\n  Widgets\n  Easy Widgets\n  Workflows\n  Building Your First Workflow\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow\n   "
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/faq/",
+	"title": "FAQs",
+	"tags": [],
+	"description": "",
+	"content": " FAQs What is Piklist? Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.\nMost people use Piklist to add fields in the WordPress admin area, but you can do a lot more with Piklist. Check out the main Piklist help section to learn more.\nPiklist is a code-based framework, which means it has no user interface. We believe this is one of the biggest benefits to using Piklist. Code based systems allow you flexibility in your field configurations and development, and will save you time in the long run. With Piklist you can usually use the same code you have written in one section and use it in another, allowing you to copy and paste, and save tons of time.\nWe’ve worked hard to make Piklist easy to use for beginners, and powerful enough for developers… and our users all agree!\nThere’s jQuery-for-Javascript and Rails-for-Ruby. Now there is Piklist-for-WordPress.\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-subtitle-field/",
@@ -133,7 +133,7 @@
 	"content": " Description To add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.\nFirst, remove the default excerpt box Custom post type\nIf you’re registering your own post type, include the supports parameter but don’t include excerpt in the array. This will tell WordPress not to render the excerpt box.\nBuilt in post type\nUse the standard WordPress function remove_post_type_support, to remove the editor. For example, to remove the editor from Posts, place this in your theme’s functions.php file, or your main plugin file:\nfunction my_remove_post_type_support() { remove_post_type_support('post', 'excerpt'); } add_action('init', 'my_remove_post_type_support', 10);  Now, add your own editor with Piklist  Create your metabox. Add the excerpt field, and make sure you set the following:  'scope' =\u0026gt; 'post' since WordPress saves this data in the post table. 'field' =\u0026gt; 'post_excerpt' is the field name for the default excerpt field. 'template' =\u0026gt; 'field' Uses the Piklist \u0026ldquo;field-only\u0026rdquo; template with no label.   piklist('field', array( 'type' =\u0026gt; 'editor' ,'scope' =\u0026gt; 'post' ,'template' =\u0026gt; 'field' ,'field' =\u0026gt; 'post_excerpt' ,'options' =\u0026gt; array ( 'media_buttons' =\u0026gt; false ,'teeny' =\u0026gt; true ) ));  That’s it. Your done.\n"
 },
 {
-	"uri": "https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/",
+	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/",
 	"title": "Admin Notices",
 	"tags": [],
 	"description": "",
@@ -144,7 +144,14 @@
 	"title": "Admin Pages",
 	"tags": [],
 	"description": "",
-	"content": " /parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.\nYou can create as many files as you like and place them in this folder. Each file will render one Admin page.\nConfiguration options are placed in a comment block at the top of your file.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.\n\u0026lt;?php /* Page: piklist */ ?\u0026gt; \u0026lt;div class=\u0026quot;wrap about-wrap\u0026quot;\u0026gt; \u0026lt;h1\u0026gt;\u0026lt;?php echo __('Welcome to Piklist','piklist'); ?\u0026gt;\u0026lt;/h1\u0026gt; \u0026lt;/div\u0026gt;  View Tutorials \u0026rightarrow;\n"
+},
+{
+	"uri": "https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/",
+	"title": "Benefits of using Piklist",
+	"tags": [],
+	"description": "",
+	"content": " A little about Piklist benefits "
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/settings/building-settings-pages/",
@@ -214,7 +221,7 @@
 	"title": "Dashboard Widgets",
 	"tags": [],
 	"description": "",
-	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\nYou can create as many files as you like and place them in this folder. Each file will render one Dashboard Widget.\nConfiguration options are placed in a comment block at the top of your file.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\n\u0026lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e('Welcome to my dashboard widget', 'piklist');  View Tutorials \u0026rightarrow;\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/datepicker/",
@@ -277,7 +284,7 @@
 	"title": "Filters",
 	"tags": [],
 	"description": "",
-	"content": " piklist_empty_post_title\nLet’s you programmatically set the post title when adding a new post (post type).\n piklist_part_process\nThe `piklist_part_process` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n piklist_part_process-{$folder}\nThe `piklist_part_process-{$folder}` filter is used to filter the parts (e.g. meta-boxes, settings, etc.) before they are saved. This allows you to modify or remove parts before they’re processed.\n piklist_post_types\nThe piklist_post_types filter lets you register your custom Post Types through Piklist. This gives you access to additional functionality that Piklist offers.\n piklist_pre_update_option\nThe piklist_pre_update_option filter is used to filter the settings input before they are saved\n piklist_pre_update_option_$setting\nThe piklist_pre_update_option_$setting filter is used to filter the settings input before they are saved\n piklist_sanitization_rules\nAdd your own rules to sanitize field data.\n piklist_taxonomies\nExtends the standard WordPress function register_taxonomy with additional features and parameters.\n piklist_validation_rules\nAdd your own rules to validate field data.\n  "
+	"content": ""
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/",
@@ -291,7 +298,7 @@
 	"title": "Forms",
 	"tags": [],
 	"description": "",
-	"content": " /parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.\n\u0026lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_type' ,'value' =\u0026gt; 'post' )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_title' ,'label' =\u0026gt; __('Title', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_title' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_content' ,'label' =\u0026gt; __('Content', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_content' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_status' ,'value' =\u0026gt; 'pending' )); // Submit button piklist('field', array( 'type' =\u0026gt; 'submit' ,'field' =\u0026gt; 'submit' ,'value' =\u0026gt; 'Submit' ));  View Tutorials \u0026rightarrow;\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/forms/",
@@ -333,7 +340,7 @@
 	"title": "Help",
 	"tags": [],
 	"description": "",
-	"content": " /parts/help/ With Piklist you can easily create Contextual Help menus.\nYou can create as many files as you like and place them in this folder. Each file will render one Help Tab.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/help/ With Piklist you can easily create Contextual Help menus.\nYou can create as many files as you like and place them in this folder. Each file will render one Help Tab.\n\u0026lt;?php /* Title: Post Help Capability: manage_options Page: post.php */ ?\u0026gt; \u0026lt;p\u0026gt; \u0026lt;?php _e('Here is some help, 'piklist');?\u0026gt; \u0026lt;/p\u0026gt;  View Tutorials \u0026rightarrow;\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/fields/types/hidden/",
@@ -357,6 +364,13 @@
 	"content": "While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. Piklist will not work properly if included in another plugin or theme.\nIf the user does install Piklist as a separate plugin, AND your plugin/theme, it invites multiple conflicts, including different versions of Piklist. This can cause your plugin, or other plugins/themes that rely on Piklist, not to work properly. In addition, you become solely responsible for keeping your code updated with the latest version of Piklist, instead of letting the user upgrade normally.\nAdditionally, if you plan on submitting your code to WordPress.org, they do not accept a plugin that includes an entire other plugin, inside it.\nTo make it easier for you to build your plugin on Piklist, we have created the Piklist Checker. By including the Checker in your plugin, your users will be notified if Piklist is not installed, and they will be walked through the installation.\nWe hope you agree that keeping Piklist as a separate plugin makes sense for both you and your users. If not, there are other frameworks you can choose from that are designed to be included in plugins and themes.\n"
 },
 {
+	"uri": "https://piklist.github.io/Piklist-Documentation/about-piklist/license/",
+	"title": "License",
+	"tags": [],
+	"description": "",
+	"content": "TODO: modify\nThe license under which the WordPress software is released is the GPLv2 (or later) from the Free Software Foundation. A copy of the license is included with every copy of WordPress, but you can also read the text of the license here.\nPart of this license outlines requirements for derivative works, such as plugins or themes. Derivatives of WordPress code inherit the GPL license. Drupal, which has the same GPL license as WordPress, has an excellent page on licensing as it applies to themes and modules (their word for plugins).\nThere is some legal grey area regarding what is considered a derivative work, but we feel strongly that plugins and themes are derivative work and thus inherit the GPL license. If you disagree, you might want to consider a non-GPL platform such as Serendipity (BSD license) or Habari (Apache license) instead.\n"
+},
+{
 	"uri": "https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/lock-field-values-based-post-status/",
 	"title": "Lock Field Values based on Post Status",
 	"tags": [],
@@ -368,7 +382,7 @@
 	"title": "Media",
 	"tags": [],
 	"description": "",
-	"content": " /parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.\nConfiguration options are placed in a comment block at the top of your file.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.\n\u0026lt;?php /* Title: Sample Media Fields */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'sample_text' ,'label' =\u0026gt; __('Text', 'piklist') ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' ) ));  View Tutorials \u0026rightarrow;\n"
 },
 {
 	"uri": "https://piklist.github.io/Piklist-Documentation/file-structure/parts/meta-boxes/",

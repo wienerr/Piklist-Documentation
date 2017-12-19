@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.31.1" />
-    <meta name="description" content="To add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.">
+    <meta name="description" content="">
 
 
     <link rel="shortcut icon" href="https://piklist.github.io/Piklist-Documentation/images/piklist-favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://piklist.github.io/Piklist-Documentation/images/piklist-favicon.png" type="image/x-icon" />
 
-    <title>Add WYSISYG to your Excerpt Box :: Piklist Documentation</title>
+    <title>About Piklist :: Piklist Documentation</title>
 
     
     <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513718169" rel="stylesheet">
@@ -36,7 +36,7 @@
 <link href="https://piklist.github.io/Piklist-Documentation/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
 
   </head>
-    <body class="type-page add-wysisyg-to-your-excerpt-box file-add-wysisyg-excerpt-box dir-tutorialsmeta-boxes" data-url="/tutorials/meta-boxes/add-wysisyg-excerpt-box/">
+    <body class="type-section about-piklist file-_index dir-about-piklist" data-url="/about-piklist/">
     <nav id="sidebar" class="">
 
 
@@ -79,8 +79,8 @@
   
     
     <li data-nav-id="/about-piklist/" title="About Piklist" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="https://piklist.github.io/Piklist-Documentation/about-piklist/">
@@ -1062,7 +1062,7 @@
   
     
     <li data-nav-id="/tutorials/" title="Tutorials" class="dd-item
-        parent
+        
         
         
         ">
@@ -1173,7 +1173,7 @@
   
     
     <li data-nav-id="/tutorials/meta-boxes/" title="Posts / Meta-boxes" class="dd-item
-        parent
+        
         
         
         ">
@@ -1655,19 +1655,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://piklist.github.io/Piklist-Documentation/'></a> > <a href='https://piklist.github.io/Piklist-Documentation/tutorials/'>Tutorials</a> > <a href='https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/'>Posts / Meta-boxes</a> > Add WYSISYG to your Excerpt Box
-          
-        
-          
-        
+            <a href='https://piklist.github.io/Piklist-Documentation/'></a> > About Piklist
           
         
           
@@ -1681,11 +1669,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#description">Description</a>
-<ul>
-<li><a href="#first-remove-the-default-excerpt-box">First, remove the default excerpt box</a></li>
-<li><a href="#now-add-your-own-editor-with-piklist">Now, add your own editor with Piklist</a></li>
-</ul></li>
+<li><a href="#a-little-about-piklist">A little about Piklist</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1701,7 +1685,7 @@
 
         <div id="body-inner">
           
-            <h1>Add WYSISYG to your Excerpt Box</h1>
+            <h1>About Piklist</h1>
           
 
         
@@ -1709,60 +1693,12 @@
 
 
 
-<p><img src="https://piklist.github.io/Piklist-Documentation/images/post-excerpt-wysiwyg.jpg" alt="Metabox" /></p>
-
-<h2 id="description">Description</h2>
-
-<p>To add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.</p>
-
-<h3 id="first-remove-the-default-excerpt-box">First, remove the default excerpt box</h3>
-
-<p><strong>Custom post type</strong></p>
-
-<p>If you’re registering your own post type, include the <code>supports</code> <a href="http://codex.wordpress.org/Function_Reference/register_post_type">parameter</a> but don’t include <code>excerpt</code> in the array. This will tell WordPress not to render the excerpt box.</p>
-
-<p><strong>Built in post type</strong></p>
-
-<p>Use the standard WordPress function <a href="http://codex.wordpress.org/Function_Reference/remove_post_type_support"><code>remove_post_type_support</code></a>, to remove the editor. For example, to remove the editor from Posts, place this in your theme’s functions.php file, or your main plugin file:</p>
-
-<pre><code>function my_remove_post_type_support() {
-  remove_post_type_support('post', 'excerpt');
-}
-add_action('init', 'my_remove_post_type_support', 10);
-</code></pre>
-
-<h3 id="now-add-your-own-editor-with-piklist">Now, add your own editor with Piklist</h3>
-
-<ul>
-<li>Create your metabox.</li>
-<li>Add the excerpt field, and make sure you set the following:
-
-<ul>
-<li><code>'scope' =&gt; 'post'</code> since WordPress saves this data in the post table.</li>
-<li><code>'field' =&gt; 'post_excerpt'</code> is the field name for the default excerpt field.</li>
-<li><code>'template' =&gt; 'field'</code> Uses the Piklist &ldquo;field-only&rdquo; template with no label.</li>
-</ul></li>
-</ul>
-
-<pre><code>piklist('field', array(
-    'type' =&gt; 'editor'
-    ,'scope' =&gt; 'post'
-    ,'template' =&gt; 'field'
-    ,'field' =&gt; 'post_excerpt'
-    ,'options' =&gt; array (
-     'media_buttons' =&gt; false
-     ,'teeny' =&gt; true
-    )
-  ));
-</code></pre>
-
-<p>That’s it. Your done.</p>
+<h2 id="a-little-about-piklist">A little about Piklist</h2>
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -1793,8 +1729,6 @@ add_action('init', 'my_remove_post_type_support', 10);
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1808,6 +1742,9 @@ add_action('init', 'my_remove_post_type_support', 10);
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2542,7 +2479,6 @@ add_action('init', 'my_remove_post_type_support', 10);
             
             
                 
-                    
                     
                 
                 
@@ -2559,9 +2495,6 @@ add_action('init', 'my_remove_post_type_support', 10);
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -2618,7 +2551,6 @@ add_action('init', 'my_remove_post_type_support', 10);
             
                 
                     
-                    
                 
                 
 
@@ -2674,9 +2606,6 @@ add_action('init', 'my_remove_post_type_support', 10);
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2914,10 +2843,10 @@ add_action('init', 'my_remove_post_type_support', 10);
 
 
         
-            <a class="nav nav-prev" href="https://piklist.github.io/Piklist-Documentation/tutorials/forms/" title="Forms"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="https://piklist.github.io/Piklist-Documentation/" title=""> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="https://piklist.github.io/Piklist-Documentation/tutorials/relationships/" title="Relationships" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/" title="Benefits of using Piklist" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -2950,7 +2879,7 @@ add_action('init', 'my_remove_post_type_support', 10);
     or <a href="https://github.com/piklist/Piklist-Documentation/compare">pull request</a> to help!
   </p>
   <p>
-    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/tutorials/meta-boxes/add-wysisyg-excerpt-box.md">Improve this page</a>
+    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/about-piklist/_index.md">Improve this page</a>
   </p>
   <small class="last-modified">This page was last modified on Monday, Jan 1, 0001 at 00:00</small>
 </div>
@@ -2965,4 +2894,3 @@ add_action('init', 'my_remove_post_type_support', 10);
 
   </body>
 </html>
-

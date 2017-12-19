@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/about-piklist/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/getting-started/</loc>
   </url>
   
@@ -32,10 +36,6 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize-wordpress/</loc>
   </url>
   
   <url>
@@ -51,15 +51,7 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/</loc>
   </url>
   
   <url>
@@ -67,7 +59,15 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/faq/</loc>
   </url>
   
   <url>
@@ -79,11 +79,15 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/</loc>
+    <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-pages/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/</loc>
   </url>
   
   <url>
@@ -205,6 +209,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/about-piklist/license/</loc>
   </url>
   
   <url>

@@ -113,10 +113,10 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
     
     <item>
       <title>Admin Notices</title>
-      <link>https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</guid>
       <description>/parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.
  Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.</description>
     </item>
@@ -128,9 +128,16 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
       
       <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-pages/</guid>
       <description>/parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.
-You can create as many files as you like and place them in this folder. Each file will render one Admin page.
-Configuration options are placed in a comment block at the top of your file.
-View Tutorials &amp;rightarrow;</description>
+&amp;lt;?php /* Page: piklist */ ?&amp;gt; &amp;lt;div class=&amp;quot;wrap about-wrap&amp;quot;&amp;gt; &amp;lt;h1&amp;gt;&amp;lt;?php echo __(&#39;Welcome to Piklist&#39;,&#39;piklist&#39;); ?&amp;gt;&amp;lt;/h1&amp;gt; &amp;lt;/div&amp;gt;  View Tutorials &amp;rightarrow;</description>
+    </item>
+    
+    <item>
+      <title>Benefits of using Piklist</title>
+      <link>https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/</guid>
+      <description> A little about Piklist benefits </description>
     </item>
     
     <item>
@@ -202,9 +209,7 @@ We’ll assume you will be using a non-hierarchical(like Tags) taxonomy, and we 
       
       <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/dashboard-widgets/</guid>
       <description>/parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.
-You can create as many files as you like and place them in this folder. Each file will render one Dashboard Widget.
-Configuration options are placed in a comment block at the top of your file.
-View Tutorials &amp;rightarrow;</description>
+&amp;lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e(&#39;Welcome to my dashboard widget&#39;, &#39;piklist&#39;);  View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
@@ -298,7 +303,7 @@ Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use fo
       
       <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/forms/</guid>
       <description>/parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.
-View Tutorials &amp;rightarrow;</description>
+&amp;lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_type&#39; ,&#39;value&#39; =&amp;gt; &#39;post&#39; )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_title&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Title&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_title&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_content&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Content&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_content&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_status&#39; ,&#39;value&#39; =&amp;gt; &#39;pending&#39; )); // Submit button piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;submit&#39; ,&#39;field&#39; =&amp;gt; &#39;submit&#39; ,&#39;value&#39; =&amp;gt; &#39;Submit&#39; ));  View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
@@ -353,7 +358,7 @@ Example piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;email&#39;
       <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/help/</guid>
       <description>/parts/help/ With Piklist you can easily create Contextual Help menus.
 You can create as many files as you like and place them in this folder. Each file will render one Help Tab.
-View Tutorials &amp;rightarrow;</description>
+&amp;lt;?php /* Title: Post Help Capability: manage_options Page: post.php */ ?&amp;gt; &amp;lt;p&amp;gt; &amp;lt;?php _e(&#39;Here is some help, &#39;piklist&#39;);?&amp;gt; &amp;lt;/p&amp;gt;  View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
@@ -387,6 +392,17 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
     </item>
     
     <item>
+      <title>License</title>
+      <link>https://piklist.github.io/Piklist-Documentation/about-piklist/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/about-piklist/license/</guid>
+      <description>TODO: modify
+The license under which the WordPress software is released is the GPLv2 (or later) from the Free Software Foundation. A copy of the license is included with every copy of WordPress, but you can also read the text of the license here.
+Part of this license outlines requirements for derivative works, such as plugins or themes. Derivatives of WordPress code inherit the GPL license. Drupal, which has the same GPL license as WordPress, has an excellent page on licensing as it applies to themes and modules (their word for plugins).</description>
+    </item>
+    
+    <item>
       <title>Lock Field Values based on Post Status</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/lock-field-values-based-post-status/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -406,8 +422,7 @@ Decide if you are going to build your Piklist code as a plugin or in your theme.
       
       <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/media/</guid>
       <description>/parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.
-Configuration options are placed in a comment block at the top of your file.
-View Tutorials &amp;rightarrow;</description>
+&amp;lt;?php /* Title: Sample Media Fields */ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;field&#39; =&amp;gt; &#39;sample_text&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Text&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;class&#39; =&amp;gt; &#39;regular-text&#39; ) ));  View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
