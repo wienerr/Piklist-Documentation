@@ -2,14 +2,13 @@
 chapter: false
 ---
 
-# Welcome to the Piklist Documentation
-
-## The most powerful framework for WordPress.
-
+# Piklist Documentation
 
 ### With Piklist you can create and enhance almost every part of WordPress.
-<h2 class="center"><i class="fas fa-graduation-cap fa-sm"></i><a href="/getting-started">Getting Started</a></h2>
-<h2 class="center"><i class="fas fa-check fa-sm"></i> <a href="/faq">FAQS</a></h2>
+
+<hr/>
+<h3 class="center"><i class="fas fa-graduation-cap fa-sm"></i><a href="/getting-started">Getting Started</a></h3>
+<h3 class="center"><i class="fas fa-check fa-sm"></i> <a href="/faq">FAQS</a></h3>
 
 <ul id="features-table">
   <li class="feature">
