@@ -6,7 +6,6 @@
     <description>Recent content on Piklist Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2017 16:38:05 -0800</lastBuildDate>
     
 	<atom:link href="https://piklist.github.io/Piklist-Documentation/index.xml" rel="self" type="application/rss+xml" />
     
@@ -114,10 +113,10 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
     
     <item>
       <title>Admin Notices</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/</guid>
       <description>/parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.
  Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.</description>
     </item>

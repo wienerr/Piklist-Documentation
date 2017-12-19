@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://piklist.github.io/Piklist-Documentation/images/piklist-favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://piklist.github.io/Piklist-Documentation/images/piklist-favicon.png" type="image/x-icon" />
 
-    <title>Writing a plugin for Piklist :: Piklist Documentation</title>
+    <title>Customize WordPress :: Piklist Documentation</title>
 
     
     <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513699171" rel="stylesheet">
@@ -35,7 +35,7 @@
     <link href="https://piklist.github.io/Piklist-Documentation/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
 
   </head>
-    <body class="type-page writing-a-plugin-for-piklist file-writing-a-plugin-for-piklist dir-getting-started" data-url="/getting-started/writing-a-plugin-for-piklist/">
+    <body class="type-section customize-wordpress file-_index dir-customize-wordpress" data-url="/customize-wordpress/">
     <nav id="sidebar" class="">
 
 
@@ -78,7 +78,7 @@
   
     
     <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item
-        parent
+        
         
         
         ">
@@ -178,7 +178,7 @@
  
   
     
-      <li data-nav-id="/getting-started/writing-a-plugin-for-piklist/" title="Writing a plugin for Piklist" class="dd-item active">
+      <li data-nav-id="/getting-started/writing-a-plugin-for-piklist/" title="Writing a plugin for Piklist" class="dd-item ">
         <a href="https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/">
         Writing a plugin for Piklist
         
@@ -205,8 +205,8 @@
   
     
     <li data-nav-id="/customize-wordpress/" title="Customize WordPress" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="https://piklist.github.io/Piklist-Documentation/customize-wordpress/">
@@ -1664,8 +1664,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
-                  
                   <span class="links">
                     
           
@@ -1674,13 +1672,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://piklist.github.io/Piklist-Documentation/'></a> > <a href='https://piklist.github.io/Piklist-Documentation/getting-started/'>Getting Started</a> > Writing a plugin for Piklist
-          
-        
+            <a href='https://piklist.github.io/Piklist-Documentation/'></a> > Customize WordPress
           
         
           
@@ -1688,100 +1680,29 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#registering-your-plugin-with-piklist">Registering your plugin with Piklist</a></li>
-<li><a href="#adding-your-plugin-to-wordpress-org">Adding your plugin to WordPress.org</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
 
         <div id="body-inner">
-          
-            <h1>Writing a plugin for Piklist</h1>
           
 
         
 
 
-
-
-<p>Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.</p>
-
-<h3 id="registering-your-plugin-with-piklist">Registering your plugin with Piklist</h3>
-
-<p>When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</p>
-
-<ol>
-<li><p>First create a folder to hold your plugin. The folder name can be anything you want… this is the same as any other plugin you would write.</p></li>
-
-<li><p>Then create your main plugin file, and make sure it’s the same name as your folder. So if your plugin is in the folder /my-cool-plugin/, then the main file should be named my-cool-plugin.php, as suggested on WordPress.org.</p></li>
-
-<li><p>Now, add the standard WordPress file headers to the top… this is also the same as any other plugin you would write.</p></li>
-
-<li><p>Now, here’s how you tell Piklist your plugin exists. Add one more line to the file header you just created: <code>Plugin Type: Piklist</code>. That’s it! Your new plugin header would look something like this:</p>
-
-<pre><code>&lt;?php
-/*
-Plugin Name: Name Of The Plugin
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
-Version: The Plugin's Version Number, e.g.: 1.0
-Author: Name Of The Plugin Author
-Author URI: http://URI_Of_The_Plugin_Author
-Plugin Type: Piklist
-License: A &quot;Slug&quot; license name e.g. GPL2
-*/
-?&gt;
-</code></pre>
-
-<p>As long as you have Piklist activated on your site, this plugin will now run properly.</p></li>
-</ol>
-
-<p>Now you just need to create the proper <a href="https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/">folder structure</a> so you can start creating fields and more.</p>
-
-<p>Creating plugins has never been easier!</p>
-
-<h3 id="adding-your-plugin-to-wordpress-org">Adding your plugin to WordPress.org</h3>
-
-<p>Let your users know Piklist is powering your plugin:</p>
-
-<ol>
-<li><p>Add a <a href="http://plugins.svn.wordpress.org/piklist/assets/powered-by-piklist.png">“Powered by Piklist”</a> logo to your plugin banner. You can download it here &gt;</p></li>
-
-<li><p>Add “Piklist” as a tag in your readme.txt file.</p></li>
-
-<li><p>Add the following information to your readme.txt file. This code is formatted for markup, which WordPress.org uses to parse your readme.txt file. The spaces after the second line are intentional and create a line break.</p></li>
-</ol>
-
-<pre><code>&gt; #### Powered by Piklist
-&gt; WordPress Helpers requires the Piklist framework.
-&gt; &lt;a href=&quot;http://wordpress.org/extend/plugins/piklist/&quot;&gt;You can download and install Piklist for free.&lt;/a&gt;
-
-</code></pre>
+<p>With Piklist you can customize most of WordPress.  Piklist &ldquo;parts&rdquo; types of items you can modify or add to WordPress. Meta-boxes and settings are &ldquo;parts&rdquo;. So are widgets and shortcodes for example.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
       </div>
@@ -1811,6 +1732,8 @@ License: A &quot;Slug&quot; license name e.g. GPL2
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1824,9 +1747,6 @@ License: A &quot;Slug&quot; license name e.g. GPL2
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1892,7 +1812,6 @@ License: A &quot;Slug&quot; license name e.g. GPL2
             
                 
                     
-                    
                 
                 
 
@@ -1912,8 +1831,6 @@ License: A &quot;Slug&quot; license name e.g. GPL2
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1927,6 +1844,9 @@ License: A &quot;Slug&quot; license name e.g. GPL2
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3052,10 +2972,10 @@ License: A &quot;Slug&quot; license name e.g. GPL2
 
 
         
-            <a class="nav nav-prev" href="https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/" title="Piklist enable your theme"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/" title="Writing a plugin for Piklist"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="https://piklist.github.io/Piklist-Documentation/customize-wordpress/" title="Customize WordPress" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="https://piklist.github.io/Piklist-Documentation/customize-wordpress/admin-notices/" title="Admin Notices" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -3088,7 +3008,7 @@ License: A &quot;Slug&quot; license name e.g. GPL2
     or <a href="https://github.com/piklist/Piklist-Documentation/compare">pull request</a> to help!
   </p>
   <p>
-    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/getting-started/writing-a-plugin-for-piklist.md">Improve this page</a>
+    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/customize-wordpress/_index.md">Improve this page</a>
   </p>
   <small class="last-modified">This page was last modified on Monday, Jan 1, 0001 at 00:00</small>
 </div>
@@ -3103,4 +3023,3 @@ License: A &quot;Slug&quot; license name e.g. GPL2
 
   </body>
 </html>
-
