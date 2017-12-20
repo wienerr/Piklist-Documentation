@@ -8,9 +8,11 @@ hidden: true
 
 In this tutorial we’ll provide each logged in user with their own set of private tags.
 
+{{< show-tutorial-start-folders >}}
+
 First, you will need to create your taxonomy using the `piklist_taxonomies` filter.
 
-We’ll assume you will be using a non-hierarchical(like Tags) taxonomy, and we will name them 'personal_tags'. However, we will do something special with the name. To allow separate taxonomies for each logged in user, we will append their user ID to the end of the taxonomy name. So the user with the ID of 1, will be using 'personal_tags_1', and the user with the ID of 2, will be using 'personal_tags_1'.
+We’ll assume you will be using a non-hierarchical( like "Tags" ) taxonomy, and we will name them 'personal_tags'. However, we will do something special with the name. To allow separate taxonomies for each logged in user, we will append their user ID to the end of the taxonomy name. So the user with the ID of 1, will be using 'personal_tags_1', and the user with the ID of 2, will be using 'personal_tags_1'.
 
 ## Full snippet
 ```

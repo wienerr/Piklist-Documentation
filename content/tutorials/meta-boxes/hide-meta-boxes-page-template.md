@@ -6,7 +6,7 @@ hidden: true
 
 Using Piklist, you can easily hide some meta boxes when a certain page template is selected in WordPress. This tutorial will show you how using two Piklist filters: `piklist_get_file_data` and `piklist_add_part`.
 
-All of the code in this tutorial will go in your theme’s functions.php file, or your main plugin file.
+All of the code in this tutorial will go in your theme’s `functions.php` file, or your main plugin file.
 
 ### Add a custom parameter to the Piklist comment block.
 Pikist uses a number of parameters in the comment block to control access to a meta box. The first step is to tell Piklist you want to use a custom parameter using the `piklist_part_data` filter. We’ll name our parameter "Hide for Template".
@@ -37,19 +37,19 @@ One of the parameters you can use in the Piklist comment block is `role`. This a
 add_filter('piklist_part_process_callback', 'my_hide_for_template', 10, 2);
 function my_hide_for_template($part, $type) {
 
-	global $post;
+    global $post;
 
-	// If not a meta box than bail
-	if($type != 'meta-boxes') {
-		return $part;
-	}
+    // If not a meta box than bail
+    if($type != 'meta-boxes') {
+        return $part;
+    }
 
 
-	// Check if any page template is set in the comment block
-	if (!empty($part['data']['hide_for_template'])) {
+    // Check if any page template is set in the comment block
+    if (!empty($part['data']['hide_for_template'])) {
 
-		// Get the active page template
-		$active_template = pathinfo(get_page_template_slug($post->ID), PATHINFO_FILENAME);
+        // Get the active page template
+        $active_template = pathinfo(get_page_template_slug($post->ID), PATHINFO_FILENAME);
 
                 $active_template = empty($active_template) ? 'default' : $active_template;
 
@@ -59,8 +59,8 @@ function my_hide_for_template($part, $type) {
                 // Change meta-box access to user role: no-role
                 $part['data']['role'] = 'no-role';
             }
-	}
-	return $part;
+    }
+    return $part;
 }
 ```
 

@@ -6,6 +6,8 @@ hidden: true
 
 Piklist makes creating Front End forms as easy as creating fields in the WordPress admin. In most cases you can use the same field code you used in the admin, plus you need to define the `scope` parameter.  `scope` tells Piklist where to save your data. In the admin, this can be auto-detected, but not with front-end forms.
 
+{{< show-tutorial-start-folders >}}
+
 Front end form code goes in your `forms/` folder.
 
 * Start adding fields to your form.

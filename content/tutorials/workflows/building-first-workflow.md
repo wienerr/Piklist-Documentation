@@ -8,6 +8,8 @@ weight: 1
 
 Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.
 
+{{< show-tutorial-start-folders >}}
+
 IMPORTANT: Each Workflow tab loads a separate page, with a new url. If you change tabs without saving you will lose your data.
 
 ALSO IMPORTANT: Workflows control the ENTIRE page, not just what is located under the tabs.

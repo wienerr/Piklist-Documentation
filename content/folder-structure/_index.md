@@ -1,5 +1,5 @@
 ---
-title: "File Structure"
+title: "Folder Structure"
 weight: 40
 ---
 

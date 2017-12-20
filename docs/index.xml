@@ -6,7 +6,6 @@
     <description>Recent content on Piklist Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Dec 2017 16:16:04 -0500</lastBuildDate>
     
 	<atom:link href="https://piklist.github.io/Piklist-Documentation/index.xml" rel="self" type="application/rss+xml" />
     
@@ -66,6 +65,27 @@ Example This example is pulled from Piklist itself.
     </item>
     
     <item>
+      <title>Built-in Demos</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</guid>
+      <description>Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
+ Install Piklist like you would any other Plugin.</description>
+    </item>
+    
+    <item>
+      <title>Piklist enable your theme</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</guid>
+      <description>Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.
+ First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.
+ Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.</description>
+    </item>
+    
+    <item>
       <title>Sanitizing Fields</title>
       <link>https://piklist.github.io/Piklist-Documentation/fields/sanitizing-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -79,6 +99,16 @@ Codex reference for parameters: sanitize_email
     </item>
     
     <item>
+      <title>Writing a plugin for Piklist</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</guid>
+      <description>Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
+Registering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</description>
+    </item>
+    
+    <item>
       <title>Create your own field</title>
       <link>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -86,6 +116,16 @@ Codex reference for parameters: sanitize_email
       <guid>https://piklist.github.io/Piklist-Documentation/fields/create-your-own-fields/</guid>
       <description>With Piklist, you can easily create your own fields to use in your projects.
  To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field.</description>
+    </item>
+    
+    <item>
+      <title>Piklist checker</title>
+      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</guid>
+      <description>Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin or theme when Piklist is not active. Since your plugin or theme requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
+If the user attempts to activate a Piklist plugin or theme, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.</description>
     </item>
     
     <item>
@@ -114,20 +154,20 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
     
     <item>
       <title>Admin Notices</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-notices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-notices/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-notices/</guid>
       <description>/parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.
  Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.</description>
     </item>
     
     <item>
       <title>Admin Pages</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-pages/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-pages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/admin-pages/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-pages/</guid>
       <description>/parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.
 &amp;lt;?php /* Page: piklist */ ?&amp;gt; &amp;lt;div class=&amp;quot;wrap about-wrap&amp;quot;&amp;gt; &amp;lt;h1&amp;gt;&amp;lt;?php echo __(&#39;Welcome to Piklist&#39;,&#39;piklist&#39;); ?&amp;gt;&amp;lt;/h1&amp;gt; &amp;lt;/div&amp;gt;  View Tutorials &amp;rightarrow;</description>
     </item>
@@ -138,7 +178,8 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/</guid>
-      <description> A little about Piklist benefits </description>
+      <description>Piklist makes it super simple to add fields and data to almost every part of WordPress:
+ Use minimal code to generate complex fields. Code-based for maximum flexibility. Use the same field code to generate a post-meta field or a settings field or a user field&amp;hellip; Packed with hooks and filters so you can modify almost everything in WordPress. Enterprise level code quality.  </description>
     </item>
     
     <item>
@@ -149,16 +190,6 @@ Use the standard WordPress function remove_post_type_support, to remove the edit
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/settings/building-settings-pages/</guid>
       <description>Creating WordPress Settings pages with Piklist is as easy as creating any other field type. First we register the Settings page, and then we start adding Settings sections. Piklist uses the standard WordPress settings API, plus it adds extra power and ease of use. You can use any Piklist field type on a Settings page, and easily add Tabs as well.
 In this tutorial, we will create a Settings Page that includes three fields: select, text and colorPicker, with tooltip help.</description>
-    </item>
-    
-    <item>
-      <title>Built-in Demos</title>
-      <link>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/built-in-demos/</guid>
-      <description>Piklist allows you to work with WordPress like never before. At its basic level, you can easily create metaboxes/metafields (also known as custom fields) for Posts, Pages, media and user profiles, as well as easy Settings pages, Widgets and Dashboard Widgets. You will need to write a little bit of code to use Piklist, but it’s minimal and we’ve included lots of examples. Let’s get started!
- Install Piklist like you would any other Plugin.</description>
     </item>
     
     <item>
@@ -205,10 +236,10 @@ We’ll assume you will be using a non-hierarchical(like Tags) taxonomy, and we 
     
     <item>
       <title>Dashboard Widgets</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/dashboard-widgets/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/dashboard-widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/dashboard-widgets/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/dashboard-widgets/</guid>
       <description>/parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.
 &amp;lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e(&#39;Welcome to my dashboard widget&#39;, &#39;piklist&#39;);  View Tutorials &amp;rightarrow;</description>
     </item>
@@ -287,22 +318,11 @@ NOTES:
     </item>
     
     <item>
-      <title>Folder Structure</title>
-      <link>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/folder-structure/</guid>
-      <description>When creating fields, forms, widgets, etc., with Piklist, you place your code a file that is located in the proper folder. For example, when creating widgets, your code would go in the /widgets/ folder.
-Piklist has a predefined folder structure which it scans for your code.
-Theme folder structure /theme-folder /piklist /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  Plugin folder structure /plugin-folder /parts /admin-pages (Do not use for settings pages) /dashboard /forms /help /media /meta-boxes /notices /pointers /settings /shortcodes /terms /updates /users /widgets /workflows  IMPORTANT If you are writing a Piklist plugin, make sure you register it with Piklist.</description>
-    </item>
-    
-    <item>
       <title>Forms</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/forms/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/forms/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/forms/</guid>
       <description>/parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.
 &amp;lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_type&#39; ,&#39;value&#39; =&amp;gt; &#39;post&#39; )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_title&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Title&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_title&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_content&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Content&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_content&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_status&#39; ,&#39;value&#39; =&amp;gt; &#39;pending&#39; )); // Submit button piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;submit&#39; ,&#39;field&#39; =&amp;gt; &#39;submit&#39; ,&#39;value&#39; =&amp;gt; &#39;Submit&#39; ));  View Tutorials &amp;rightarrow;</description>
     </item>
@@ -353,10 +373,10 @@ Example piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;email&#39;
     
     <item>
       <title>Help</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/help/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/help/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/help/</guid>
       <description>/parts/help/ With Piklist you can easily create Contextual Help menus.
 You can create as many files as you like and place them in this folder. Each file will render one Help Tab.
 &amp;lt;?php /* Title: Post Help Capability: manage_options Page: post.php */ ?&amp;gt; &amp;lt;p&amp;gt; &amp;lt;?php _e(&#39;Here is some help, &#39;piklist&#39;);?&amp;gt; &amp;lt;/p&amp;gt;  View Tutorials &amp;rightarrow;</description>
@@ -398,9 +418,7 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/about-piklist/license/</guid>
-      <description>TODO: modify
-The license under which the WordPress software is released is the GPLv2 (or later) from the Free Software Foundation. A copy of the license is included with every copy of WordPress, but you can also read the text of the license here.
-Part of this license outlines requirements for derivative works, such as plugins or themes. Derivatives of WordPress code inherit the GPL license. Drupal, which has the same GPL license as WordPress, has an excellent page on licensing as it applies to themes and modules (their word for plugins).</description>
+      <description>The license under which the Piklist software is released is the same as WordPress; the GPLv2 (or later) from the Free Software Foundation. A copy of the license is included with every copy of Piklist, but you can also read the text of the license here.</description>
     </item>
     
     <item>
@@ -418,20 +436,20 @@ Decide if you are going to build your Piklist code as a plugin or in your theme.
     
     <item>
       <title>Media</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/media/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/media/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/media/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/media/</guid>
       <description>/parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.
 &amp;lt;?php /* Title: Sample Media Fields */ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;field&#39; =&amp;gt; &#39;sample_text&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Text&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;class&#39; =&amp;gt; &#39;regular-text&#39; ) ));  View Tutorials &amp;rightarrow;</description>
     </item>
     
     <item>
       <title>Meta-boxes</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/meta-boxes/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/meta-boxes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/meta-boxes/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/meta-boxes/</guid>
       <description>/parts/meta-boxes/ With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created.
 You can create as many files as you like and place them in this folder. Each file will render one meta-box.
 View Tutorials &amp;rightarrow;</description>
@@ -449,27 +467,6 @@ Please contact your host and ask them to upgrade you.</description>
     </item>
     
     <item>
-      <title>Piklist checker</title>
-      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-checker/</guid>
-      <description>Use the Piklist checker when creating plugins that require Piklist. The Piklist Checker makes it easy for you to notify users from your plugin when Piklist is not active. Since your plugin requires Piklist, not having Piklist installed and activated would provide an unpleasant user experience. Piklist Checker is designed to alleviate that.
-If the user attempts to activate a Piklist plugin, without activating Piklist first, they will get a message notifying them the plugin was deactivated and instructions on how to get Piklist.</description>
-    </item>
-    
-    <item>
-      <title>Piklist enable your theme</title>
-      <link>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/piklist-enable-your-theme/</guid>
-      <description>Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.
- First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.
- Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.</description>
-    </item>
-    
-    <item>
       <title>Placing &#34;Add New Post&#34; in a Workflow</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/placing-add-new-post-workflow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -481,10 +478,10 @@ If the user attempts to activate a Piklist plugin, without activating Piklist fi
     
     <item>
       <title>Pointers</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/pointers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/pointers/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/pointers/</guid>
       <description>/parts/pointers/ With Piklist you can easily create Pointers.
 You can create as many files as you like and place them in this folder. Each file will render one pointer. View Tutorials &amp;rightarrow;</description>
     </item>
@@ -504,7 +501,7 @@ You can create as many files as you like and place them in this folder. Each fil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/registering-post-types/</guid>
-      <description>Piklist works well with existing Post Types… those created with the standard WordPress function register_post_type. However, you can add some extra power to your Post Types by registering them the Piklist way. Piklist extends the register_post_type function with extra parameters to enable extra features. You can use the standard `register_post_type()&amp;rsquo; parameters, plus the additional Piklist Custom Post Type parameters.
+      <description>Piklist works well with existing Post Types… those created with the standard WordPress function register_post_type. However, you can add some extra power to your Post Types by registering them the Piklist way. Piklist extends the register_post_type function with extra parameters to enable extra features. You can use the standard register_post_type() parameters, plus the additional Piklist Custom Post Type parameters.
 To learn more about registering Post Types with Piklist, please read about the piklist_post_types filter.</description>
     </item>
     
@@ -521,10 +518,10 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;select&#39; ,&#39;
     
     <item>
       <title>Settings</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/settings/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/settings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/settings/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/settings/</guid>
       <description>/parts/settings/ A Settings Page is made up of Settings Sections. With Piklist you can easily create these sections.
 You can create as many files as you like and place them in this folder. Each file will render one section.
 View Tutorials &amp;rightarrow;</description>
@@ -532,10 +529,10 @@ View Tutorials &amp;rightarrow;</description>
     
     <item>
       <title>Shortcodes</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/shortcodes/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/shortcodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/shortcodes/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/shortcodes/</guid>
       <description>/parts/shortcodes/ With Piklist you can easily create Shortcodes.
 Shortcodes are made up of two files: * Form file * Output file
 Form file Everything in this file will display a form in the admin. Piklist automatically creates a form for every shortcode you create with it.
@@ -563,10 +560,10 @@ Output file Everything in this file will display on the frontend. It can be as s
     
     <item>
       <title>Terms</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/terms/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/terms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/terms/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/terms/</guid>
       <description>/parts/terms/ With Piklist you can easily create term meta sections.
 You can create as many files as you like and place them in this folder. Each file will render one section.
 View Tutorials &amp;rightarrow;</description>
@@ -592,10 +589,10 @@ View Tutorials &amp;rightarrow;</description>
     
     <item>
       <title>Updates</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/updates/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/updates/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/updates/</guid>
       <description>/parts/updates/ If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.
 Then write your update procedure.
 View Tutorials &amp;rightarrow;</description>
@@ -603,10 +600,10 @@ View Tutorials &amp;rightarrow;</description>
     
     <item>
       <title>Users</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/users/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/users/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/users/</guid>
       <description>/parts/users/ With Piklist you can easily create user meta sections.
 You can create as many files as you like and place them in this folder. Each file will render one user meta section.
 View Tutorials &amp;rightarrow;</description>
@@ -625,10 +622,10 @@ To remove the custom-fields meta box from a WordPress default post type, or one 
     
     <item>
       <title>Widgets</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/widgets/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/widgets/</guid>
       <description>/parts/widgets/ With Piklist you can easily create Widgets.
 Widgets are made up of two files:
  Output file (This is the only required file) Form file (Not required)  Output file This is the only required file for widgets. Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.</description>
@@ -636,10 +633,10 @@ Widgets are made up of two files:
     
     <item>
       <title>Workflows</title>
-      <link>https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/</link>
+      <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://piklist.github.io/Piklist-Documentation/file-structure/parts/workflows/</guid>
+      <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/workflows/</guid>
       <description>/parts/workflows/ Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.
 You can create as many files as you like and place them in this folder. Each file will render one workflow tab.
 View Tutorials &amp;rightarrow;</description>
@@ -656,16 +653,6 @@ In this tutorial we&amp;rsquo;ll use the classic books example, assuming our pos
 Since we&amp;rsquo;re using Post Types, all this code goes in your /parts/meta-boxes/ folder.
 First let&amp;rsquo;s add the chapter relate field to the book post type. Create a file and add this code:
 /** * Title: Chapters * Post Type: book * Context: normal * Priority: high */ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;select&#39; ,&#39;title&#39; =&amp;gt; &#39;Chapters&#39; ,&#39;choices&#39; =&amp;gt; piklist(get_posts(array( &#39;numberposts&#39; =&amp;gt; -1 ,&#39;post_type&#39; =&amp;gt; &#39;chapters&#39; )), array(&#39;ID&#39;, &#39;post_title&#39;)) ,&#39;relate&#39; =&amp;gt; array( &#39;scope&#39; =&amp;gt; &#39;post&#39; ) ,&#39;attributes&#39; =&amp;gt; array( &#39;class&#39; =&amp;gt; &#39;multiple&#39; ) ));  Create a second file in the same /parts/meta-boxes/ folder.</description>
-    </item>
-    
-    <item>
-      <title>Writing a plugin for Piklist</title>
-      <link>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piklist.github.io/Piklist-Documentation/getting-started/writing-a-plugin-for-piklist/</guid>
-      <description>Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder.
-Registering your plugin with Piklist When writing WordPress plugins that rely on other plugins, you usually have to use hooks and filters… but not with Piklist. We’ve simplified the process for you.</description>
     </item>
     
     <item>

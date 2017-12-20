@@ -10,7 +10,7 @@ weight: 1
 ## Description
 Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
 
-The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.) You can see the supported [Piklist folder structure here]( /getting-started/folder-structure/ ).
+{{< show-tutorial-start-folders >}}
 
 Each file we add to the the meta-boxes folder will create a metabox on the post edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward.  Ok, let’s create our metabox file!
 

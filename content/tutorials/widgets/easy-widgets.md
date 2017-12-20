@@ -7,10 +7,12 @@ weight: 1
 
 Building widgets with Piklist is incredibly simple.  You can use a fraction of the code WordPress requires to make very powerful widgets.  In this tutorial, we will create a widget that includes three fields: select, text and ColorPicker.
 
-* The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a widgets subfolder. You can see the supported Piklist folder structure here.
+{{< show-tutorial-start-folders >}}
+
+* The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a widgets subfolder.
 * Next we need to create the widget files.  Piklist widgets are made up of two:
-	* `widget-name.php`: This file holds the widget output, and is the **only required file for a widget**. (i.e. example.php)
-	* `widget-name-form.php`: Settings fields for your widget are placed in this file. (i.e. example-form.php)
+    * `widget-name.php`: This file holds the widget output, and is the **only required file for a widget**. (i.e. example.php)
+    * `widget-name-form.php`: Settings fields for your widget are placed in this file. (i.e. example-form.php)
 
 ### Widget Settings File
 Let’s start with example-form.php, which will hold the fields the user will fill in to control the widget. This file is only required if you want to add settings to your widget.

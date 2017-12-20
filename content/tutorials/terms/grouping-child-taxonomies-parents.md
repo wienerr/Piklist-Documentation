@@ -12,6 +12,8 @@ The basis of this tutorial is the flexibility of the Piklist field function, whi
 
 This tutorial assumes you have already created a hierarchical taxonomy or you’re using the default WordPress Categories. In our example we will be using a custom taxonomy called `company_type`.
 
+{{< show-tutorial-start-folders >}}
+
 ### First get the Parents
 Using the standard WordPress function `get_terms()`, we will first get all the Parents for this taxonomy. Setting `'parent' => 0` returns all top-level terms.
 
@@ -23,7 +25,7 @@ $parents = get_terms('company_type', array(
 ```
 
 
-###Next, assign the Children
+### Next, assign the Children
 Now that we have the parents, we need to loop through each one, then show their child fields using the Piklist Field function. Then we pass some parameters to the Piklist Field function for each Parent ID.
 
 Once again we will use the WordPress function `get_terms()`, to get our child taxonomy values. This function stores data in an array, and with Piklist, parsing an array and displaying it as Checkboxes (or Radio buttons… or a Select box) is really easy. As you can see from the [WordPress Codex page](http://codex.wordpress.org/Function_Reference/get_terms), this array stores all data in an Object, and then breaks them out. You have access to fields like `term_id`, `name`, `child_of` etc.

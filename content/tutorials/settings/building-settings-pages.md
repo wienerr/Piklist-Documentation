@@ -52,6 +52,7 @@ Setting: my_theme_settings
 This comment block tells Piklist you want to name your Settings section, “My Demo Settings Section”, and you want to associate this Section with the Settings page that uses the setting “demo-setting”. When you registered your Settings page, earlier in this tutorial, this is the setting you defined. The Piklist comment block for settings supports a lot more than just these two variables.  You can view the full list in our docs.
 
 * Now, let’s create our first field, a TEXT BOX:
+
 ```
 piklist('field', array(
     'type' => 'text'
@@ -70,6 +71,7 @@ piklist('field', array(
 This simple array will create a TEXT BOX that automatically uses the WordPress settings API to display and save.  The `'type' => 'text'` variable tells Piklist what sort of field to render. Also, notice that this is very similar to the way you create fields for metaboxes.
 
 * Now, let’s create our next field, a SELECT FIELD:
+
 ```
 piklist('field', array(
     'type' => 'select'

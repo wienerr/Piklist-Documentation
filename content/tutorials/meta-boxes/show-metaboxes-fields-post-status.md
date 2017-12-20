@@ -6,9 +6,11 @@ hidden: true
 
 With web applications and powerful websites, there will be times you want to only show a meta-box or metafield when a post is in a particular post status.  This becomes extra powerful when paired with the Piklist capability parameter, which allows you to show/hide a field based on a user role or capability. For an Order Management system, you may want an order notes field hidden until the estimate becomes an order. Well, Piklist makes it easy to do just that.
 
-In this tutorial, you will learn how to show or hide a meta-box or metafield based on the Post Status.
+{{< show-tutorial-start-folders >}}
 
-* First let’s build a meta-box using our [base tutorial](/tutorials/meta-boxes/meta-boxes-creating-metaboxes-and-fields/).  Once completed you should have a working Meta Box with three fields.
+In this tutorial, you will learn how to show or hide a meta-box or meta-field based on the Post Status.
+
+* First let’s build a meta-box using our ["Getting Started" tutorial](/getting-started/).  Once completed you should have a working Meta Box with three fields.
 * Piklist allows you to show/hide the entire Meta Box by using the status parameter, or by individual field by using the on_post_status parameter.
 
 ## SHOW entire Meta Box by Post Status(es)

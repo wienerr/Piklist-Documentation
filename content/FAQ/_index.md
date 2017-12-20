@@ -1,9 +1,8 @@
 ---
 title: "FAQs"
-chapter: true
+chapter: false
 weight: 999
 ---
-# FAQs
 
 ## What is Piklist?
 Piklist is an incredibly powerful framework for WordPress. When using Piklist to enhance your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code. Just install Piklist as you would a normal WordPress plugin, and then start writing code in your theme or plugin. This website should help you get started and provide a quick reference.

@@ -9,11 +9,9 @@ hidden: true
 ## Description
 Using Piklist you can easily display your Menus as Radio, Checkboxes or a Select list (dropdowns). Easily include them in custom theme settings, or when creating posts. This simple tutorial will show you how.
 
-* Install Piklist
-* Decide if you are going to build your Piklist code as a plugin or in your theme.
-* With Piklist you can display fields as Metaboxes, on a Settings page or a Widget. Choose which one you want to use.
+{{< show-tutorial-start-folders >}}
 
-Now we can get started and write some code!  We’re are going to use the WordPress function `wp_get_nav_menus()`, to get our menus.  This function stores data in an array, and with Piklist, parsing an array and displaying it as a list is really easy.  This array stores all menus in an Object, and then breaks them out.  You have access to fields like term_id, name, slug, etc.  We are going to assign each item in the dropdown to the slug, but show the name:
+We’re are going to use the WordPress function `wp_get_nav_menus()`, to get our menus.  This function stores data in an array, and with Piklist, parsing an array and displaying it as a list is really easy.  This array stores all menus in an Object, and then breaks them out.  You have access to fields like term_id, name, slug, etc.  We are going to assign each item in the dropdown to the slug, but show the name:
 
 ```
 piklist('field', array(

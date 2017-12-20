@@ -8,7 +8,7 @@ hidden: true
 
 Piklist’s Workflow system is incredibly powerful. It allows you to divide a page into different tabs. In this tutorial, we’ll use the Workflows to divide the default WordPress add new Post page.
 
-* Review the [Workflows documentation](/file-structure/parts/workflows/) page to get an idea how they work. For this tutorial, we will need to create one Workflow HEADER, and two Workflow TAB files. Additionally, we will need to write a quick function as well.
+* Review the ["Building Your First Workflow" tutorial](/tutorials/workflows/building-first-workflow/) to get an idea how they work. For this tutorial, we will need to create one Workflow HEADER, and two Workflow TAB files. Additionally, we will need to write a quick function as well.
 
 * First create your Workflow HEADER file. A header file is determined by setting the header parameter to true. It can be named anything and should contain just a comment block that looks like this:
 

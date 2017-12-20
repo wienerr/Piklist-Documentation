@@ -8,9 +8,7 @@ hidden: true
 
 Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).  This simple tutorial will show you how.
 
-* Install Piklist
-* Decide if you are going to build your Piklist code as a plugin or in your theme.
-* With Piklist you can display fields as Meta-boxes, on a Settings page or a Widget. Choose which one you want to use.
+{{< show-tutorial-start-folders >}}
 
 Now we can get started and write some code!  We're are going to use the WordPress function `get_users()`, to get our users.  This function stores data in an array, and with Piklist, parsing an array and displaying it as a Select List is really easy.  As you can see from the WordPress Codex page, this array stores all users in an Object, and then breaks them out.  You have access to fields like `ID`, `user_login`, `user_pass`, etc.  We are going to assign each item in the dropdown to the ID, but show the `display_name`:
 

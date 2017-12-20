@@ -6,6 +6,8 @@ hidden: true
 
 ![Metabox](/images/userguide-subtitle.png)
 
+{{< show-tutorial-start-folders >}}
+
 The Piklist folder structure makes it very easy to create Meta-Boxes, Settings Sections, etc, with limited code. Sometimes, however, you may need to insert a field in a specific place. Usually this is tied to a WordPress hook.
 
 The Piklist `field` function, can be used outside the Piklist folder structure, and placed inside a standard function.

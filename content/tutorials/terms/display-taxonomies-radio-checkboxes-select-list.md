@@ -8,11 +8,9 @@ hidden: true
 
 Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns).  This simple tutorial will show you how.
 
-* Install Piklist
-* Decide if you are going to build your Piklist code as a plugin or in your theme.
-* With Piklist you can display fields as Metaboxes, on a Settings page or a Widget. Choose which one you want to use.
+{{< show-tutorial-start-folders >}}
 
-Now we can get started and write some code!  In this example, we are going to pull the standard WordPress categories, this works for custom taxonomies as well.
+In this example, we are going to pull the standard WordPress categories, this works for custom taxonomies as well.
 
 We’re are going to use the WordPress function `get_terms()`, to get our taxonomy values. This function stores data in an array, and with Piklist, parsing an array and displaying it as a Select List is really easy.  As you can see from the [WordPress Codex page](http://codex.wordpress.org/Function_Reference/get_terms), this array stores all data in an Object, and then breaks them out.  You have access to fields like `term_id`, `name`, `parent` etc.  We are going to assign each item in the select list to the `term_id`, but show the `name`. This is added to the Piklist parameter choices:
 

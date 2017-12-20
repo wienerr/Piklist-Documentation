@@ -11,11 +11,11 @@ In this tutorial, if the user clicks on the “Yes” radio button to subscribe 
 
 * Conditional fields work on almost every page in WordPress. In this tutorial we are going to build these fields for a Post.
 
-* First let’s build a metabox using our base tutorial. You can stop at Step 4, since we will be creating our own fields.
+* First let’s build a metabox using our [base tutorial](/getting-started/). You can stop at "Adding Fields", since we will be creating our own fields.
 
 * Now, let’s add two fields:
-	1. The Control field will be a radio button
-	2. The Conditional field will only display if “Yes” is selected in the radio button.
+    1. The Control field will be a radio button
+    2. The Conditional field will only display if “Yes” is selected in the radio button.
 
 ### Build the Control Field
 
