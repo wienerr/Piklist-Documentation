@@ -13,18 +13,18 @@
     <title>Hide Meta Boxes for a Page Template :: Piklist Documentation</title>
 
     
-    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513797434" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513801136" rel="stylesheet">
     
-      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513797434" rel="stylesheet">
+      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513801136" rel="stylesheet">
     
 
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513801136"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513797434"></script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513801136"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513801136"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/piklist.github.io\/Piklist-Documentation\/";
     
 </script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513801136"></script>
 
     
   </div>
@@ -1775,7 +1775,7 @@
 
 <p>Using Piklist, you can easily hide some meta boxes when a certain page template is selected in WordPress. This tutorial will show you how using two Piklist filters: <code>piklist_get_file_data</code> and <code>piklist_add_part</code>.</p>
 
-<p>All of the code in this tutorial will go in your theme’s functions.php file, or your main plugin file.</p>
+<p>All of the code in this tutorial will go in your theme’s <code>functions.php</code> file, or your main plugin file.</p>
 
 <h3 id="add-a-custom-parameter-to-the-piklist-comment-block">Add a custom parameter to the Piklist comment block.</h3>
 
@@ -1806,19 +1806,19 @@ function my_custom_comment_block($data, $folder) {
 <pre><code>add_filter('piklist_part_process_callback', 'my_hide_for_template', 10, 2);
 function my_hide_for_template($part, $type) {
 
-	global $post;
+    global $post;
 
-	// If not a meta box than bail
-	if($type != 'meta-boxes') {
-		return $part;
-	}
+    // If not a meta box than bail
+    if($type != 'meta-boxes') {
+        return $part;
+    }
 
 
-	// Check if any page template is set in the comment block
-	if (!empty($part['data']['hide_for_template'])) {
+    // Check if any page template is set in the comment block
+    if (!empty($part['data']['hide_for_template'])) {
 
-		// Get the active page template
-		$active_template = pathinfo(get_page_template_slug($post-&gt;ID), PATHINFO_FILENAME);
+        // Get the active page template
+        $active_template = pathinfo(get_page_template_slug($post-&gt;ID), PATHINFO_FILENAME);
 
                 $active_template = empty($active_template) ? 'default' : $active_template;
 
@@ -1828,8 +1828,8 @@ function my_hide_for_template($part, $type) {
                 // Change meta-box access to user role: no-role
                 $part['data']['role'] = 'no-role';
             }
-	}
-	return $part;
+    }
+    return $part;
 }
 </code></pre>
 
@@ -3169,20 +3169,20 @@ Hide for Template: full-width, another-template
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513801137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513801137"></script>
 
-    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513797434" type="text/css" rel="stylesheet" />
-    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513797434"></script>
+    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513801137" type="text/css" rel="stylesheet" />
+    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513801137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

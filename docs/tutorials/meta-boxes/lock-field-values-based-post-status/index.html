@@ -13,18 +13,18 @@
     <title>Lock Field Values based on Post Status :: Piklist Documentation</title>
 
     
-    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513797434" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513801137" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513801137" rel="stylesheet">
     
-      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513797434" rel="stylesheet">
+      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513801137" rel="stylesheet">
     
 
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513801137"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513797434"></script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513801137"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513801137"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/piklist.github.io\/Piklist-Documentation\/";
     
 </script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513801137"></script>
 
     
   </div>
@@ -1774,15 +1774,35 @@
 
 <p>Piklist allows you to lock a field value (making it read-only), when the post status changes. A perfect example of this is if you want to lock post meta once a post is published.</p>
 
+<div class="expand">
+
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+
+        <span>
+
+            <strong>New to Piklist?</strong>
+
+        </span>
+
+    </div>
+
+    <div class="expand-content" style="display: none;">
+
+        <p>
+            <h3>Before you start this tutorial:</h3>
+            <ol>
+                <li><a href="https://wordpress.org/plugins/piklist/">Install Piklist</a> like you would any other WordPress plugin.</li>
+                <li>Decide if you are going to add the code in this tutorial to your custom plugin or your theme.  This will define how to setup your <a href="https://piklist.github.io/Piklist-Documentation/folder-structure/">Piklist folder structure</a>.</li>
+                <li>If you're new to Piklist, you may want to review the <a href="https://piklist.github.io/Piklist-Documentation/getting-started/">"Getting Started"</a> tutorial first.  It gives you a good overview of how Piklist works.</li>
+            </ol>
+    </div>
+
+</div>
+
+
 <p>Here’s how we do that:</p>
-
-<p>If you are already using Piklist, then skip to step 4.</p>
-
-<p>Install Piklist</p>
-
-<p>Decide if you are going to build your Piklist code as a plugin or in your theme.</p>
-
-<p>With Piklist you can display fields as metaboxes, on a Settings page or a Widget. Choose which one you want to use.</p>
 
 <p>Create your field the standard Piklist way.  For this tutorial we will create a text box.  The only difference is that you will add the <a href="https://piklist.github.io/Piklist-Documentation/fields/field-parameters
 /#on-post-status"><code>on_post_status</code></a> parameter. You’ll notice that it is set to show values when the post status equals publish.</p>
@@ -3125,20 +3145,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513801137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513801137"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513801137"></script>
 
-    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513797434" type="text/css" rel="stylesheet" />
-    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513797434"></script>
+    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513801137" type="text/css" rel="stylesheet" />
+    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513801137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

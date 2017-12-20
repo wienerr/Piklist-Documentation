@@ -13,18 +13,18 @@
     <title>Building Settings Pages :: Piklist Documentation</title>
 
     
-    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513797434" rel="stylesheet">
-    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513797434" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/nucleus.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hybrid.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/featherlight.min.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/perfect-scrollbar.min.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/horsey.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/theme.css?1513801136" rel="stylesheet">
+    <link href="https://piklist.github.io/Piklist-Documentation/css/hugo-theme.css?1513801136" rel="stylesheet">
     
-      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513797434" rel="stylesheet">
+      <link href="https://piklist.github.io/Piklist-Documentation/css/theme-piklist.min.css?1513801136" rel="stylesheet">
     
 
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery-2.x.min.js?1513801136"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513797434"></script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/lunr.min.js?1513801136"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/horsey.js?1513801136"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/piklist.github.io\/Piklist-Documentation\/";
     
 </script>
-<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513797434"></script>
+<script type="text/javascript" src="https://piklist.github.io/Piklist-Documentation/js/search.js?1513801136"></script>
 
     
   </div>
@@ -1823,44 +1823,44 @@ Setting: my_theme_settings
 <p>This comment block tells Piklist you want to name your Settings section, “My Demo Settings Section”, and you want to associate this Section with the Settings page that uses the setting “demo-setting”. When you registered your Settings page, earlier in this tutorial, this is the setting you defined. The Piklist comment block for settings supports a lot more than just these two variables.  You can view the full list in our docs.</p>
 
 <ul>
-<li>Now, let’s create our first field, a TEXT BOX:
-<code>
-piklist('field', array(
-'type' =&gt; 'text'
-,'field' =&gt; 'text'
-,'label' =&gt; 'Text Box'
-,'description' =&gt; 'Field Description'
-,'help' =&gt; 'This is help text.'
-,'value' =&gt; 'Default text'
-,'attributes' =&gt; array(
-  'class' =&gt; 'text'
-)
-));
-</code></li>
+<li>Now, let’s create our first field, a TEXT BOX:</li>
 </ul>
+
+<pre><code>piklist('field', array(
+    'type' =&gt; 'text'
+    ,'field' =&gt; 'text'
+    ,'label' =&gt; 'Text Box'
+    ,'description' =&gt; 'Field Description'
+    ,'help' =&gt; 'This is help text.'
+    ,'value' =&gt; 'Default text'
+    ,'attributes' =&gt; array(
+      'class' =&gt; 'text'
+    )
+  ));
+</code></pre>
 
 <p>This simple array will create a TEXT BOX that automatically uses the WordPress settings API to display and save.  The <code>'type' =&gt; 'text'</code> variable tells Piklist what sort of field to render. Also, notice that this is very similar to the way you create fields for metaboxes.</p>
 
 <ul>
-<li>Now, let’s create our next field, a SELECT FIELD:
-<code>
-piklist('field', array(
-'type' =&gt; 'select'
-,'field' =&gt; 'select'
-,'label' =&gt; 'Select Box'
-,'description' =&gt; 'Choose from the drop-down.'
-,'help' =&gt; 'This is help text.'
-,'attributes' =&gt; array(
-  'class' =&gt; 'text'
-)
-,'choices' =&gt; array(
-  'option1' =&gt; 'Option 1'
-  ,'option2' =&gt; 'Option 2'
-  ,'option3' =&gt; 'Option 3'
-)
-));
-</code></li>
+<li>Now, let’s create our next field, a SELECT FIELD:</li>
 </ul>
+
+<pre><code>piklist('field', array(
+    'type' =&gt; 'select'
+    ,'field' =&gt; 'select'
+    ,'label' =&gt; 'Select Box'
+    ,'description' =&gt; 'Choose from the drop-down.'
+    ,'help' =&gt; 'This is help text.'
+    ,'attributes' =&gt; array(
+      'class' =&gt; 'text'
+    )
+    ,'choices' =&gt; array(
+      'option1' =&gt; 'Option 1'
+      ,'option2' =&gt; 'Option 2'
+      ,'option3' =&gt; 'Option 3'
+    )
+  ));
+</code></pre>
 
 <p>Notice that this array is very similar to the one used to create the text box. Just two differences:</p>
 
@@ -3273,20 +3273,20 @@ piklist('field', array(
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/clipboard.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/perfect-scrollbar.jquery.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/jquery.sticky-kit.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/featherlight.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/html5shiv-printshiv.min.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/highlight.pack.js?1513801136"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513797434"></script>
-    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513797434"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/modernizr.custom.71422.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/learn.js?1513801136"></script>
+    <script src="https://piklist.github.io/Piklist-Documentation/js/hugo-learn.js?1513801136"></script>
 
-    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513797434" type="text/css" rel="stylesheet" />
-    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513797434"></script>
+    <link href="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.css?1513801136" type="text/css" rel="stylesheet" />
+    <script src="https://piklist.github.io/Piklist-Documentation/mermaid/mermaid.js?1513801136"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

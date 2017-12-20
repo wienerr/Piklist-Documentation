@@ -17,9 +17,7 @@
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/building-first-workflow/</guid>
       <description>Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.
-IMPORTANT: Each Workflow tab loads a separate page, with a new url. If you change tabs without saving you will lose your data.
-ALSO IMPORTANT: Workflows control the ENTIRE page, not just what is located under the tabs.
-Each Workflow needs a minimum of two files:</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
     
     <item>
@@ -29,7 +27,7 @@ Each Workflow needs a minimum of two files:</description>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</guid>
       <description>Building widgets with Piklist is incredibly simple. You can use a fraction of the code WordPress requires to make very powerful widgets. In this tutorial, we will create a widget that includes three fields: select, text and ColorPicker.
- The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a widgets subfolder. You can see the supported Piklist folder structure here.</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
     <item>
@@ -39,7 +37,7 @@ Each Workflow needs a minimum of two files:</description>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/</guid>
       <description>Description Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
-The first step is to create the proper folder structure in your theme. Create a piklist folder, and then a parts subfolder, and then add a meta-boxes subfolder. (Be sure to include the dash.</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
     <item>
@@ -59,9 +57,7 @@ To register a Taxonomy with Piklist:</description>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/updates/getting-started-with-updates/</guid>
       <description>If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.
-Then write your update procedure.
-Example This example is pulled from Piklist itself.
- This update scripts runs if you are upgrading from Piklist version 0.</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin.</description>
     </item>
     
     <item>
@@ -134,9 +130,7 @@ If the user attempts to activate a Piklist plugin or theme, without activating P
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-subtitle-field/</guid>
-      <description>The Piklist folder structure makes it very easy to create Meta-Boxes, Settings Sections, etc, with limited code. Sometimes, however, you may need to insert a field in a specific place. Usually this is tied to a WordPress hook.
-The Piklist field function, can be used outside the Piklist folder structure, and placed inside a standard function.
-For this tutorial, we will insert a “Subtitle” field, under the Post Title field. A few things:</description>
+      <description>New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you&#39;re new to Piklist, you may want to review the &#34;Getting Started&#34; tutorial first. It gives you a good overview of how Piklist works.</description>
     </item>
     
     <item>
@@ -146,10 +140,8 @@ For this tutorial, we will insert a “Subtitle” field, under the Post Title f
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-wysisyg-excerpt-box/</guid>
       <description>Description To add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.
-First, remove the default excerpt box Custom post type
-If you’re registering your own post type, include the supports parameter but don’t include excerpt in the array. This will tell WordPress not to render the excerpt box.
-Built in post type
-Use the standard WordPress function remove_post_type_support, to remove the editor.</description>
+First, remove the default excerpt box Custom post type If you’re registering your own post type, include the supports parameter but don’t include excerpt in the array. This will tell WordPress not to render the excerpt box.
+Built in post type Use the standard WordPress function remove_post_type_support, to remove the editor.</description>
     </item>
     
     <item>
@@ -230,8 +222,7 @@ A few important caveats:
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/terms/creating-separate-taxonomies-user/</guid>
       <description>In this tutorial we’ll provide each logged in user with their own set of private tags.
-First, you will need to create your taxonomy using the piklist_taxonomies filter.
-We’ll assume you will be using a non-hierarchical(like Tags) taxonomy, and we will name them &amp;lsquo;personal_tags&amp;rsquo;. However, we will do something special with the name. To allow separate taxonomies for each logged in user, we will append their user ID to the end of the taxonomy name.</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you&#39;re new to Piklist, you may want to review the &#34;</description>
     </item>
     
     <item>
@@ -264,7 +255,7 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;datepicker&#39;, &
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</guid>
       <description>Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.
- Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Metaboxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code!</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
     
     <item>
@@ -274,7 +265,7 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;datepicker&#39;, &
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/users/display-users-radio-checkbox-select-list/</guid>
       <description>Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.
- Install Piklist Decide if you are going to build your Piklist code as a plugin or in your theme. With Piklist you can display fields as Meta-boxes, on a Settings page or a Widget. Choose which one you want to use.  Now we can get started and write some code!</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
     
     <item>
@@ -428,10 +419,7 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/lock-field-values-based-post-status/</guid>
       <description>Description Piklist allows you to lock a field value (making it read-only), when the post status changes. A perfect example of this is if you want to lock post meta once a post is published.
-Here’s how we do that:
-If you are already using Piklist, then skip to step 4.
-Install Piklist
-Decide if you are going to build your Piklist code as a plugin or in your theme.</description>
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
     <item>
@@ -473,7 +461,7 @@ Please contact your host and ask them to upgrade you.</description>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/workflows/placing-add-new-post-workflow/</guid>
       <description>Piklist’s Workflow system is incredibly powerful. It allows you to divide a page into different tabs. In this tutorial, we’ll use the Workflows to divide the default WordPress add new Post page.
- Review the Workflows documentation page to get an idea how they work. For this tutorial, we will need to create one Workflow HEADER, and two Workflow TAB files. Additionally, we will need to write a quick function as well.</description>
+ Review the &amp;ldquo;Building Your First Workflow&amp;rdquo; tutorial to get an idea how they work. For this tutorial, we will need to create one Workflow HEADER, and two Workflow TAB files. Additionally, we will need to write a quick function as well.</description>
     </item>
     
     <item>
