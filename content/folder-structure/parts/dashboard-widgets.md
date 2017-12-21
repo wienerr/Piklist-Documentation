@@ -18,4 +18,4 @@ _e('Welcome to my dashboard widget', 'piklist');
 
 ```
 
-**[View Tutorials &rightarrow;](/tutorials/dashboard/)**
+**[View Tutorials &rightarrow;](/tutorials/dashboard-widgets/)**

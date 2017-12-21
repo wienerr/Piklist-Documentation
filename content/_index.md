@@ -5,11 +5,12 @@ weight: 90
 
 # Piklist Documentation
 
+<h3 class="center"><i class="fas fa-graduation-cap fa-sm"></i><a href="/getting-started">Getting Started</a></h3>
+<h3 class="center"><i class="fas fa-check fa-sm"></i> <a href="/faq">FAQS</a></h3>
+
 ### With Piklist you can create and enhance almost every part of WordPress.
 
 <hr/>
-<h3 class="center"><i class="fas fa-graduation-cap fa-sm"></i><a href="/getting-started">Getting Started</a></h3>
-<h3 class="center"><i class="fas fa-check fa-sm"></i> <a href="/faq">FAQS</a></h3>
 
 <ul id="features-table">
   <li class="feature">

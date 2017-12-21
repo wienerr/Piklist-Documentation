@@ -22,4 +22,4 @@ Dismiss: true
 <p>This is my notice</p>
 ```
 
-**[View Tutorials &rightarrow;](/tutorials/notices/)**
+**[View Tutorials &rightarrow;](/tutorials/admin-notices/)**
