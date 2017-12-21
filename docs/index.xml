@@ -21,6 +21,36 @@
     </item>
     
     <item>
+      <title>Building a simple Admin Page</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/admin-pages/creating-a-simple-admin-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/admin-pages/creating-a-simple-admin-page/</guid>
+      <description>Description Piklist makes it super easy to create admin pages in WordPress.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you&#39;re new to Piklist, you may want to review the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Building your first Admin Notice</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/admin-notices/building-an-admin-notice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/admin-notices/building-an-admin-notice/</guid>
+      <description>Description Piklist makes it super easy to create admin notices in WordPress, usually with no PHP.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you&#39;re new to Piklist, you may want to review the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Create a Dashboard Widget to show an RSS Feed.</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/dashboard-widgets/creating-a-dashboard-widget-to-show-rss-feed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/dashboard-widgets/creating-a-dashboard-widget-to-show-rss-feed/</guid>
+      <description>Description Piklist makes it super easy to create Dashboard Widgets in WordPress. This way you can concentrate on your widget code, and let Piklist do the hard part.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
+    </item>
+    
+    <item>
       <title>Easy Widgets</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -213,6 +243,17 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;colorpicker&#39;, 
       <description>Custom Post Statuses are at the heart of any web application built with WordPress, and Piklist makes it easy for you to implement them. No longer are you stuck with draft, pending review and published. You can add whatever post statuses you choose.
 A few important caveats:
  Due to the nature of WordPress, your first post status has to remain “draft”. You can change the label so it displays “New”, or “Howdy”, but the key in the post status array will have to remain draft (we’ll explain more later in the tutorial).</description>
+    </item>
+    
+    <item>
+      <title>Creating Help Tabs for WordPress</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/help/creating-help-tabs-for-wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/help/creating-help-tabs-for-wordpress/</guid>
+      <description>Description Creating Help Tabs for WordPress is super easy with Piklist.
+In this example, we&amp;rsquo;ll create some help for your custom Post Type. You should already have a custom Post Type registered and working in WordPress.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
     <item>
@@ -641,6 +682,18 @@ In this tutorial we&amp;rsquo;ll use the classic books example, assuming our pos
 Since we&amp;rsquo;re using Post Types, all this code goes in your /parts/meta-boxes/ folder.
 First let&amp;rsquo;s add the chapter relate field to the book post type. Create a file and add this code:
 /** * Title: Chapters * Post Type: book * Context: normal * Priority: high */ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;select&#39; ,&#39;title&#39; =&amp;gt; &#39;Chapters&#39; ,&#39;choices&#39; =&amp;gt; piklist(get_posts(array( &#39;numberposts&#39; =&amp;gt; -1 ,&#39;post_type&#39; =&amp;gt; &#39;chapters&#39; )), array(&#39;ID&#39;, &#39;post_title&#39;)) ,&#39;relate&#39; =&amp;gt; array( &#39;scope&#39; =&amp;gt; &#39;post&#39; ) ,&#39;attributes&#39; =&amp;gt; array( &#39;class&#39; =&amp;gt; &#39;multiple&#39; ) ));  Create a second file in the same /parts/meta-boxes/ folder.</description>
+    </item>
+    
+    <item>
+      <title>piklist_admin_pages</title>
+      <link>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_admin_pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_admin_pages/</guid>
+      <description>apply_filters(&#39;piklist_admin_pages&#39;, array()); The piklist_admin_pages filter lets you register your custom Admin Pages through Piklist. This gives you access to additional functionality that Piklist offers.
+To register an Admin Page with Piklist:
+ Create a function with your Admin Page parameters. Hook it to the piklist_admin_pages() filter.  This code goes in your theme&amp;rsquo;s functions.php file or your plugin file.
+Parameters This filter supports every parameter that add_menu_page() supports. Additionally, you may use the following Piklist specific parameters.</description>
     </item>
     
     <item>

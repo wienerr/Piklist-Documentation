@@ -7,6 +7,18 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/admin-pages/creating-a-simple-admin-page/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/admin-notices/building-an-admin-notice/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/dashboard-widgets/creating-a-dashboard-widget-to-show-rss-feed/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/widgets/easy-widgets/</loc>
   </url>
   
@@ -87,10 +99,6 @@
   </url>
   
   <url>
-    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/tutorial-start/</loc>
-  </url>
-  
-  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/add-subtitle-field/</loc>
   </url>
   
@@ -103,7 +111,15 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/admin-notices/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-pages/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/admin-pages/</loc>
   </url>
   
   <url>
@@ -140,11 +156,19 @@
   </url>
   
   <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/help/creating-help-tabs-for-wordpress/</loc>
+  </url>
+  
+  <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/terms/creating-separate-taxonomies-user/</loc>
   </url>
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/dashboard-widgets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/dashboard-widgets/</loc>
   </url>
   
   <url>
@@ -209,6 +233,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/help/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/tutorials/help/</loc>
   </url>
   
   <url>
@@ -354,6 +382,10 @@
   
   <url>
     <loc>https://piklist.github.io/Piklist-Documentation/tutorials/relationships/working-with-field-relationships/</loc>
+  </url>
+  
+  <url>
+    <loc>https://piklist.github.io/Piklist-Documentation/actions-filters/filters/piklist_admin_pages/</loc>
   </url>
   
   <url>
