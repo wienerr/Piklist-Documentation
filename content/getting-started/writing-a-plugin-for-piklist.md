@@ -31,7 +31,7 @@ License: A "Slug" license name e.g. GPL2
 ```
 As long as you have Piklist activated on your site, this plugin will now run properly.
 
-Now you just need to create the proper <a href="{{< ref "folder-structure.md" >}}">folder structure</a> so you can start creating fields and more.
+Now you just need to create the proper [folder structure](/folder-structure) so you can start creating fields and more.
 
 Creating plugins has never been easier!
 
