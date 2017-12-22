@@ -1,30 +1,28 @@
 ---
-title: Getting Started with Meta-boxes and Fields
-description: Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
+title: Add fields to Media items
+description: Add fields to Media library items
 hidden: true
-weight: 1
 ---
 
-![Metabox](/images/userguide-meta-box.jpg)
+![Metabox](/images/add-fields-to-media.png)
 
 ## Description
-Piklist makes it radically easy to add meta-boxes and fields to your posts, pages or custom post types.  In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
+Piklist makes it radically easy to add meta-boxes and fields to your media items.  In this tutorial, we will create a meta-box that includes three fields, select, text and ColorPicker, for standard posts.
 
 {{< show-tutorial-start-folders >}}
 
-Each file we add to the the meta-boxes folder will create a metabox on the post edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward.  Ok, let’s create our metabox file!
+Each file we add to the the `media/` folder will create a metabox on the media edit screen. Each field we include in this file will be part of this metabox. Fairly straightforward.  Ok, let’s create our Media metabox file!
 
-Create a new file: let’s call it `demo-metabox.php`.  At the top of the file, we will add a comment block that will control the configuration of the metabox.  This comment block is very similar to what you would see in a standard WordPress plugin or theme.  Here are the minimum variables required:
+Create a new file in your `/parts/media/` folder: let’s call it `media-metabox.php`.  At the top of the file, we will add a comment block that will control the configuration of the metabox.  This comment block is very similar to what you would see in a standard WordPress plugin or theme.  Here is the minimum variable required:
 
 ```
 <?php
 /*
-Title: My Demo Metabox
-Post Type: post
+Title: My Media Metabox
 */
 ```
 
-This comment block tells Piklist you want to name your metabox, “My Demo Metabox”, and have it display on the edit screen for a Post. To have this metabox work with a custom post type, you could also add a custom post type slug here as well. The Piklist comment block for metaboxes supports a lot more than just these two variables.  You can view the full list in our docs.
+This comment block tells Piklist you want to name your Media metabox, “My Media Metabox". The Piklist comment block for Media metaboxes supports a lot more than just these two variables.  You can view the full list in our docs.
 
 Now we start adding our fields.  It’s best practice to make the “field” name all lowercase letters, numbers, and dashes or underscores, with no spaces or special characters if possible (i.e. facebook-page-url). The field label can be anything you want.
 
@@ -43,7 +41,7 @@ piklist('field', array(
     )
   ));
  ```
- This simple array will create a text box that automatically saves as Post Meta.
+ Since Media items in WordPress are really a Post Type, this data will be saved as post meta.
 
 Now, let’s create our select field:
 
@@ -92,11 +90,10 @@ Seriously, that’s all you need to create a ColorPicker field.  You will notice
 
 ## Full Code Snippet:
 
-  ```
-  <?php
+```
+<?php
 /*
-Title: My Demo Metabox
-Post Type: post
+Title: My Media Metabox
 */
 
 piklist('field', array(
@@ -143,9 +140,9 @@ piklist('field', array(
 ## Usage
 Where possible, Piklist uses the default WordPress functions to get things done, and using Post Meta is no different. You can use the [`get_post_meta()`](https://developer.wordpress.org/reference/functions/get_post_meta/) function to pull this data into your theme.  Here’s how you would use these fields in your single.php file:
 ```
-echo get_post_meta($post->ID, 'demo_text', true);
-echo get_post_meta($post->ID, 'demo_select', true);
-echo get_post_meta($post->ID, 'demo_colorpicker', true);
+echo get_post_meta($attachment->ID, 'demo_text', true);
+echo get_post_meta($attachment->ID, 'demo_select', true);
+echo get_post_meta($attachment->ID, 'demo_colorpicker', true);
 ```
 
 `get_post_meta()` takes a second parameter, which can be set as true or false. Set to true if you want only a single row from the database, or false if you want every row it finds that matches the meta name.
