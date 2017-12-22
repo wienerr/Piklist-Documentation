@@ -66,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/getting-started-creating-metaboxes-and-fields/</guid>
-      <description>Description Piklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
+      <description>Description Piklist makes it radically easy to add meta-boxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.
   New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
@@ -175,6 +175,16 @@ Built in post type Use the standard WordPress function remove_post_type_support,
     </item>
     
     <item>
+      <title>Add fields to Media items</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/media/add-fields-to-media/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/media/add-fields-to-media/</guid>
+      <description>Description Piklist makes it radically easy to add meta-boxes and fields to your media items. In this tutorial, we will create a meta-box that includes three fields, select, text and ColorPicker, for standard posts.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
+    </item>
+    
+    <item>
       <title>Admin Notices</title>
       <link>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/admin-notices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -202,6 +212,17 @@ Built in post type Use the standard WordPress function remove_post_type_support,
       <guid>https://piklist.github.io/Piklist-Documentation/about-piklist/benefits-of-using-piklist/</guid>
       <description>Piklist makes it super simple to add fields and data to almost every part of WordPress:
  Use minimal code to generate complex fields. Code-based for maximum flexibility. Use the same field code to generate a post-meta field or a settings field or a user field&amp;hellip; Packed with hooks and filters so you can modify almost everything in WordPress. Enterprise level code quality.  </description>
+    </item>
+    
+    <item>
+      <title>Building Pointers without code</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/pointers/building-pointers-without-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/pointers/building-pointers-without-code/</guid>
+      <description>Description Piklist let&amp;rsquo;s you build WordPress Pointers without code. No PHP. No Javascript.
+In this tutorial, we will create a simple WordPress pointer.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
     
     <item>
@@ -357,6 +378,16 @@ NOTES:
       <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/forms/</guid>
       <description>/parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.
 &amp;lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_type&#39; ,&#39;value&#39; =&amp;gt; &#39;post&#39; )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_title&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Title&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_title&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;text&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_content&#39; ,&#39;label&#39; =&amp;gt; __(&#39;Content&#39;, &#39;piklist&#39;) ,&#39;attributes&#39; =&amp;gt; array( &#39;wrapper_class&#39; =&amp;gt; &#39;post_content&#39; ,&#39;style&#39; =&amp;gt; &#39;width: 100%&#39; ) )); piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;hidden&#39; ,&#39;scope&#39; =&amp;gt; &#39;post&#39; ,&#39;field&#39; =&amp;gt; &#39;post_status&#39; ,&#39;value&#39; =&amp;gt; &#39;pending&#39; )); // Submit button piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;submit&#39; ,&#39;field&#39; =&amp;gt; &#39;submit&#39; ,&#39;value&#39; =&amp;gt; &#39;Submit&#39; ));  View Tutorials &amp;rightarrow;</description>
+    </item>
+    
+    <item>
+      <title>Getting started with Shortcodes</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/shortcodes/getting-started-with-shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/shortcodes/getting-started-with-shortcodes/</guid>
+      <description>Description Creating Shortcodes with Piklist is super easy. In this tutorial, we&amp;rsquo;ll create a shortcode to display post meta in your post content.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
     
     <item>
