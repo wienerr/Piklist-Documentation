@@ -256,6 +256,17 @@ piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;colorpicker&#39;, 
     </item>
     
     <item>
+      <title>Conditionally Show Fields</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/fields/conditionally-show-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/fields/conditionally-show-fields/</guid>
+      <description>Description Piklist makes it easy to show one or more fields, based on the value of another field, and so much more. The Piklist conditions parameter is very powerful, and you can see all the options in the documentation.
+In this tutorial, if the user clicks on the “Yes” radio button to subscribe to our newsletter, we will show an “Email” text field.
+ Conditional fields work on almost every page in WordPress.</description>
+    </item>
+    
+    <item>
       <title>Creating Custom Post Statuses</title>
       <link>https://piklist.github.io/Piklist-Documentation/tutorials/meta-boxes/creating-custom-post-statuses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -308,6 +319,16 @@ This field uses the standard jQuery DatePicker field, and respects the same opti
 You can use Piklist field parameters to customize this field.
 Basic Datepicker field
 piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;datepicker&#39;, &#39;field&#39; =&amp;gt; &#39;my_date_field&#39;, &#39;label&#39; =&amp;gt; &#39;Date&#39;, &#39;value&#39; =&amp;gt; date(&#39;M d, Y&#39;, time() + 604800), // set default value &#39;options&#39; =&amp;gt; array( &#39;dateFormat&#39; =&amp;gt; &#39;M d, yy&#39; ) ));  Localizing the Datepicker field</description>
+    </item>
+    
+    <item>
+      <title>Display Menus as a Radio, Checkbox or Select list</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/fields/display-menus-radio-checkbox-select-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/fields/display-menus-radio-checkbox-select-list/</guid>
+      <description>Description Using Piklist you can easily display your Menus as Radio, Checkboxes or a Select list (dropdowns). Easily include them in custom theme settings, or when creating posts. This simple tutorial will show you how.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme.</description>
     </item>
     
     <item>
@@ -542,7 +563,7 @@ Please contact your host and ask them to upgrade you.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piklist.github.io/Piklist-Documentation/folder-structure/parts/pointers/</guid>
-      <description>/parts/pointers/ With Piklist you can easily create Pointers.
+      <description>/parts/pointers/ With Piklist you can easily create Pointers in WordPress.
 You can create as many files as you like and place them in this folder. Each file will render one pointer. View Tutorials &amp;rightarrow;</description>
     </item>
     
@@ -645,6 +666,16 @@ View Tutorials &amp;rightarrow;</description>
       
       <guid>https://piklist.github.io/Piklist-Documentation/fields/types/textarea/</guid>
       <description> &#39;type&#39; =&amp;gt; &#39;textarea&#39; piklist(&#39;field&#39;, array( &#39;type&#39; =&amp;gt; &#39;textarea&#39;, &#39;field&#39; =&amp;gt; &#39;my_textarea&#39;, &#39;label&#39; =&amp;gt; &#39;Text Area&#39;, &#39;attributes&#39; =&amp;gt; array( &#39;rows&#39; =&amp;gt; 10, &#39;cols&#39; =&amp;gt; 50, &#39;class&#39; =&amp;gt; &#39;large-text&#39; ) ));  </description>
+    </item>
+    
+    <item>
+      <title>Understanding Front End Forms</title>
+      <link>https://piklist.github.io/Piklist-Documentation/tutorials/forms/understanding-front-end-forms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piklist.github.io/Piklist-Documentation/tutorials/forms/understanding-front-end-forms/</guid>
+      <description>Piklist makes creating Front End forms as easy as creating fields in the WordPress admin. In most cases you can use the same field code you used in the admin, plus you need to define the scope parameter. scope tells Piklist where to save your data. In the admin, this can be auto-detected, but not with front-end forms.
+  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin.</description>
     </item>
     
     <item>
