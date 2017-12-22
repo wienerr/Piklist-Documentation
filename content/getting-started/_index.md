@@ -1,5 +1,6 @@
 ---
 title: "Getting Started"
+description: "Getting started with Piklist."
 weight: 10
 ---
 ## Getting Started with Piklist
