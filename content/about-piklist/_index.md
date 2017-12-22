@@ -1,5 +1,6 @@
 ---
 title: "About Piklist"
+description: "Piklist is a fast and concise plugin that encourages WordPress rapid development. It simplifies many of the more difficult tasks in WordPress and adds functionality not presently common in WordPress core."
 weight: 5
 ---
 ## The most powerful framework available for WordPress.

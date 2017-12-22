@@ -1,5 +1,6 @@
 ---
 title: "Shortcodes"
+description: "With Piklist you can easily create Shortcodes."
 ---
 
 ### `/parts/shortcodes/`

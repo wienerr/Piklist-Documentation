@@ -1,5 +1,6 @@
 ---
 title: "Workflows"
+description: "Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab."
 ---
 
 ### `/parts/workflows/`

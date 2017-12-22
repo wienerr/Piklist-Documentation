@@ -1,5 +1,6 @@
 ---
 title: "Admin Notices"
+description: "Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP."
 ---
 
 ### `/parts/notices/`

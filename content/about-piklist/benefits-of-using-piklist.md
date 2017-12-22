@@ -1,5 +1,6 @@
 ---
 title: "Benefits of using Piklist"
+description: "Piklist makes it super simple to add fields and data to almost every part of WordPress."
 ---
 Piklist makes it super simple to add fields and data to almost every part of WordPress:
 

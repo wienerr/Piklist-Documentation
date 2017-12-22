@@ -1,5 +1,6 @@
 ---
 title: "Dashboard Widgets"
+description: "With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite."
 ---
 
 ### `/parts/dashboard/`

@@ -1,5 +1,6 @@
 ---
 title: Help Tabs
+description: "Tutorials on Help Tabs"
 ---
 ## Tutorials
 

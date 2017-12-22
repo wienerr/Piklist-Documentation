@@ -1,5 +1,6 @@
 ---
 title: "Users"
+description: "With Piklist you can easily create user meta sections."
 ---
 
 ### `/parts/users/`

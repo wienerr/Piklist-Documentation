@@ -1,5 +1,6 @@
 ---
 title: "FAQs"
+description: "Frequently asked questions"
 chapter: false
 weight: 999
 ---

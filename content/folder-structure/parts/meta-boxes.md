@@ -1,5 +1,6 @@
 ---
 title: "Meta-boxes"
+description: "With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created."
 ---
 
 ### `/parts/meta-boxes/`

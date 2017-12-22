@@ -1,5 +1,6 @@
 ---
 title: Shortcodes
+description: "Tutorials on Shortcodes"
 ---
 ## Tutorials
 

@@ -1,5 +1,6 @@
 ---
 title: Settings
+description: "Tutorials on Settings"
 ---
 ## Tutorials
 

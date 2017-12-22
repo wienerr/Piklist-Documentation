@@ -1,5 +1,6 @@
 ---
 title: Pointers
+description: "Tutorials on Pointers"
 ---
 ## Tutorials
 

@@ -1,5 +1,6 @@
 ---
 title: "Writing a plugin for Piklist"
+description: "Writing a plugin to take advantage of Piklist is very simple. The only additional step is registering your plugin with Piklist, otherwise, this is just like writing a regular WordPress plugin. Like all plugins, Piklist plugins also live in your wp-content/plugins/ folder."
 weight: 30
 ---
 

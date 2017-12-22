@@ -1,5 +1,6 @@
 ---
 title: Admin Notices
+description: "Tutorials on Admin Notices"
 ---
 ## Tutorials
 

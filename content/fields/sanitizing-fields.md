@@ -1,5 +1,6 @@
 ---
 title: "Sanitizing Fields"
+description: "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the `sanitize` parameter."
 weight: 30
 ---
 

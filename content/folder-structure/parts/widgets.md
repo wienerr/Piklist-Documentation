@@ -1,5 +1,6 @@
 ---
 title: "Widgets"
+description: "With Piklist you can easily create Widgets."
 ---
 
 ### `/parts/widgets/`
@@ -7,7 +8,7 @@ title: "Widgets"
 With Piklist you can easily create Widgets.
 
 Widgets are made up of two files:
-    
+
 * Output file (This is the only required file)
 * Form file (Not required)
 

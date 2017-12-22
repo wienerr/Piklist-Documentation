@@ -1,5 +1,6 @@
 ---
 title: "Admin Pages"
+description: "With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages."
 ---
 
 ### `/parts/admin-pages/`

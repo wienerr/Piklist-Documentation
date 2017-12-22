@@ -1,5 +1,6 @@
 ---
 title: "Piklist enable your theme"
+description: "Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy."
 weight: 20
 ---
 

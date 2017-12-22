@@ -1,5 +1,6 @@
 ---
 title: "Field Types"
+description: "Piklist supports tons of field types, or you can create your own."
 weight: 30
 ---
 

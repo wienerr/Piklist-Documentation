@@ -1,5 +1,6 @@
 ---
 title: "Help"
+description: "With Piklist you can easily create Contextual Help menus."
 ---
 
 ### `/parts/help/`

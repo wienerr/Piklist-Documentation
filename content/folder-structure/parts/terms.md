@@ -1,5 +1,6 @@
 ---
 title: "Terms"
+description: "With Piklist you can easily create term meta sections."
 ---
 
 ### `/parts/terms/`

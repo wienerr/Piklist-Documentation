@@ -1,5 +1,6 @@
 ---
 title: Updates
+description: "Tutorials on Updates"
 ---
 ## Tutorials
 

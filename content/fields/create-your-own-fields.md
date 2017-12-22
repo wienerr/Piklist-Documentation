@@ -1,5 +1,6 @@
 ---
 title: "Create your own field"
+description: "With Piklist, you can easily create your own fields to use in your projects."
 weight: 99
 ---
 
