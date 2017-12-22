@@ -5,6 +5,8 @@ hidden: true
 weight: 1
 ---
 
+![Dashboard Widget](/images/creating-a-dashboard-widget-to-show-rss-feed.png)
+
 ## Description
 Piklist makes it super easy to create Dashboard Widgets in WordPress. This way you can concentrate on your widget code, and let Piklist do the hard part.
 
