@@ -1583,6 +1583,15 @@ h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
     margin-bottom: 1rem;
 }
 
-body.dir-actions-filtersfilters h1 {
+body.type-page.dir-actions-filtersfilters h1 {
     text-transform: lowercase;
+}
+
+
+
+
+
+body.tutorials ul.children > .child .children-title a,
+body.actions-and-filters ul.children > .child .children-title a {
+    color: black;
 }
