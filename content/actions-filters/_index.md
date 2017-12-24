@@ -1,7 +1,7 @@
 ---
 title: "Actions and Filters"
-weight: 55
 description: "Piklist Actions and Filters"
+weight: 1200
 ---
 
 Piklist includes tons of actions and filters.
