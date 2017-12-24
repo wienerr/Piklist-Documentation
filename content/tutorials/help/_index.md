@@ -1,6 +1,7 @@
 ---
 title: Help Tabs
 description: "Tutorials on Help Tabs"
+hidden: "true"
 ---
 ## Tutorials
 

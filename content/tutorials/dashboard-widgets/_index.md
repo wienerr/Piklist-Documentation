@@ -1,6 +1,7 @@
 ---
 title: Dashboard Widgets
 description: "Tutorials on Dashboard Widgets"
+hidden: "true"
 ---
 ## Tutorials
 

@@ -1,6 +1,7 @@
 ---
 title: Updates
 description: "Tutorials on Updates"
+hidden: "true"
 ---
 ## Tutorials
 

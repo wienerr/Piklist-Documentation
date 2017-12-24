@@ -25,4 +25,4 @@ Page: post.php
 
 ```
 
-**[View Tutorials &rightarrow;](/tutorials/help/)**
+### [View Tutorials &rightarrow;](/tutorials/help/)

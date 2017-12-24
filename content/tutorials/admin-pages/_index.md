@@ -1,6 +1,7 @@
 ---
 title: Admin Pages
 description: "Tutorials on Admin Pages"
+hidden: "true"
 ---
 ## Tutorials
 

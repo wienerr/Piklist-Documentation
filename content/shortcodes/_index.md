@@ -23,4 +23,4 @@ Everything in this file will display on the frontend. It can be as simple as sta
 The format of this file is: `widgetname.php` (i.e. example.php)
 
 
-**[View Tutorials &rightarrow;](/tutorials/shortcodes/)**
+### [View Tutorials &rightarrow;](/tutorials/shortcodes/)

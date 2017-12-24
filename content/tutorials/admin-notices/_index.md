@@ -1,6 +1,7 @@
 ---
 title: Admin Notices
 description: "Tutorials on Admin Notices"
+hidden: "true"
 ---
 ## Tutorials
 

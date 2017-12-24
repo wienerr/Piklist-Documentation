@@ -64,4 +64,4 @@ Logged in: true
   ));
  ```
 
-**[View Tutorials &rightarrow;](/tutorials/forms/)**
+### [View Tutorials &rightarrow;](/tutorials/forms/)

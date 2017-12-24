@@ -1,6 +1,7 @@
 ---
 title: Media
 description: "Tutorials on Media"
+hidden: "true"
 ---
 ## Tutorials
 

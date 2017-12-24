@@ -26,4 +26,4 @@ The format of this file is: `widget-name-form.php` (i.e. example-form.php)
 
 
 
-**[View Tutorials &rightarrow;](/tutorials/widgets/)**
+### [View Tutorials &rightarrow;](/tutorials/widgets/)

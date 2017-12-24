@@ -24,4 +24,4 @@ Title: Sample Media Fields
   ));
  ```
 
-**[View Tutorials &rightarrow;](/tutorials/media/)**
+### [View Tutorials &rightarrow;](/tutorials/media/)
