@@ -1513,9 +1513,16 @@ h1 {
 
 #contribute a.button {
     background: #e32e19;
-    -webkit-box-shadow: 0 3px 0 #71170c;
-    box-shadow: 0 3px 0 #71170c
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
+    #contribute a.button:hover {
+        background: #ccc;
+        border: #eee;
+        color: #000;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
 
 #contribute small.last-modified {
     display: block;
@@ -1572,6 +1579,11 @@ ul.children li.child p.children-description {
 /*
  * Overrides
  */
+
+.searchbox {
+    border-radius: 0px;
+
+}
 h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
     text-align: center;
 }
@@ -1579,9 +1591,7 @@ h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
 #sidebar ul li[data-nav-id="/getting-started/"],
 #sidebar ul li[data-nav-id="/workflows/"],
 #sidebar ul li[data-nav-id="/comment-block-parameters/"] {
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+
 }
 
 body.type-page.dir-actions-filtersfilters h1 {
@@ -1591,4 +1601,12 @@ body.type-page.dir-actions-filtersfilters h1 {
 body.tutorials ul.children > .child .children-title a,
 body.actions-and-filters ul.children > .child .children-title a {
     color: black;
+}
+
+/* menu */
+ul.topics h4 {
+    color: #fff;
+    border-top: 1px solid #aaa;
+    padding-top: 1rem;
+    margin-top: 1rem;
 }
