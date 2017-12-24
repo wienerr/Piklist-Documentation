@@ -15,5 +15,16 @@
     var $contribute = $('#contribute').detach();
     $contribute.appendTo('#body > .sticky-parent');
     $contribute.addClass('display');
+
+    $( "#sidebar").append( "<p>Test</p>" );
+
   });
+</script>
+
+<script>
+$(document).ready(function(){
+    $('<li><h4>Customize</h4></li>').insertBefore('li[data-nav-id="/admin-notices/"]');
+    $('<li><h4>Reference</h4></li>').insertBefore('li[data-nav-id="/folder-structure/"]');
+    $('<li><h4>Help</h4></li>').insertBefore('li[data-nav-id="/faq/"]');
+});
 </script>

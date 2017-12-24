@@ -103,7 +103,7 @@
   </url>
   
   <url>
-    <loc>http://docs.piklist.com/meta-boxes/</loc>
+    <loc>http://docs.piklist.com/posts-meta-boxes/</loc>
   </url>
   
   <url>
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://docs.piklist.com/terms/</loc>
+    <loc>http://docs.piklist.com/taxonomies-terms/</loc>
   </url>
   
   <url>
@@ -139,7 +139,7 @@
   </url>
   
   <url>
-    <loc>http://docs.piklist.com/reference/folder-structure/</loc>
+    <loc>http://docs.piklist.com/folder-structure/</loc>
   </url>
   
   <url>
@@ -325,10 +325,6 @@
   
   <url>
     <loc>http://docs.piklist.com/tutorials/meta-boxes/</loc>
-  </url>
-  
-  <url>
-    <loc>http://docs.piklist.com/reference/</loc>
   </url>
   
   <url>

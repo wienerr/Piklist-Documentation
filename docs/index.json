@@ -130,21 +130,21 @@
 	"title": "Admin Notices",
 	"tags": [],
 	"description": "Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.",
-	"content": " /parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.\n Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.  \u0026lt;?php /* Notice Type: updated Dismiss: true */ ?\u0026gt; \u0026lt;p\u0026gt;This is my notice\u0026lt;/p\u0026gt;  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/notices/ Creating Admin Notices with Piklist is very easy, and can be done without writing any PHP.\n Decide whether you are going to include your notice in a plugin or theme. Create a notices/ folder in your parts/ folder (e.g. /parts/notices/). Now, create a php file in your notices folder. This file will hold your notice code. At the top of the file, add the following comment block which tells Piklist this is an “updated” type notice, and can be dismissible by the user.  \u0026lt;?php /* Notice Type: updated Dismiss: true */ ?\u0026gt; \u0026lt;p\u0026gt;This is my notice\u0026lt;/p\u0026gt;  View Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/admin-pages/",
 	"title": "Admin Pages",
 	"tags": [],
 	"description": "With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.",
-	"content": " /parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.\n\u0026lt;?php /* Page: piklist */ ?\u0026gt; \u0026lt;div class=\u0026quot;wrap about-wrap\u0026quot;\u0026gt; \u0026lt;h1\u0026gt;\u0026lt;?php echo __('Welcome to Piklist','piklist'); ?\u0026gt;\u0026lt;/h1\u0026gt; \u0026lt;/div\u0026gt;  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/admin-pages/ With Piklist you can easily create Admin pages to display HTML, embed shortcodes, insert a Piklist form, and create other types of pages.\n\u0026lt;?php /* Page: piklist */ ?\u0026gt; \u0026lt;div class=\u0026quot;wrap about-wrap\u0026quot;\u0026gt; \u0026lt;h1\u0026gt;\u0026lt;?php echo __('Welcome to Piklist','piklist'); ?\u0026gt;\u0026lt;/h1\u0026gt; \u0026lt;/div\u0026gt;  View Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/dashboard-widgets/",
 	"title": "Dashboard Widgets",
 	"tags": [],
 	"description": "With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.",
-	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\n\u0026lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e('Welcome to my dashboard widget', 'piklist');  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\n\u0026lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e('Welcome to my dashboard widget', 'piklist');  View Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/fields/",
@@ -158,87 +158,87 @@
 	"title": "Forms",
 	"tags": [],
 	"description": "With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.",
-	"content": " /parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.\n\u0026lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_type' ,'value' =\u0026gt; 'post' )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_title' ,'label' =\u0026gt; __('Title', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_title' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_content' ,'label' =\u0026gt; __('Content', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_content' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_status' ,'value' =\u0026gt; 'pending' )); // Submit button piklist('field', array( 'type' =\u0026gt; 'submit' ,'field' =\u0026gt; 'submit' ,'value' =\u0026gt; 'Submit' ));  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/forms/ With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form.\n\u0026lt;?php /* Title: Post Submit Method: post Message: Post Saved Logged in: true */ // Where to save this form piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_type' ,'value' =\u0026gt; 'post' )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_title' ,'label' =\u0026gt; __('Title', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_title' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'text' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_content' ,'label' =\u0026gt; __('Content', 'piklist') ,'attributes' =\u0026gt; array( 'wrapper_class' =\u0026gt; 'post_content' ,'style' =\u0026gt; 'width: 100%' ) )); piklist('field', array( 'type' =\u0026gt; 'hidden' ,'scope' =\u0026gt; 'post' ,'field' =\u0026gt; 'post_status' ,'value' =\u0026gt; 'pending' )); // Submit button piklist('field', array( 'type' =\u0026gt; 'submit' ,'field' =\u0026gt; 'submit' ,'value' =\u0026gt; 'Submit' ));  View Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/help/",
 	"title": "Help",
 	"tags": [],
 	"description": "With Piklist you can easily create Contextual Help menus.",
-	"content": " /parts/help/ With Piklist you can easily create Contextual Help menus.\nYou can create as many files as you like and place them in this folder. Each file will render one Help Tab.\n\u0026lt;?php /* Title: Post Help Capability: manage_options Page: post.php */ ?\u0026gt; \u0026lt;p\u0026gt; \u0026lt;?php _e('Here is some help, 'piklist');?\u0026gt; \u0026lt;/p\u0026gt;  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/help/ With Piklist you can easily create Contextual Help menus.\nYou can create as many files as you like and place them in this folder. Each file will render one Help Tab.\n\u0026lt;?php /* Title: Post Help Capability: manage_options Page: post.php */ ?\u0026gt; \u0026lt;p\u0026gt; \u0026lt;?php _e('Here is some help, 'piklist');?\u0026gt; \u0026lt;/p\u0026gt;  View Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/media/",
 	"title": "Media",
 	"tags": [],
 	"description": "With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.",
-	"content": " /parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.\n\u0026lt;?php /* Title: Sample Media Fields */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'sample_text' ,'label' =\u0026gt; __('Text', 'piklist') ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' ) ));  View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/media/ With Piklist you can easily create Media meta-boxes in the admin. You can create as many files as you like and place them in this folder. Each file will render one meta-box.\n\u0026lt;?php /* Title: Sample Media Fields */ piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'sample_text' ,'label' =\u0026gt; __('Text', 'piklist') ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' ) ));  View Tutorials \u0026rightarrow; "
 },
 {
-	"uri": "http://docs.piklist.com/meta-boxes/",
-	"title": "Meta-boxes",
+	"uri": "http://docs.piklist.com/posts-meta-boxes/",
+	"title": "Post Types / Meta-boxes",
 	"tags": [],
 	"description": "With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created.",
-	"content": " /parts/meta-boxes/ With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created.\nYou can create as many files as you like and place them in this folder. Each file will render one meta-box.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/meta-boxes/ With Piklist you can easily create meta-boxes for any Post Types… built-in WordPress, Post Types you created, or Post Types another theme or plugin created.\nYou can create as many files as you like and place them in this folder. Each file will render one meta-box.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/pointers/",
 	"title": "Pointers",
 	"tags": [],
 	"description": "With Piklist you can easily create Pointers in WordPress.",
-	"content": " /parts/pointers/ With Piklist you can easily create Pointers in WordPress.\nYou can create as many files as you like and place them in this folder. Each file will render one pointer. View Tutorials \u0026rightarrow;\n"
+	"content": " /parts/pointers/ With Piklist you can easily create Pointers in WordPress.\nYou can create as many files as you like and place them in this folder. Each file will render one pointer.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/settings/",
 	"title": "Settings",
 	"tags": [],
 	"description": "A Settings Page is made up of Settings Sections. With Piklist you can easily create these sections.",
-	"content": " /parts/settings/ A Settings Page is made up of Settings Sections. With Piklist you can easily create these sections.\nYou can create as many files as you like and place them in this folder. Each file will render one section.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/settings/ A Settings Page is made up of Settings Sections. With Piklist you can easily create these sections.\nYou can create as many files as you like and place them in this folder. Each file will render one section.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/shortcodes/",
 	"title": "Shortcodes",
 	"tags": [],
 	"description": "With Piklist you can easily create Shortcodes.",
-	"content": " /parts/shortcodes/ With Piklist you can easily create Shortcodes.\nShortcodes are made up of two files: * Form file * Output file\nForm file Everything in this file will display a form in the admin. Piklist automatically creates a form for every shortcode you create with it.\nThe format of this file is: widgetname-form.php (i.e. example-form.php)\nOutput file Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.\nThe format of this file is: widgetname.php (i.e. example.php)\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/shortcodes/ With Piklist you can easily create Shortcodes.\nShortcodes are made up of two files: * Form file * Output file\nForm file Everything in this file will display a form in the admin. Piklist automatically creates a form for every shortcode you create with it.\nThe format of this file is: widgetname-form.php (i.e. example-form.php)\nOutput file Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.\nThe format of this file is: widgetname.php (i.e. example.php)\nView Tutorials \u0026rightarrow; "
 },
 {
-	"uri": "http://docs.piklist.com/terms/",
-	"title": "Terms",
+	"uri": "http://docs.piklist.com/taxonomies-terms/",
+	"title": "Taxonomies / Terms",
 	"tags": [],
 	"description": "With Piklist you can easily create term meta sections.",
-	"content": " /parts/terms/ With Piklist you can easily create term meta sections.\nYou can create as many files as you like and place them in this folder. Each file will render one section.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/terms/ With Piklist you can easily create term meta sections.\nYou can create as many files as you like and place them in this folder. Each file will render one section.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/updates/",
-	"title": "Updates",
+	"title": "Update Scripts",
 	"tags": [],
 	"description": "If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.",
-	"content": " /parts/updates/ If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.\nThen write your update procedure.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/updates/ If your plugin needs an update procedure, Piklist makes it quite easy. First create a php file, and drop it in the updates folder. The file name should be the current version of your plugin. So, if the update procedure is for version 2.0 of your plugin, then the file name should be 2.0.php.\nThen write your update procedure.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/users/",
 	"title": "Users",
 	"tags": [],
 	"description": "With Piklist you can easily create user meta sections.",
-	"content": " /parts/users/ With Piklist you can easily create user meta sections.\nYou can create as many files as you like and place them in this folder. Each file will render one user meta section.\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/users/ With Piklist you can easily create user meta sections.\nYou can create as many files as you like and place them in this folder. Each file will render one user meta section.\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/widgets/",
 	"title": "Widgets",
 	"tags": [],
 	"description": "With Piklist you can easily create Widgets.",
-	"content": " /parts/widgets/ With Piklist you can easily create Widgets.\nWidgets are made up of two files:\n Output file (This is the only required file) Form file (Not required)  Output file This is the only required file for widgets. Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.\nThe format of this file is: widget-name.php (i.e. example.php)\nForm file This file holds the fields that will be filled in on the Widget page in the WordPress admin.\nThe format of this file is: widget-name-form.php (i.e. example-form.php)\nView Tutorials \u0026rightarrow;\n"
+	"content": " /parts/widgets/ With Piklist you can easily create Widgets.\nWidgets are made up of two files:\n Output file (This is the only required file) Form file (Not required)  Output file This is the only required file for widgets. Everything in this file will display on the frontend. It can be as simple as standard HTML or a MailChimp form. Or it can be pulled from the Forms File.\nThe format of this file is: widget-name.php (i.e. example.php)\nForm file This file holds the fields that will be filled in on the Widget page in the WordPress admin.\nThe format of this file is: widget-name-form.php (i.e. example-form.php)\nView Tutorials \u0026rightarrow; "
 },
 {
 	"uri": "http://docs.piklist.com/workflows/",
-	"title": "Workflows",
+	"title": "Workflow Tabs",
 	"tags": [],
-	"description": "Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.",
-	"content": " /parts/workflows/ Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\nYou can create as many files as you like and place them in this folder. Each file will render one workflow tab.\nView Tutorials \u0026rightarrow;\n"
+	"description": "Piklist Workflow Tabs allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.",
+	"content": " /parts/workflows/ Piklist Workflow Tabs allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.\nYou can create as many files as you like and place them in this folder. Each file will render one workflow tab.\nView Tutorials \u0026rightarrow; "
 },
 {
-	"uri": "http://docs.piklist.com/reference/folder-structure/",
+	"uri": "http://docs.piklist.com/folder-structure/",
 	"title": "Folder Structure",
 	"tags": [],
 	"description": "Customizing with Piklist is as easy as creating the proper folder structure in your theme or plugin, and placing files in those folders.",
@@ -565,13 +565,6 @@
 	"tags": [],
 	"description": "Tutorials on Post Types and Meta-boxes",
 	"content": " Tutorials Getting Started with Meta-boxes and Fields\nPiklist makes it radically easy to add metaboxes and fields to your posts, pages or custom post types. In this tutorial, we will create a metabox that includes three fields, select, text and ColorPicker, for standard posts.\n Add Subtitle field to the Post screen\nInsert a subtitle filed to the Post screen\n Add WYSISYG to your Excerpt Box\nTo add some style to your excerpts, you can easily add a WYSIWYG editor to your excerpt box.\n Creating Custom Post Statuses\nCustom Post Statuses are at the heart of any web application built with WordPress, and Piklist makes it easy for you to implement them.\n Hide Meta Boxes for a Page Template\nUsing Piklist, you can easily hide some meta boxes when a certain page template is selected in WordPress\n Lock Field Values based on Post Status\nPiklist allows you to lock a field value (making it read-only), when the post status changes. A perfect example of this is if you want to lock post meta once a post is published.\n Registering Post Types\nAdd some extra power to your Post Types by registering them the Piklist way.\n Show Metaboxes and Fields by Post Status\nWith web applications and powerful websites, there will be times you want to only show a metabox or metafield when a post is in a particular post status.\n  "
-},
-{
-	"uri": "http://docs.piklist.com/reference/",
-	"title": "REFERENCE",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "http://docs.piklist.com/fields/types/radio/",
