@@ -2,7 +2,7 @@
 title: "FAQs"
 description: "Frequently asked questions"
 chapter: false
-weight: 999
+weight: 10100
 ---
 
 ## What is Piklist?

@@ -2,7 +2,7 @@
 title: "Fields"
 description: "Piklist fields are incredibly powerful and easy to use."
 chapter: true
-weight: 50
+weight: 140
 ---
 
 # Fields
