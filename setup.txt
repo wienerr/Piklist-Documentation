@@ -8,4 +8,4 @@ When finished:
 -run:  hugo
 
 To view live:
-https://piklist.github.io/Piklist-Documentation/file-structure/
+http://docs.piklist.com/file-structure/
