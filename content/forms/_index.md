@@ -1,6 +1,7 @@
 ---
 title: "Forms"
 description: "With Piklist you can easily create forms to use on the front of your site, or in the admin. You can create as many files as you like and place them in this folder. Each file will render one form."
+weight: 150
 ---
 
 ### `/parts/forms/`

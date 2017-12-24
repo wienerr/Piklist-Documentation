@@ -1,6 +1,7 @@
 ---
 title: "Pointers"
 description: "With Piklist you can easily create Pointers in WordPress."
+weight: 190
 ---
 
 ### `/parts/pointers/`

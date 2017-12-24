@@ -1,6 +1,7 @@
 ---
 title: "Shortcodes"
 description: "With Piklist you can easily create Shortcodes."
+weight: 210
 ---
 
 ### `/parts/shortcodes/`

@@ -1,6 +1,7 @@
 ---
 title: "Widgets"
 description: "With Piklist you can easily create Widgets."
+weight: 250
 ---
 
 ### `/parts/widgets/`

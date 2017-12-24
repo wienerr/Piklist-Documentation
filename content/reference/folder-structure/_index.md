@@ -1,7 +1,7 @@
 ---
 title: "Folder Structure"
 description: "Customizing with Piklist is as easy as creating the proper folder structure in your theme or plugin, and placing files in those folders."
-weight: 40
+weight: 1100
 ---
 
 Customizing with Piklist is as easy as creating the proper folder structure in your theme or plugin, and placing files in those folders.

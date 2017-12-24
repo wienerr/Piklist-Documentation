@@ -1,6 +1,7 @@
 ---
 title: "Help"
 description: "With Piklist you can easily create Contextual Help menus."
+weight: 160
 ---
 
 ### `/parts/help/`

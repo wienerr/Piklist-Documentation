@@ -1,6 +1,7 @@
 ---
 title: "Terms"
 description: "With Piklist you can easily create term meta sections."
+weight: 220
 ---
 
 ### `/parts/terms/`

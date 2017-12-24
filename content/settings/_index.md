@@ -1,6 +1,7 @@
 ---
 title: "Settings"
 description: "A Settings Page is made up of Settings Sections. With Piklist you can easily create these sections."
+weight: 200
 ---
 
 ### `/parts/settings/`

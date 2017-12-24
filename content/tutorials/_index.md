@@ -1,7 +1,7 @@
 ---
 title: "Tutorials"
 description: "Piklist Tutorials"
-weight: 99
+weight: 10200
 ---
 We've put together some tutorials on specific examples. Enjoy!
 
