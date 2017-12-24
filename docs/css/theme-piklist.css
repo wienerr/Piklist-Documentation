@@ -1577,7 +1577,8 @@ h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
 }
 
 #sidebar ul li[data-nav-id="/getting-started/"],
-#sidebar ul li[data-nav-id="/actions-filters/"] {
+#sidebar ul li[data-nav-id="/workflows/"],
+#sidebar ul li[data-nav-id="/comment-block-parameters/"] {
     border-bottom: 1px solid #aaa;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -1586,10 +1587,6 @@ h3#with-piklist-you-can-create-and-enhance-almost-every-part-of-wordpress {
 body.type-page.dir-actions-filtersfilters h1 {
     text-transform: lowercase;
 }
-
-
-
-
 
 body.tutorials ul.children > .child .children-title a,
 body.actions-and-filters ul.children > .child .children-title a {
