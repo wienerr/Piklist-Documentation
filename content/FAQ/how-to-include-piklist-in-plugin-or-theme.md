@@ -9,6 +9,6 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
 
 Additionally, if you plan on submitting your code to WordPress.org, they do not accept a plugin that includes an entire other plugin, inside it.
 
-To make it easier for you to build your plugin on Piklist, we have created the [Piklist Checker](/Piklist-Documentation/getting-started/piklist-checker/). By including the Checker in your plugin, your users will be notified if Piklist is not installed, and they will be walked through the installation.
+To make it easier for you to build your plugin on Piklist, we have created the [Piklist Checker](/getting-started/piklist-checker/). By including the Checker in your plugin, your users will be notified if Piklist is not installed, and they will be walked through the installation.
 
 We hope you agree that keeping Piklist as a separate plugin makes sense for both you and your users. If not, there are other frameworks you can choose from that are designed to be included in plugins and themes.

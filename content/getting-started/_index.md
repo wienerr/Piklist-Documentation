@@ -92,7 +92,7 @@ Now that we have our folder structure set up, it’s time to add some files. Eac
 ### Comment blocks
 Configuration options for each field group are defined in the comment block at the top of each file.  These comment blocks are similar to what WordPress uses for plugin headers. They allow you to easily configure a group of fields with no hooks or filters.
 
-[A full list of Comment Block parameters can be found here.](/parts/comment-block-parameters/)
+[A full list of Comment Block parameters can be found here.](/comment-block-parameters/)
 
 Create a new file in your “meta-boxes” folder called my-fields.php. At the top of the file, add this comment block:
 
