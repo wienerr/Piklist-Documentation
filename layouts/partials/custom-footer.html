@@ -7,7 +7,6 @@
   <p>
     <a class="button" href="{{.Site.Params.docsrepo}}/edit/master/content/{{.File.Path}}">Improve this page</a>
   </p>
-  <small class="last-modified">This page was last modified on {{dateFormat "Monday, Jan 2, 2006 at 15:04" .Lastmod}}</small>
 </div>
 
 <script>
@@ -15,9 +14,6 @@
     var $contribute = $('#contribute').detach();
     $contribute.appendTo('#body > .sticky-parent');
     $contribute.addClass('display');
-
-    $( "#sidebar").append( "<p>Test</p>" );
-
   });
 </script>
 
