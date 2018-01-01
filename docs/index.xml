@@ -135,6 +135,18 @@ Registering your plugin with Piklist When writing WordPress plugins that rely on
     </item>
     
     <item>
+      <title>Validating Fields</title>
+      <link>https://docs.piklist.com/fields/validating-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/fields/validating-fields/</guid>
+      <description>When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the validate parameter.
+Choose the appropriate type of validation for each of your fields.
+email Verifies that the input is in the proper format for an email address.
+Uses the standard WordPress function is_email</description>
+    </item>
+    
+    <item>
       <title>Create your own field</title>
       <link>https://docs.piklist.com/fields/create-your-own-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

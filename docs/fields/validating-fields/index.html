@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.31.1" />
-    <meta name="description" content="Piklist Workflows allow you to add a tabbed system on Post and User. Additionally, you can add almost anything you want to each tab.">
+    <meta name="description" content="When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the `validate` parameter.">
 
 
     <link rel="shortcut icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 
-    <title>Building Your First Workflow &middot;Piklist Documentation</title>
+    <title>Validating Fields &middot;Piklist Documentation</title>
 
     
     <link href="https://docs.piklist.com/css/nucleus.css?1514812099" rel="stylesheet">
@@ -48,7 +48,7 @@
 </script>
 
   </head>
-    <body class="type-page building-your-first-workflow file-building-first-workflow dir-tutorialsworkflows" data-url="/tutorials/workflows/building-first-workflow/">
+    <body class="type-page validating-fields file-validating-fields dir-fields" data-url="/fields/validating-fields/">
     <nav id="sidebar" class="">
 
 
@@ -335,7 +335,7 @@
   
     
     <li data-nav-id="/fields/" title="Fields" class="dd-item
-        
+        parent
         
         
         ">
@@ -661,7 +661,7 @@
  
   
     
-      <li data-nav-id="/fields/validating-fields/" title="Validating Fields" class="dd-item ">
+      <li data-nav-id="/fields/validating-fields/" title="Validating Fields" class="dd-item active">
         <a href="https://docs.piklist.com/fields/validating-fields/">
         Validating Fields
         
@@ -1221,7 +1221,7 @@
   
     
     <li data-nav-id="/tutorials/" title="Tutorials" class="dd-item
-        parent
+        
         
         
         ">
@@ -1371,13 +1371,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='https://docs.piklist.com/'></a> > <a href='https://docs.piklist.com/tutorials/'>Tutorials</a> > <a href='https://docs.piklist.com/tutorials/workflows/'>Workflow Tabs</a> > Building Your First Workflow
-          
-        
+            <a href='https://docs.piklist.com/'></a> > <a href='https://docs.piklist.com/fields/'>Fields</a> > Validating Fields
           
         
           
@@ -1389,36 +1383,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#header-file">Header file</a>
-<ul>
-<li><a href="#parameters">Parameters</a>
-<ul>
-<li><a href="#flow">Flow</a></li>
-<li><a href="#page">Page</a></li>
-<li><a href="#post-type">Post Type</a></li>
-<li><a href="#header">Header</a></li>
-<li><a href="#position">Position</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#tab-file">Tab file</a>
-<ul>
-<li><a href="#parameters-1">Parameters</a>
-<ul>
-<li><a href="#title">Title</a></li>
-<li><a href="#order">Order</a></li>
-<li><a href="#flow-1">Flow</a></li>
-<li><a href="#page-1">Page</a></li>
-<li><a href="#default">Default</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#assign-meta-boxes-sections-etc-to-workflows">Assign Meta Boxes, Sections, Etc. to Workflows.</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -1431,180 +1396,226 @@
 
         <div id="body-inner">
           
-            <h1>Building Your First Workflow</h1>
+            <h1>Validating Fields</h1>
           
 
         
 
 
+<p>When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the <code>validate</code> parameter.</p>
 
+<p>Choose the appropriate type of validation for each of your fields.</p>
 
-<p>Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.</p>
+<h2 id="email">email</h2>
 
-<div class="expand">
+<p>Verifies that the input is in the proper format for an email address.</p>
 
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+<p>Uses the standard WordPress function <a href="http://codex.wordpress.org/Function_Reference/is_email"><code>is_email</code></a></p>
 
-        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'email'
+      )
+    )
+</code></pre>
+<h2 id="email-domain">email_domain</h2>
 
-        <span>
+<p>Verifies that the input is a valid email domain.</p>
 
-            <strong>New to Piklist?</strong>
+<p>Uses the standard PHP function <a href="http://php.net/manual/en/function.checkdnsrr.php"><code>checkdnsrr</code></a></p>
 
-        </span>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'email_domain'
+      )
+    )
+</code></pre>
+<h2 id="email-exists">email_exists</h2>
 
-    </div>
+<p>Checks that the entered email is not already registered to another user.</p>
 
-    <div class="expand-content" style="display: none;">
+<p>Uses the standard WordPress function <a href="https://codex.wordpress.org/Function_Reference/email_exists"><code>email_exists</code></a></p>
 
-        <p>
-            <h3>Before you start this tutorial:</h3>
-            <ol>
-                <li><a href="https://wordpress.org/plugins/piklist/">Install Piklist</a> like you would any other WordPress plugin.</li>
-                <li>Decide if you are going to add the code in this tutorial to your custom plugin or your theme.  This will define how to setup your <a href="https://docs.piklist.com/folder-structure/">Piklist folder structure</a>.</li>
-                <li>If you're new to Piklist, you may want to review the <a href="https://docs.piklist.com/getting-started/">"Getting Started"</a> tutorial first.  It gives you a good overview of how Piklist works.</li>
-            </ol>
-        </p>
-        <hr/>
-    </div>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'email_exists'
+      )
+    )
+</code></pre>
+<h2 id="file-exists">file_exists</h2>
 
-</div>
+<p>Verifies that the file path entered leads to an actual file.</p>
 
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'file_exists'
+      )
+    )
+</code></pre>
+<h2 id="hex-color">hex_color</h2>
 
-<p>IMPORTANT: Each Workflow tab loads a separate page, with a new url. If you change tabs without saving you will lose your data.</p>
+<p>Verifies that the data entered is a valid hex color.</p>
 
-<p>ALSO IMPORTANT: Workflows control the ENTIRE page, not just what is located under the tabs.</p>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'hex_color'
+      )
+    )
+</code></pre>
+<h2 id="image">image</h2>
 
-<p>Each Workflow needs a minimum of two files:</p>
+<p>Verifies that the file path entered leads to an image file.</p>
 
-<h2 id="header-file">Header file</h2>
+<p>Uses the standard PHP function <a href="http://php.net/manual/en/function.exif-imagetype.php"><code>exif_imagetype</code></a></p>
 
-<p>This file goes in the <code>/workflows</code> folder</p>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'image'
+      )
+    )
+</code></pre>
+<h2 id="ip-address">ip_address</h2>
 
-<p>The header sets the main parameters for the entire flow. Entering the parameters into a comment block is all that&rsquo;s required of the header file.</p>
+<p>Verifies that the data entered is a valid IP Address.</p>
 
-<h3 id="parameters">Parameters</h3>
+<pre><code class="language-php">'validate' =&gt; array(
+      array(
+        'type' =&gt; 'ip_address'
+      )
+    )
+</code></pre>
+<h2 id="limit">limit</h2>
 
-<h4 id="flow">Flow</h4>
+<p>Verifies that the number of items are within the defined limit.</p>
 
-<p>Define a unique name for your flow. The name will tie together all your tabs.
-Example: <code>My Flow</code></p>
+<h3 id="options">Options</h3>
 
-<h4 id="page">Page</h4>
+<h4 id="min">min</h4>
 
-<p>What pages the flow should display on. This can be multiple pages, separated by commas.
-Example: <code>post.php, post-new.php, post-edit.php, admin.php, your_custom_setting</code></p>
+<p>The minimum allowed value.
+default: 1</p>
 
-<h4 id="post-type">Post Type</h4>
+<h4 id="max">max</h4>
 
-<p>For custom post type flows, please define the post type.
-Example: <code>my_cpt</code></p>
+<p>The maximum allowed value
+default: infinite</p>
 
-<h4 id="header">Header</h4>
+<h4 id="count">count</h4>
 
-<p>Tells Piklist this is a WorkFlow header file. Set this to: <code>true</code>.</p>
+<p>Determines what you want to count: words, characters, files, images, add-more&rsquo;s</p>
 
-<h4 id="position">Position</h4>
+<p>values: words, characters</p>
 
-<p>Where on the page should the WorkFlow display. The Workflow system can currently display in five WordPress hook locations:</p>
+<p>default: false (files, images, add-more&rsquo;s)</p>
 
-<p><code>'header' =&gt; 'in_admin_header'</code></p>
-
-<p><code>'body' =&gt; 'all_admin_notices'</code></p>
-
-<p><code>'title' =&gt; 'edit_form_after_title'</code></p>
-
-<p><code>'editor' =&gt; 'edit_form_after_editor'</code></p>
-
-<p><code>'profile' =&gt; 'profile_personal_options'</code></p>
-
-<pre><code>/*
-Flow: My Flow
-Page: post.php, post-new.php, post-edit.php, admin.php
-Post Type: my_cpt
-Header: true
-Position: title
-*/
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'limit'
+        ,'options' =&gt; array(
+          'min' =&gt; 2
+          ,'max' =&gt; 2
+        )
+      )
+    )
 </code></pre>
 
-<h2 id="tab-file">Tab file</h2>
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'limit'
+        ,'options' =&gt; array(
+          'min' =&gt; 2
+          ,'max' =&gt; 6
+          ,'count' =&gt; 'characters'
+        )
+      )
+    )
+</code></pre>
+<h2 id="match">match</h2>
 
-<p>This file goes in the <code>/workflows</code> folder</p>
+<p>Checks to see if two fields match.</p>
 
-<p>Each tab in your Workflow gets its own file. Each file uses a comment block to link it to a Workflow.</p>
+<h3 id="options">Options</h3>
 
-<p><strong>TIP: You must create at least two tabs for WorkFlows to show up.</strong></p>
+<h4 id="field">field</h4>
 
-<h3 id="parameters-1">Parameters</h3>
+<p>The field name to match</p>
 
-<h4 id="title">Title</h4>
+<pre><code class="language-php">piklist('field', array(
+    'type' =&gt; 'password'
+    ,'scope' =&gt; 'user'
+    ,'field' =&gt; 'user_pass_repeat'
+    ,'label' =&gt; 'Repeat New Password'
+    ,'value' =&gt; false // Setting to false forces no value to show in form.
+    ,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'match'
+        ,'options' =&gt; array(
+          'field' =&gt; 'user_pass' // does this match the field user_pass_repeat
+        )
+      )
+    )
+  ));
+</code></pre>
+<h2 id="range">range</h2>
 
-<p>The title of the Workflow tab.
-Example: <code>My Tab</code></p>
+<p>Verifies that the data entered is within the defined range.</p>
 
-<h4 id="order">Order</h4>
+<h3 id="options">Options</h3>
 
-<p>Defines the sort order of the tabs.
-Example: <code>10</code></p>
+<h4 id="min">min</h4>
 
-<h4 id="flow-1">Flow</h4>
+<p>The minimum allowed value.
+default: 1</p>
 
-<p>Should be the same value as the header file.
-Example: <code>My Flow</code></p>
+<h4 id="max">max</h4>
 
-<h4 id="page-1">Page</h4>
+<p>The maximum allowed value
+default: 10</p>
 
-<p>What pages the individual tab should display on. This can be multiple pages, separated by commas.
-Example: <code>post.php, post-new.php, post-edit.php, admin.php</code></p>
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'range'
+        ,'options' =&gt; array(
+          'min' =&gt; 2
+          ,'max' =&gt; 8
+        )
+      )
+    )
+</code></pre>
+<h2 id="safe-text">safe_text</h2>
 
-<h4 id="default">Default</h4>
+<p>Verifies that the data entered is alphanumeric.</p>
 
-<p>Sets this tab as the default tab.
-IMPORTANT: Only use this parameter in ONE of your WorkFlow tab files.
-Default: <code>true</code></p>
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'safe_text'
+      )
+    )
+</code></pre>
+<h2 id="url">url</h2>
 
-<pre><code>/*
-Title: My Tab
-Order: 10
-Flow: My Flow
-*/
+<p>Verifies that the data entered is a valid URL.</p>
+
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'url'
+      )
+    )
+</code></pre>
+<h2 id="username-exists">username_exists</h2>
+
+<p>Checks that the entered username does not already exist.</p>
+
+<p>Uses the standard WordPress function <a href="https://codex.wordpress.org/Function_Reference/username_exists"><code>username_exists</code></a></p>
+
+<pre><code class="language-php">,'validate' =&gt; array(
+      array(
+        'type' =&gt; 'username_exists'
+      )
+    )
 </code></pre>
 
-<p>So far we&rsquo;ve created a Workflow and a tab, but we have not shown any content. When you click on a tab you are defining the entire page environment, not just the environment in the tab. You have to define which meta-boxes (or user sections, settings sections, term sections, etc) are shown on the entire page, even in the sidebar. This means when a user clicks on a WorkFlow tab you can hide or show fields in the actual tab and in the sidebar.</p>
 
-<h2 id="assign-meta-boxes-sections-etc-to-workflows">Assign Meta Boxes, Sections, Etc. to Workflows.</h2>
-
-<p>** This file goes in the <code>/meta-boxes</code> folder, if you want to assign meta-boxes to this workflow. If you want to assign settings sections, then this file would go in the <code>/settings</code> folder.</p>
-
-<p>In this example, we are creating and assigning a meta-box.</p>
-
-<p>Create a meta-box the way you normally would with Piklist.</p>
-
-<p>In the comment block of your meta box file add the following two parameters:</p>
-
-<pre><code>Tab: My Tab
-Flow: My Flow
-</code></pre>
-
-<p>So, if this was the original comment block for your meta box:</p>
-
-<pre><code>/*
-Title: Text Fields
-Post Type: piklist_demo
-*/
-</code></pre>
-
-<p>It would now look like this:</p>
-
-<pre><code>/*
-Title: Text Fields
-Post Type: piklist_demo
-Tab: My Tab
-Flow: My Flow
-*/
-</code></pre>
-
-<p>Your meta-box will now show up under the “My Tab” tab of your workflow.</p>
 
 
 <footer class=" footline" >
@@ -1820,6 +1831,7 @@ Flow: My Flow
             
                 
                     
+                    
                 
                 
 
@@ -1834,6 +1846,9 @@ Flow: My Flow
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2075,6 +2090,7 @@ Flow: My Flow
             
                 
                     
+                    
                 
                 
 
@@ -2090,6 +2106,9 @@ Flow: My Flow
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2607,7 +2626,6 @@ Flow: My Flow
             
             
                 
-                    
                     
                 
                 
@@ -2624,9 +2642,6 @@ Flow: My Flow
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -3022,7 +3037,6 @@ Flow: My Flow
             
             
                 
-                    
                     
                 
                 
@@ -3055,10 +3069,10 @@ Flow: My Flow
 
 
         
-            <a class="nav nav-prev" href="https://docs.piklist.com/tutorials/widgets/" title="Widgets"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="https://docs.piklist.com/fields/sanitizing-fields/" title="Sanitizing Fields"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="https://docs.piklist.com/tutorials/admin-notices/" title="Admin Notices" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="https://docs.piklist.com/fields/create-your-own-fields/" title="Create your own field" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -3091,7 +3105,7 @@ Flow: My Flow
     or <a href="https://github.com/piklist/Piklist-Documentation/compare">pull request</a> to help!
   </p>
   <p>
-    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/tutorials/workflows/building-first-workflow.md">Improve this page</a>
+    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/fields/validating-fields.md">Improve this page</a>
   </p>
 </div>
 
