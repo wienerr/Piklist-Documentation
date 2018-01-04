@@ -78,4 +78,4 @@ add_action( 'admin_init', 'my_remove_from_flow' );
 
 This code is hooking to `admin_init()`, and looking at the HTTP Request variable. If `$_REQUEST` is set to `flow`, and the flow is add_post (set in the header file), and the `flow_page` is step_2, then remove post type support for the Editor with Posts.
 
-That’s it! You now have the default Add New Post page placed in a Piklist Flow. Refer to the [documentation on Workflows](/file-structure/parts/workflows/) to find out how to add fields to Step 2 of your Workflow.
+That’s it! You now have the default Add New Post page placed in a Piklist Flow. Refer to the [Building Your First Workflow](/tutorials/workflows/building-first-workflow/) Tutorial to find out how to add fields to Step 2 of your Workflow.
