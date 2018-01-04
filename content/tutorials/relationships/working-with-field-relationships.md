@@ -7,6 +7,7 @@ hidden: true
 Piklist relationships allow you to relate any object to any object.
 
 In this tutorial we'll use the classic books example, assuming our post types are book and chapter, and a user can be an author.
+We'll cover the `post_has`, `post_belongs`, and `relate_query` parameters.
 
 Since we're using Post Types, all this code goes in your `/parts/meta-boxes/` folder.
 
