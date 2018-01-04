@@ -6,14 +6,15 @@
     {{ .Hugo.Generator }}
     {{ partial "meta.html" . }}
     {{ partial "favicon.html" . }}
-    <title>{{ if .Title }}{{ .Title }} &middot;{{ end }}{{ .Site.Title }}</title>
+    <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
     {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
     <link href="{{"css/nucleus.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/font-awesome.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hybrid.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/featherlight.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/perfect-scrollbar.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
-    <link href="{{"css/horsey.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    <link href="{{"css/auto-complete.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hugo-theme.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{with .Site.Params.themeVariant}}
@@ -38,18 +39,18 @@
     {{ partial "menu.html" . }}
         <section id="body">
         <div id="overlay"></div>
-        <div class="padding highlightable sticky-parent">
+        <div class="padding highlightable">
               {{if not .IsHome}}
-              <div class="sticky-spacer">
+              <div>
                 <div id="top-bar">
                 {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
                   <div id="top-github-link">
-                    <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
                       <i class="fa fa-code-fork"></i>
-                      {{T "Edit-this-page"}}
+                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
                     </a>
                   </div>
                   {{ end }}
@@ -78,7 +79,6 @@
         {{ if .Params.chapter }}
           <div id="chapter">
         {{ end }}
-
         <div id="body-inner">
           {{if and (not .IsHome) (not .Params.chapter) }}
             <h1>{{.Title}}</h1>
