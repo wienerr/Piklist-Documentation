@@ -1,5 +1,5 @@
 ---
-description: "Welcome to Piklist Documentation."
+description: "Official documentation for Piklist, the most powerful framework available for WordPress."
 chapter: false
 weight: 90
 ---
