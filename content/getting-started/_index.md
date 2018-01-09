@@ -7,7 +7,7 @@ weight: 10
 To get the most out of this tutorial you should have a recent version of WordPress running and the [Piklist plugin](https://wordpress.org/plugins/piklist/) installed and activated. If you are not running WordPress locally, then you will need FTP access to your site so you can upload files.
 
 ## What is Piklist?
-At it’s very basic level, Piklist is a rapid development framework for WordPress. When using Piklist to build your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code.
+At its very basic level, Piklist is a rapid development framework for WordPress. When using Piklist to build your WordPress themes or plugins, you will be able to build more powerful, flexible websites with less code.
 
 You install and activate Piklist like any other WordPress plugin. It is absolutely free. Built-in demos are included, so you can see some of the features of Piklist in action.
 
