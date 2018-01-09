@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.31.1" />
-    <meta name="description" content="">
+    <meta name="description" content="Piklist Documentation is a community effort. Learn how to contribute here.">
 
 
     <link rel="shortcut icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 
-    <title>Group Field &middot; Piklist Documentation</title>
+    <title>Contribute to Docs &middot; Piklist Documentation</title>
 
     
     <link href="https://docs.piklist.com/css/nucleus.css?1515532587" rel="stylesheet">
@@ -49,7 +49,7 @@
 </script>
 
   </head>
-    <body class="type-page group-field file-group dir-fieldstypes" data-url="/fields/types/group/">
+    <body class="type-section contribute-to-docs file-_index dir-contribute-to-docs" data-url="/contribute-to-docs/">
     <nav id="sidebar" class="">
 
 
@@ -336,7 +336,7 @@
   
     
     <li data-nav-id="/fields/" title="Fields" class="dd-item 
-        parent
+        
         
         
         ">
@@ -363,7 +363,7 @@
   
     
     <li data-nav-id="/fields/types/" title="Field Types" class="dd-item 
-        parent
+        
         
         
         ">
@@ -482,7 +482,7 @@
  
   
     
-      <li data-nav-id="/fields/types/group/" title="Group Field" class="dd-item active">
+      <li data-nav-id="/fields/types/group/" title="Group Field" class="dd-item ">
         <a href="https://docs.piklist.com/fields/types/group/">
         Group
         
@@ -1326,8 +1326,8 @@
   
     
     <li data-nav-id="/contribute-to-docs/" title="Contribute to Docs" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="https://docs.piklist.com/contribute-to-docs/">
@@ -1409,19 +1409,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://docs.piklist.com/'></a> > <a href='https://docs.piklist.com/fields/'>Fields</a> > <a href='https://docs.piklist.com/fields/types/'>Field Types</a> > Group Field
-          
-         
-          
-         
+            <a href='https://docs.piklist.com/'></a> > Contribute to Docs
           
          
           
@@ -1435,15 +1423,10 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li><a href="#type-group"><code>'type' =&gt; 'group'</code></a></li>
-<li><a href="#examples">Examples</a></li>
-<li><a href="#usage">Usage</a>
-<ul>
-<li><a href="#display-grouped-fields">Display Grouped Fields</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#editing-an-existing-page">Editing an existing page</a></li>
+<li><a href="#add-a-new-page">Add a new page</a></li>
+<li><a href="#after-you-submit-a-pull-request">After you submit a Pull Request</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1458,7 +1441,7 @@
         
         <div id="body-inner">
           
-            <h1>Group Field</h1>
+            <h1>Contribute to Docs</h1>
           
 
         
@@ -1466,86 +1449,54 @@
 
 
 
-<h3 id="type-group"><code>'type' =&gt; 'group'</code></h3>
+<p>The Piklist Documentation like Piklist itself is a community effort. The code for the documentation is hosted on Github and can be edited and added to like any other file via a pull request.</p>
 
-<p>Adds a group of fields.</p>
+<p>This can be done 100% in the Github.com UI. However, if you like you can also pull the repository to your local and edit there.  This guide reviews using the Github.com UI.</p>
 
-<p>If <code>field</code> parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched.
-The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.</p>
+<h2 id="getting-started">Getting Started</h2>
 
-<h3 id="examples">Examples</h3>
+<p>The first step is to make sure you have a Github.com account and you&rsquo;re logged in.</p>
 
-<pre><code class="language-php">piklist('field', array(
-    'type' =&gt; 'group'
-    ,'field' =&gt; 'address_group'
-    ,'label' =&gt; __('Address (Grouped)', 'piklist-demo')
-    ,'list' =&gt; false
-    ,'description' =&gt; __('A grouped field with the field parameter set.', 'piklist-demo')
-    ,'fields' =&gt; array(
-      array(
-        'type' =&gt; 'text'
-        ,'field' =&gt; 'address_1'
-        ,'label' =&gt; __('Street Address', 'piklist-demo')
-        ,'required' =&gt; true
-        ,'columns' =&gt; 12
-        ,'attributes' =&gt; array(
-          'placeholder' =&gt; 'Street Address'
-        )
-      )
-      ,array(
-        'type' =&gt; 'text'
-        ,'field' =&gt; 'address_2'
-        ,'label' =&gt; __('PO Box, Suite, etc.', 'piklist-demo')
-        ,'columns' =&gt; 12
-        ,'attributes' =&gt; array(
-          'placeholder' =&gt; 'PO Box, Suite, etc.'
-        )
-      )
-      ,array(
-        'type' =&gt; 'text'
-        ,'field' =&gt; 'city'
-        ,'label' =&gt; __('City', 'piklist-demo')
-        ,'columns' =&gt; 5
-        ,'attributes' =&gt; array(
-          'placeholder' =&gt; 'City'
-        )
-      )
-      ,array(
-        'type' =&gt; 'select'
-        ,'field' =&gt; 'state'
-        ,'label' =&gt; __('State', 'piklist-demo')
-        ,'columns' =&gt; 4
-        ,'choices' =&gt; piklist_demo_get_states()
-      )
-      ,array(
-        'type' =&gt; 'text'
-        ,'field' =&gt; 'postal_code'
-        ,'label' =&gt; __('Postal Code', 'piklist-demo')
-        ,'columns' =&gt; 3
-        ,'attributes' =&gt; array(
-          'placeholder' =&gt; 'Postal Code'
-        )
-      )
-    )
-  ));
-</code></pre>
+<p>Then you can fork the documentation project so you can have a copy in your own repository. <a href="https://github.com/piklist/piklist-documentation/">Visit the documentation repository</a> and click on the &ldquo;Fork&rdquo; button in the upper right.</p>
 
-<h3 id="usage">Usage</h3>
+<p>Github just copied all the documentation files to your personal Github account.</p>
 
-<h4 id="display-grouped-fields">Display Grouped Fields</h4>
+<h2 id="editing-an-existing-page">Editing an existing page</h2>
 
-<p>If <code>field</code> value is set for the group, unserialize the contents of the field like this:</p>
+<ul>
+<li>At the bottom of every page in the documentation (including this one) is a red &ldquo;Improve this page&rdquo; button. Clicking that button brings you to the appropriate page on Github, in YOUR account where you can start editing.</li>
+<li>Make any changes you want. Scroll down to the bottom of the page, add some comments if necessary and click &ldquo;propose file change&rdquo;.</li>
+<li>Github saves the file and creates a new branch automatically.</li>
+<li>Click &ldquo;Create pull request&rdquo;.</li>
+<li>Double check your comments and click &ldquo;Create pull request&rdquo; again.</li>
+</ul>
 
-<pre><code>$group_data = get_post_meta($post-&gt;ID, 'field_name', true);
-$group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed
-print_r($group_data); // output the results
-</code></pre>
+<h2 id="add-a-new-page">Add a new page</h2>
+
+<ul>
+<li>Go to the <a href="https://github.com/piklist/Piklist-Documentation/tree/master/content">content directory</a> of the documentation on Github.</li>
+<li>Find the appropriate folder for your new page.</li>
+<li>Click &ldquo;Create new file&rdquo;</li>
+<li>Name your file. The name of your file will be the URL for that page so please name it something relevant and SEO friendly. The documenation is written in Markdown, so the file should end in &ldquo;.md&rdquo;. Example: <code>how-to-do-awesome-things-with-piklist.md.</code></li>
+<li>Add content to the new file. Use an existing documentation file as a guide.</li>
+<li>Scroll down to the bottom of the page, add some comments if necessary and click &ldquo;propose file change&rdquo;.</li>
+<li>Github saves the file and creates a new branch automatically.</li>
+<li>Click &ldquo;Create pull request&rdquo;.</li>
+<li>Double check your comments and click &ldquo;Create pull request&rdquo; again.</li>
+</ul>
+
+<h2 id="after-you-submit-a-pull-request">After you submit a Pull Request</h2>
+
+<p>You can view <a href="https://github.com/piklist/Piklist-Documentation/pulls">all pull requests here</a>.</p>
+
+<p>A member of the Piklist documentation team will review your changes. We may make some changes or ask you some questions before accepting them.</p>
+
+<p>Thank you for making the Piklist documentation better.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -1757,7 +1708,6 @@ print_r($group_data); // output the results
             
                 
                     
-                    
                 
                 
 
@@ -1772,7 +1722,6 @@ print_r($group_data); // output the results
             
             
                 
-                    
                     
                 
                 
@@ -1786,9 +1735,6 @@ print_r($group_data); // output the results
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1870,7 +1816,6 @@ print_r($group_data); // output the results
             
                 
                     
-                    
                 
                 
 
@@ -1886,9 +1831,6 @@ print_r($group_data); // output the results
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3009,6 +2951,7 @@ print_r($group_data); // output the results
             
             
                 
+                    
                     
                 
                 
@@ -3028,10 +2971,10 @@ print_r($group_data); // output the results
 
 
         
-            <a class="nav nav-prev" href="https://docs.piklist.com/fields/types/file/" title="File (upload) Field"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="https://docs.piklist.com/tutorials/workflows/" title="Workflow Tabs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="https://docs.piklist.com/fields/types/html/" title="HTML Field" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="https://docs.piklist.com/about-piklist/" title="About Piklist" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -3040,20 +2983,20 @@ print_r($group_data); // output the results
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://docs.piklist.com/js/clipboard.min.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/perfect-scrollbar.min.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/perfect-scrollbar.jquery.min.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/jquery.sticky.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/featherlight.min.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/html5shiv-printshiv.min.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/highlight.pack.js?1515532588"></script>
+    <script src="https://docs.piklist.com/js/clipboard.min.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/perfect-scrollbar.min.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/perfect-scrollbar.jquery.min.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/jquery.sticky.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/featherlight.min.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/html5shiv-printshiv.min.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/highlight.pack.js?1515532587"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://docs.piklist.com/js/modernizr.custom.71422.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/learn.js?1515532588"></script>
-    <script src="https://docs.piklist.com/js/hugo-learn.js?1515532588"></script>
+    <script src="https://docs.piklist.com/js/modernizr.custom.71422.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/learn.js?1515532587"></script>
+    <script src="https://docs.piklist.com/js/hugo-learn.js?1515532587"></script>
 
-    <link href="https://docs.piklist.com/mermaid/mermaid.css?1515532588" type="text/css" rel="stylesheet" />
-    <script src="https://docs.piklist.com/mermaid/mermaid.js?1515532588"></script>
+    <link href="https://docs.piklist.com/mermaid/mermaid.css?1515532587" type="text/css" rel="stylesheet" />
+    <script src="https://docs.piklist.com/mermaid/mermaid.js?1515532587"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -3064,7 +3007,7 @@ print_r($group_data); // output the results
     or <a href="https://github.com/piklist/Piklist-Documentation/compare">pull request</a> to help!
   </p>
   <p>
-    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/fields/types/group.md">Improve this page</a>
+    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/contribute-to-docs/_index.md">Improve this page</a>
   </p>
 </div>
 
@@ -3086,4 +3029,3 @@ $(document).ready(function(){
 
   </body>
 </html>
-
