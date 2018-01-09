@@ -9,9 +9,13 @@ The Piklist Documentation like Piklist itself is a community effort. The code fo
 This can be done 100% in the Github.com UI. However, if you like you can also pull the repository to your local and edit there.  This guide reviews using the Github.com UI.
 
 ## Getting Started
+**You only need to do these steps once.**
+
+#### Github.com account
 The first step is to make sure you have a Github.com account and you're logged in.
 
-Then you can fork the documentation project so you can have a copy in your own repository. [Visit the documentation repository](https://github.com/piklist/piklist-documentation/) and click on the "Fork" button in the upper right.
+#### Fork the piklist-documentation repository
+You need to fork the documentation project so you can have a copy in your own repository. [Visit the documentation repository](https://github.com/piklist/piklist-documentation/) and click on the "Fork" button in the upper right.
 
 Github just copied all the documentation files to your personal Github account.
 
