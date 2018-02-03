@@ -17,6 +17,7 @@ If you want to use your theme for your Piklist files, open your theme’s main f
 ```text
 /theme-folder
   /piklist
+    /add-ons
     /parts
       /admin-pages (Do not use for settings pages)
       /dashboard
@@ -39,6 +40,7 @@ You can also create a Piklist plugin if you want. The folder structure is slight
 
 ```text
 /plugin-folder
+  /add-ons
   /parts
     /admin-pages (Do not use for settings pages)
     /dashboard

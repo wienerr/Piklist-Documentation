@@ -14,7 +14,7 @@ You can get a good overview of what Piklist is capable of by activating the incl
 
 1. Hover over the “Piklist” menu item, and then click on “Settings”.
 2. You should now see options for Settings. Under the Add-ons tab is the “Extend Piklist” area containing the “Piklist Demos” add-on. Click on “Activate”, and then on “Save Changes”.
-![Add-ons menu](/images/add-ons-menu.jpg)
+![Add-ons menu](/images/add-ons-menu.png)
 3. You will now have access to the Piklist Demos:
 
 Custom Post Type and Settings: Go to Piklist Demos > Add New. Create a new demo here and it will show up under Piklist Demos.
