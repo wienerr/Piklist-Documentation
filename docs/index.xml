@@ -135,6 +135,17 @@ Registering your plugin with Piklist When writing WordPress plugins that rely on
     </item>
     
     <item>
+      <title>Piklist Add-ons</title>
+      <link>https://docs.piklist.com/getting-started/piklist-add-ons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/getting-started/piklist-add-ons/</guid>
+      <description>Piklist Add-ons allow you to put a plugin in your theme or Piklist plugin. This allows you to package full featured plugins that are only available when your theme or plugin is active.
+A good example of this is the Piklist Demos that come with Piklist itself.
+Creating a Piklist add-on is not much different than creating a Piklist plugin. The difference is, the plugin lives in the /add-ons folder in your theme or plugin.</description>
+    </item>
+    
+    <item>
       <title>Validating Fields</title>
       <link>https://docs.piklist.com/fields/validating-fields/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
