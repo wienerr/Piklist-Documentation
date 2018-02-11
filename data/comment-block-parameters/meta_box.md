@@ -1,4 +1,4 @@
-## Metabox
+## Meta box
 
 If set to false, the default box box "look" will be removed.
 
@@ -10,5 +10,5 @@ Piklist Parts: forms
 
 Example:
 ```
-meta_box: false
+Meta box: false
 ```
