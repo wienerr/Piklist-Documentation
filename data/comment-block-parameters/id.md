@@ -2,7 +2,7 @@
 
 Display this group of fields for this object ID.
 
-Piklist Parts: meta-boxes, terms, users, media
+Piklist Parts: meta-boxes, terms, users, media, notices, workflows
 
 * Input:  comma-delimited
 * Returns:  array
