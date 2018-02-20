@@ -212,14 +212,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/checkbox/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/colorpicker/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/fields/conditionally-show-fields/</loc>
   </url>
   
@@ -240,10 +232,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/datepicker/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/fields/display-menus-radio-checkbox-select-list/</loc>
   </url>
   
@@ -256,19 +244,11 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/editor/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/field-parameters/</loc>
   </url>
   
   <url>
     <loc>https://docs.piklist.com/tutorials/fields/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/file/</loc>
   </url>
   
   <url>
@@ -284,27 +264,11 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/group/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/terms/grouping-child-taxonomies-parents/</loc>
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/html/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/html5/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/help/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/hidden/</loc>
   </url>
   
   <url>
@@ -344,19 +308,11 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/radio/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/meta-boxes/registering-post-types/</loc>
   </url>
   
   <url>
     <loc>https://docs.piklist.com/tutorials/relationships/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/select/</loc>
   </url>
   
   <url>
@@ -385,14 +341,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/fields/types/text/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/fields/types/textarea/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/tutorials/forms/understanding-front-end-forms/</loc>
   </url>
   
@@ -418,6 +366,58 @@
   
   <url>
     <loc>https://docs.piklist.com/tutorials/relationships/working-with-field-relationships/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/checkbox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/color/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/colorpicker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/date/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/datepicker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/editor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/email/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/file/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/group/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/hidden/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/html/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/month/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/number/</loc>
   </url>
   
   <url>
@@ -458,6 +458,46 @@
   
   <url>
     <loc>https://docs.piklist.com/actions-filters/filters/piklist_validation_rules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/radio/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/range/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/select/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/tel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/text/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/textarea/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/time/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/url/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/fields/types/week/</loc>
   </url>
   
 </urlset>
