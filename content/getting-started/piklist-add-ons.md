@@ -18,4 +18,4 @@ Creating a Piklist add-on is not much different than creating a Piklist plugin. 
 
 3. Now [write your plugin](/getting-started/writing-a-plugin-for-piklist/) as you normally would.
 
-When your theme or plugin is activated, you will find your add-on, in the Piklist > Add-ons menu.
+When your theme or plugin is activated, you will find your add-on, in the "Piklist > Add-ons" menu.

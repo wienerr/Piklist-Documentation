@@ -1,6 +1,6 @@
 ---
-title: "Group Field"
-menuTitle: "Group"
+title: "group Field"
+menuTitle: "group"
 ---
 ### `'type' => 'group'`
 

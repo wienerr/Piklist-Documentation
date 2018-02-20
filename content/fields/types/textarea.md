@@ -1,6 +1,6 @@
 ---
-title: "Textarea Field"
-menuTitle: "Textarea"
+title: "textarea Field"
+menuTitle: "textarea"
 ---
 ### `'type' => 'textarea'`
 

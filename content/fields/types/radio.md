@@ -1,6 +1,6 @@
 ---
-title: "Radio Field"
-menuTitle: "Radio"
+title: "radio Field"
+menuTitle: "radio"
 ---
 ### `'type' => 'radio'`
 

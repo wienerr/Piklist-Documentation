@@ -1,6 +1,6 @@
 ---
-title: "Datepicker Field"
-menuTitle: "Datepicker"
+title: "datepicker Field"
+menuTitle: "datepicker"
 ---
 ### `'type' => 'datepicker'`
 

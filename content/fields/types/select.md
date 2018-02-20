@@ -1,6 +1,6 @@
 ---
-title: "Select Field"
-menuTitle: "Select"
+title: "select Field"
+menuTitle: "select"
 ---
 ### `'type' => 'select'`
 

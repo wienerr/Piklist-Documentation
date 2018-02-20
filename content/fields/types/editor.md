@@ -1,6 +1,6 @@
 ---
-title: "Editor Field"
-menuTitle: "Editor"
+title: "editor Field"
+menuTitle: "editor"
 ---
 ### `'type' => 'editor'`
 

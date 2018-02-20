@@ -1,6 +1,6 @@
 ---
-title: "HTML Field"
-menuTitle: "HTML"
+title: "html Field"
+menuTitle: "html"
 ---
 ### `'type' => 'html'`
 

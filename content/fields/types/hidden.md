@@ -1,6 +1,6 @@
 ---
-title: "Hidden Field"
-menuTitle: "Hidden"
+title: "hidden Field"
+menuTitle: "hidden"
 ---
 ### `'type' => 'hidden'`
 

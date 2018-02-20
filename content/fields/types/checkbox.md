@@ -1,6 +1,6 @@
 ---
-title: "Checkbox Field"
-menuTitle: "Checkbox"
+title: "checkbox Field"
+menuTitle: "checkbox"
 ---
 ### `'type' => 'checkbox'`
 

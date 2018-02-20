@@ -1,6 +1,6 @@
 ---
-title: "Colorpicker Field"
-menuTitle: "Colorpicker"
+title: "colorpicker Field"
+menuTitle: "colorpicker"
 ---
 ### `'type' => 'colorpicker'`
 

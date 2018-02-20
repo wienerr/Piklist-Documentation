@@ -1,6 +1,6 @@
 ---
-title: "File (upload) Field"
-menuTitle: "File (upload)"
+title: "file (upload) Field"
+menuTitle: "file (upload)"
 ---
 ### `'type' => 'file'`
 
@@ -53,3 +53,31 @@ Save either the attachment ID or the url to the file to the database.
 * values:  'id' or 'url'
 * Default:  id
 * Example: 	`'save' => 'url'`
+
+
+
+
+```
+  piklist('field', array(
+    'type' => 'file'
+    ,'field' => 'my_upload_basic_field'
+    ,'scope' => 'post_meta'
+    ,'label' => 'Basic Upload Field'
+    ,'options' => array(
+      'basic' => true
+    )
+  ));
+```
+
+```
+  piklist('field', array(
+    'type' => 'file'
+    ,'field' => 'my_upload_field'
+    ,'scope' => 'post_meta'
+    ,'label' => 'Media Uploader'
+    ,'options' => array(
+      'modal_title' => 'Add File(s)'
+      ,'button' => 'Add'
+    )
+  ));
+```
