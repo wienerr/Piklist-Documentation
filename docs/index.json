@@ -809,7 +809,7 @@
 	"title": "range Field",
 	"tags": [],
 	"description": "",
-	"content": " 'type' =\u0026gt; 'range' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'range', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
+	"content": " 'type' =\u0026gt; 'range' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'range', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', 'attributes' =\u0026gt; array( 'min' =\u0026gt; 5 ,'max' =\u0026gt; 30 ,'step' =\u0026gt; 5 ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/search/",
