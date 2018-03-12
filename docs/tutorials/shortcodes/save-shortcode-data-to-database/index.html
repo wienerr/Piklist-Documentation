@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.37.1" />
-    <meta name="description" content="Tutorials on Media">
+    <meta name="description" content="Save Shortcode data to database">
 
 
     <link rel="shortcut icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://docs.piklist.com/images/piklist-favicon.png" type="image/x-icon" />
 
-    <title>Media &middot; Piklist Documentation</title>
+    <title>Save Shortcode data to database &middot; Piklist Documentation</title>
 
     
     <link href="https://docs.piklist.com/css/nucleus.css?1520889515" rel="stylesheet">
@@ -49,7 +49,7 @@
 </script>
 
   </head>
-    <body class="type-section media file-_index dir-tutorialsmedia" data-url="/tutorials/media/">
+    <body class="type-page save-shortcode-data-to-database file-save-shortcode-data-to-database dir-tutorialsshortcodes" data-url="/tutorials/shortcodes/save-shortcode-data-to-database/">
     <nav id="sidebar" class="">
 
 
@@ -1622,7 +1622,13 @@
             
           
           
-            <a href='https://docs.piklist.com/'></a> > <a href='https://docs.piklist.com/tutorials/'>Tutorials</a> > Media
+            
+            
+          
+          
+            <a href='https://docs.piklist.com/'></a> > <a href='https://docs.piklist.com/tutorials/'>Tutorials</a> > <a href='https://docs.piklist.com/tutorials/shortcodes/'>Shortcodes</a> > Save Shortcode data to database
+          
+         
           
          
           
@@ -1638,7 +1644,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#description">Description</a>
+<ul>
+<li><a href="#create-the-field">Create the field</a></li>
+<li><a href="#save-the-meta-data">Save the meta data</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1653,7 +1663,7 @@
         
         <div id="body-inner">
           
-            <h1>Media</h1>
+            <h1>Save Shortcode data to database</h1>
           
 
         
@@ -1661,54 +1671,85 @@
 
 
 
-<h2 id="tutorials">Tutorials</h2>
+<h2 id="description">Description</h2>
+
+<p>With Piklist you can save shortcode data to your database instead of the WordPress editor.</p>
+
+<div class="expand">
+
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+
+        <span>
+
+            <strong>New to Piklist?</strong>
+
+        </span>
+
+    </div>
+
+    <div class="expand-content" style="display: none;">
+
+        <p>
+            <h3>Before you start this tutorial:</h3>
+            <ol>
+                <li><a href="https://wordpress.org/plugins/piklist/">Install Piklist</a> like you would any other WordPress plugin.</li>
+                <li>Decide if you are going to add the code in this tutorial to your custom plugin or your theme.  This will define how to setup your <a href="https://docs.piklist.com/folder-structure/">Piklist folder structure</a>.</li>
+                <li>If you're new to Piklist, you may want to review the <a href="https://docs.piklist.com/getting-started/">"Getting Started"</a> tutorial first.  It gives you a good overview of how Piklist works.</li>
+            </ol>
+        </p>
+        <hr/>
+    </div>
+
+</div>
 
 
+<p>In this tutorial we&rsquo;ll save add_more (repeater) data to the database, since this data would be difficult to show in a standard shortcode.</p>
 
+<h3 id="create-the-field">Create the field</h3>
 
+<p>Open or create your shortcodes form file and add this field:</p>
 
+<pre><code>piklist('field', array(
+    'type' =&gt; 'text'
+    ,'field' =&gt; 'my_shortcode_saved_to_db'
+    ,'scope' =&gt; 'post_meta'
+    ,'save_id' =&gt; isset($shortcode['attributes']['my_shortcode_saved_to_db']) ? (int) $shortcode['attributes']['my_shortcode_saved_to_db'] : true // Get the meta_id from the shortcode
+    ,'label' =&gt; 'Demo shortcode'
+    ,'add_more' =&gt; true
+  );
+</code></pre>
 
+<p>A few things about this field:</p>
 
-
-<ul class="children children-li">
-	
-    
-    
-
-	
-		
-	
-		
-
-
-
-  <li class="child">
-  <p class="children-title"><a href="https://docs.piklist.com/tutorials/media/add-fields-to-media/" >Add fields to Media items</a></p>
-	 
-      <p class="children-description">Add fields to Media library items</p>
-		
-	
-  </li>
-
-
-
-			
-
-		
-	
-
-	
+<ul>
+<li>We are setting the <code>scope</code> to post_meta, to tell Piklist where to save the data. This can also be user_meta, term_meta, etc.</li>
+<li>The <code>save_id</code> parameter is the meta_id in your database. This line is telling Piklist to retrieve the meta_id.  This is what will be shown in the post editor.</li>
 </ul>
 
+<h3 id="save-the-meta-data">Save the meta data</h3>
 
+<p>Add the following directly under the above field.</p>
 
+<pre><code>// Get the last field rendered
+$field = piklist('field');
 
+// Store our meta id on the shortcode using the same field name as the post_meta for easy reference
+piklist('field', array(
+  'type' =&gt; 'hidden'
+  ,'field' =&gt; 'my_shortcode_saved_to_db'
+  ,'value' =&gt; $field['data_id']
+));
+</code></pre>
 
+<p>If you save this shortcode you should see the <code>my_shortcode_saved_to_db</code> field in your database. You can then retrieve it normally.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -3055,108 +3096,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -3217,21 +3156,15 @@
             
         
                     
+                        
+            
             
         
                     
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
                         
             
@@ -3303,6 +3236,93 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -3337,6 +3357,27 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
                         
             
             
@@ -3371,10 +3412,10 @@
 
 
         
-            <a class="nav nav-prev" href="https://docs.piklist.com/tutorials/help/" title="Help Tabs"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="https://docs.piklist.com/tutorials/settings/" title="Settings"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="https://docs.piklist.com/tutorials/pointers/" title="Pointers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="https://docs.piklist.com/tutorials/terms/" title="Taxonomies / Terms" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -3407,7 +3448,7 @@
     or <a href="https://github.com/piklist/Piklist-Documentation/compare">pull request</a> to help!
   </p>
   <p>
-    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/tutorials/media/_index.md">Improve this page</a>
+    <a class="button" href="https://github.com/piklist/piklist-documentation/edit/master/content/tutorials/shortcodes/save-shortcode-data-to-database.md">Improve this page</a>
   </p>
 </div>
 
@@ -3429,3 +3470,4 @@ $(document).ready(function(){
 
   </body>
 </html>
+

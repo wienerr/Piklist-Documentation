@@ -291,7 +291,7 @@
 	"title": "Tutorials",
 	"tags": [],
 	"description": "Piklist Tutorials",
-	"content": "We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\nAdmin Notices\n  Building your first Admin Notice\n  Admin Pages\n  Building a simple Admin Page\n  Dashboard Widgets\n  Create a Dashboard Widget to show an RSS Feed.\n  Fields (General)\n  Conditionally Show Fields\n Display Menus as a Radio, Checkbox or Select list\n Show Fields by User Capability or Role\n  Forms\n  Understanding Front End Forms\n  Help Tabs\n  Creating Help Tabs for WordPress\n  Media\n  Add fields to Media items\n  Pointers\n  Building Pointers without code\n  Posts / Meta-boxes\n  Getting Started with Meta-boxes and Fields\n Add Subtitle field to the Post screen\n Add WYSISYG to your Excerpt Box\n Creating Custom Post Statuses\n Hide Meta Boxes for a Page Template\n Lock Field Values based on Post Status\n Registering Post Types\n Show Metaboxes and Fields by Post Status\n  Relationships\n  Working with Field Relationships\n  Settings\n  Building Settings Pages\n  Shortcodes\n  Getting started with Shortcodes\n  Taxonomies / Terms\n  Getting Started with Taxonomies and Piklist\n Creating Separate Taxonomies for each User\n Display Taxonomies as Radio, Checkboxes or Select list\n Grouping child taxonomies by their parents\n  Updates\n  Getting started with updates\n  Users\n  Display Users as a Radio, Checkbox or Select list\n  Widgets\n  Easy Widgets\n  Workflow Tabs\n  Building Your First Workflow\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow\n   "
+	"content": "We\u0026rsquo;ve put together some tutorials on specific examples. Enjoy!\nAdmin Notices\n  Building your first Admin Notice\n  Admin Pages\n  Building a simple Admin Page\n  Dashboard Widgets\n  Create a Dashboard Widget to show an RSS Feed.\n  Fields (General)\n  Conditionally Show Fields\n Display Menus as a Radio, Checkbox or Select list\n Show Fields by User Capability or Role\n  Forms\n  Understanding Front End Forms\n  Help Tabs\n  Creating Help Tabs for WordPress\n  Media\n  Add fields to Media items\n  Pointers\n  Building Pointers without code\n  Posts / Meta-boxes\n  Getting Started with Meta-boxes and Fields\n Add Subtitle field to the Post screen\n Add WYSISYG to your Excerpt Box\n Creating Custom Post Statuses\n Hide Meta Boxes for a Page Template\n Lock Field Values based on Post Status\n Registering Post Types\n Show Metaboxes and Fields by Post Status\n  Relationships\n  Working with Field Relationships\n  Settings\n  Building Settings Pages\n  Shortcodes\n  Getting started with Shortcodes\n Save Shortcode data to database\n  Taxonomies / Terms\n  Getting Started with Taxonomies and Piklist\n Creating Separate Taxonomies for each User\n Display Taxonomies as Radio, Checkboxes or Select list\n Grouping child taxonomies by their parents\n  Updates\n  Getting started with updates\n  Users\n  Display Users as a Radio, Checkbox or Select list\n  Widgets\n  Easy Widgets\n  Workflow Tabs\n  Building Your First Workflow\n Placing \u0026#34;Add New Post\u0026#34; in a Workflow\n   "
 },
 {
 	"uri": "https://docs.piklist.com/contribute-to-docs/",
@@ -546,6 +546,13 @@
 	"content": " Tutorials Working with Field Relationships\nPiklist allows you to relate any object to any object.\n  "
 },
 {
+	"uri": "https://docs.piklist.com/tutorials/shortcodes/save-shortcode-data-to-database/",
+	"title": "Save Shortcode data to database",
+	"tags": [],
+	"description": "Save Shortcode data to database",
+	"content": " Description With Piklist you can save shortcode data to your database instead of the WordPress editor.\n  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you're new to Piklist, you may want to review the \"Getting Started\" tutorial first. It gives you a good overview of how Piklist works.     In this tutorial we\u0026rsquo;ll save add_more (repeater) data to the database, since this data would be difficult to show in a standard shortcode.\nCreate the field Open or create your shortcodes form file and add this field:\npiklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'my_shortcode_saved_to_db' ,'scope' =\u0026gt; 'post_meta' ,'save_id' =\u0026gt; isset($shortcode['attributes']['my_shortcode_saved_to_db']) ? (int) $shortcode['attributes']['my_shortcode_saved_to_db'] : true // Get the meta_id from the shortcode ,'label' =\u0026gt; 'Demo shortcode' ,'add_more' =\u0026gt; true );  A few things about this field:\n We are setting the scope to post_meta, to tell Piklist where to save the data. This can also be user_meta, term_meta, etc. The save_id parameter is the meta_id in your database. This line is telling Piklist to retrieve the meta_id. This is what will be shown in the post editor.  Save the meta data Add the following directly under the above field.\n// Get the last field rendered $field = piklist('field'); // Store our meta id on the shortcode using the same field name as the post_meta for easy reference piklist('field', array( 'type' =\u0026gt; 'hidden' ,'field' =\u0026gt; 'my_shortcode_saved_to_db' ,'value' =\u0026gt; $field['data_id'] ));  If you save this shortcode you should see the my_shortcode_saved_to_db field in your database. You can then retrieve it normally.\n"
+},
+{
 	"uri": "https://docs.piklist.com/tutorials/settings/",
 	"title": "Settings",
 	"tags": [],
@@ -557,7 +564,7 @@
 	"title": "Shortcodes",
 	"tags": [],
 	"description": "Tutorials on Shortcodes",
-	"content": " Tutorials Getting started with Shortcodes\nCreating Shortcodes with Piklist is super easy.\n  "
+	"content": " Tutorials Getting started with Shortcodes\nCreating Shortcodes with Piklist is super easy.\n Save Shortcode data to database\nSave Shortcode data to database\n  "
 },
 {
 	"uri": "https://docs.piklist.com/tutorials/fields/show-fields-user-capability-role/",
