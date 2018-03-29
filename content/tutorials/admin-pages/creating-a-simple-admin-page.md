@@ -20,16 +20,19 @@ add_filter('piklist_admin_pages', 'my_admin_pages');
 function my_admin_pages($pages) {
 
     $pages[] = array(
-      'page_title' => 'About this plugin',
-      ,'menu_title' => 'About',
+      'page_title' => 'About this plugin'
+      ,'menu_title' => 'About'
       ,'menu_slug' => 'about_my_plugin'
+      ,'capability' => 'manage_options'
     );
 
     return $pages;
   }
 ```
 
-* If you go to the WordPress admin you should see a menu item called "About".
+If you go to the WordPress admin you should see a menu item called "About".
+
+
 * Now, create a PHP file in your `/parts/admin-pages/` [folder](/folder-structure/). It doesn't matter what you name the file. For this example we'll call it `about.php`.
 * At the top of the file, add this code:
 
