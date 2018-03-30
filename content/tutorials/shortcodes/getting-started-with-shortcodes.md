@@ -10,8 +10,8 @@ Creating Shortcodes with Piklist is super easy. In this tutorial, we'll create a
 
 {{< show-tutorial-start-folders >}}
 
-* If you don't already have a `widgets` folder, create one: `/parts/widgets/`
-* Next we need to create the widget files.  Piklist widgets are made up of two:
+* If you don't already have a `shortcodes` folder, create one: `/parts/shortcodes/`
+* Next we need to create the shortcode files.  Piklist shortcodes are made up of two:
     * `shortcode-name.php`: This file holds the shortcode output, and is the **only required file for a shortcode**. (i.e. example.php)
     * `shortcode-name-form.php`: Settings fields for your shortcode are placed in this file. (i.e. example-form.php)
 
@@ -100,4 +100,4 @@ if ( isset( $arguments['meta_key'] ) ) {
 }
 ```
 
-You just built a widget!
+You just built a shortcode!
