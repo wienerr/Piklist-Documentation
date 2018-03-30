@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/piklist/Piklist-Documentation#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2"
+    "bootstrap": "^4.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "browser-sync-webpack-plugin": "^1.2.0",
     "laravel-mix": "^1.7.2",
-    "webpack-livereload-plugin": "^1.0.0"
+    "webpack-livereload-plugin": "^1.1.0"
   }
 }
