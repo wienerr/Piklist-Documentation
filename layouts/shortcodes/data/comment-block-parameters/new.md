@@ -6,7 +6,7 @@ Piklist Parts: term
 
 * Input:  boolean
 * Returns:  boolean
-* Default:  true
+* Default:  false
 
 Example:
 ```
