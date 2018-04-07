@@ -1,7 +1,7 @@
-{{- $path := "data/sanitize" -}}
+{{- $path := "layouts/shortcodes/data/sanitize" -}}
 {{- $files := readDir $path -}}
 {{- range $files }}
   {{- if ne "_index.md" .Name }}
-    {{- print "data/sanitize/" .Name | readFile | markdownify }}
+    {{- print "layouts/shortcodes/data/sanitize/" .Name | readFile | markdownify }}
   {{- end }}
 {{- end }}

@@ -1,7 +1,7 @@
-{{- $path := "data/validate" -}}
+{{- $path := "layouts/shortcodes/data/validate" -}}
 {{- $files := readDir $path -}}
 {{- range $files }}
   {{- if ne "_index.md" .Name }}
-    {{- print "data/validate/" .Name | readFile | markdownify }}
+    {{- print "layouts/shortcodes/data/validate/" .Name | readFile | markdownify }}
   {{- end }}
 {{- end }}
