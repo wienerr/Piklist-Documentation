@@ -2,7 +2,7 @@
 title: "What is Piklist"
 description: "A brief explanation of Piklist"
 chapter: false
-weight: 10100
+weight: 1
 ---
 
 ## What is Piklist?

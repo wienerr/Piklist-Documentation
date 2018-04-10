@@ -1,6 +1,7 @@
 ---
 title: "How do I include Piklist in my plugin or theme?"
 description: "Using Piklist with your plugin or theme."
+weight: 5
 ---
 
 While we understand why you may want to include Piklist in your plugin or theme, we believe it may negatively impact your users’ experience. Piklist is not a boilerplate framework and is always designed to be a standalone plugin. **Piklist will not work properly if included in another plugin or theme**.

@@ -1,5 +1,7 @@
 ---
 title: "Parse error: syntax error, unexpected T_FUNCTION"
+description: "An error caused by older versions of PHP."
+weight: 999
 ---
 
 If you’re getting this error, you are running an older version of PHP on your server.
