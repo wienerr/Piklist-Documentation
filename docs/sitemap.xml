@@ -35,7 +35,15 @@
   </url>
   
   <url>
+    <loc>https://docs.piklist.com/faq/what-is-piklist/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.piklist.com/about-piklist/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
   </url>
   
   <url>
@@ -44,6 +52,18 @@
   
   <url>
     <loc>https://docs.piklist.com/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/faq/fields-not-saving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/faq/number-of-fields-limit/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.piklist.com/faq/update-script-not-running/</loc>
   </url>
   
   <url>
@@ -147,6 +167,10 @@
   </url>
   
   <url>
+    <loc>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.piklist.com/folder-structure/</loc>
   </url>
   
@@ -160,10 +184,6 @@
   
   <url>
     <loc>https://docs.piklist.com/faq/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/what-is-piklist/</loc>
   </url>
   
   <url>
@@ -276,10 +296,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/how-to-include-piklist-in-plugin-or-theme/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/about-piklist/license/</loc>
   </url>
   
@@ -289,10 +305,6 @@
   
   <url>
     <loc>https://docs.piklist.com/tutorials/media/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</loc>
   </url>
   
   <url>
@@ -354,10 +366,6 @@
   
   <url>
     <loc>https://docs.piklist.com/tutorials/users/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields-not-saving/</loc>
   </url>
   
   <url>

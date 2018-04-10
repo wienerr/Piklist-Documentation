@@ -31,17 +31,6 @@ If the user does install Piklist as a separate plugin, AND your plugin/theme, it
     </item>
     
     <item>
-      <title>Parse error: syntax error, unexpected T_FUNCTION</title>
-      <link>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</guid>
-      <description>If you’re getting this error, you are running an older version of PHP on your server.
-Piklist, like WordPress, recommends PHP v5.6 or higher.
-Please contact your host and ask them to upgrade you.</description>
-    </item>
-    
-    <item>
       <title>Why aren’t my fields saving?</title>
       <link>https://docs.piklist.com/faq/fields-not-saving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -50,6 +39,39 @@ Please contact your host and ask them to upgrade you.</description>
       <description>The most common reason for fields not saving is because a post type uses the default WordPress “custom fields” meta box. This meta box actually duplicates the inputs used by your fields.
 If you are registering a post type, make sure custom-fields is not in the “supports” array.
 To remove the custom-fields meta box from a WordPress default post type, or one that is registered by another plugin, use remove_post_type_support().</description>
+    </item>
+    
+    <item>
+      <title>Is there a limit on the number of Piklist fields?</title>
+      <link>https://docs.piklist.com/faq/number-of-fields-limit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/faq/number-of-fields-limit/</guid>
+      <description>There is no limit to how many fields you can create and display with Piklist. However, your server limits how many can be used on each page.
+This is not a Piklist issue&amp;hellip; it&amp;rsquo;s part of your servers configuration.
+The most common solution is adjusting your max_vars setting. This is a PHP setting which sets the maximum variables that can be used in one page load.
+Once you increase this limit, Piklist can finish rendering all it&amp;rsquo;s fields.</description>
+    </item>
+    
+    <item>
+      <title>Update script not running</title>
+      <link>https://docs.piklist.com/faq/update-script-not-running/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/faq/update-script-not-running/</guid>
+      <description>Piklist allows you to easily create update scripts that run on certain versions of your plugin. If the script doesn&amp;rsquo;t run, you may have an issue with the piklist_active_plugin_versions setting:
+ Deactivate and delete Piklist Open your database. In the wp_options table, look for this field: piklist_active_plugin_versions and delete it. Reinstall piklist The piklist_active_plugin_versions should come back to your db. Log back into WordPress. The update script should run.  </description>
+    </item>
+    
+    <item>
+      <title>Parse error: syntax error, unexpected T_FUNCTION</title>
+      <link>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/faq/parse-error-syntax-error-unexpected-t_function/</guid>
+      <description>If you’re getting this error, you are running an older version of PHP on your server.
+Piklist, like WordPress, recommends PHP v5.6 or higher.
+Please contact your host and ask them to upgrade you.</description>
     </item>
     
   </channel>
