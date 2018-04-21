@@ -6,7 +6,7 @@ weight: 1
 ---
 
 
-Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab.
+Piklist Workflows allow you to add a tabbed system on almost any admin page. Additionally, you can add almost anything you want to each tab. Currently are not available on frontend forms.
 
 {{< show-tutorial-start-folders >}}
 
