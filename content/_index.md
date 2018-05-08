@@ -41,7 +41,7 @@ weight: 90
     <h3><i class="fas fa-angle-up fa-sm"></i><a href="/pointers/">Pointers</a></h3> Create step-by-step tutorials in the admin.
   </li>
   <li class="feature">
-    <h3><i class="fas fa-thumbtack fa-sm"></i><a href="/meta-boxes/">Post Types</a></h3> Register Post Types with Piklist and add power to your post types.
+    <h3><i class="fas fa-thumbtack fa-sm"></i><a href="/posts-meta-boxes/">Post Types</a></h3> Register Post Types with Piklist and add power to your post types.
   </li>
   <li class="feature">
     <h3><i class="fas fa-sliders-h fa-sm fa-rotate-90"></i><a href="/settings/">Settings</a></h3> The simplest way to add settings pages in WordPress.
