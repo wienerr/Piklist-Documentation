@@ -41,5 +41,25 @@ In this tutorial, if the user clicks on the “Yes” radio button to subscribe 
       <description>With web applications and powerful websites, there will be times you want to only show a metabox or metafield to a particular user role or capability. For an Order Management system you may want your customers to see certain fields, while your employees can see them all. Or maybe you want Administrators and Editors to be able to leave notes on a post that no one else can see. Well, Piklist makes it easy to do just that.</description>
     </item>
     
+    <item>
+      <title>Using &#34;Chosen&#34; for select fields</title>
+      <link>https://docs.piklist.com/tutorials/fields/using-chosen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/tutorials/fields/using-chosen/</guid>
+      <description>Description Piklist makes it easy to create select boxes, but sometimes they can become long with tons of options. Using the &amp;ldquo;Chosen&amp;rdquo; jQuery plugin from Harvest can make them more user-friendly.
+ First, let&amp;rsquo;s load two files from Chosen. Their javascript and css file. Though the javascript is mandatory, the css is not. You can just borrow from this file if you want.  In your theme&amp;rsquo;s functions.php file, or your main plugin file add this code:</description>
+    </item>
+    
+    <item>
+      <title>Using &#34;Select2&#34; for select fields</title>
+      <link>https://docs.piklist.com/tutorials/fields/using-select2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/tutorials/fields/using-select2/</guid>
+      <description>Description Piklist makes it easy to create select boxes, but sometimes they can become long with tons of options. Using the &amp;ldquo;Select2&amp;rdquo; jQuery plugin can make them more user-friendly.
+ First, let&amp;rsquo;s load two files from Select2. Their javascript and css file. Though the javascript is mandatory, the css is not. You can just borrow from this file if you want.  In your theme&amp;rsquo;s functions.php file, or your main plugin file add this code:</description>
+    </item>
+    
   </channel>
 </rss>

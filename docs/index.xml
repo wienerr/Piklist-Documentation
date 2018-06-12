@@ -545,6 +545,26 @@ To learn more about registering Post Types with Piklist, please read about the p
     </item>
     
     <item>
+      <title>Using &#34;Chosen&#34; for select fields</title>
+      <link>https://docs.piklist.com/tutorials/fields/using-chosen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/tutorials/fields/using-chosen/</guid>
+      <description>Description Piklist makes it easy to create select boxes, but sometimes they can become long with tons of options. Using the &amp;ldquo;Chosen&amp;rdquo; jQuery plugin from Harvest can make them more user-friendly.
+ First, let&amp;rsquo;s load two files from Chosen. Their javascript and css file. Though the javascript is mandatory, the css is not. You can just borrow from this file if you want.  In your theme&amp;rsquo;s functions.php file, or your main plugin file add this code:</description>
+    </item>
+    
+    <item>
+      <title>Using &#34;Select2&#34; for select fields</title>
+      <link>https://docs.piklist.com/tutorials/fields/using-select2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.piklist.com/tutorials/fields/using-select2/</guid>
+      <description>Description Piklist makes it easy to create select boxes, but sometimes they can become long with tons of options. Using the &amp;ldquo;Select2&amp;rdquo; jQuery plugin can make them more user-friendly.
+ First, let&amp;rsquo;s load two files from Select2. Their javascript and css file. Though the javascript is mandatory, the css is not. You can just borrow from this file if you want.  In your theme&amp;rsquo;s functions.php file, or your main plugin file add this code:</description>
+    </item>
+    
+    <item>
       <title>Working with Field Relationships</title>
       <link>https://docs.piklist.com/tutorials/relationships/working-with-field-relationships/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
