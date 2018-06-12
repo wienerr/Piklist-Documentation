@@ -19,8 +19,7 @@
       <guid>https://docs.piklist.com/tutorials/relationships/working-with-field-relationships/</guid>
       <description>Piklist relationships allow you to relate any object to any object.
 In this tutorial we&amp;rsquo;ll use the classic books example, assuming our post types are book and chapter, and a user can be an author. We&amp;rsquo;ll cover the post_has, post_belongs, and relate_query parameters.
-Since we&amp;rsquo;re using Post Types, all this code goes in your /parts/meta-boxes/ folder.
-First let&amp;rsquo;s add the chapter relate field to the book post type. Create a file and add this code:</description>
+First let&amp;rsquo;s add the chapter relate field to the book post type. Since this is a post type we&amp;rsquo;re adding a field to, the file goes in the /parts/meta-boxes/ folder.</description>
     </item>
     
   </channel>
