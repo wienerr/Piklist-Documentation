@@ -27,8 +27,12 @@ piklist('field', array(
     'numberposts' => -1
     ,'post_type' => 'chapters'
   )), array('ID', 'post_title'))
-  ,'relate' => array( 'scope' => 'post' )
-  ,'attributes' => array( 'class' => 'multiple' )
+  ,'relate' => array(
+    'scope' => 'post'
+  )
+  ,'attributes' => array(
+    'multiple' => 'multiple'
+  )
 ));
 ```
 
@@ -46,8 +50,12 @@ piklist('field', array(
     'numberposts' => -1
     ,'post_type' => 'books'
   )), array('ID', 'post_title'))
-  ,'relate' => array( 'scope' => 'post' )
-  ,'attributes' => array( 'class' => 'multiple' )
+  ,'relate' => array(
+    'scope' => 'post'
+  )
+  ,'attributes' => array(
+    'multiple' => 'multiple'
+  )
 ));
 ```
 
