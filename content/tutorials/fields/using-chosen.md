@@ -4,6 +4,8 @@ description: Chosen is a jQuery plugin that makes long, unwieldy select boxes mu
 hidden: true
 ---
 
+![Chosen Example](/images/chosen.png)
+
 ## Description
 Piklist makes it easy to create select boxes, but sometimes they can become long with tons of options. Using the "Chosen" jQuery plugin from Harvest can make them more user-friendly.
 
