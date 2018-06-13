@@ -119,25 +119,11 @@
 	"content": " Adding Piklist meta-boxes, fields, settings pages, Widgets, etc. to your theme is very easy.\n First you need to add the proper folder structure to your theme. Piklist works by searching the active theme for the /piklist folder and then processing the sub-folders and files within it.\n Most Piklist code will go in the folder structure you set up. But other Piklist code, like registering Post Types, would go in your theme’s functions.php file.\n  IMPORTANT You cannot include the Piklist plugin in your theme. It needs to remain a separate plugin.\n"
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/",
-	"title": "Field Types",
-	"tags": [],
-	"description": "Piklist supports tons of field types, or you can create your own.",
-	"content": "Piklist supports all these field types, or you can create your own.\ncheckbox Field\n color Field\n colorpicker Field\n date Field\n datepicker Field\n editor Field\n email Field\n file (upload) Field\n group Field\n hidden Field\n html Field\n month Field\n number Field\n radio Field\n range Field\n search Field\n select Field\n tel Field\n text Field\n textarea Field\n time Field\n url Field\n week Field\n  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/",
 	"title": "Field Types",
 	"tags": [],
 	"description": "Piklist supports tons of field types, or you can create your own.",
 	"content": "Piklist supports all these field types, or you can create your own.\ncheckbox Field\n color Field\n colorpicker Field\n date Field\n datepicker Field\n editor Field\n email Field\n file (upload) Field\n group Field\n hidden Field\n html Field\n month Field\n number Field\n radio Field\n range Field\n search Field\n select Field\n tel Field\n text Field\n textarea Field\n time Field\n url Field\n week Field\n  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/sanitizing-fields/",
-	"title": "Sanitizing Fields",
-	"tags": [],
-	"description": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the `sanitize` parameter.",
-	"content": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the sanitize parameter.\nChoose the appropriate type of sanitization for each of your fields.\nemail Strips out all characters that are not allowable in an email address.\nCodex reference for parameters: sanitize_email\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'email' ) )  file_name Removes special characters that are illegal in filenames on certain operating systems and special characters requiring special escaping to manipulate at the command line. Replaces spaces and consecutive dashes with a single dash. Trim period, dash and underscore from beginning and end of filename.\nCodex reference for parameters: sanitize_file_name\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'file_name' ) )  html_class Sanitizes a html classname to ensure it only contains valid characters.\nCodex reference for parameters: sanitize_html_class\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'html_class' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-class' ) ) )  text_field Checks for invalid UTF-8, Convert single \u0026lt; characters to entity, strip all tags, remove line breaks, tabs and extra white space, strip octets.\nCodex reference for parameters: sanitize_text_field\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'text_field' ) )  title Specifically, HTML and PHP tags are stripped, and (in a ‘save’ context) accents are removed (accented characters are replaced with non-accented equivalents). Despite the name of this function, the returned value is intended to be suitable for use in a URL, not as a human-readable title.\nCodex reference for parameters: sanitize_title\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'title' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-fallback-title' ) ,'context' =\u0026gt; 'save' ) )  user Sanitize username stripping out unsafe characters.\nCodex reference for parameters: sanitize_user\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'user' ,'options' =\u0026gt; array( 'strict' =\u0026gt; 'true' ) ) )  wp_filter_kses Sanitize content with allowed HTML Kses rules.\nCodex reference for parameters: wp_filter_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_filter_kses' ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  wp_kses Makes sure that only the allowed HTML element names, attribute names and attribute values plus only sane HTML entities will be saved.\nCodex reference for parameters: wp_kses\n'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'wp_kses' ,'options' =\u0026gt; array( 'allowed_html' =\u0026gt; array( 'strong' =\u0026gt; array() ,'a' =\u0026gt; array( 'href' =\u0026gt; array() ,'title' =\u0026gt; array() ) ) ,'allowed_protocols' =\u0026gt; array('http') ) ) )  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/sanitizing-fields/",
@@ -161,13 +147,6 @@
 	"content": "Piklist Add-ons allow you to put a plugin in your theme or Piklist plugin. This allows you to package full featured plugins that are only available when your theme or plugin is active.\nA good example of this is the Piklist Demos that come with Piklist itself.\nCreating a Piklist add-on is not much different than creating a Piklist plugin. The difference is, the plugin lives in the /add-ons folder in your theme or plugin.\n Review the Piklist folder structure and create an /add-ons folder in the appropriate location.\n Add another folder to hold your plugin. It should look like: /add-ons/my-plugin.\n Now write your plugin as you normally would.\n  When your theme or plugin is activated, you will find your add-on, in the \u0026ldquo;Piklist \u0026gt; Add-ons\u0026rdquo; menu.\n"
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/validating-fields/",
-	"title": "Validating Fields",
-	"tags": [],
-	"description": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the `validate` parameter.",
-	"content": "When writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the validate parameter.\nChoose the appropriate type of validation for each of your fields.\nemail Verifies that the input is in the proper format for an email address.\nUses the standard WordPress function is_email\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'email' ) )  email_domain Verifies that the input is a valid email domain.\nUses the standard PHP function checkdnsrr\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'email_domain' ) )  email_exists Checks that the entered email is not already registered to another user.\nUses the standard WordPress function email_exists\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'email_exists' ) )  file_exists Verifies that the file path entered leads to an actual file.\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'file_exists' ) )  hex_color Verifies that the data entered is a valid hex color.\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'hex_color' ) )  image Verifies that the file path entered leads to an image file.\nUses the standard PHP function exif_imagetype\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'image' ) )  ip_address Verifies that the data entered is a valid IP Address.\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'ip_address' ) )  limit Verifies that the number of items are within the defined limit.\nOptions min The minimum allowed value. default: 1\nmax The maximum allowed value default: infinite\ncount Determines what you want to count: words, characters, files, images, add-more\u0026rsquo;s\nvalues: words, characters\ndefault: false (files, images, add-more\u0026rsquo;s)\n,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'limit' ,'options' =\u0026gt; array( 'min' =\u0026gt; 2 ,'max' =\u0026gt; 2 ) ) )  ,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'limit' ,'options' =\u0026gt; array( 'min' =\u0026gt; 2 ,'max' =\u0026gt; 6 ,'count' =\u0026gt; 'characters' ) ) )  match Checks to see if two fields match.\nOptions field The field name to match\npiklist('field', array( 'type' =\u0026gt; 'password' ,'scope' =\u0026gt; 'user' ,'field' =\u0026gt; 'user_pass_repeat' ,'label' =\u0026gt; 'Repeat New Password' ,'value' =\u0026gt; false // Setting to false forces no value to show in form. ,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'match' ,'options' =\u0026gt; array( 'field' =\u0026gt; 'user_pass' // does this match the field user_pass_repeat ) ) ) ));  range Verifies that the data entered is within the defined range.\nOptions min The minimum allowed value. default: 1\nmax The maximum allowed value default: 10\n,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'range' ,'options' =\u0026gt; array( 'min' =\u0026gt; 2 ,'max' =\u0026gt; 8 ) ) )  safe_text Verifies that the data entered is alphanumeric.\n,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'safe_text' ) )  url Verifies that the data entered is a valid URL.\n,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'url' ) )  username_exists Checks that the entered username does not already exist.\nUses the standard WordPress function username_exists\n,'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'username_exists' ) )  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/validating-fields/",
 	"title": "Validating Fields",
 	"tags": [],
@@ -180,13 +159,6 @@
 	"tags": [],
 	"description": "Official documentation for Piklist, the most powerful framework available for WordPress.",
 	"content": " Piklist Documentation Getting Started  FAQS With Piklist you can create and enhance almost every part of WordPress.  Admin Notices Dismissable or standard admin notices that can be on every admin page, or just specific ones.\n Admin Pages Create \"About\" pages and more, with customizable forms.\n Dashboard Widgets Easy dashboard widgets for Multisite or Single site  Custom Fields The simplest, most powerful way to create custom fields in WordPress  Frontend Forms Powerful forms that can do anything you can imagine.  Help Tabs Easily add WordPress help tabs to any page.  Media Library Totally customize your Media Library pages.  Pointers Create step-by-step tutorials in the admin.  Post Types Register Post Types with Piklist and add power to your post types.  Settings The simplest way to add settings pages in WordPress.  Shortcodes Piklist automatically creates a UI for your shortcodes.  Taxonomies Register Taxonomies with Piklist and add power to your terms.  Update Scripts Let Piklist handle update scripts for your plugin or theme.  Users Totally customize the user screens.  Widgets Easily add widgets to your plugin or theme.  Workflow Tabs Break up any page with an advanced tab system.   "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/create-your-own-fields/",
-	"title": "Create your own field",
-	"tags": [],
-	"description": "With Piklist, you can easily create your own fields to use in your projects.",
-	"content": " With Piklist, you can easily create your own fields to use in your projects.\n To start, you should have a /parts folder in your theme or plugin to put Piklist parts files. Add a subfolder called /fields/. The structure should look like /parts/fields/. Create a file in the /fields/ folder. Any files in this folder can become fields automatically registered with Piklist. The name of your file is important since it will become the name of your field. For demonstration purposes we’ll create our own checkbox field and call it my-checkbox, so the file name is my-checkbox.php. Depending on the type of field you want to create, you may want to copy/paste from an existing Piklist field. For this demo, we are going to open the default Piklist checkbox file, piklist/parts/fields/checkbox.php, copy everything and paste it into my-checkbox.php. Make any changes to this field you like, and you’re done!  Usage When using your new checkbox, use the type my-checkbox. It should look like this:\npiklist('field', array( 'type' =\u0026gt; 'my-checkbox', // custom field type 'field' =\u0026gt; 'custom-checkbox', 'label' =\u0026gt; 'Custom Select Field', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/create-your-own-fields/",
@@ -224,18 +196,11 @@
 	"content": " /parts/dashboard/ With Piklist you can easily create Dashboard Widgets for a standard WordPress site or for Network Dashboards in multisite.\n\u0026lt;?php /* Title: My Dashboard Widget Capability: manage_options */ _e('Welcome to my dashboard widget', 'piklist');  View Tutorials \u0026rightarrow; "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/",
-	"title": "Fields",
-	"tags": [],
-	"description": "Piklist fields are incredibly powerful and easy to use.",
-	"content": " Fields Piklist fields are incredibly powerful and easy to use.\nField Types\n Sanitizing Fields\n Validating Fields\n Create your own field\n Field Parameters\n  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/",
 	"title": "Fields",
 	"tags": [],
 	"description": "Piklist fields are incredibly powerful and easy to use.",
-	"content": " Fields Piklist fields are incredibly powerful and easy to use.\nField Types\n Sanitizing Fields\n Validating Fields\n Create your own field\n Field Parameters\n  "
+	"content": " Fields Piklist fields are incredibly powerful and easy to use.\nField Types\n Sanitizing Fields\n Validating Fields\n Create your own field\n Field Parameters\n  Field Tutorials   "
 },
 {
 	"uri": "https://docs.piklist.com/forms/",
@@ -354,7 +319,7 @@
 	"title": "FAQs",
 	"tags": [],
 	"description": "Frequently asked questions",
-	"content": " What is Piklist\nA brief explanation of Piklist\n   How do I include Piklist in my plugin or theme?\nUsing Piklist with your plugin or theme.\n   Why aren’t my fields saving?\nThe most common reason for fields is a conflict with the WordPress “custom fields” meta box.\n   Is there a limit on the number of Piklist fields?\nHow to fix field limit issues.\n   Update script not running\nFix update script issues.\n   Fields\nPiklist fields are incredibly powerful and easy to use.\n  Field Types\nPiklist supports tons of field types, or you can create your own.\n  checkbox Field\n color Field\n colorpicker Field\n date Field\n datepicker Field\n editor Field\n email Field\n file (upload) Field\n group Field\n hidden Field\n html Field\n month Field\n number Field\n radio Field\n range Field\n search Field\n select Field\n tel Field\n text Field\n textarea Field\n time Field\n url Field\n week Field\n  Sanitizing Fields\nWhen writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes sanitizing your data easy with the `sanitize` parameter.\n   Validating Fields\nWhen writing field code, whether with Piklist or not, you should be extra cautious of how you handle data coming into WordPress and how it’s presented to the end user. Piklist makes validating your data easy with the `validate` parameter.\n   Create your own field\nWith Piklist, you can easily create your own fields to use in your projects.\n   Field Parameters\nThis is a full list of available parameters for Piklist fields.\n    Parse error: syntax error, unexpected T_FUNCTION\nAn error caused by older versions of PHP.\n    "
+	"content": " What is Piklist\nA brief explanation of Piklist\n   How do I include Piklist in my plugin or theme?\nUsing Piklist with your plugin or theme.\n   Why aren’t my fields saving?\nThe most common reason for fields is a conflict with the WordPress “custom fields” meta box.\n   Is there a limit on the number of Piklist fields?\nHow to fix field limit issues.\n   Update script not running\nFix update script issues.\n   Parse error: syntax error, unexpected T_FUNCTION\nAn error caused by older versions of PHP.\n    "
 },
 {
 	"uri": "https://docs.piklist.com/tutorials/",
@@ -488,13 +453,6 @@
 	"tags": [],
 	"description": "Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns).",
 	"content": "Using Piklist you can easily display your Users as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.\n  New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you're new to Piklist, you may want to review the \"Getting Started\" tutorial first. It gives you a good overview of how Piklist works.     Now we can get started and write some code! We\u0026rsquo;re are going to use the WordPress function get_users(), to get our users. This function stores data in an array, and with Piklist, parsing an array and displaying it as a Select List is really easy. As you can see from the WordPress Codex page, this array stores all users in an Object, and then breaks them out. You have access to fields like ID, user_login, user_pass, etc. We are going to assign each item in the dropdown to the ID, but show the display_name:\npiklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'my_users' ,'label' =\u0026gt; 'Choose a user' ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'text' ) ,'choices' =\u0026gt; array( '' =\u0026gt; 'Choose User' ) + piklist( get_users( array( 'orderby' =\u0026gt; 'display_name' ,'order' =\u0026gt; 'asc' ) ,'objects' ) ,array( 'ID' ,'display_name' ) ) ));  Let\u0026rsquo;s take a look at this code:\n First we created a standard Piklist Select list. The only major change is the choices array. We told Piklist to use the get_users() function, and then passed the orderby and order parameters to Piklist. These parameters are standard to the get_users() function and can be found at the WordPress Codex. The next array tells Piklist what should be the KEY for the field, and what should be the VALUE. In this case we selected ID as the KEY, and DISPLAY_NAME as the VALUE to show in the list.  Checkbox: To make this a Checkbox, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'checkbox'.\nRadio Buttons: To make this Radio Buttons, just change 'type' =\u0026gt; 'select', to 'type' =\u0026gt; 'radio'.\nYes, it\u0026rsquo;s that easy!\n"
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/field-parameters/",
-	"title": "Field Parameters",
-	"tags": [],
-	"description": "This is a full list of available parameters for Piklist fields.",
-	"content": "This is a full list of available parameters for Piklist fields.\nadd_more (repeater) Piklist allows you to turn ANY field, or group of fields, into a repeater field, by simple adding the add_more parameter.\nDisplaying Data To display the results of the Add-More in your theme, pull the data like you normally would. Add more’s save data as an array, so you can loop though the data to display.\n Input: boolean Default: false  Example: 'add_more' =\u0026gt; true\nattributes Adds HTML attributes to your field.\n Input: array 8 values: An array of HTML attributes piklist  Example:\narray( 'placeholder' =\u0026gt; 'Enter text' ,'class' =\u0026gt; 'large-text' )  capability Set the user capabilities that will see this field.\n Input: comma-delimited Default: none  Examples: 'capability' =\u0026gt; 'create_users' 'capability' =\u0026gt; 'create_users, edit_posts'\nchild_add_more  Input: boolean Default: false  child_field  Input: boolean Default: false  choices Create a list of choices. Used with the following fields: checkbox, radio, select.\n Input: array values: An array of choices  Example:\n'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' )  columns Piklist uses a 12 column grid system to help you layout your fields. The grid system is really helpful when laying out group fields.\n Input: numeric values: Any number 1-12  Examples: 'columns' =\u0026gt; 1 'columns' =\u0026gt; 12\nConditions Set conditions for your fields.\n Input: parameters values: An array of conditions  Sub Parameters: relation When using multiple conditions, the default logic is AND. Use this parameter to change the logic to OR. Examples: 'relation' =\u0026gt; 'or' 'relation' =\u0026gt; 'and'\nfield The name of the field you will be watching for Hide/Show, or the field you will be Updating. Example: 'field' =\u0026gt; 'my_field'\nvalue The value(s) of the field that will trigger the condition. This parameter also accepts an array of values. Examples: 'value' =\u0026gt; 'yes' 'value' =\u0026gt; array('yes', 'maybe')\nreset By default, any field that is hidden/shown will have their values reset. To prevent this set reset to false. Example: 'reset' =\u0026gt; 'false'\ncompare Operator to test the value against. Currently only two values are supported: == and !=. * default: ==\nExample: 'compare' =\u0026gt; '!='\ntype Piklist supports two condition types; toggle and update. * default: toggle\nExample: 'type' =\u0026gt; update\nscope IMPORTANT: Only use if you manually set the scope in the field you are monitoring for Hide/Show. Example: 'scope' =\u0026gt; taxonomy\npost_status_hide post_status_value Example:\n // Demonstrates a lot of conditional fields working together // Show this field if (guest_meal == steak) or (guest_one_meal == steak) or (guest_two_meal == steak) piklist('field', array( 'type' =\u0026gt; 'html' ,'field' =\u0026gt; '_message_meal' ,'value' =\u0026gt; __('We only serve steaks rare.', 'piklist-demo') ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'piklist-error-text' ) ,'conditions' =\u0026gt; array( 'relation' =\u0026gt; 'or' ,array( 'field' =\u0026gt; 'guest_meal' ,'value' =\u0026gt; 'steak' ) ,array( 'field' =\u0026gt; 'guest_one_meal' ,'value' =\u0026gt; 'steak' ) ,array( 'field' =\u0026gt; 'guest_two_meal' ,'value' =\u0026gt; 'steak' ) ) )); // Update the field 'guests' to 'yes', if this field is set to ('yes' or 'maybe') piklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'attending' ,'label' =\u0026gt; __('Are you coming to the party?', 'piklist-demo') ,'choices' =\u0026gt; array( '' =\u0026gt; '' ,'yes' =\u0026gt; 'Yes' ,'no' =\u0026gt; 'No' ,'maybe' =\u0026gt; 'Maybe' ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'guests' ,'value' =\u0026gt; array('yes', 'maybe') ,'update' =\u0026gt; 'yes' ,'type' =\u0026gt; 'update' ) ) )); // Show this field if the field 'attending' is not eqaual to (empty or 'no') piklist('field', array( 'type' =\u0026gt; 'radio' ,'field' =\u0026gt; 'guest_meal' ,'label' =\u0026gt; __('Choose meal type', 'piklist-demo') ,'choices' =\u0026gt; array( 'chicken' =\u0026gt; 'Chicken' ,'steak' =\u0026gt; 'Steak' ,'vegetarian' =\u0026gt; 'Vegetarian' ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'attending' ,'value' =\u0026gt; array('', 'no') ,'compare' =\u0026gt; '!=' ) ) )); // Show this field if the field 'attending' is not eqaual to (empty or 'no') piklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'guests' ,'label' =\u0026gt; __('Are you bringing guests', 'piklist-demo') ,'description' =\u0026gt; __('Coming to party != (No or empty)', 'piklist-demo') ,'choices' =\u0026gt; array( 'yes' =\u0026gt; 'Yes' ,'no' =\u0026gt; 'No' ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'attending' ,'value' =\u0026gt; array('', 'no') ,'compare' =\u0026gt; '!=' ) ) )); // Show this field if the field 'guests_number' is 3 piklist('field', array( 'type' =\u0026gt; 'html' ,'field' =\u0026gt; '_message_guests' ,'value' =\u0026gt; __('Sorry, only two guests are allowed.', 'piklist-demo') ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'piklist-error-text' ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'guests_number' ,'value' =\u0026gt; '3' ) ) )); // Show this field if the field 'attending' is not equal to (empty or 'no') // AND the field 'guests' is 'yes' piklist('field', array( 'type' =\u0026gt; 'number' ,'field' =\u0026gt; 'guests_number' ,'label' =\u0026gt; __('How many guests?', 'piklist-demo') ,'description' =\u0026gt; __('Coming to party != (No or empty) AND Guests = Yes', 'piklist-demo') ,'value' =\u0026gt; 1 ,'attributes' =\u0026gt; array( 'class' =\u0026gt; 'small-text' ,'step' =\u0026gt; 1 ,'min' =\u0026gt; 0 ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'attending' ,'value' =\u0026gt; array('', 'no') ,'compare' =\u0026gt; '!=' ) ,array( 'field' =\u0026gt; 'guests' ,'value' =\u0026gt; 'yes' ) ) )); // Show this field if the field 'guests_number' not equals (empty or 0) // AND the field 'guests' is 'yes' // AND 'attending' is not equal to (empty or 'no') piklist('field', array( 'type' =\u0026gt; 'group' ,'label' =\u0026gt; __('Guest One', 'piklist-demo') ,'description' =\u0026gt; __('Number of guests != empty', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'guest_one' ,'label' =\u0026gt; __('Name', 'piklist-demo') ) ,array( 'type' =\u0026gt; 'radio' ,'field' =\u0026gt; 'guest_one_meal' ,'label' =\u0026gt; __('Meal choice', 'piklist-demo') ,'choices' =\u0026gt; array( 'chicken' =\u0026gt; 'Chicken' ,'steak' =\u0026gt; 'Steak' ,'vegetarian' =\u0026gt; 'Vegetarian' ) ) ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'guests_number' ,'value' =\u0026gt; array('', '0') ,'compare' =\u0026gt; '!=' ) ,array( 'field' =\u0026gt; 'guests' ,'value' =\u0026gt; 'yes' ) ,array( 'field' =\u0026gt; 'attending' ,'value' =\u0026gt; array('', 'no') ,'compare' =\u0026gt; '!=' ) ) )); // Show this field if the field 'guests_number' not equals (empty or 0 or 1) // AND 'attending' is not equal to (empty or 'no') piklist('field', array( 'type' =\u0026gt; 'group' ,'label' =\u0026gt; __('Guest Two', 'piklist-demo') ,'description' =\u0026gt; __('Number of guests != (empty or 1)', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'guest_two' ,'label' =\u0026gt; __('Name', 'piklist-demo') ) ,array( 'type' =\u0026gt; 'radio' ,'field' =\u0026gt; 'guest_two_meal' ,'label' =\u0026gt; __('Meal choice', 'piklist-demo') ,'choices' =\u0026gt; array( 'chicken' =\u0026gt; 'Chicken' ,'steak' =\u0026gt; 'Steak' ,'vegetarian' =\u0026gt; 'Vegetarian' ) ) ) ,'conditions' =\u0026gt; array( array( 'field' =\u0026gt; 'guests_number' ,'value' =\u0026gt; array('', '0', '1') ,'compare' =\u0026gt; '!=' ) ,array( 'field' =\u0026gt; 'attending' ,'value' =\u0026gt; array('', 'no') ,'compare' =\u0026gt; '!=' ) ) ));  data_id  Input: string Default: null  description The description of your field.\n Input: string  Example: 'description' =\u0026gt; 'This is my description'\ndisable_label  Input: boolean Default: true  display  Input: boolean Default: true  embed  Input: boolean Default: false  errors  Input: boolean Default: false  field The name of your field. This is the name that will be saved to your database.\n Input: string Example: 'field' =\u0026gt; 'my_field'  group_field  Input: boolean Default: false  help Adds tooltip help to your field. This will only display if a label is set for your field.\n Input: string  Example: 'help' =\u0026gt; 'Some help text'\nid Adds tooltip help to your field. This will only display if a label is set for your field.\n Input: string Default: null  label The label for your field.\n Input: string  Example: 'label' =\u0026gt; 'My field'\nlabel_position The position of your label relative to your field.\n Input: string values: before, after Default: before  Example: 'label_position' =\u0026gt; 'after'\nlabel_tag The position of your label relative to your field.\n Input: boolean Default: true  list Display a list field (Checkbox, Radio or Select) as a vertical list or not. True is vertical.\n Input: boolean Default: true  Example: 'list' =\u0026gt; false\nlist_type  Input: string Default: null  list_type_item  Input: string Default: null  logged_in Show field to only logged in users.\n Input: boolean Default: false  meta_query  Input: parameters  multiple  Input: string  name  Input: string Default: null  object_id  Input: string Default: null  on_post_status Lock the field value when your post is in a certain post status. A range of post statuses can be used by separating them with two hyphens (–).\nOnly used for Post data. on_post_status is now part of the conditions array: post_status_hide, post_status_value\n Input: parameters  Examples:\n'on_post_status' =\u0026gt; array( 'value' =\u0026gt; 'publish' )  'on_post_status' =\u0026gt; array( 'value' =\u0026gt; 'repair--closed' )  options  Input: parameters  position  Input: string Default: null  prefix  Input: boolean Default: true  query  Input: parameters  redirect  Input: string Default: null  relate Allow this field to relate to a post type, user, comment or taxonomy.\n Input: array Default: none  Sub Parameter: scope The scope of the item you want to relate to.\nExamples: \u0026quot;scope\u0026quot; =\u0026gt; \u0026quot;post\u0026quot; \u0026quot;scope\u0026quot; =\u0026gt; \u0026quot;user\u0026quot;\nrelate_to  Input: string Default: null  request_value  Input: string Default: null  request_value Make a field required. If this field is not filled in the form will not save.\nNOTE: Piklist uses server-side authentication instead of browser-side authentication to do required verification. The pro is that it’s more secure, the con is that the user has to press “save” before the validation kicks in.\nIf you want the convenience of browser-side verification you could add the HTML5 \u0026ldquo;required\u0026rdquo; attribute as well. See example below.\n Input: boolean Default: false  // required with Piklist piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'text_required' ,'label' =\u0026gt; 'Enter some required text' ,'required' =\u0026gt; true ));  // required with Piklist and HTML 5 piklist('field', array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'text_required_2' ,'label' =\u0026gt; 'Enter some required text' ,'required' =\u0026gt; true ,'attributes' =\u0026gt; array( 'required' =\u0026gt; 'required' // HTML 5 validation ) ));  role Set the user role that will see this field.\n Input: comma-delimited Default: none  Examples: 'role' =\u0026gt; 'editor' 'role' =\u0026gt; 'super-editor, editor, author'\nsanitize Untrusted data entered into your form should be sanitized and validated before saving. By default Piklist uses the WordPress $wpdb-\u0026gt;prepare method to handle your data, insuring it is SQL-escaped before saving to prevent against SQL injection attacks.\nPiklist also adds another level of sanitization you can use at the field level, and makes it easy to use. A library of sanitization functions are included with Piklist, or you can create your own.\nSince data sanitization depends on the type of data and the context in which it is used, the sanitize parameter allows you to choose how to clean your data, and accepts the following parameters:\n Input: parameters  Sub Parameters: type The type of sanitization function to run. 'type' =\u0026gt; 'html_class'\noptions An array of arguments to pass to the function. 'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-fallback' )\ncallback Override the default Piklist callback function with your own. 'callback' =\u0026gt; 'my-custom-callback\nExamples:\n// sanitize parameter example. Must be in field function ,'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'html_class' ,'options' =\u0026gt; array( 'fallback' =\u0026gt; 'my-default-class' ) ,'callback' =\u0026gt; 'my-custom-callback' ) )  // Use the built-in sanitize function: file_name piklist('field', array( 'type' =\u0026gt; 'text' ,'label' =\u0026gt; 'File Name' ,'field' =\u0026gt; 'sanitize_file_name' ,'description' =\u0026gt; 'Converts multiple words to a valid file name' ,'sanitize' =\u0026gt; array( array( 'type' =\u0026gt; 'file_name' ) ) ));  save_as  Input: string  save_id  Input: string Default: null  scope The scope parameter tells Piklist where to save field data. In many cases this is the WordPress database table (i.e. post, post_meta, term, term_meta)\nWhen creating fields for the WordPress admin, in most cases, you do not have to define scope. Piklist will automatically set it for you.\nYou MUST define scope when creating front-end forms.\nPiklist allows you to mix-and-match field types within a form. So, one form can have fields that save information as post_meta, while other fields save to a taxonomy. Scope is what determines where the field data is saved. If you don’t set the scope parameter then it will default to where the field is used. For example, if you are creating a meta-box, then scope will automatically be set to post_meta. When working with front-end forms, you must set the scope for each field, so Piklist knows where to save your data.\nIf you want create a field that saves the post_title, then you would set scope to post, since the post_title field is in the wp_posts database table.\n Input: string Default: piklist_form::get_field_scope()  Example: 'scope' =\u0026gt; 'post'\nsortable If set to false, will stop an add_more field from being sortable.\n Input: boolean Default: true  tax_query  Input: parameters  template Define a Piklist field template.\n Input: string  type The type of field.\n Input: string Default: text  Examples: 'type' =\u0026gt;'text' 'type' =\u0026gt;'radio' 'type' =\u0026gt;'editor' 'type' =\u0026gt;'group'\nvalidate Validate this field with a set of validation rules.\n Input: parameters  value The default value for this field.\n Input: string Default: null  wrapper The default value for this field.\n Input: string Default: null  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/field-parameters/",
@@ -714,25 +672,11 @@
 	"content": " Piklist relationships allow you to relate any object to any object.\nIn this tutorial we\u0026rsquo;ll use the classic books example, assuming our post types are book and chapter, and a user can be an author. We\u0026rsquo;ll cover the post_has, post_belongs, and relate_query parameters.\nFirst let\u0026rsquo;s add the chapter relate field to the book post type. Since this is a post type we\u0026rsquo;re adding a field to, the file goes in the /parts/meta-boxes/ folder.\nCreate a file and add this code:\n/** * Title: Chapters * Post Type: book * Context: normal * Priority: high */ piklist('field', array( 'type' =\u0026gt; 'select' ,'title' =\u0026gt; 'Chapters' ,'choices' =\u0026gt; piklist(get_posts(array( 'numberposts' =\u0026gt; -1 ,'post_type' =\u0026gt; 'chapters' )), array('ID', 'post_title')) ,'relate' =\u0026gt; array( 'scope' =\u0026gt; 'post' ) ,'attributes' =\u0026gt; array( 'multiple' =\u0026gt; 'multiple' ) ));  Create a second file in the /parts/user/ folder. Now let\u0026rsquo;s add the books relate field to the author:\n/** * Title: Books * Capability: edit_books */ piklist('field', array( 'type' =\u0026gt; 'select' ,'title' =\u0026gt; 'Books' ,'choices' =\u0026gt; piklist(get_posts(array( 'numberposts' =\u0026gt; -1 ,'post_type' =\u0026gt; 'books' )), array('ID', 'post_title')) ,'relate' =\u0026gt; array( 'scope' =\u0026gt; 'post' ) ,'attributes' =\u0026gt; array( 'multiple' =\u0026gt; 'multiple' ) ));  Querying data by relationships Like most parts of Piklist, you can use standard WordPress functions to retrieve your data. Relationships are not different.\nImportant Note: When using the get_posts() function make sure ou include 'suppress_filters' =\u0026gt; false, otherwise WordPress won\u0026rsquo;t allow Piklist to extend the function. WP_Query allows filters by default.\nGet a book\u0026rsquo;s chapters:\n$chapters = get_posts(array( 'post_type' =\u0026gt; 'chapter' ,'numberposts' =\u0026gt; -1 ,'suppress_filters' =\u0026gt; false ,'relate_query' =\u0026gt; array( array( 'id' =\u0026gt; $book_id ,'relate' =\u0026gt; 'belongs' ) ) ));  Here\u0026rsquo;s a shorthand method, which has the same result and works for simple queries. There\u0026rsquo;s also a post_belongs counterpart.\n$chapters = get_posts(array( 'post_type' =\u0026gt; 'chapter' ,'numberposts' =\u0026gt; -1 ,'suppress_filters' =\u0026gt; false ,'post_belongs' =\u0026gt; $book_id ));  Get an author\u0026rsquo;s books:\n$books = get_posts(array( 'post_type' =\u0026gt; 'book' ,'numberposts' =\u0026gt; -1 ,'suppress_filters' =\u0026gt; false ,'relate_query' =\u0026gt; array( array( 'id' =\u0026gt; $user_id ,'scope' =\u0026gt; 'user' ,'relate' =\u0026gt; 'has' ) ) ));  Please note that we\u0026rsquo;re including scope in the relate array but I didn\u0026rsquo;t in the first example. This is because in the first example the scope is the same for both objects. I could put 'scope' =\u0026gt; 'post', but it\u0026rsquo;s unnecessary.\nGet either books\u0026rsquo; authors\n$authors = get_users(array( 'relate_query' =\u0026gt; array( 'compare' =\u0026gt; 'OR' ,array( 'id' =\u0026gt; $book_one_id ,'scope' =\u0026gt; 'post' ,'relate' =\u0026gt; 'belongs' ) ,array( 'id' =\u0026gt; $book_two_id ,'scope' =\u0026gt; 'post' ,'relate' =\u0026gt; 'belongs' ) ) ));  To get an author that has both books, you would simply change 'compare' =\u0026gt; 'OR' to 'compare' =\u0026gt; 'AND' – and this is not case sensitive.\nAdvanced example of getting books that belong to ( Author 1 AND Author 2 ) OR Author 3:\n$books = get_posts(array( 'post_type' =\u0026gt; 'book' ,'numberposts' =\u0026gt; -1 ,'suppress_filters' =\u0026gt; false ,'relate_query' =\u0026gt; array( 'compare' =\u0026gt; 'OR' ,array( 'compare' =\u0026gt; 'AND' ,array( 'id' =\u0026gt; $user_one_id ,'scope' =\u0026gt; 'user' ,'relate' =\u0026gt; 'has' ) 'id' =\u0026gt; $user_two_id ,'scope' =\u0026gt; 'user' ,'relate' =\u0026gt; 'has' ) ) ,array( 'id' =\u0026gt; $user_three_id ,'scope' =\u0026gt; 'user' ,'relate' =\u0026gt; 'has' ) ) ));  How relationships are stored Let’s talk about how relate data is stored for a moment. In our case we have a book post type relating to a chapter post type. As mentioned, in this case the book owns the chapter; that is to say, when creating a book the user selects which chapters will be in it — makes sense!\nThe way Piklist stores this is that in the chapter’s meta it adds a __relate_post meta key wherein the value is the ID of the event that owns it. This is later used when performing relate queries.\nSo if you look at the book’s meta, you won’t see anything added about the chapter. Why? Because it’s not designed to put anything there. Look at the chapter’s meta. You should find it there. For this reason, you don’t need to specify a field, as relate fields are a special type which store in their own way. In short, the owned object stores the meta.\nNote: we\u0026rsquo;re talking about two post types, here. In the case of a user that owns a post type, the post type would have __relate_user in the meta. The possibilities are __relate_post, __relate_user, and __relate_comment.\n"
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/checkbox/",
-	"title": "checkbox Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'checkbox' piklist('field', array( 'type' =\u0026gt; 'checkbox', 'field' =\u0026gt; 'checkbox', 'label' =\u0026gt; 'Checkbox', 'value' =\u0026gt; 'third', // set default value 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', ,'second' =\u0026gt; 'Second Choice', ,'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/checkbox/",
 	"title": "checkbox Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'checkbox' piklist('field', array( 'type' =\u0026gt; 'checkbox', 'field' =\u0026gt; 'checkbox', 'label' =\u0026gt; 'Checkbox', 'value' =\u0026gt; 'third', // set default value 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', ,'second' =\u0026gt; 'Second Choice', ,'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/color/",
-	"title": "color Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'color' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'color', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'Color field', ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/color/",
@@ -742,25 +686,11 @@
 	"content": " 'type' =\u0026gt; 'color' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'color', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'Color field', ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/colorpicker/",
-	"title": "colorpicker Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'colorpicker' Create a WordPress colorpicker field.\nYou can use Piklist field parameters to customize this field.\npiklist('field', array( 'type' =\u0026gt; 'colorpicker', 'field' =\u0026gt; 'my_color', 'label' =\u0026gt; 'Color Picker' ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/colorpicker/",
 	"title": "colorpicker Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'colorpicker' Create a WordPress colorpicker field.\nYou can use Piklist field parameters to customize this field.\npiklist('field', array( 'type' =\u0026gt; 'colorpicker', 'field' =\u0026gt; 'my_color', 'label' =\u0026gt; 'Color Picker' ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/date/",
-	"title": "date Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'date' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'date', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'Date field', ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/date/",
@@ -770,25 +700,11 @@
 	"content": " 'type' =\u0026gt; 'date' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'date', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'Date field', ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/datepicker/",
-	"title": "datepicker Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'datepicker' Create a jQuery datepicker field.\nThis field uses the standard jQuery DatePicker field, and respects the same options. Just define them in the Piklist options array. See examples below.\nYou can use Piklist field parameters to customize this field.\nBasic Datepicker field\npiklist('field', array( 'type' =\u0026gt; 'datepicker', 'field' =\u0026gt; 'my_date_field', 'label' =\u0026gt; 'Date', 'value' =\u0026gt; date('M d, Y', time() + 604800), // set default value 'options' =\u0026gt; array( 'dateFormat' =\u0026gt; 'M d, yy' ) ));  Localizing the Datepicker field\nThe datepicker field can be localized by translating these parameters. This example shows the field being translated into French.\npiklist('field', array( 'type' =\u0026gt; 'datepicker', 'field' =\u0026gt; 'my_date_field', 'label' =\u0026gt; 'Date', 'options' =\u0026gt; array( 'closeText'=\u0026gt;'Fermer', 'prevText'=\u0026gt;'Précédent', 'nextText'=\u0026gt;'Suivant', 'currentText'=\u0026gt;'Aujourd\\'hui', 'monthNames'=\u0026gt;['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'], 'monthNamesShort'=\u0026gt;['Janv.','Févr.','Mars','Avril','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov.','Déc.'], 'dayNames'=\u0026gt;['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'], 'dayNamesShort'=\u0026gt;['Dim.','Lun.','Mar.','Mer.','Jeu.','Ven.','Sam.'], 'dayNamesMin'=\u0026gt;['D','L','M','M','J','V','S'], 'weekHeader'=\u0026gt;'Sem.', 'dateFormat'=\u0026gt;'dd/mm/yy', 'firstDay'=\u0026gt;1, 'isRTL'=\u0026gt;false, 'showMonthAfterYear'=\u0026gt;false, 'yearSuffix'=\u0026gt;'' ) ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/datepicker/",
 	"title": "datepicker Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'datepicker' Create a jQuery datepicker field.\nThis field uses the standard jQuery DatePicker field, and respects the same options. Just define them in the Piklist options array. See examples below.\nYou can use Piklist field parameters to customize this field.\nBasic Datepicker field\npiklist('field', array( 'type' =\u0026gt; 'datepicker', 'field' =\u0026gt; 'my_date_field', 'label' =\u0026gt; 'Date', 'value' =\u0026gt; date('M d, Y', time() + 604800), // set default value 'options' =\u0026gt; array( 'dateFormat' =\u0026gt; 'M d, yy' ) ));  Localizing the Datepicker field\nThe datepicker field can be localized by translating these parameters. This example shows the field being translated into French.\npiklist('field', array( 'type' =\u0026gt; 'datepicker', 'field' =\u0026gt; 'my_date_field', 'label' =\u0026gt; 'Date', 'options' =\u0026gt; array( 'closeText'=\u0026gt;'Fermer', 'prevText'=\u0026gt;'Précédent', 'nextText'=\u0026gt;'Suivant', 'currentText'=\u0026gt;'Aujourd\\'hui', 'monthNames'=\u0026gt;['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'], 'monthNamesShort'=\u0026gt;['Janv.','Févr.','Mars','Avril','Mai','Juin','Juil.','Août','Sept.','Oct.','Nov.','Déc.'], 'dayNames'=\u0026gt;['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'], 'dayNamesShort'=\u0026gt;['Dim.','Lun.','Mar.','Mer.','Jeu.','Ven.','Sam.'], 'dayNamesMin'=\u0026gt;['D','L','M','M','J','V','S'], 'weekHeader'=\u0026gt;'Sem.', 'dateFormat'=\u0026gt;'dd/mm/yy', 'firstDay'=\u0026gt;1, 'isRTL'=\u0026gt;false, 'showMonthAfterYear'=\u0026gt;false, 'yearSuffix'=\u0026gt;'' ) ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/editor/",
-	"title": "editor Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'editor' Create a standard WordPress editor field.\nYou can use Piklist field parameters to customize this field.\nCustom Parameters The editor field takes any option that can be passed to the WordPress wp_editor() function. You can pass them through the options array. See examples below.\nExamples Basic Editor Field\npiklist('field', array( 'type' =\u0026gt; 'editor', 'field' =\u0026gt; 'my_editor_field', 'label' =\u0026gt; 'Post Content' ));  Default Editor\nPiklist can replace the default editor in WordPress by using code the following code.\npiklist('field', array( 'type' =\u0026gt; 'editor', 'field' =\u0026gt; 'post_content', // This is the field name of the WordPress default editor 'scope' =\u0026gt; 'post', // Save to the wp_post table 'label' =\u0026gt; 'Post Content', 'template' =\u0026gt; 'field', // Only display the field not the label 'options' =\u0026gt; array( // Pass any option that is accepted by wp_editor() 'wpautop' =\u0026gt; true, 'media_buttons' =\u0026gt; true, 'shortcode_buttons' =\u0026gt; true, 'teeny' =\u0026gt; false, 'dfw' =\u0026gt; false, 'quicktags' =\u0026gt; true, 'drag_drop_upload' =\u0026gt; true, 'tinymce' =\u0026gt; array( 'resize' =\u0026gt; false, 'wp_autoresize_on' =\u0026gt; true ) ) ));  Displaying Editor content\nWordPress has a standard function, the_content(), for displaying data from the post editor. This function automatically gets filtered by WordPress to format your data correctly. When you want to display data from your custom editor field you may also need to duplicate the functionality of the_content()`.\nFormat line breaks: The WordPress function wpautop() changes double line-breaks into HTML paragraphs. echo wpautop( get_post_meta( $post-\u0026gt;ID, 'field_name', true ) );\nRun shortcodes: Use do_shortcode() to run shortcodes in your content. echo do_shortcode( get_post_meta( $post-\u0026gt;ID, 'field_name', true ) );\nYou can even use both together: echo do_shortcode( wpautop( get_post_meta( $post-\u0026gt;ID, 'field_name', true) ) );\n"
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/editor/",
@@ -798,25 +714,11 @@
 	"content": " 'type' =\u0026gt; 'editor' Create a standard WordPress editor field.\nYou can use Piklist field parameters to customize this field.\nCustom Parameters The editor field takes any option that can be passed to the WordPress wp_editor() function. You can pass them through the options array. See examples below.\nExamples Basic Editor Field\npiklist('field', array( 'type' =\u0026gt; 'editor', 'field' =\u0026gt; 'my_editor_field', 'label' =\u0026gt; 'Post Content' ));  Default Editor\nPiklist can replace the default editor in WordPress by using code the following code.\npiklist('field', array( 'type' =\u0026gt; 'editor', 'field' =\u0026gt; 'post_content', // This is the field name of the WordPress default editor 'scope' =\u0026gt; 'post', // Save to the wp_post table 'label' =\u0026gt; 'Post Content', 'template' =\u0026gt; 'field', // Only display the field not the label 'options' =\u0026gt; array( // Pass any option that is accepted by wp_editor() 'wpautop' =\u0026gt; true, 'media_buttons' =\u0026gt; true, 'shortcode_buttons' =\u0026gt; true, 'teeny' =\u0026gt; false, 'dfw' =\u0026gt; false, 'quicktags' =\u0026gt; true, 'drag_drop_upload' =\u0026gt; true, 'tinymce' =\u0026gt; array( 'resize' =\u0026gt; false, 'wp_autoresize_on' =\u0026gt; true ) ) ));  Displaying Editor content\nWordPress has a standard function, the_content(), for displaying data from the post editor. This function automatically gets filtered by WordPress to format your data correctly. When you want to display data from your custom editor field you may also need to duplicate the functionality of the_content()`.\nFormat line breaks: The WordPress function wpautop() changes double line-breaks into HTML paragraphs. echo wpautop( get_post_meta( $post-\u0026gt;ID, 'field_name', true ) );\nRun shortcodes: Use do_shortcode() to run shortcodes in your content. echo do_shortcode( get_post_meta( $post-\u0026gt;ID, 'field_name', true ) );\nYou can even use both together: echo do_shortcode( wpautop( get_post_meta( $post-\u0026gt;ID, 'field_name', true) ) );\n"
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/email/",
-	"title": "email Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'email' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'email', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/email/",
 	"title": "email Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'email' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'email', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/file/",
-	"title": "file (upload) Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'file' Create a file upload field. Uses either the WordPress media uploader, or a basic uploader.\nCustom Parameters The file field takes the following custom parameters. Include them within the options array.\nbasic\nPiklist allows for two different file upload fields in the WordPress admin, a Basic uploader and the standard Media uploader. To use the Media uploader, do not set this parameter at all.\nNOTES:\n The basic uploader is not supported in Widgets. Use the Media Uploader. If the basic uploader is on a form that has validation, and the validation fails, the uploader will be empty.\n Input: Array\n Default: false\n Example: 'basic' =\u0026gt; true\n  button\nSet button text.\n Input: Array Example: 'button' =\u0026gt; 'Add File'  modal_title\nSet the title in the modal window (Media Uploader only)\n Input: Array Example: 'modal_title' =\u0026gt; 'Add File(s)'  preview_size\nThe preview size of the image\n Input: Array values: Any registered image size Default: thumbnail Example: 'preview_size' =\u0026gt; 'medium'  save\nSave either the attachment ID or the url to the file to the database.\n Input: Array values: \u0026lsquo;id\u0026rsquo; or \u0026lsquo;url\u0026rsquo; Default: id Example: 'save' =\u0026gt; 'url'   piklist('field', array( 'type' =\u0026gt; 'file' ,'field' =\u0026gt; 'my_upload_basic_field' ,'scope' =\u0026gt; 'post_meta' ,'label' =\u0026gt; 'Basic Upload Field' ,'options' =\u0026gt; array( 'basic' =\u0026gt; true ) ));   piklist('field', array( 'type' =\u0026gt; 'file' ,'field' =\u0026gt; 'my_upload_field' ,'scope' =\u0026gt; 'post_meta' ,'label' =\u0026gt; 'Media Uploader' ,'options' =\u0026gt; array( 'modal_title' =\u0026gt; 'Add File(s)' ,'button' =\u0026gt; 'Add' ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/file/",
@@ -826,25 +728,11 @@
 	"content": " 'type' =\u0026gt; 'file' Create a file upload field. Uses either the WordPress media uploader, or a basic uploader.\nCustom Parameters The file field takes the following custom parameters. Include them within the options array.\nbasic\nPiklist allows for two different file upload fields in the WordPress admin, a Basic uploader and the standard Media uploader. To use the Media uploader, do not set this parameter at all.\nNOTES:\n The basic uploader is not supported in Widgets. Use the Media Uploader. If the basic uploader is on a form that has validation, and the validation fails, the uploader will be empty.\n Input: Array\n Default: false\n Example: 'basic' =\u0026gt; true\n  button\nSet button text.\n Input: Array Example: 'button' =\u0026gt; 'Add File'  modal_title\nSet the title in the modal window (Media Uploader only)\n Input: Array Example: 'modal_title' =\u0026gt; 'Add File(s)'  preview_size\nThe preview size of the image\n Input: Array values: Any registered image size Default: thumbnail Example: 'preview_size' =\u0026gt; 'medium'  save\nSave either the attachment ID or the url to the file to the database.\n Input: Array values: \u0026lsquo;id\u0026rsquo; or \u0026lsquo;url\u0026rsquo; Default: id Example: 'save' =\u0026gt; 'url'   piklist('field', array( 'type' =\u0026gt; 'file' ,'field' =\u0026gt; 'my_upload_basic_field' ,'scope' =\u0026gt; 'post_meta' ,'label' =\u0026gt; 'Basic Upload Field' ,'options' =\u0026gt; array( 'basic' =\u0026gt; true ) ));   piklist('field', array( 'type' =\u0026gt; 'file' ,'field' =\u0026gt; 'my_upload_field' ,'scope' =\u0026gt; 'post_meta' ,'label' =\u0026gt; 'Media Uploader' ,'options' =\u0026gt; array( 'modal_title' =\u0026gt; 'Add File(s)' ,'button' =\u0026gt; 'Add' ) ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/group/",
-	"title": "group Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'group' Adds a group of fields.\nIf field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.\nExamples piklist('field', array( 'type' =\u0026gt; 'group' ,'field' =\u0026gt; 'address_group' ,'label' =\u0026gt; __('Address (Grouped)', 'piklist-demo') ,'list' =\u0026gt; false ,'description' =\u0026gt; __('A grouped field with the field parameter set.', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_1' ,'label' =\u0026gt; __('Street Address', 'piklist-demo') ,'required' =\u0026gt; true ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Street Address' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_2' ,'label' =\u0026gt; __('PO Box, Suite, etc.', 'piklist-demo') ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'PO Box, Suite, etc.' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'city' ,'label' =\u0026gt; __('City', 'piklist-demo') ,'columns' =\u0026gt; 5 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'City' ) ) ,array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'state' ,'label' =\u0026gt; __('State', 'piklist-demo') ,'columns' =\u0026gt; 4 ,'choices' =\u0026gt; piklist_demo_get_states() ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'postal_code' ,'label' =\u0026gt; __('Postal Code', 'piklist-demo') ,'columns' =\u0026gt; 3 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Postal Code' ) ) ) ));  Usage Display Grouped Fields If field value is set for the group, unserialize the contents of the field like this:\n$group_data = get_post_meta($post-\u0026gt;ID, 'field_name', true); $group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed print_r($group_data); // output the results  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/group/",
 	"title": "group Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'group' Adds a group of fields.\nIf field parameter is set, a serialized array is created of the field group, otherwise they will be saved as individual meta. Individual meta can easily be searched. The columns field parameter is especially helpful in Field Groups for more complex layouts like address blocks.\nExamples piklist('field', array( 'type' =\u0026gt; 'group' ,'field' =\u0026gt; 'address_group' ,'label' =\u0026gt; __('Address (Grouped)', 'piklist-demo') ,'list' =\u0026gt; false ,'description' =\u0026gt; __('A grouped field with the field parameter set.', 'piklist-demo') ,'fields' =\u0026gt; array( array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_1' ,'label' =\u0026gt; __('Street Address', 'piklist-demo') ,'required' =\u0026gt; true ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Street Address' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'address_2' ,'label' =\u0026gt; __('PO Box, Suite, etc.', 'piklist-demo') ,'columns' =\u0026gt; 12 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'PO Box, Suite, etc.' ) ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'city' ,'label' =\u0026gt; __('City', 'piklist-demo') ,'columns' =\u0026gt; 5 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'City' ) ) ,array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'state' ,'label' =\u0026gt; __('State', 'piklist-demo') ,'columns' =\u0026gt; 4 ,'choices' =\u0026gt; piklist_demo_get_states() ) ,array( 'type' =\u0026gt; 'text' ,'field' =\u0026gt; 'postal_code' ,'label' =\u0026gt; __('Postal Code', 'piklist-demo') ,'columns' =\u0026gt; 3 ,'attributes' =\u0026gt; array( 'placeholder' =\u0026gt; 'Postal Code' ) ) ) ));  Usage Display Grouped Fields If field value is set for the group, unserialize the contents of the field like this:\n$group_data = get_post_meta($post-\u0026gt;ID, 'field_name', true); $group_data = maybe_unserialize($group_data); // nice WP helper function to unserialize if needed print_r($group_data); // output the results  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/hidden/",
-	"title": "hidden Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'hidden' piklist('field', array( 'type' =\u0026gt; 'hidden', 'field' =\u0026gt; 'post_id', 'value' =\u0026gt; $post-\u0026gt;ID // set the value of this hidden field to the Post ID. ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/hidden/",
@@ -854,13 +742,6 @@
 	"content": " 'type' =\u0026gt; 'hidden' piklist('field', array( 'type' =\u0026gt; 'hidden', 'field' =\u0026gt; 'post_id', 'value' =\u0026gt; $post-\u0026gt;ID // set the value of this hidden field to the Post ID. ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/html/",
-	"title": "html Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'html' The Piklist html field, allows you to render standard HTML markup and keep the same label/field format as the rest of your fields.\nYou can use Piklist field parameters to customize this field.\npiklist('field', array( 'type' =\u0026gt; 'html', ,'label' =\u0026gt; 'HTML Field', ,'value' =\u0026gt; '\u0026lt;strong\u0026gt;This is some html\u0026lt;/strong\u0026gt;' ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/html/",
 	"title": "html Field",
 	"tags": [],
@@ -868,25 +749,11 @@
 	"content": " 'type' =\u0026gt; 'html' The Piklist html field, allows you to render standard HTML markup and keep the same label/field format as the rest of your fields.\nYou can use Piklist field parameters to customize this field.\npiklist('field', array( 'type' =\u0026gt; 'html', ,'label' =\u0026gt; 'HTML Field', ,'value' =\u0026gt; '\u0026lt;strong\u0026gt;This is some html\u0026lt;/strong\u0026gt;' ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/month/",
-	"title": "month Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'month' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'month', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'email field', ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/month/",
 	"title": "month Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'month' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'month', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'email field', ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/number/",
-	"title": "number Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'number' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'number', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/number/",
@@ -966,25 +833,11 @@
 	"content": " apply_filters('piklist_validation_rules', self::$validation_rules); Add your own rules to validate field data.\nExample:\nadd_filter('piklist_validation_rules', 'check_valid_number', 11); function check_valid_number($validation_rules) { $validation_rules['my_number'] = array( 'rule' =\u0026gt; \u0026quot;/[-+]?[0-9]*[.,]?[0-9]+/\u0026quot; ,'message' =\u0026gt; __('is not a number') ); return $validation_rules; }  Usage:\n'validate' =\u0026gt; array( array( 'type' =\u0026gt; 'my_number' ) )  Create a rule with a callback function:\n// Create a validation rule called \u0026quot;my_file_exists\u0026quot; add_filter('piklist_validation_rules', 'check_file_exists', 11); function check_file_exists($validation_rules) { $validation_rules['my_file_exists'] = array( 'callback' =\u0026gt; 'my_validate_file_exists' ); return $validation_rules; } /** * @param int $index The field index being checked. * @param mixed $value The value of the field. * @param array $options The options. * @param array $field The field object. * @param array $fields Collection of fields. */ function my_validate_file_exists($index, $value, $options, $field, $fields) { return @file_get_contents($value) ? true : 'contains a file that does not exist.'; }  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/radio/",
-	"title": "radio Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'radio' piklist('field', array( 'type' =\u0026gt; 'radio', 'field' =\u0026gt; 'my_radio', 'label' =\u0026gt; 'Radio', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', ,'second' =\u0026gt; 'Second Choice', ,'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/radio/",
 	"title": "radio Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'radio' piklist('field', array( 'type' =\u0026gt; 'radio', 'field' =\u0026gt; 'my_radio', 'label' =\u0026gt; 'Radio', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', ,'second' =\u0026gt; 'Second Choice', ,'third' =\u0026gt; 'Third Choice' ) ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/range/",
-	"title": "range Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'range' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'range', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', 'attributes' =\u0026gt; array( 'min' =\u0026gt; 5 ,'max' =\u0026gt; 30 ,'step' =\u0026gt; 5 ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/range/",
@@ -994,25 +847,11 @@
 	"content": " 'type' =\u0026gt; 'range' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'range', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', 'attributes' =\u0026gt; array( 'min' =\u0026gt; 5 ,'max' =\u0026gt; 30 ,'step' =\u0026gt; 5 ) ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/search/",
-	"title": "search Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'search' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'search', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/search/",
 	"title": "search Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'search' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'search', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/select/",
-	"title": "select Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'select' Basic Select Field\npiklist('field', array( 'type' =\u0026gt; 'select', 'field' =\u0026gt; 'my_select', 'label' =\u0026gt; 'My select', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  Select Field with Optgroup\npiklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'select_optgroup' ,'label' =\u0026gt; __('Select with Option Groups', 'piklist-demo') ,'value' =\u0026gt; 'third' ,'choices' =\u0026gt; array( 'Group 1' =\u0026gt; array( 'first' =\u0026gt; __('First Choice', 'piklist-demo') ,'second' =\u0026gt; __('Second Choice', 'piklist-demo') ,'third' =\u0026gt; __('Third Choice', 'piklist-demo') ) ,'Group 2' =\u0026gt; array( 'first' =\u0026gt; __('First Choice', 'piklist-demo') ,'second' =\u0026gt; __('Second Choice', 'piklist-demo') ,'third' =\u0026gt; __('Third Choice', 'piklist-demo') ) ) ));  Multiselect\nAdd the following to the attributes array 'multiple' =\u0026gt; 'multiple'\npiklist('field', array( 'type' =\u0026gt; 'select', 'field' =\u0026gt; 'my_multiselect', 'label' =\u0026gt; 'My Multiselect', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ), 'attributes' =\u0026gt; array( 'multiple' =\u0026gt; 'multiple' // Allow a select field to accept multiple selections ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/select/",
@@ -1022,25 +861,11 @@
 	"content": " 'type' =\u0026gt; 'select' Basic Select Field\npiklist('field', array( 'type' =\u0026gt; 'select', 'field' =\u0026gt; 'my_select', 'label' =\u0026gt; 'My select', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ) ));  Select Field with Optgroup\npiklist('field', array( 'type' =\u0026gt; 'select' ,'field' =\u0026gt; 'select_optgroup' ,'label' =\u0026gt; __('Select with Option Groups', 'piklist-demo') ,'value' =\u0026gt; 'third' ,'choices' =\u0026gt; array( 'Group 1' =\u0026gt; array( 'first' =\u0026gt; __('First Choice', 'piklist-demo') ,'second' =\u0026gt; __('Second Choice', 'piklist-demo') ,'third' =\u0026gt; __('Third Choice', 'piklist-demo') ) ,'Group 2' =\u0026gt; array( 'first' =\u0026gt; __('First Choice', 'piklist-demo') ,'second' =\u0026gt; __('Second Choice', 'piklist-demo') ,'third' =\u0026gt; __('Third Choice', 'piklist-demo') ) ) ));  Multiselect\nAdd the following to the attributes array 'multiple' =\u0026gt; 'multiple'\npiklist('field', array( 'type' =\u0026gt; 'select', 'field' =\u0026gt; 'my_multiselect', 'label' =\u0026gt; 'My Multiselect', 'choices' =\u0026gt; array( 'first' =\u0026gt; 'First Choice', 'second' =\u0026gt; 'Second Choice', 'third' =\u0026gt; 'Third Choice' ), 'attributes' =\u0026gt; array( 'multiple' =\u0026gt; 'multiple' // Allow a select field to accept multiple selections ) ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/tel/",
-	"title": "tel Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'tel' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'tel', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/tel/",
 	"title": "tel Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'tel' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'tel', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/text/",
-	"title": "text Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'text' piklist('field', array( 'type' =\u0026gt; 'text', 'field' =\u0026gt; 'my_text', 'label' =\u0026gt; 'Text', 'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' // WordPress css class ) ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/text/",
@@ -1050,25 +875,11 @@
 	"content": " 'type' =\u0026gt; 'text' piklist('field', array( 'type' =\u0026gt; 'text', 'field' =\u0026gt; 'my_text', 'label' =\u0026gt; 'Text', 'attributes' =\u0026gt; array( 'class' =\u0026gt; 'regular-text' // WordPress css class ) ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/textarea/",
-	"title": "textarea Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'textarea' piklist('field', array( 'type' =\u0026gt; 'textarea', 'field' =\u0026gt; 'my_textarea', 'label' =\u0026gt; 'Text Area', 'attributes' =\u0026gt; array( 'rows' =\u0026gt; 10, 'cols' =\u0026gt; 50, 'class' =\u0026gt; 'large-text' ) ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/textarea/",
 	"title": "textarea Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'textarea' piklist('field', array( 'type' =\u0026gt; 'textarea', 'field' =\u0026gt; 'my_textarea', 'label' =\u0026gt; 'Text Area', 'attributes' =\u0026gt; array( 'rows' =\u0026gt; 10, 'cols' =\u0026gt; 50, 'class' =\u0026gt; 'large-text' ) ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/time/",
-	"title": "time Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'time' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'time', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/time/",
@@ -1078,25 +889,11 @@
 	"content": " 'type' =\u0026gt; 'time' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'time', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
 },
 {
-	"uri": "https://docs.piklist.com/faq/fields/types/url/",
-	"title": "url Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'url' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'url', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
 	"uri": "https://docs.piklist.com/fields/types/url/",
 	"title": "url Field",
 	"tags": [],
 	"description": "",
 	"content": " 'type' =\u0026gt; 'url' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'url', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
-},
-{
-	"uri": "https://docs.piklist.com/faq/fields/types/week/",
-	"title": "week Field",
-	"tags": [],
-	"description": "",
-	"content": " 'type' =\u0026gt; 'week' This is an HTML5 field\npiklist('field', array( 'type' =\u0026gt; 'week', 'field' =\u0026gt; 'my_field', 'label' =\u0026gt; 'my field', ));  "
 },
 {
 	"uri": "https://docs.piklist.com/fields/types/week/",

@@ -88,16 +88,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/</loc>
     <lastmod>2017-12-22T14:12:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/sanitizing-fields/</loc>
   </url>
   
   <url>
@@ -116,10 +108,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/validating-fields/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/validating-fields/</loc>
     <lastmod>2018-01-01T08:08:14-05:00</lastmod>
   </url>
@@ -127,10 +115,6 @@
   <url>
     <loc>https://docs.piklist.com/</loc>
     <lastmod>2018-05-08T14:44:18-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/create-your-own-fields/</loc>
   </url>
   
   <url>
@@ -159,12 +143,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/</loc>
-    <lastmod>2017-12-23T21:10:03-05:00</lastmod>
+    <lastmod>2018-06-13T12:40:00-04:00</lastmod>
   </url>
   
   <url>
@@ -348,10 +328,6 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/field-parameters/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/field-parameters/</loc>
     <lastmod>2017-12-22T14:12:31-05:00</lastmod>
   </url>
@@ -507,16 +483,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/checkbox/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/checkbox/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/color/</loc>
   </url>
   
   <url>
@@ -525,16 +493,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/colorpicker/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/colorpicker/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/date/</loc>
   </url>
   
   <url>
@@ -543,16 +503,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/datepicker/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/datepicker/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/editor/</loc>
   </url>
   
   <url>
@@ -561,16 +513,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/email/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/email/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/file/</loc>
   </url>
   
   <url>
@@ -579,16 +523,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/group/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/group/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/hidden/</loc>
   </url>
   
   <url>
@@ -597,25 +533,13 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/html/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/html/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/month/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/month/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/number/</loc>
   </url>
   
   <url>
@@ -674,16 +598,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/radio/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/radio/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/range/</loc>
   </url>
   
   <url>
@@ -692,16 +608,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/search/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/search/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/select/</loc>
   </url>
   
   <url>
@@ -710,16 +618,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/tel/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/tel/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/text/</loc>
   </url>
   
   <url>
@@ -728,16 +628,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/textarea/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/textarea/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/time/</loc>
   </url>
   
   <url>
@@ -746,16 +638,8 @@
   </url>
   
   <url>
-    <loc>https://docs.piklist.com/faq/fields/types/url/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.piklist.com/fields/types/url/</loc>
     <lastmod>2018-02-20T09:36:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://docs.piklist.com/faq/fields/types/week/</loc>
   </url>
   
   <url>
