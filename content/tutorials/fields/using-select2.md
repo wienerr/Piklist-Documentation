@@ -18,7 +18,8 @@ In your theme's `functions.php` file, or your main plugin file add this code:
 ```
 function my_enqueue_files() {
   wp_enqueue_style( 'select2_styles', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css', false );
-  wp_enqueue_script( 'select2_js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', false );
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'select2_js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', array('jquery'), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_files' );
 ```

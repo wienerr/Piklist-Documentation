@@ -17,7 +17,8 @@ In your theme's `functions.php` file, or your main plugin file add this code:
 ```
 function my_enqueue_files() {
   wp_enqueue_style( 'chosen_styles', 'https://harvesthq.github.io/chosen/chosen.css', false );
-  wp_enqueue_script( 'chosen_js', 'https://harvesthq.github.io/chosen/chosen.jquery.js', false );
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'chosen_js', 'https://harvesthq.github.io/chosen/chosen.jquery.js', array('jquery'), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_files' );
 ```
