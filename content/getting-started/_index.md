@@ -25,7 +25,9 @@ You can easily create your project in a new or existing plugin, or your theme. I
 ## Piklist Folder Structure
 To help keep your code organized, Piklist uses a pre-defined folder/file structure that makes it easy for you to add functionality to your site.
 
-Piklist utilizes a folder for each major section of WordPress. You create these folders in your theme or plugin and place the appropriate files in them. Piklist will automatically load these files correctly.
+Piklist utilizes a folder for each major section of WordPress. You create these folders in your theme or your plugin and place the appropriate files in them. Piklist will automatically load these files correctly.
+
+IMPORTANT: You create the folder structure in YOUR theme or YOUR plugin, NOT in Piklist itself. Choosing to create the folder structure in your theme or plugin is a matter of preference. For example, if you may change themes in the future, then a plugin is a better option.  However, if you choose a plugin, then you need to first [create a WordPress plugin](https://codex.wordpress.org/Writing_a_Plugin), before adding the Piklist folder structure.
 
 ### Folder Structure for your theme
 If you want to use your theme for your Piklist files, open your theme’s main folder and add a folder called “piklist”. Inside that folder add another called “parts” and then add any Piklist folders you will need. Your folder structure should look like this:
