@@ -50,7 +50,7 @@ weight: 90
     <h3><i class="fas fa-code fa-sm"></i><a href="/shortcodes/">Shortcodes</a></h3> Piklist automatically creates a UI for your shortcodes.
   </li>
   <li class="feature">
-    <h3><i class="fas fa-sitemap fa-sm"></i><a href="/terms/">Taxonomies</a></h3> Register Taxonomies with Piklist and add power to your terms.
+    <h3><i class="fas fa-sitemap fa-sm"></i><a href="/taxonomies-terms/">Taxonomies</a></h3> Register Taxonomies with Piklist and add power to your terms.
   </li>
   <li class="feature">
     <h3><i class="fas fa-arrow-alt-circle-up fa-sm"></i><a href="/updates/">Update Scripts</a></h3> Let Piklist handle update scripts for your plugin or theme.
