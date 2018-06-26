@@ -6,7 +6,7 @@
     <description>Recent content on Piklist Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 May 2018 14:44:18 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 26 Jun 2018 17:11:41 -0400</lastBuildDate>
     
 	<atom:link href="https://docs.piklist.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -73,10 +73,10 @@
     
     <item>
       <title>Getting Started with Taxonomies and Piklist</title>
-      <link>https://docs.piklist.com/tutorials/terms/getting-started-taxonomies/</link>
+      <link>https://docs.piklist.com/tutorials/taxonomies-terms/getting-started-taxonomies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.piklist.com/tutorials/terms/getting-started-taxonomies/</guid>
+      <guid>https://docs.piklist.com/tutorials/taxonomies-terms/getting-started-taxonomies/</guid>
       <description>Whether you register a taxonomy via the standard WordPress function register_taxonomy, or through Piklist, you can still take advantage of many Piklist features. However, you can add some extra power to your Taxonomies by registering them the Piklist way. Piklist extends the register_taxonomy function with extra parameters to enable extra features. You can use the standard register_taxonomy parameters, plus additional ones defined by Piklist.
 To register a Taxonomy with Piklist:</description>
     </item>
@@ -338,10 +338,10 @@ In this example, we&amp;rsquo;ll create some help for your custom Post Type. You
     
     <item>
       <title>Creating Separate Taxonomies for each User</title>
-      <link>https://docs.piklist.com/tutorials/terms/creating-separate-taxonomies-user/</link>
+      <link>https://docs.piklist.com/tutorials/taxonomies-terms/creating-separate-taxonomies-user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.piklist.com/tutorials/terms/creating-separate-taxonomies-user/</guid>
+      <guid>https://docs.piklist.com/tutorials/taxonomies-terms/creating-separate-taxonomies-user/</guid>
       <description>In this tutorial we’ll provide each logged in user with their own set of private tags.
   New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure. If you&#39;re new to Piklist, you may want to review the &#34;</description>
     </item>
@@ -358,10 +358,10 @@ In this example, we&amp;rsquo;ll create some help for your custom Post Type. You
     
     <item>
       <title>Display Taxonomies as Radio, Checkboxes or Select list</title>
-      <link>https://docs.piklist.com/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</link>
+      <link>https://docs.piklist.com/tutorials/taxonomies-terms/display-taxonomies-radio-checkboxes-select-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.piklist.com/tutorials/terms/display-taxonomies-radio-checkboxes-select-list/</guid>
+      <guid>https://docs.piklist.com/tutorials/taxonomies-terms/display-taxonomies-radio-checkboxes-select-list/</guid>
       <description>Using Piklist you can easily display your Taxonomies as Radio, Checkboxes or a Select list (dropdowns). This simple tutorial will show you how.
   New to Piklist?    Before you start this tutorial:  Install Piklist like you would any other WordPress plugin. Decide if you are going to add the code in this tutorial to your custom plugin or your theme. This will define how to setup your Piklist folder structure.</description>
     </item>
@@ -400,10 +400,10 @@ Displaying Data To display the results of the Add-More in your theme, pull the d
     
     <item>
       <title>Grouping child taxonomies by their parents</title>
-      <link>https://docs.piklist.com/tutorials/terms/grouping-child-taxonomies-parents/</link>
+      <link>https://docs.piklist.com/tutorials/taxonomies-terms/grouping-child-taxonomies-parents/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.piklist.com/tutorials/terms/grouping-child-taxonomies-parents/</guid>
+      <guid>https://docs.piklist.com/tutorials/taxonomies-terms/grouping-child-taxonomies-parents/</guid>
       <description>WordPress hierarchical taxonomies allow you to assign terms to a parent term. In this tutorial we’ll show you how to group the child terms under each parent, and make the parent unselectable, forcing the user to only select the children.
 The basis of this tutorial is the flexibility of the Piklist field function, which we will place in a foreach loop.
 This tutorial assumes you have already created a hierarchical taxonomy or you’re using the default WordPress Categories.</description>
