@@ -152,14 +152,15 @@ Then add in your fields where you want them to show:
 <?php echo $before_widget; ?>
 
 <?php echo $before_title; ?>
+<?php $theme_options = get_option('my_theme_settings');?>
 
-<?php echo $settings['demo_text']; ?>!
+<?php echo( $theme_options['demo_text']);?>
 
 <?php echo $after_title; ?>
 
-<?php echo $settings['demo_select']; ?>!
-
-<?php echo $settings['demo_colorpicker']; ?>!
+<?php echo( $theme_options['demo_select']);?>
+</br>
+<?php echo( $theme_options['demo_colorpicker']);?>
 
 <?php echo $after_widget; ?>
 ```
