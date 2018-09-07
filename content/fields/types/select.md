@@ -58,4 +58,5 @@ piklist('field', array(
       'multiple' => 'multiple' // Allow a select field to accept multiple selections
     )
   ));
+  Add an Example of how to read and display the selection on the front end (widget) and the admin
   ```
